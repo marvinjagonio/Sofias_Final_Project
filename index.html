@@ -9,10 +9,21 @@
   <body>
     <header>
       <nav class="navbar">
-        <div class="logo">ShopMate</div>
+        <div class="logo">
+          <img src="image/shop_mate.png" alt="" />
+          <h2>ShopMate</h2>
+        </div>
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
+          <li class="dropdown">
+            <a href="#">Products ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="electronics_page.html">Electronics</a></li>
+              <li><a href="#">Clothing</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </li>
+
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
@@ -28,7 +39,10 @@
     <section class="slider">
       <button class="slider-btn prev">&#10094;</button>
       <div class="slider-container">
-        <div class="slide"><img src="image/slider1.jpg" alt="Slide 1" /></div>
+        <div class="slide">
+          <img src="image/slider1.jpg" alt="Slide 1" />
+        </div>
+
         <div class="slide"><img src="image/slider2.jpg" alt="Slide 2" /></div>
         <div class="slide"><img src="image/slider3.jpg" alt="Slide 3" /></div>
       </div>
@@ -39,19 +53,39 @@
       <h2>Featured Products</h2>
       <div class="product-grid">
         <div class="product">
-          <img src="image/product1.png" alt="Product 1" />
-          <h3>Product Name</h3>
+          <img src="image/computer_camera_img.png" alt="Product 1" />
+          <h3>Computer Camera</h3>
+          <img class="star" src="image/stars_rate.png" alt="" />
+          <p>$59.99</p>
+          <button class="cart">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="image/headset_img.png" alt="Product 2" />
+          <h3>Headset</h3>
+          <img class="star" src="image/stars_rate.png" alt="" />
+          <p>$69.99</p>
+          <button class="cart">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="image/pc_mouse_img.png" alt="Product 3" />
+          <h3>Computer Mouse</h3>
+          <img class="star" src="image/stars_rate.png" alt="" />
           <p>$19.99</p>
+          <button class="cart">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="image/product2.jpg" alt="Product 2" />
-          <h3>Product Name</h3>
-          <p>$29.99</p>
+          <img src="image/monitor.jpg" alt="Product 4" />
+          <h3>LG Monitors</h3>
+          <img class="star" src="image/stars_rate.png" alt="" />
+          <p>$319.99</p>
+          <button class="cart">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="image/product3.jpg" alt="Product 3" />
-          <h3>Product Name</h3>
-          <p>$39.99</p>
+          <img src="image/cpu_img.png" alt="Product 5" />
+          <h3>Desktop Computer CPU</h3>
+          <img class="star" src="image/stars_rate.png" alt="" />
+          <p>$228.47</p>
+          <button class="cart">Add to Cart</button>
         </div>
       </div>
     </section>
