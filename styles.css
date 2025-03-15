@@ -198,37 +198,95 @@ top: 3%;
 
 /* Footer */
 footer {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     background: #333;
     color: white;
-    padding: 15px;
+    padding: 30px 0;
     margin-top: 20px;
+    gap: 200px;
 }
 
-/* Slider Section */
+.footer-container img{
+    height: 70px;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+
+.b_w_logo{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.b_w_logo img{
+border: none;
+width: 50px;
+height: 50px;
+}
+
+li,a,ul {
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 5px 0;
+}
+
+a:hover{
+    color: #e6b800;
+  
+}
+
+/* Carousel Slider */
 .slider {
     width: 100%;
-    max-width: 1200px; /* Set a maximum width */
+    max-width: 1200px;
+    /* Adjust as needed */
     margin: auto;
     overflow: hidden;
     position: relative;
-    border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .slider-container {
     display: flex;
-    transition: transform 1s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    gap: 10px;
+    /* Space between images */
 }
 
 .slide {
-    flex: 1 0 100%;
+    flex: 0 0 calc(34.25% - 18px);
+    /* Show 3 images at a time */
+    text-align: center;
 }
 
 .slide img {
     width: 100%;
     height: 300px;
-    object-fit: fill;
+    /* Adjust height as needed */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Navigation Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 /* Slider Navigation Buttons */
@@ -271,6 +329,75 @@ footer {
 
 .slider-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sign-in Form */
+
+.popup {
+    display: none;
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 300px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #333;
+    font-size: x-large;
+    border-radius: 20px;
+    color: white;
+    z-index: 1000;
+}
+
+h1{
+    text-align: center;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+input,
+label {
+    font-size: x-large;
+    flex-direction: row;
+    padding: 10px;
+    font-size: large;
+}
+
+.email {
+    padding: 30px;
+ 
+}
+
+.password {
+    color: white;
+    font-weight: bold;
+    padding-left: 30px;
+
+}
+
+.submit {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+#openLogin{
+    margin-left: 15px;
+    border-radius: 10px;
+    border: white;
 }
 
 
