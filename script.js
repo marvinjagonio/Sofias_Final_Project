@@ -5,23 +5,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextButton = document.querySelector(".next");
 
     let index = 0;
+    const visibleSlides = 3; // Adjust to show more or fewer slides
     const totalSlides = slides.length;
+    const slideWidth = slides[0].offsetWidth + 10; // Includes gap
 
-    function showSlide(i) {
-        index = (i + totalSlides) % totalSlides;
-        sliderContainer.style.transform = `translateX(-${index * 100}%)`;
+    function updateCarousel() {
+        sliderContainer.style.transform = `translateX(-${index * slideWidth}px)`;
     }
 
-    prevButton.addEventListener("click", () => {
-        showSlide(index - 1);
+    nextButton.addEventListener("click", () => {
+        if (index < totalSlides - visibleSlides) {
+            index++;
+        } else {
+            index = 0; // Loop back to the start
+        }
+        updateCarousel();
     });
 
-    nextButton.addEventListener("click", () => {
-        showSlide(index + 1);
+    prevButton.addEventListener("click", () => {
+        if (index > 0) {
+            index--;
+        } else {
+            index = totalSlides - visibleSlides; // Loop to the end
+        }
+        updateCarousel();
     });
 
     // Auto-slide every 3 seconds
     setInterval(() => {
-        showSlide(index + 1);
+        nextButton.click();
     }, 3000);
 });
