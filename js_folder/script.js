@@ -36,3 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
         nextButton.click();
     }, 3000);
 });
+
+function increase() {
+    let qty = document.getElementById("quantity");
+    if (parseInt(qty.value) < 10) {
+        qty.value = parseInt(qty.value) + 1;
+    }
+}
+
+function decrease() {
+    let qty = document.getElementById("quantity");
+    if (parseInt(qty.value) > 1) {
+        qty.value = parseInt(qty.value) - 1;
+    }
+}

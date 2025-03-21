@@ -169,6 +169,8 @@ top: 3%;
 }
 
 .product {
+    flex-direction: row;
+    row-gap: 0;
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -189,6 +191,7 @@ top: 3%;
 .product h3 {
     margin: 10px 0;
     font-size: 1.2rem;
+    padding: 0;
 }
 
 .product p {
@@ -225,15 +228,22 @@ width: 50px;
 height: 50px;
 }
 
-li,a,ul {
+li,.footer_link,ul {
     text-decoration: none;
     display: block;
     color: white;
     padding: 5px 0;
 }
 
-a:hover{
+a{
+text-decoration: none;
+    display: block;
+    color: rgb(58, 58, 58);
+}
+
+.footer_link:hover{
     color: #e6b800;
+    transition: color 0.3s ease-in-out;
   
 }
 
@@ -331,7 +341,7 @@ a:hover{
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Sign-in Form */
+/* Log-in Form */
 
 .popup {
     display: none;
@@ -365,8 +375,8 @@ h1{
     cursor: pointer;
 }
 
-input,
-label {
+input,label
+ {
     font-size: x-large;
     flex-direction: row;
     padding: 10px;
@@ -379,8 +389,7 @@ label {
 }
 
 .password {
-    color: white;
-    font-weight: bold;
+
     padding-left: 30px;
 
 }
@@ -400,5 +409,55 @@ label {
     border: white;
 }
 
+/* Sign-up Form */
+
+.sign-up_popup{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #333;
+    font-size: x-large;
+    border-radius: 20px;
+    color: white;
+    z-index: 1000;
+}
+
+.sign-up_popup-content{
+    position: relative;
+}
+
+.sign-up_close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
 
 
+
+.name_username{
+    gap: 10px;
+    display: flex;
+    padding-left: 28px;
+}
+
+
+.sign-up_password{
+
+    padding-left: 30px;
+}
+
+.sign-up_submit{
+        transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+}

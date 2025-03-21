@@ -153,15 +153,25 @@ body {
     float: left;
     flex-direction: row;
     padding-top: 50px;
+    gap: 0;
 
 }
 
-.middle_1 h2{
-   padding: 0; 
+.middle_1 p{
+   font-size: xx-large;
+   font-weight: bold;
+   padding: 0;
    margin: 0;
 }
 
-.middle_1 h3 {
+.middle_1 h3{
+    font-size: medium;
+    font-weight: lighter;
+    padding-bottom: 10px;
+    margin: 0%;
+}
+
+.middle_1 h4 {
     font-size: x-large;
     color: #ffcc00;
     padding: 0;
