@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css_folder/style_electronics.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="../image/shop_mate.png" alt="" />
+          </a>
+          <h2>ShopMate</h2>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Products ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="electronics_page.html">Electronics</a></li>
+              <li><a href="#">Storage</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Memory</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- First Left Section -->
+
+    <section id="first_left_section">
+      <div class="left_section">
+        <div class="in_stock">
+          <span>In stock</span>
+          <input type="checkbox" />
+        </div>
+        <br />
+        <div class="adjust_price">
+          <span>Adjust Price</span>
+          <button class="price_button" onclick="changePrice(-5)">-</button>
+          <span id="price" class="price">$50</span>
+          <button class="price_button" onclick="changePrice(5)">+</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Right Section -->
+
+    <section id="second_right_section">
+      <div class="items_wrap">
+        <div class="product">
+          <a href="items_page_folder/webcam_page.html">
+            <img src="../image/computer_camera_img.png" alt="Product 1" />
+            <h4>Webcam</h4>
+            <img class="star" src="image/stars_rate.png" alt="" />
+            <p>$59.99</p>
+            <button class="cart">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product">
+          <a href="items_page_folder/headset_page.html">
+            <img src="../image/headset.png" alt="Product 2" />
+            <h4>Headset</h4>
+            <img class="star" src="image/stars_rate.png" alt="" />
+            <p>$69.99</p>
+            <button class="cart">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product">
+          <a href="items_page_folder/pc_mouse_page.html">
+            <img src="../image/pc_mouse.png" alt="Product 3" />
+            <h4>Computer Mouse</h4>
+            <img class="star" src="image/stars_rate.png" alt="" />
+            <p>$19.99</p>
+            <button class="cart">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product">
+          <a href="items_page_folder/monitor_page.html">
+            <img src="../image/monitor.jpg" alt="Product 4" />
+            <h4>LG Monitors</h4>
+            <img class="star" src="image/stars_rate.png" alt="" />
+            <p>$319.99</p>
+            <button class="cart">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product">
+          <a href="items_page_folder/cpu_page.html">
+            <img src="../image/cpu.png" alt="Product 5" />
+            <h4>Desktop Computer CPU</h4>
+            <img class="star" src="image/stars_rate.png" alt="" />
+            <p>$228.47</p>
+            <button class="cart">Add to Cart</button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js_folder/script.js"></script>
+    <script src="../js_folder/floating_log-in_sign-up.js"></script>
+  </body>
+</html>

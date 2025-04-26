@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css_folder/styles_item_page.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../image/SPC-Logo.png" alt="" />
+          </a>
+          <h2>ShopMate</h2>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Products ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="electronics_page.html">Electronics</a></li>
+              <li><a href="#">Storage</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Memory</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <div class="sign_in">
+            <li>
+              <a href="#">Sign in</a>
+            </li>
+            <li>
+              <a href=""
+                ><img class="sign_in_img" src="../image/log_in.jpg" alt=""
+              /></a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <section id="first_section">
+      <div class="first_section_full">
+        <div class="first_section_left_side">
+          <p>Home &nbsp; > &nbsp; Electronics &nbsp; > &nbsp; Headset</p>
+          <div class="zoom-container" id="zoomContainer">
+            <img src="../image/cpu.png" id="image" alt="Sample Image" />
+            <div class="zoom-lens" id="zoomLens"></div>
+          </div>
+        </div>
+        <div class="first_section_middle">
+          <div class="middle_1">
+            <h3>CPU</h3>
+            <p>CPU</p>
+            <h4>★★★★★</h4>
+            <button>f share</button>
+            <p><b>Available:</b>Instock</p>
+            <hr />
+          </div>
+          <div class="middle_2">
+            <img src="../image/delivery_in_time.jpg" alt="" />
+            <div class="middle_2_1">
+              <h1>$69.99</h1>
+              <button>
+                <span class="heart">❤</span>
+                In Wish List
+              </button>
+            </div>
+          </div>
+          <div class="middle_3">
+            <div class="middle_3_1">
+              <h3>$60.99</h3>
+
+              <p>- Available for Delivery</p>
+              <p>- Available for Pick-up at ShopMate Bacoor</p>
+              <p>- Available for Pick-up at ShopMate Marikina</p>
+              <p>- Available for Pick-up at ShopMate Makati</p>
+              <br />
+            </div>
+            <div class="middle_3_2">
+              <form>
+                <div>
+                  <span for="">Quantity:</span>
+                  <button type="button" onclick="decrease()">-</button>
+                  <input
+                    type="number"
+                    id="quantity"
+                    name="quantity"
+                    min="1"
+                    max="10"
+                    value="1"
+                  />
+                  <button type="button" onclick="increase()">+</button>
+                </div>
+                <button class="addToCart" type="submit">Add To Cart</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="first_section_right_side">
+          <div>
+            <table border="1">
+              <tr>
+                <th>Delivery Options</th>
+              </tr>
+              <tr>
+                <td>
+                  <dl class="list">
+                    <dt class="unordered_list">• Nation Wide Delivery</dt>
+                    <dt class="unordered_list">• Easy2get Delivery</dt>
+                    <dt>- As fast as 2 hours</dt>
+                    <dt class="unordered_list">•Express Delivery</dt>
+                    <dt>- Delivery within 4 hours</dt>
+                    <dt class="unordered_list">•Same Day Delivery</dt>
+                    <dt>- Order between 12:00AM to 12:00NN</dt>
+                    <dt class="unordered_list">•Standard Delivery</dt>
+                  </dl>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <table border="1">
+              <tr>
+                <th>Payment Options</th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="wrap_image">
+                    <img
+                      src="../icons/billease_logo.png"
+                      alt="Billease"
+                      width="80"
+                    />
+                    <img
+                      src="../icons/gcash_logo.jpeg"
+                      alt="Gcash"
+                      width="80"
+                    />
+                    <img
+                      src="../icons/grab_logo.png"
+                      alt="GrabPay"
+                      width="80"
+                    />
+                    <img
+                      src="../icons/mastercard_logo.png"
+                      alt="Mastercard"
+                      width="100"
+                    />
+                    <img src="../icons/visa_logo.jpg" alt="Visa" width="80" />
+
+                    <img
+                      src="../icons/paymaya_icon.png"
+                      alt="Visa"
+                      width="80"
+                    />
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="second_left_section">
+      <div class="second_left_section_1">
+        <table border="1">
+          <tr>
+            <th><b>Pro 7.1 RGB Gaming Headset USB Black</b></th>
+          </tr>
+          <tr>
+            <td class="item_list">
+              <dl>
+                <div class="list_flex">
+                  <dt class="item_left"><b>Brand</b></dt>
+                  <dt class="item_right"><small>RAKK</small></dt>
+                </div>
+                <hr />
+                <div class="list_flex">
+                  <dt class="item_left"><b>Model</b></dt>
+                  <dt class="item_right"><small>Kusog Pro</small></dt>
+                </div>
+                <hr />
+                <div class="list_flex">
+                  <dt class="item_left"><b>Color</b></dt>
+                  <dt class="item_right"><small>Black</small></dt>
+                </div>
+                <hr />
+                <div class="list_flex">
+                  <dt class="item_left"><b>Headphone Input Impedance</b></dt>
+                  <dt class="item_right"><small>16ohms</small></dt>
+                </div>
+                <hr />
+                <div class="list_flex">
+                  <dt class="item_left"><b>Headphone Sensitivity</b></dt>
+                  <dt class="item_right"><small>95 � 3qb</small></dt>
+                </div>
+                <hr />
+                <div class="list_flex">
+                  <dt class="item_left"><b>Noise Cancelling</b></dt>
+                  <dt class="item_right"><small>Yes</small></dt>
+                </div>
+                <hr />
+                <div class="list_flex">
+                  <dt class="item_left"><b>Cord Length</b></dt>
+                  <dt class="item_right"><small>2.1m</small></dt>
+                </div>
+                <hr />
+                <div class="list_flex">
+                  <dt class="item_left">
+                    <b>Microphone Frequency Response</b>
+                  </dt>
+                  <dt class="item_right"><small>100Hz to 10kHz</small></dt>
+                </div>
+                <hr />
+                <div class="list_flex">
+                  <dt class="item_left"><b>Microphone Sensitivity</b></dt>
+                  <dt class="item_right"><small>-38dB +/ -4dB</small></dt>
+                </div>
+                <hr />
+                <div class="headset_image">
+                  <img src="../image/cpu.png" alt="" />
+                </div>
+
+                <div class="list_float_left">
+                  <dt class="item_left">
+                    <h2><b>Product Description</b></h2>
+                    <br />
+                    <p>
+                      Immerse in superior gaming audio with the RAKK Kusog Pro
+                      7.1 RGB Gaming Headset. USB connectivity, black sleek
+                      design, and RGB lighting offer a personalized gaming
+                      experience. Elevate your gameplay with precision sound,
+                      comfort, and style in this cutting-edge headset.
+                    </p>
+                    <br />
+                    <h2><b>Product Specifications</b></h2>
+                    <ul class="item_list_ul">
+                      <li class="item_list_li">
+                        <b>Brand:</b> <small>Rakk</small>
+                      </li>
+                      <li class="item_list_li">
+                        <b>Model:</b> <small>Kusog Pro</small>
+                      </li>
+                      <li class="item_list_li">
+                        <b>Color:</b> <small>Black</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Features</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>7.1 Virtual Surround Sound</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>50mm Audio Drivers</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Noise Cancellation Microphone</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small
+                          >Sound Controller - Mute and Volume Control</small
+                        >
+                      </li>
+                      <li class="item_list_li">
+                        <small>Removable Ear Foam</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Software Audio Finetuner</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Braided Cables 2.1m</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>RGB Lighting</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Headphones</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Audio Driver: 50 MM</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Maximum power: 30W</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Rated power: 5V</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Impedance: 16ohms ± 15 %</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Sensitivity: 95 ± 3qb</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Microphone sensitivity: -42 ± 2qbz</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Microphone</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Microphone size: ⌀4.0x1.5mm</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Microphone direction: comprehensive</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Microphone sensitivity: -38dB +/ -4dB</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Microphone frequency: 100Hz to 10kHz</small>
+                      </li>
+                      <li class="item_list_li">
+                        <small>Metering Condition: 2V/2.2K</small>
+                      </li>
+                    </ul>
+                    <h1><b>Customer Reviews</b></h1>
+                    <div class="customer_reviews_flex">
+                      <div class="customer_reviews_left">
+                        <p>★★★☆☆</p>
+                        <p>Based on 3 Reviews</p>
+                        <br />
+                        <form action="">
+                          <label for="options">Most Recents</label>
+                          <br />
+                          <select id="options" name="options">
+                            <option value="option1">Highest Rating</option>
+                            <option value="option2">Lowest Rating</option>
+                            <option value="option3">Only Pictures</option>
+                            <option value="option3">Pictures First</option>
+                            <option value="option3">Videos First</option>
+                          </select>
+                        </form>
+                      </div>
+                      <div class="vertical-line"></div>
+                      <div class="review-container">
+                        <div class="review-row">
+                          <span>★★★★★</span>
+                          <div class="progress-bar">
+                            <div class="progress" style="width: 80%"></div>
+                          </div>
+                          <span>80%</span>
+                        </div>
+
+                        <div class="review-row">
+                          <span>★★★★</span>
+                          <div class="progress-bar">
+                            <div class="progress" style="width: 60%"></div>
+                          </div>
+                          <span>60%</span>
+                        </div>
+
+                        <div class="review-row">
+                          <span>★★★</span>
+                          <div class="progress-bar">
+                            <div class="progress" style="width: 40%"></div>
+                          </div>
+                          <span>40%</span>
+                        </div>
+
+                        <div class="review-row">
+                          <span>★★</span>
+                          <div class="progress-bar">
+                            <div class="progress" style="width: 20%"></div>
+                          </div>
+                          <span>20%</span>
+                        </div>
+
+                        <div class="review-row">
+                          <span>★</span>
+                          <div class="progress-bar">
+                            <div class="progress" style="width: 10%"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                        <a href="">see all reviews</a>
+                      </div>
+                    </div>
+                  </dt>
+                </div>
+              </dl>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="second_right_section">
+      <div class="best_bundles_rows">
+        <h2>Best Bundles</h2>
+        <hr style="width: 70%; text-align: left; margin-left: 0" />
+        <div class="best_bundles_flex">
+          <img src="../image/computer_camera_img.png" alt="" />
+          <div class="best_bundles_right">
+            <a href=""><small>HD Webcam</small> </a>
+            <p><span class="budles_star">★★★</span> no reviews</p>
+            <br />
+            <p><b>₱1,090.00</b></p>
+          </div>
+        </div>
+        <hr style="width: 70%; text-align: left; margin-left: 0" />
+        <div class="best_bundles_flex">
+          <img src="../image/headset.png" alt="" />
+          <div class="best_bundles_right">
+            <a href=""><small>Headset</small></a>
+            <p><span class="budles_star">★★★</span> no reviews</p>
+            <br />
+            <p><b>₱995.00</b></p>
+          </div>
+        </div>
+        <hr style="width: 70%; text-align: left; margin-left: 0" />
+        <div class="best_bundles_flex">
+          <img src="../image/monitor.jpg" alt="" />
+          <div class="best_bundles_right">
+            <a href=""><small>LG Monitors</small> </a>
+            <p><span class="budles_star">★★★</span> no reviews</p>
+            <br />
+            <p><b>$319.99</b></p>
+          </div>
+        </div>
+        <hr style="width: 70%; text-align: left; margin-left: 0" />
+        <div class="best_bundles_flex">
+          <img src="../image/pc_mouse.png" alt="" />
+          <div class="best_bundles_right">
+            <a href=""><small>Computer Mouse</small> </a>
+            <p><span class="budles_star">★★★</span> no reviews</p>
+            <br />
+            <p><b>$19.99</b></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Brands Section -->
+
+      <div class="featured_brands_section">
+        <h2>Featured Brands</h2>
+        <div class="featured_brands_flex">
+          <a href=""
+            ><p class="rakk"><b>RAKK</b></p></a
+          >
+          <a href=""><p class="specterpro">Specterpro</p></a>
+          <div class="featured_brands_button">
+            <button class="featured_brands_button_next">&lt;</button>
+            <button class="featured_brands_button_preview">&gt;</button>
+          </div>
+        </div>
+        <hr style="width: 70%; text-align: left; margin-left: 0" />
+        <div class="featured_brands_slider">
+          <div class="featured_brands_container">
+            <div class="featured_brands_slides">
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+              <hr />
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+              <hr />
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+              <hr />
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+            </div>
+            <div class="featured_brands_slides">
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+              <hr />
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+              <hr />
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+              <hr />
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+            </div>
+            <div class="featured_brands_slides">
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+              <hr />
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+              <hr />
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+              <hr />
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+            </div>
+            <div class="featured_brands_slides">
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+              <hr />
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+              <hr />
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+              <hr />
+              <div class="featured_brands_items">
+                <img src="../image/computer_camera_img.png" alt="" />
+                <div class="featured_brands_right">
+                  <a href=""><small>HD Webcam</small> </a>
+                  <p><span class="budles_star">★★★</span> no reviews</p>
+                  <br />
+                  <p><b>₱1,090.00</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="third_bottom_section">
+      <div class="third_bottom_section_flex">
+        <a href=""><h3 class="by_category">By Category</h3></a>
+        <a href=""><p class="by_brand">By Brand</p></a>
+      </div>
+      <hr class="third_bottom_section_hr" />
+
+      <div class="product-grid">
+        <button
+          class="third_bottom_button"
+          onclick="third_bottom_section_left_button()"
+        >
+          &lt;
+        </button>
+        <div class="product">
+          <a href="../items_page_folder/webcam_page.html">
+            <img src="../image/computer_camera_img.png" alt="Product 1" />
+            <h4>Webcam</h4>
+            <img class="star" src="../image/stars_rate.png" alt="" />
+            <p>$59.99</p>
+            <button class="cart">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product">
+          <a href="../items_page_folder/headset_page.html">
+            <img src="../image/headset.png" alt="Product 2" />
+            <h4>Headset</h4>
+            <img class="star" src="../image/stars_rate.png" alt="" />
+            <p>$69.99</p>
+            <button class="cart">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product">
+          <a href="../items_page_folder/pc_mouse_page.html">
+            <img src="../image/pc_mouse.png" alt="Product 3" />
+            <h4>Computer Mouse</h4>
+            <img class="star" src="../image/stars_rate.png" alt="" />
+            <p>$19.99</p>
+            <button class="cart">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product">
+          <a href="../items_page_folder/monitor_page.html">
+            <img src="../image/monitor.jpg" alt="Product 4" />
+            <h4>LG Monitors</h4>
+            <img class="star" src="../image/stars_rate.png" alt="" />
+            <p>$319.99</p>
+            <button class="cart">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product">
+          <a href="../items_page_folder/cpu_page.html">
+            <img src="../image/cpu.png" alt="Product 5" />
+            <h4>Desktop Computer CPU</h4>
+            <img class="star" src="../image/stars_rate.png" alt="" />
+            <p>$228.47</p>
+            <button class="cart">Add to Cart</button>
+          </a>
+        </div>
+        <button
+          class="third_bottom_button"
+          onclick="third_bottom_section_right_button()"
+        >
+          &gt;
+        </button>
+      </div>
+    </section>
+    <!-- Footer -->
+
+    <footer>
+      <div class="footer-container">
+        <h3>CUSTOMER SERVICE</h3>
+        <ul class="footer-links">
+          <li class="footer_li">
+            <a class="footer_link" href="#">Cancellation Policy</a>
+          </li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">Delivery</a>
+          </li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">Order And Payments</a>
+          </li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">Payment FAQs</a>
+          </li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">Privacy Policy</a>
+          </li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">Return And Refunds</a>
+          </li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">Service Area Directory</a>
+          </li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">Terms And Conditions</a>
+          </li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">Warranty Information</a>
+          </li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">Warranty Policy</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-container">
+        <h3>COMPANY</h3>
+        <ul class="footer-links">
+          <li class="footer_li"><a class="footer_link" href="#">Careers</a></li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">Contact Us</a>
+          </li>
+          <li class="footer_li"><a class="footer_link" href="#">FAQs</a></li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">News And Articles</a>
+          </li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">Our Company</a>
+          </li>
+          <li class="footer_li"><a class="footer_link" href="#">Reviews</a></li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">Store Locations</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-container">
+        <h3>LINKS</h3>
+        <ul class="footer-links">
+          <li class="footer_li">
+            <a class="footer_link" href="#">EasyPC Corporate</a>
+          </li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">EasyPC Community</a>
+          </li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">Lazada Official Store</a>
+          </li>
+          <li class="footer_li">
+            <a class="footer_link" href="#">Shopee Official Store</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-container">
+        <img src="../image/SPC-Logo.png" alt="" />
+        <ul class="footer-links">
+          <h3>FOLLOW US</h3>
+
+          <div class="b_w_logo">
+            <img src="../black_white_logo/facebook_logo_b_w.png" alt="" />
+            <img src="../black_white_logo/instagram_logo_b_w.png" alt="" />
+            <img src="../black_white_logo/viber_icon_b_w.png" alt="" />
+          </div>
+        </ul>
+      </div>
+    </footer>
+    <script src="../js_folder/script.js"></script>
+  </body>
+</html>
