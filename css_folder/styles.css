@@ -6,6 +6,7 @@ body {
     background-color: white;
 }
 
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -237,11 +238,35 @@ body {
 
  /* Items Cathegory Section */
 
-.items_flex{
+#items_category_section{
+    background-color: rgb(63, 63, 63); 
+    margin: 40px 0;
+    width: 100%;
+    height: 100%;
+}
+
+.items_category_slider{
+    width: 1380px;
+    max-width: 1380px;
+    margin: auto ;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px; 
+    
+      
+    
+}
+
+.items_category_container{
     display: flex;
-    width: max-content;
-    transition: transform 0.5s ease-in-out;
-    padding: 50px 250px;
+    justify-content: left; /* Center items inside the container */
+    width: 100%;             /* Make it span the full width of its parent */
+    transition: transform 1.20s ease-in-out;
+    padding: 50px 0;
+    
+     
+
+    
 }
 
 .items_category_product{
@@ -250,13 +275,20 @@ body {
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(104, 104, 104, 0.5);
-    margin: 0 15px;
+    margin: 0 10px;
     transition: transform 0.3s ease;
 
 }
 
 .items_category_product:hover{
     transform: scale(1.05);
+}
+
+.items_category{
+    display: flex;
+    width: max-content;        /* Allow it to be only as wide as its children */
+    transition: transform 0.2s linear;
+    gap: 10px;
 }
 
 .items_cathegory_image{
@@ -266,8 +298,8 @@ body {
 
 .items_category_preview{
     position: absolute;
-    left: 10%;
-    top: 106%;
+    left: 9%;
+    top: 109%;
     padding: 10px 15px;
     border-radius: 50%;
     border: none;
@@ -278,8 +310,8 @@ body {
 
 .items_category_next{
     position: absolute;
-    right: 10%;
-    top: 106%;
+    right: 9%;
+    top: 109%;
     padding: 10px 15px;
     border-radius: 50%;
     border: none;
@@ -297,7 +329,7 @@ body {
 
 .products {
     text-align: center;
-    margin-right: 30px;
+    margin: 40px 0;
 }
 
 .product-grid {
@@ -388,7 +420,7 @@ body {
 .featured_products_preview{
     position: absolute;
     left: 11%;
-    top: 152%;
+    top: 160%;
     padding: 10px 15px;
     border-radius: 50%;
     border: none;
@@ -400,7 +432,7 @@ body {
 .featured_products_next{
     position: absolute;
     right: 11%;
-    top: 152%;
+    top: 160%;
     padding: 10px 15px;
     border-radius: 50%;
     border: none;
@@ -539,6 +571,89 @@ input,label
     font-size: large;
     font-weight: bold;
     position: absolute;
+}
+
+/* Loptop and Desktop Section */
+
+#loptop_desktop_section{
+    background-color: rgb(143, 143, 143); 
+    padding-top: 80px;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    margin: 40px 0;
+}
+
+.loptop_slider , .desktop_slider{
+    width: max-content;
+    max-width: 840px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+   
+}
+
+.loptop_container , .desktop_container{
+    display: flex;
+    width: max-content;
+    
+    transition: transform 0.5s ease-in-out;
+    background-color: rgb(63, 63, 63);
+    padding: 40px 25px;
+  
+}
+
+
+.loptop_desktop_flex{
+    display: flex;
+}
+
+
+.loptop_font , .desktop_font{
+    position: absolute;
+    color: white;
+    top: 0%;
+    display: flex;
+    gap: 620px;
+}
+
+.loptop, .desktop {
+    transition: transform 0.2s linear;
+    display: flex;
+    box-sizing: border-box;
+    gap: 20px;
+   
+    
+}
+
+.loptop_preview , .desktop_preview{
+    position: absolute;
+    left: 4%;
+    top: 50%;
+    padding: 10px 15px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.loptop_preview:hover , .loptop_next:hover , .desktop_preview:hover , .desktop_next:hover {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+.loptop_next , .desktop_next{
+    position: absolute;
+    left:90%;
+    top: 50%;
+    padding: 10px 15px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 10;
 }
 
 /* Sign-up Form */
@@ -685,87 +800,6 @@ input,label
     border-radius: 10px;
     border: 0;
     background-color: #3c9052;
-}
-
-/* Loptop and Desktop Section */
-
-#loptop_desktop_section{
-    background-color: rgb(143, 143, 143); 
-    padding-top: 80px;
-    padding-bottom: 50px;
-    width: 100%;
-    height: 100%;
-}
-
-.loptop_slider , .desktop_slider{
-    width: max-content;
-    max-width: 840px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    border-radius: 20px;
-   
-}
-
-.loptop_container , .desktop_container{
-    display: flex;
-    width: max-content;
-    transition: transform 0.5s ease-in-out;
-    background-color: rgb(51, 51, 51, 0.5);
-    padding: 30px;
-  
-}
-
-
-.loptop_desktop_flex{
-    display: flex;
-}
-
-
-.loptop_font , .desktop_font{
-    position: absolute;
-    color: white;
-    top: 0%;
-    display: flex;
-    gap: 620px;
-}
-
-.loptop, .desktop {
-    transition: transform 0.5s ease-in-out;
-    display: flex;
-    box-sizing: border-box;
-    gap: 20px;
-   
-    
-}
-
-.loptop_preview , .desktop_preview{
-    position: absolute;
-    left: 4%;
-    top: 50%;
-    padding: 10px 15px;
-    border-radius: 50%;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    z-index: 10;
-}
-
-.loptop_preview:hover , .loptop_next:hover , .desktop_preview:hover , .desktop_next:hover {
-    transform: scale(0.95);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2) inset;
-}
-
-.loptop_next , .desktop_next{
-    position: absolute;
-    left:90%;
-    top: 50%;
-    padding: 10px 15px;
-    border-radius: 50%;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    z-index: 10;
 }
 
 /* Footer */

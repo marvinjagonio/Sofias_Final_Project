@@ -171,4 +171,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+    // Items Category Products
+
+document.addEventListener("DOMContentLoaded", () => {
+  const itemsCategoryContainer = document.querySelector(".items_category");
+
+  const itemsCategoryNext = document.querySelector(".items_category_next");
+  const itemsCategoryPreview = document.querySelector(".items_category_preview");
+
+
+  let itemsCategory = 0;
+  const itemsVisibleSlides = 6;
+
+
+  const itemsSlideWidth = document.querySelector(".items_category_product").offsetWidth + 10;
+
+
+  const itemstotalSlides = itemsCategoryContainer.querySelectorAll(".items_category_product").length;
+
+  function updateItemsCarousel() {
+    itemsCategoryContainer.style.transform = `translateX(-${itemsCategory * itemsSlideWidth}px)`;
+  }
+
+  itemsCategoryNext.addEventListener("click", () => {
+    if (itemsCategory < itemstotalSlides - itemsVisibleSlides) {
+      itemsCategory++;
+    } else {
+      itemsCategory = 0;
+    }
+    updateItemsCarousel();
+  });
+
+  itemsCategoryPreview.addEventListener("click", () => {
+    if (itemsCategory > 0) {
+      itemsCategory--;
+    }
+    updateItemsCarousel();
+  });
+
+
+});
+
   
