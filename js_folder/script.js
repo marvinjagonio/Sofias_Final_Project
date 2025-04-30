@@ -1,5 +1,7 @@
 
 
+
+
 function increase() {
     let qty = document.getElementById("quantity");
     if (parseInt(qty.value) < 10) {
