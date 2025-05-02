@@ -26,7 +26,7 @@ closeSignUpBtn.addEventListener("click", () => {
     signUpPopup.style.display = "none";
 });
 
-// Hide when clicking outside (for both popups)
+// Hide when clicking outside
 window.addEventListener("click", (event) => {
     if (event.target === loginPopup) {
         loginPopup.style.display = "none";
@@ -36,7 +36,8 @@ window.addEventListener("click", (event) => {
     }
 });
 
-setTimeout(function() {
+// Startup popup
+setTimeout(function () {
     document.getElementById("start_popup").style.display = "flex";
 }, 5000);
 
@@ -44,4 +45,3 @@ setTimeout(function() {
 function closePopup() {
     document.getElementById("start_popup").style.display = "none";
 }
-

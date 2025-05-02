@@ -38,14 +38,17 @@
           <div class="sign_in">
             <li>
               <a id="openSignUp" href="#">Sign in</a>
-            </li>
-            <li>
-              <button type="submit" class="openLogin"> <b>Login</b></button>
+              </li>
+              <li>
+              <button type="button" id="openLogin"> <b>Login</b></button>
             </li>
           </div>
         </ul>
       </nav>
     </header>
+
+    
+    <!-- Start Up Pop-Up Section -->
 
     <div id="start_popup" class="start_popup">
       <div class="start_popup-content">
@@ -83,6 +86,88 @@
         </div>
       </div>
     </div>
+
+
+    <!-- Log-in Popup -->
+
+    <section id="loginPopup" class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <form action="">
+          <h1>Log-in</h1>
+          <div class="email_password">
+            <div class="email">
+              <label for="">Email:</label>
+              <input type="text" placeholder="email" min="1" required />
+            </div>
+            <div class="password">
+              <label for="">Password:</label>
+              <input
+                type="password"
+                placeholder="******"
+                max="6"
+                min="1"
+                required
+              />
+            </div>
+          </div>
+          <input class="submit" type="submit" />
+        </form>
+      </div>
+    </section>
+
+    <!-- Sign-up Popup -->
+
+    <section id="signUpPopup" class="sign-up_popup">
+      <div class="sign-up_popup-content">
+        <span class="sign-up_close-btn">&times;</span>
+        <form action="">
+          <h1>Sign-Up</h1>
+          <div class="name_username">
+            <div class="name">
+              <label for="">Name:</label>
+              <input
+                type="text"
+                id="sign-up-name"
+                placeholder="name"
+                required
+              />
+            </div>
+            <div class="username">
+              <label for="">Username:</label>
+              <input
+                type="text"
+                id="sign-up-username"
+                placeholder="username"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="email">
+            <label for="">Email:</label>
+            <br />
+            <input
+              type="email"
+              id="sign-up-email"
+              placeholder="email"
+              required
+            />
+          </div>
+          <div class="sign-up_password">
+            <label for="">Password:</label>
+            <br />
+            <input
+            type="password" placeholder="******" maxlength="6" minlength="1" required
+            />
+          </div>
+
+          <input class="sign-up_submit" type="submit" value="Sign Up" />
+        </form>
+      </div>
+    </section>
+
+    <!-- Welcome to Shopmate Section -->
 
     <main class="hero">
       <h1>Welcome to ShopMate</h1>
@@ -583,85 +668,212 @@
 
     <!-- New Arrivals Section and Top Sellers Section -->
 
-    <!-- Log-in Popup -->
-
-    <section id="loginPopup" class="popup">
-      <div class="popup-content">
-        <span class="close-btn">&times;</span>
-        <form action="">
-          <h1>Log-in</h1>
-          <div class="email_password">
-            <div class="email">
-              <label for="">Email:</label>
-              <input type="text" placeholder="email" min="1" required />
-            </div>
-            <div class="password">
-              <label for="">Password:</label>
-              <input
-                type="password"
-                placeholder="******"
-                max="6"
-                min="1"
-                required
-              />
-            </div>
+    <section id="new_arrivals">
+      
+      <div class="new_arrivals_top_sellers_flex">
+        <h2 class="new_arrivals_font">NEW ARRIVALS</h2>
+        
+      <div class="new_arrivals_products">
+        
+        
+        <div class="product">
+          
+          <a href="items_page_folder/webcam_page.html">
+            <img class="product_image" src="image/computer_camera_img.png" alt="Product 1" />
+            <h4>Webcam</h4>
+            <img class="star" src="image/stars_rate.png" alt="" />
+            <p>$59.99</p>
+            <div class="product_buttons">
+              <button class="buy_now">Buy Now</button>
+            <button class="cart"><img src="image/cart.png" alt=""></button>
+            
           </div>
-          <input class="submit" type="submit" />
-        </form>
+          </a>
+          <ul class="products_hover"><li><a href="">♡ Add To Wishlist</a></li></ul>
+        </div>
+        <div class="product">
+          
+          <a href="items_page_folder/webcam_page.html">
+            <img class="product_image" src="image/computer_camera_img.png" alt="Product 1" />
+            <h4>Webcam</h4>
+            <img class="star" src="image/stars_rate.png" alt="" />
+            <p>$59.99</p>
+            <div class="product_buttons">
+              <button class="buy_now">Buy Now</button>
+            <button class="cart"><img src="image/cart.png" alt=""></button>
+            
+          </div>
+          </a>
+          <ul class="products_hover"><li><a href="">♡ Add To Wishlist</a></li></ul>
+        </div>
+        <div class="product">
+          
+          <a href="items_page_folder/webcam_page.html">
+            <img class="product_image" src="image/computer_camera_img.png" alt="Product 1" />
+            <h4>Webcam</h4>
+            <img class="star" src="image/stars_rate.png" alt="" />
+            <p>$59.99</p>
+            <div class="product_buttons">
+              <button class="buy_now">Buy Now</button>
+            <button class="cart"><img src="image/cart.png" alt=""></button>
+            
+          </div>
+          </a>
+          <ul class="products_hover"><li><a href="">♡ Add To Wishlist</a></li></ul>
+        </div>
+        <div class="product">
+          
+          <a href="items_page_folder/webcam_page.html">
+            <img class="product_image" src="image/computer_camera_img.png" alt="Product 1" />
+            <h4>Webcam</h4>
+            <img class="star" src="image/stars_rate.png" alt="" />
+            <p>$59.99</p>
+            <div class="product_buttons">
+              <button class="buy_now">Buy Now</button>
+            <button class="cart"><img src="image/cart.png" alt=""></button>
+            
+          </div>
+          </a>
+          <ul class="products_hover"><li><a href="">♡ Add To Wishlist</a></li></ul>
+        </div>
+        <div class="product">
+          
+          <a href="items_page_folder/webcam_page.html">
+            <img class="product_image" src="image/computer_camera_img.png" alt="Product 1" />
+            <h4>Webcam</h4>
+            <img class="star" src="image/stars_rate.png" alt="" />
+            <p>$59.99</p>
+            <div class="product_buttons">
+              <button class="buy_now">Buy Now</button>
+            <button class="cart"><img src="image/cart.png" alt=""></button>
+            
+          </div>
+          </a>
+          <ul class="products_hover"><li><a href="">♡ Add To Wishlist</a></li></ul>
+        </div>
+        <div class="product">         
+          <a href="items_page_folder/webcam_page.html">
+            <img class="product_image" src="image/computer_camera_img.png" alt="Product 1" />
+            <h4>Webcam</h4>
+            <img class="star" src="image/stars_rate.png" alt="" />
+            <p>$59.99</p>
+            <div class="product_buttons">
+              <button class="buy_now">Buy Now</button>
+            <button class="cart"><img src="image/cart.png" alt=""></button>
+            
+          </div>
+          </a>
+          <ul class="products_hover"><li><a href="">♡ Add To Wishlist</a></li></ul>
+        </div>
+        </div>
+        <br>
+        <h2 class="top_seller_font">TOP SELLERS</h2>
+         <div class="top_sellers_products">
+          
+          
+          <div class="product">
+          
+            <a href="items_page_folder/webcam_page.html">
+              <img class="product_image" src="image/computer_camera_img.png" alt="Product 1" />
+              <h4>Webcam</h4>
+              <img class="star" src="image/stars_rate.png" alt="" />
+              <p>$59.99</p>
+              <div class="product_buttons">
+                <button class="buy_now">Buy Now</button>
+              <button class="cart"><img src="image/cart.png" alt=""></button>
+              
+            </div>
+            </a>
+            <ul class="products_hover"><li><a href="">♡ Add To Wishlist</a></li></ul>
+          </div>
+          <div class="product">
+            
+            <a href="items_page_folder/webcam_page.html">
+              <img class="product_image" src="image/computer_camera_img.png" alt="Product 1" />
+              <h4>Webcam</h4>
+              <img class="star" src="image/stars_rate.png" alt="" />
+              <p>$59.99</p>
+              <div class="product_buttons">
+                <button class="buy_now">Buy Now</button>
+              <button class="cart"><img src="image/cart.png" alt=""></button>
+              
+            </div>
+            </a>
+            <ul class="products_hover"><li><a href="">♡ Add To Wishlist</a></li></ul>
+          </div>
+          <div class="product">
+            
+            <a href="items_page_folder/webcam_page.html">
+              <img class="product_image" src="image/computer_camera_img.png" alt="Product 1" />
+              <h4>Webcam</h4>
+              <img class="star" src="image/stars_rate.png" alt="" />
+              <p>$59.99</p>
+              <div class="product_buttons">
+                <button class="buy_now">Buy Now</button>
+              <button class="cart"><img src="image/cart.png" alt=""></button>
+              
+            </div>
+            </a>
+            <ul class="products_hover"><li><a href="">♡ Add To Wishlist</a></li></ul>
+          </div>
+          <div class="product">
+            
+            <a href="items_page_folder/webcam_page.html">
+              <img class="product_image" src="image/computer_camera_img.png" alt="Product 1" />
+              <h4>Webcam</h4>
+              <img class="star" src="image/stars_rate.png" alt="" />
+              <p>$59.99</p>
+              <div class="product_buttons">
+                <button class="buy_now">Buy Now</button>
+              <button class="cart"><img src="image/cart.png" alt=""></button>
+              
+            </div>
+            </a>
+            <ul class="products_hover"><li><a href="">♡ Add To Wishlist</a></li></ul>
+          </div>
+          <div class="product">
+            
+            <a href="items_page_folder/webcam_page.html">
+              <img class="product_image" src="image/computer_camera_img.png" alt="Product 1" />
+              <h4>Webcam</h4>
+              <img class="star" src="image/stars_rate.png" alt="" />
+              <p>$59.99</p>
+              <div class="product_buttons">
+                <button class="buy_now">Buy Now</button>
+              <button class="cart"><img src="image/cart.png" alt=""></button>
+              
+            </div>
+            </a>
+            <ul class="products_hover"><li><a href="">♡ Add To Wishlist</a></li></ul>
+          </div>
+          <div class="product">         
+            <a href="items_page_folder/webcam_page.html">
+              <img class="product_image" src="image/computer_camera_img.png" alt="Product 1" />
+              <h4>Webcam</h4>
+              <img class="star" src="image/stars_rate.png" alt="" />
+              <p>$59.99</p>
+              <div class="product_buttons">
+                <button class="buy_now">Buy Now</button>
+              <button class="cart"><img src="image/cart.png" alt=""></button>
+              
+            </div>
+            </a>
+            <ul class="products_hover"><li><a href="">♡ Add To Wishlist</a></li></ul>
+          </div>
+         </div>       
       </div>
+    
     </section>
 
-    <!-- Sign-up Popup -->
-    <section id="signUpPopup" class="sign-up_popup">
-      <div class="sign-up_popup-content">
-        <span class="sign-up_close-btn">&times;</span>
-        <form action="">
-          <h1>Sign-Up</h1>
-          <div class="name_username">
-            <div class="name">
-              <label for="">Name:</label>
-              <input
-                type="text"
-                id="sign-up-name"
-                placeholder="name"
-                required
-              />
-            </div>
-            <div class="username">
-              <label for="">Username:</label>
-              <input
-                type="text"
-                id="sign-up-username"
-                placeholder="username"
-                required
-              />
-            </div>
-          </div>
+    <!-- Customers Comments Section -->
 
-          <div class="email">
-            <label for="">Email:</label>
-            <br />
-            <input
-              type="email"
-              id="sign-up-email"
-              placeholder="email"
-              required
-            />
-          </div>
-          <div class="sign-up_password">
-            <label for="">Password:</label>
-            <br />
-            <input
-              type="password"
-              id="sign-up-password"
-              placeholder="******"
-              minlength="6"
-              required
-            />
-          </div>
-
-          <input class="sign-up_submit" type="submit" value="Sign Up" />
-        </form>
+    <section id="customers_comment">
+      <div class="comments_flex">
+        <div class="comments">
+          <p>⭐⭐⭐⭐</p>
+          <p> <b>Good game drive</b> <br>
+            using it for games storage, it's what you expect from an ssd, mabilis. <br> It's cheaper than others in terms of capacity though 👍🏼</p>
+        </div>
       </div>
     </section>
 
@@ -719,8 +931,9 @@
       </div>
     </footer>
 
+    <script src="js_folder/floating_log-in_sign-up.js"></script>
     <script src="js_folder/script.js"></script>
     <script src="js_folder/slides.js"></script>
-    <script src="js_folder/floating_log-in_sign-up.js"></script>
+    
   </body>
 </html>

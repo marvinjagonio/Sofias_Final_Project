@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: white;
+    background-color: rgb(250, 250, 250);
 }
 
 
@@ -14,7 +14,7 @@ body {
     align-items: center;
     background-color: rgb(194, 194, 194);
     padding: 5px 30px;
-    padding-right: 100px;
+    padding-right: 200px;
 
 }
 
@@ -62,19 +62,23 @@ body {
 .sign_in{
 
     display: flex;
+    position: absolute;
+    top: 3%;
+    right: 5%;
 }
 
 
-.openLogin{
+#openLogin{
     border: none;
     background-color: #4CAF50;
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    position: absolute;
-    top: 3%;
-    right: 1.20%;
-    padding:5px;
+    
+}
+
+#openLogin b{
+    font-size: small;
 }
 
 #openLogin:hover{
@@ -708,6 +712,53 @@ input,label
     width: 400px;
     border-radius: 10px;
     padding: 20px 0;
+  }
+
+  /* New Arrivals Section and Top Sellers Section */
+
+  #new_arrivals{
+    background-color: lightgray;
+    padding: 50px;
+    padding-left: 200px;
+    left: 0;
+    right: 0;
+  }
+
+  .new_arrivals_top_sellers_flex{
+    flex-direction: row;
+  }
+
+
+  .new_arrivals_products{
+    display: flex;
+    
+  }
+
+  .new_arrivals_font{
+    color: rgb(56, 56, 56);
+    font-size: x-large;
+    text-decoration: 3px underline rgb(238, 0, 0) ;
+    text-underline-offset: 10px;
+    
+  }
+
+  .top_sellers_products{
+    display: flex;
+  }
+
+  .top_seller_font{
+    color: rgb(56, 56, 56);
+    font-size: x-large;
+    text-decoration: 3px underline rgb(238, 0, 0) ;
+    text-underline-offset: 10px;
+    
+
+  }
+
+  /* Customers Comments Section */
+  
+  .comments{
+
   }
 
 /* Sign-up Form */
