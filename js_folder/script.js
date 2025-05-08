@@ -36,7 +36,7 @@ function decrease() {
             resultDiv.innerHTML = `New Price: <strong>${newPrice.toFixed(2)}</strong>`;
         }
 
-
+      
 
 
         let stock = 5; 
@@ -66,6 +66,9 @@ function decrease() {
             decreaseBtn.disabled = newPrice <= minPrice;
             increaseBtn.disabled = newPrice >= maxPrice || stock === 0;
         }
+
+
+        // Zoom Image Container
 
 
         // Show popup after 5 seconds
