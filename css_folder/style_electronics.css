@@ -180,6 +180,8 @@ a{
     background-color: #45a049;
 }
 
+
+
  /* Left Side Section */
 
 #left_side_section{
@@ -201,6 +203,7 @@ a{
     left: 2%;
     top: 2%;
     font-weight: bold;
+  
      
 }
 
@@ -213,7 +216,7 @@ a{
     padding: 10px;
     top: 100%;
     left: 0;
-    z-index: 999;
+  
 }
 
 

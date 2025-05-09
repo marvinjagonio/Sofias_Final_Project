@@ -12,6 +12,8 @@ function decrease() {
     }
 }
 
+
+
  function calculateNewPrice() {
             let initialPrice = parseFloat(document.getElementById("initialPrice").value);
             let adjustmentValue = parseFloat(document.getElementById("adjustmentValue").value);
