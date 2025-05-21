@@ -2,15 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Commerce Landing Page</title>
     <link rel="stylesheet" href="css_folder/styles.css" />
+    <!-- Bootstrap -->
+     <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  /> 
   </head>
   <body>
+
+    
+
+
 <!-- Navigation Bar Section -->
 
 <header>
-  <nav class="navbar">
+  <nav id="navbar">
     <div class="logo">
       <a href="index.html">
         <img src="image/SPC-Logo.png" alt="" />
@@ -22,23 +31,13 @@
    </div>
     <ul class="nav-links">
       <li><a href="#"><img class="navbar_icon" src="icons/home.png" alt=""></a></li>
-      <li class="dropdown">
-        <a href="#"><small>Products ▼</small></a>
-        <ul class="dropdown-menu">
-          <li><a href="items_page_folder/electronic_page.html">Electronics</a></li>
-        <li><a href="items_page_folder/storage_page.html"> Storage</a></li>
-        <li><a href="items_page_folder/accessories_page.html">Accessories</a></li>
-        <li><a href="items_page_folder/memory_page.html">Memory</a></li>
-        </ul>
-      </li>
-
       <li><a href="#"><img class="navbar_icon" src="icons/about.png" alt=""></a></li>
       <li><a href="#"><img class="navbar_icon" src="icons/contact_us.png" alt=""></a></li>
       <li><a href="#"><img class="navbar_icon" src="icons/wishlist.png" alt=""></a></li>
       <li><a href="#"><img class="navbar_icon" src="image/cart.png" alt=""></a></li>
       <li><a href="#"><img class="navbar_icon" src="icons/log-in.png.png" alt=""></a></li>
-      <li><a href="#"><img class="navbar_icon" src="icons/sign_up.png" alt=""></a></li>
-    </ul>
+      <li><a href="#"><img class="navbar_icon" src="icons/nav_icon_2.png" alt=""></a></li>
+    </ul> 
     <div class="scrolling-container">
       <div class="scrolling-text">
        ShopMate now offers Easy2Get Delivery, where you can deliver your order as fast as 3 hours for orders between 9:00AM to 12:00PM, available on some areas of Metro Manila. Express Delivery is also available from on some areas of Metro Manila. Express Delivery is also available from 8:00AM to 2:00PM providing prompt delivery within two hours. Same Day Delivery for orders within some areas of Metro Manila, as well as specific areas in Rizal, Cavite, and Bulacan.
@@ -46,12 +45,105 @@
     </div>
   </nav>
 </header>
+
+ <!-- Second Nav-bar -->
+
+   <section>
+      <nav id="nav-bar2"><ul class="nav-link2"><li><a href="">Home</a> </li><li class="dropdown2">
+        <a href="#">Products ▼</a>
+        <ul class="dropdown-menu2">
+          <li class="dropdown3">
+          <a href="items_page_folder/electronic_page.html"><b>Electronics</b></a> 
+          <ul class="dropdown-menu3">
+            <div class="dropdown3-flex">
+              <div>
+            <li><a href="">Chassis Fan</a></li>
+            <li><a href="">Chassis Fan</a></li>
+           <li><a href="">Chassis Fan</a></li>
+           <li><a href="">Chassis Fan</a></li>
+          </div>
+          <div>
+            <li><a href="">Chassis Fan</a></li>
+            <li><a href="">Chassis Fan</a></li>
+           <li><a href="">Chassis Fan</a></li>
+           <li><a href="">Chassis Fan</a></li>
+           </div>
+           </div>
+           </ul>
+           
+        </li>
+        <li class="dropdown4"><a href="items_page_folder/storage_page.html"> <b>Storage</b> </a>
+        <ul class="dropdown-menu4">
+            <div class="dropdown3-flex">
+              <div>
+            <li><a href="">Electronics</a></li>
+            <li><a href="">Electronics</a></li>
+           <li><a href="">Electronics</a></li>
+           <li><a href="">Electronics</a></li>
+          </div>
+          <div>
+            <li><a href="">Electronics</a></li>
+            <li><a href="">Electronics</a></li>
+           <li><a href="">Electronics</a></li>
+           <li><a href="">Electronics</a></li>
+           </div>
+           </div>
+           </ul></li>
+        <li class="dropdown5"><a href="items_page_folder/accessories_page.html"><b>Acessories</b> </a>
+        <ul class="dropdown-menu5">
+            <div class="dropdown3-flex">
+              <div>
+            <li><a href="">Storage</a></li>
+            <li><a href="">Storage</a></li>
+           <li><a href="">Storage</a></li>
+           <li><a href="">Storage</a></li>
+          </div>
+          <div>
+            <li><a href="">Storage</a></li>
+            <li><a href="">Storage</a></li>
+           <li><a href="">Storage</a></li>
+           <li><a href="">Storage</a></li>
+           </div>
+           </div>
+           </ul></li>
+        <li class="dropdown6"><a href="items_page_folder/memory_page.html"><b>Memory</b> </a>
+         <ul class="dropdown-menu6">
+            <div class="dropdown3-flex">
+              <div>
+            <li><a href="">Accessories</a></li>
+            <li><a href="">Accessories</a></li>
+           <li><a href="">Accessories</a></li>
+           <li><a href="">Accessories</a></li>
+          </div>
+          <div>
+            <li><a href="">Accessories</a></li>
+            <li><a href="">Accessories</a></li>
+           <li><a href="">Accessories</a></li>
+           <li><a href="">Accessories</a></li>
+           </div>
+           </div>
+           </ul></li>
+        </ul>
+      </li>
+    <li><a href="">Desktop</a></li>
+    <li><a href="">Laptop</a></li>
+    <li><a href="">Powerd by MSI</a></li>
+    <li><a href="">Build a PC</a></li>
+    <li><a href="">RAKK</a></li>
+    <li><a href="">ShopMate</a></li>
+    <li><a href="">Rewards</a></li>
+    <li><a href="">Brands</a></li>
+    </ul>
+    
+  </nav>
+  </section>
+    
     
     <!-- Start Up Pop-Up Section -->
 
     <div id="start_popup" class="start_popup">
-      <div class="start_popup-content">
-        <span class="start_close-btn" onclick="closePopup()">&times;</span>
+      <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
         <div class="pop-up_flex">
           <div class="pop-up_left_image">
             <img src="image/SPC-Logo.png" alt="" />
@@ -63,8 +155,8 @@
             </p>
 
             <p class="left_p_2">
-              Plus get early access to new items, exclusive offers and more.No
-              spam ever obve
+              Plus get early access to new items, exclusive offers and more <br>.No
+              spam ever above
             </p>
             <div class="pop-up_form">
               <form action="">
@@ -75,9 +167,11 @@
                     id=""
                   />
                 </div>
+                <br>
                 <div>
                   <input type="text" placeholder="Enter Your Email Address" />
                 </div>
+                <br>
                 <button class="continue_button">Continue</button>
               </form>
             </div>
@@ -1004,6 +1098,10 @@
     <script src="js_folder/floating_log-in_sign-up.js"></script>
     <script src="js_folder/script.js"></script>
     <script src="js_folder/slides.js"></script>
-    
+    <!-- Bootstrap -->
+     <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+   
   </body>
 </html>

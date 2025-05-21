@@ -1,3 +1,5 @@
+
+
 // Get elements
 const loginPopup = document.getElementById("loginPopup");
 const openLogin = document.getElementById("openLogin");
@@ -36,12 +38,21 @@ window.addEventListener("click", (event) => {
     }
 });
 
-// Startup popup
-setTimeout(function () {
+function showPopup() {
     document.getElementById("start_popup").style.display = "flex";
-}, 5000);
+  }
 
-// Function to close the popup
-function closePopup() {
+  function closePopup() {
     document.getElementById("start_popup").style.display = "none";
-}
+  }
+
+  window.onclick = () => {
+    if (!localStorage.getItem("popupShown")) {
+      setTimeout(() => {
+        showPopup();
+        localStorage.setItem("popupShown", "true");
+      }, 1500); // Popup appears 1.5 seconds after load
+    }
+  };
+
+
