@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const itemsCategoryPreview = document.querySelector(".items_category_preview");
 
 
-  let itemsCategory = 0;
+  let itemsCategory = 1;
   const itemsVisibleSlides = 6;
 
 

@@ -1,34 +1,41 @@
-
-
-// Get elements
+  // Get elements
+const startPopupCloseBtn = document.querySelector(".start_popup_close-btn");
+const startPopup = document.getElementById("start_popup");
 const loginPopup = document.getElementById("loginPopup");
-const openLogin = document.getElementById("openLogin");
-const closeLoginBtn = document.querySelector(".close-btn");
+const loginBtn = document.getElementById("loginBtn");
+const loginCloseBtn = document.querySelector(".login_close-btn");
+const signUpBtn = document.getElementById("signUpBtn");
 const signUpPopup = document.getElementById("signUpPopup");
-const openSignUp = document.getElementById("openSignUp");
-const closeSignUpBtn = document.querySelector(".sign-up_close-btn");
+const signUpCloseBtn = document.querySelector(".sign-up_close-btn");
 
-// Show login form
-openLogin.addEventListener("click", () => {
-    loginPopup.style.display = "block";
+//start_pop-up
+
+startPopupCloseBtn.addEventListener("click", () => {
+   startPopup.style.display = "none";
 });
 
-// Hide login form
-closeLoginBtn.addEventListener("click", () => {
-    loginPopup.style.display = "none";
+//log-in pop-up
+
+loginBtn.addEventListener("click", () => {
+  loginPopup.style.display = "block";
 });
 
-// Show sign-up form
-openSignUp.addEventListener("click", () => {
+loginCloseBtn.addEventListener("click", () => {
+  loginPopup.style.display = "none";
+});
+
+//sign-up pop-up
+
+
+signUpBtn.addEventListener("click", () => {
     signUpPopup.style.display = "block";
 });
 
-// Hide sign-up form
-closeSignUpBtn.addEventListener("click", () => {
+
+signUpCloseBtn.addEventListener("click", () => {
     signUpPopup.style.display = "none";
 });
 
-// Hide when clicking outside
 window.addEventListener("click", (event) => {
     if (event.target === loginPopup) {
         loginPopup.style.display = "none";
@@ -37,6 +44,8 @@ window.addEventListener("click", (event) => {
         signUpPopup.style.display = "none";
     }
 });
+
+// start pop-up
 
 function showPopup() {
     document.getElementById("start_popup").style.display = "flex";
@@ -54,5 +63,7 @@ function showPopup() {
       }, 1500); // Popup appears 1.5 seconds after load
     }
   };
+
+
 
 
