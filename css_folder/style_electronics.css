@@ -334,12 +334,11 @@ a{
 
 #left_side_section{
     position: absolute;
-    /* border: 1px solid black; */
-    left: 6%;
+    left: 5%;
     top: 23%;
     color: rgb(51, 51, 51);
     height: 550px;
-    width: 280px;
+    width: 281px;
     padding: 20px;
     background-color: white;
     border: 0.5px solid #c7c7c7;
@@ -456,7 +455,7 @@ label{
 #right_side_section{
     position: absolute;
     left: 25%;
-    top: 18%;
+    top: 19%;
 }
 
 /* Container */
@@ -464,6 +463,7 @@ label{
     position: absolute;
     display: inline-block;
     right: 20%;
+    top: -1%;
   }
   
   /* Button */
@@ -508,8 +508,9 @@ label{
     background-color: #ddd;
   }
 
+   /* Product Card */
+
   .product {
-    flex-direction: column;
     background: white;
     padding: 10px 20px;
     border-radius: 10px;
@@ -542,13 +543,36 @@ label{
     border-radius: 10px;
 }
 
-.product p{
+.product_save{
     background-color: yellow;
     text-align: left;
-    width: 90px;
+    width: fit-content;
     padding: 5px;
     border-radius: 10px;
+    font-size: 0.9rem;
+    flex-wrap: nowrap;
 }
+
+.product_column h5,
+.product_column h6{
+  margin: 2px;
+}
+
+.product_list {
+  display: flex;      
+  gap: 0;              
+  flex-wrap: wrap;     
+}
+
+.product_name{
+ font-size: small;
+  white-space: nowrap;       
+  overflow: hidden;          
+  text-overflow: ellipsis;   
+  width: 100%;               
+  display: block; 
+}
+
 
 .products_hover li a:hover{
     color: red;
@@ -559,9 +583,9 @@ label{
 }
 
 .product_image {
-    width: 100%;
+  width: 100%;
   height: auto;
-  max-height: 150px; /* Compressed image height */
+  max-height: 150px; 
   object-fit: cover;
   margin-bottom: 8px;
 }
@@ -569,33 +593,29 @@ label{
 
 
 .product_column{
-    flex-direction: column;
-    padding-bottom: 50px;
-    text-align: left;
-    column-gap: 0;
-     
-}
-
-.product_column h5{
-  position: absolute;
-  bottom: 14%;
+  text-align: left;
+  flex-direction: column;
+  padding-bottom: 20px;
+  width: 180px;
+  
+        
 }
 
 .product_column h6{
-    position: absolute;
-    text-decoration: line-through;
-    bottom: 9%;
+  text-decoration: line-through; 
 }
 
 .product_buttons{
    margin-right: 30px;
 }
 
+.product_small_font{
+  font-size: smaller;
+}
+
 .star{
-    height: 50px;
-    position: absolute;
-    bottom: 21%;
-    left: 6%;
+    height: 25px;
+   margin: 0;
     
 }
 
@@ -656,6 +676,8 @@ label{
     top: -20%;
     display: flex;
 }
+
+
 
 
 
