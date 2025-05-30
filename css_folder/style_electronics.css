@@ -170,7 +170,7 @@ a{
   /* Nav-bar2 */
   
   #nav-bar2{
-    top: 10%;
+    top: 8%;
     left: 0;
     right: 0;
     position: fixed;
@@ -335,7 +335,7 @@ a{
 #left_side_section{
     position: absolute;
     left: 5%;
-    top: 23%;
+    top: 28%;
     color: rgb(51, 51, 51);
     height: 550px;
     width: 281px;
@@ -455,7 +455,7 @@ label{
 #right_side_section{
     position: absolute;
     left: 25%;
-    top: 19%;
+    top: 24%;
 }
 
 /* Container */
