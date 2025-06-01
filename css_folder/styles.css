@@ -32,7 +32,7 @@ button, p, h5, h6 {
     align-items: center;
     background-color: rgb(194, 194, 194);
     border: 1px solid #b9b9b9;
-    padding: 0 20px;
+    padding: 5px 20px;
     padding-right: 160px;
     top: 0;
     right: 0;
@@ -183,7 +183,7 @@ button, p, h5, h6 {
   /* Nav-bar2 */
   
   #nav-bar2{
-    top: 9.5%;
+    top: 10.5%;
     left: 0;
     right: 0;
     position: fixed;
@@ -341,6 +341,9 @@ button, p, h5, h6 {
       box-shadow: 0 0 15px rgba(0,0,0,0.3);
       position: relative;
       z-index: 10;
+      transform: translateY(-100px);
+      opacity: 0;
+      animation: slideDown 0.5s forwards;
       
     }
 
@@ -412,7 +415,14 @@ button, p, h5, h6 {
     border: 0;
     background-color: #3c9052;
     color: white;
-} 
+}
+
+@keyframes floatIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
   /* Sign-up Form */
 
@@ -433,6 +443,7 @@ button, p, h5, h6 {
 
 .sign-up_popup-content{
     background: white;
+    opacity: 0;
     width: 390px;
     padding: 30px;
     position: relative;
@@ -440,6 +451,9 @@ button, p, h5, h6 {
     top: 25%;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transform: translateY(-100px);
+    opacity: 0;
+    animation: slideDown 0.5s forwards;
 }
 
 .sign-up_h1{
@@ -488,11 +502,12 @@ button, p, h5, h6 {
     padding: 0 120px;
 }
 
-
-  
-
-
-
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
  /* Scrolling Text Section */
 
@@ -505,7 +520,7 @@ button, p, h5, h6 {
     font-size: small;
     padding: 5px 0;
     position: fixed;
-    top: 6.3%;
+    top: 7.5%;
     left: 0%;
     right: 0%;
     z-index: 10;
@@ -962,6 +977,9 @@ button, p, h5, h6 {
     top: 30%;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transform: translateY(-100px);
+    opacity: 0;
+    animation: slideDown 0.5s forwards;
 }
 
 .log-in_h1{
@@ -1345,8 +1363,8 @@ footer {
 
 .b_w_logo img{
 border: none;
-width: 50px;
-height: 50px;
+width: 30px;
+height: 30px;
 }
 
 .footer_link:hover{
