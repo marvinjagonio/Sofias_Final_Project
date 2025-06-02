@@ -805,7 +805,7 @@ button, p, h5, h6 {
 
 .product_column h5,
 .product_column h6{
-  margin: 2px;
+  margin: 5px;
 }
 
 .product_list {
@@ -845,7 +845,7 @@ button, p, h5, h6 {
 .product_column{
   text-align: left;
   flex-direction: column;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   width: 180px;
   
         
@@ -869,6 +869,31 @@ button, p, h5, h6 {
     
 }
 
+.btn_star_flex{
+    display: flex;
+    gap: 55%;
+    margin: 0;
+}
+
+.spcfix_btn{
+    background-color: green;
+  color: white;
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.spcfix_btn:hover{
+    background-color: green;
+}
+
+.star_flex{
+    display: flex;
+    gap: 0;
+}
+
 
 .cart{
     background-color: rgb(53, 187, 53);
@@ -884,7 +909,7 @@ button, p, h5, h6 {
 }
 
 .cart img{
-    width: 15px;
+    width: 25px;
     padding: 5px;
     color: #333;
 }

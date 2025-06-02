@@ -689,8 +689,6 @@ button, p, h5, h6 {
   
 }
 
-
-
 .product {
     background: white;
     padding: 10px 20px;
@@ -721,7 +719,7 @@ button, p, h5, h6 {
     padding-bottom: 10px;
     height: 30px;
     z-index: 1;
-     margin-top: 5px;
+    margin-top: 5px;
     height: fit-content;
     border-top: none;
     
@@ -864,6 +862,7 @@ button, p, h5, h6 {
     width: 150px;
     height: 35px;
     margin-right: 20px;
+    
 }
 
 .buy_now:hover{
