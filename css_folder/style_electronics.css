@@ -507,6 +507,10 @@ button, p, h5, h6 {
   }
 }
 
+.star_rating{
+  color: green;
+}
+
  /* Scrolling Text Section */
 
 .scrolling-container {
@@ -920,7 +924,7 @@ button, p, h5, h6 {
 }
 
 .buy_now{
-    background-color: rgb(53, 187, 53);
+    background-color: rgb(0, 155, 0);
     border-radius: 10px;
     border: none;
     padding: 5px;
