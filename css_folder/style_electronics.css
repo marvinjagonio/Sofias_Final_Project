@@ -771,8 +771,8 @@ button, p, h5, h6 {
     box-shadow: 0 4px 8px rgba(104, 104, 104, 0.5);
     transition: transform 0.3s ease;
     margin: 5px;
-    width: auto;
-    height: auto;
+    max-width: 250px;
+    max-height: fit-content;
     text-align: center;
     position: relative;
 }
@@ -837,8 +837,8 @@ button, p, h5, h6 {
 }
 
 .product_image {
-  width: 100%;
-  height: auto;
+  max-width: fit-content;
+  max-height: fit-content;
   max-height: 150px; 
   object-fit: cover;
   margin-bottom: 8px;

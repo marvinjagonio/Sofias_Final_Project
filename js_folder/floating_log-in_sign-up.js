@@ -7,6 +7,7 @@ const loginCloseBtn = document.querySelector(".login_close-btn");
 const signUpBtn = document.getElementById("signUpBtn");
 const signUpPopup = document.getElementById("signUpPopup");
 const signUpCloseBtn = document.querySelector(".sign-up_close-btn");
+const cartBtn = document.getElementById("cart");
 
 //start_pop-up
 
