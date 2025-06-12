@@ -124,8 +124,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const loptopsVisibleSlides = 3;
   const desktopVisibleSlides = 3;
 
-  const loptopSlideWidth = loptopContainer.querySelector(".product").offsetWidth + 30;
-  const desktopSlideWidth = desktopContainer.querySelector(".product").offsetWidth + 30;
+  window.addEventListener("resize", () => {
+  loptopSlideWidth = loptopContainer.querySelector(".product").offsetWidth + 30;
+  desktopSlideWidth = desktopContainer.querySelector(".product").offsetWidth + 30;
+  updateLoptopCarousel();
+  updateDesktopCarousel();
+   });
 
   const loptoptotalSlides = loptopContainer.querySelectorAll(".product").length;
   const desktoptotalSlides = desktopContainer.querySelectorAll(".product").length;
@@ -148,10 +152,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   loptopPrevButton.addEventListener("click", () => {
-    if (indexLoptop > 0) {
-      indexLoptop--;
-    }
-    updateLoptopCarousel();
+     if (indexLoptop > 0) {
+    indexLoptop--;
+    } else {
+    indexLoptop = loptoptotalSlides - loptopsVisibleSlides;
+     }
+     updateLoptopCarousel();
   });
 
   desktopNextButton.addEventListener("click", () => {
@@ -164,11 +170,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   desktopPrevButton.addEventListener("click", () => {
-    if (indexDesktop > 0) {
-      indexDesktop--;
-    }
-    updateDesktopCarousel();
+   if (indexDesktop > 0) {
+    indexDesktop--;
+    } else {
+    indexDesktop = loptoptotalSlides - loptopsVisibleSlides;
+     }
+     updateDesktopCarousel();
   });
+
+  if (loptoptotalSlides <= loptopsVisibleSlides) {
+  loptopNextButton.style.display = "none";
+  loptopPrevButton.style.display = "none";
+  }
 });
 
     // Items Category Products

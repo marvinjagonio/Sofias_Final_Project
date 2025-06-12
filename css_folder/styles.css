@@ -529,16 +529,19 @@ button, p, h5, h6 {
 .addToCart_popup-content{
     background: white;
     opacity: 0;
-    width: 390px;
-    padding: 30px;
+    width: 50%;
+    padding: 50px;
     position: relative;
-    left: 40%;
-    top: 25%;
+    left: 25%;
+    top: 30%;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
     transform: translateY(-100px);
     opacity: 0;
     animation: slideDown 0.5s forwards;
+    font-size: large;
+    
+    
 }
 
 .addToCart_h1{
@@ -556,6 +559,63 @@ button, p, h5, h6 {
     font-size: 20px;
     cursor: pointer;
     color: black;
+}
+
+.product_added_flex{
+  display: flex;
+  gap: 10px;
+}
+
+.product_added_flex img{
+  height: 200px;
+}
+.product_added_flex p{
+  color: #222 !important;
+}
+
+.addToCart_item_p{
+  margin-top: 20px;
+}
+
+.addToCart_button_flex{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.addToCart_button_flex p{
+  color: #222 !important;
+}
+
+.addToCart_button_flex input{
+     padding: 10px 10px;
+    color: white;
+    border-radius: 10px;
+    font-weight: 500;
+    margin: 20px 0;
+    font-size: x-large;
+    border: none;
+    background-color: #3c9052;
+    
+}
+
+.checkout_btn{
+  background-color: yellow;
+  color: #222;
+}
+
+.cart_paragraph{
+  color: #00ad2e;
+}
+
+.addToCart_hr{
+  width: 100%;
+  color: #222;
+  border: 1px solid black;
+}
+
+#popupProductLess{
+  text-decoration: line-through;
 }
 
 
