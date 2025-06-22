@@ -49,15 +49,13 @@ startPopupCloseBtn.addEventListener("click", () => {
    startPopup.style.display = "none";
 });
 
-<<<<<<< HEAD
-=======
+
 // Sign-up pop-up
 
 signUpCloseBtn.addEventListener("click", () => {
    signUpPopup.style.display = "none";
 });
 
->>>>>>> a74a0ca (Initial commit)
 //log-in pop-up
 
 loginBtn.addEventListener("click", () => {
@@ -75,11 +73,10 @@ signUpBtn.addEventListener("click", () => {
     signUpPopup.style.display = "block";
 });
 
-<<<<<<< HEAD
-=======
+
 signUpCloseBtn
 
->>>>>>> a74a0ca (Initial commit)
+
 
 
 window.addEventListener("click", (event) => {

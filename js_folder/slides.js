@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextButton = document.querySelector(".next");
 
     let index = 0;
-    const visibleSlides = 3; // Adjust to show more or fewer slides
+    const visibleSlides = 3; 
     const totalSlides = slides.length;
-    const slideWidth = slides[0].offsetWidth + 10; // Includes gap
+    const slideWidth = slides[0].offsetWidth + 10; 
 
     function updateCarousel() {
         sliderContainer.style.transform = `translateX(-${index * slideWidth}px)`;
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (index < totalSlides - visibleSlides) {
             index++;
         } else {
-            index = 0; // Loop back to the start
+            index = 0; 
         }
         updateCarousel();
     });
@@ -26,12 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (index > 0) {
             index--;
         } else {
-            index = totalSlides - visibleSlides; // Loop to the end
+            index = totalSlides - visibleSlides; 
         }
         updateCarousel();
     });
 
-    // Auto-slide every 3 seconds
+    
     setInterval(() => {
         nextButton.click();
     }, 3000);
@@ -39,8 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
  });
 
-<<<<<<< HEAD
-=======
+
 //  Featured Products Section
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -77,9 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-           // Featured Brands Section
+ // Featured Brands Section
 
->>>>>>> a74a0ca (Initial commit)
+
 document.addEventListener("DOMContentLoaded", () => {
     const featuredContainer = document.querySelector(".featured_brands_container");
     const featuredSlides = document.querySelectorAll(".featured_brands_slides");
@@ -87,11 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevButton = document.querySelector(".featured_brands_button_next");
 
     let index = 0;
-<<<<<<< HEAD
-    const slideWidth = featuredSlides[1].offsetWidth; // No need to add padding separately
-=======
+
     const slideWidth = featuredSlides[1].offsetWidth; 
->>>>>>> a74a0ca (Initial commit)
+
     const totalSlides = featuredSlides.length;
 
     function updateSlider() {
@@ -126,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevButton = document.querySelector(".third_bottom_button_left");
 
     let index = 0;
-    const slideWidth = thirdBottomSlides[1].offsetWidth; // No need to add padding separately
+    const slideWidth = thirdBottomSlides[1].offsetWidth; 
     const totalSlides = thirdBottomSlides.length;
 
      function updateCarousel() {
@@ -137,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (index < totalSlides - 1) {
             index++;
         } else {
-            // index = 0; // Loop back to the start
+            
         }
         updateCarousel();
     });
@@ -146,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (index > 0) {
             index--;
         } else {
-            // index = totalSlides - 1; // Loop to the end
+            
         }
         updateCarousel();
     });
@@ -155,18 +152,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-<<<<<<< HEAD
-document.addEventListener("DOMContentLoaded", () => {
-  const loptopContainer = document.querySelector(".loptop");
-  const desktopContainer = document.querySelector(".desktop");
-
-=======
-// Loptop and Desktop Product
 
 document.addEventListener("DOMContentLoaded", () => {
   const loptopContainer = document.querySelector(".loptop");
   const desktopContainer = document.querySelector(".desktop");
->>>>>>> a74a0ca (Initial commit)
   const loptopNextButton = document.querySelector(".loptop_next");
   const loptopPrevButton = document.querySelector(".loptop_preview");
   const desktopNextButton = document.querySelector(".desktop_next");
@@ -174,26 +163,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let indexLoptop = 0;
   let indexDesktop = 0;
-<<<<<<< HEAD
-  const loptopsVisibleSlides = 3;
-  const desktopVisibleSlides = 3;
 
-  window.addEventListener("resize", () => {
-  loptopSlideWidth = loptopContainer.querySelector(".product").offsetWidth + 30;
-  desktopSlideWidth = desktopContainer.querySelector(".product").offsetWidth + 30;
-  updateLoptopCarousel();
-  updateDesktopCarousel();
-   });
-=======
   const loptopsVisibleSlides = 2;
   const desktopVisibleSlides = 2;
 
-  const loptopSlideWidth = loptopContainer.querySelector(".product").offsetWidth + 30;
-  const desktopSlideWidth = desktopContainer.querySelector(".product").offsetWidth + 30;
->>>>>>> a74a0ca (Initial commit)
-
   const loptoptotalSlides = loptopContainer.querySelectorAll(".product").length;
   const desktoptotalSlides = desktopContainer.querySelectorAll(".product").length;
+
+  let loptopSlideWidth = 0;
+  let desktopSlideWidth = 0;
+
+  function calculateSlideWidths() {
+    loptopSlideWidth = loptopContainer.querySelector(".product").offsetWidth + 30;
+    desktopSlideWidth = desktopContainer.querySelector(".product").offsetWidth + 30;
+  }
 
   function updateLoptopCarousel() {
     loptopContainer.style.transform = `translateX(-${indexLoptop * loptopSlideWidth}px)`;
@@ -203,52 +186,42 @@ document.addEventListener("DOMContentLoaded", () => {
     desktopContainer.style.transform = `translateX(-${indexDesktop * desktopSlideWidth}px)`;
   }
 
+  // Initial setup
+  calculateSlideWidths();
+  updateLoptopCarousel();
+  updateDesktopCarousel();
+
+  // Responsive
+  window.addEventListener("resize", () => {
+    calculateSlideWidths();
+    updateLoptopCarousel();
+    updateDesktopCarousel();
+  });
+
+
+   // Button functionality
   loptopNextButton.addEventListener("click", () => {
-    if (indexLoptop < loptoptotalSlides - loptopsVisibleSlides) {
-      indexLoptop++;
-    } else {
-      indexLoptop = 0;
-    }
+    indexLoptop = (indexLoptop < loptoptotalSlides - loptopsVisibleSlides) ? indexLoptop + 1 : 0;
     updateLoptopCarousel();
   });
 
   loptopPrevButton.addEventListener("click", () => {
-     if (indexLoptop > 0) {
-    indexLoptop--;
-    } else {
-    indexLoptop = loptoptotalSlides - loptopsVisibleSlides;
-     }
-     updateLoptopCarousel();
+    indexLoptop = (indexLoptop > 0) ? indexLoptop - 1 : loptoptotalSlides - loptopsVisibleSlides;
+    updateLoptopCarousel();
   });
 
   desktopNextButton.addEventListener("click", () => {
-    if (indexDesktop < desktoptotalSlides - desktopVisibleSlides) {
-      indexDesktop++;
-    } else {
-      indexDesktop = 0;
-    }
+    indexDesktop = (indexDesktop < desktoptotalSlides - desktopVisibleSlides) ? indexDesktop + 1 : 0;
     updateDesktopCarousel();
   });
 
   desktopPrevButton.addEventListener("click", () => {
-   if (indexDesktop > 0) {
-    indexDesktop--;
-    } else {
-<<<<<<< HEAD
-    indexDesktop = loptoptotalSlides - loptopsVisibleSlides;
-=======
-    indexDesktop = desktoptotalSlides - desktopVisibleSlides;
->>>>>>> a74a0ca (Initial commit)
-     }
-     updateDesktopCarousel();
+    indexDesktop = (indexDesktop > 0) ? indexDesktop - 1 : desktoptotalSlides - desktopVisibleSlides;
+    updateDesktopCarousel();
   });
 
-<<<<<<< HEAD
+  // Hide buttons if not needed
   if (loptoptotalSlides <= loptopsVisibleSlides) {
-  loptopNextButton.style.display = "none";
-  loptopPrevButton.style.display = "none";
-=======
-    if (loptoptotalSlides <= loptopsVisibleSlides) {
     loptopNextButton.style.display = "none";
     loptopPrevButton.style.display = "none";
   }
@@ -256,34 +229,24 @@ document.addEventListener("DOMContentLoaded", () => {
   if (desktoptotalSlides <= desktopVisibleSlides) {
     desktopNextButton.style.display = "none";
     desktopPrevButton.style.display = "none";
->>>>>>> a74a0ca (Initial commit)
   }
+
 });
+
+
 
     // Items Category Products
 
 document.addEventListener("DOMContentLoaded", () => {
   const itemsCategoryContainer = document.querySelector(".items_category");
-<<<<<<< HEAD
-
-=======
->>>>>>> a74a0ca (Initial commit)
   const itemsCategoryNext = document.querySelector(".items_category_next");
   const itemsCategoryPreview = document.querySelector(".items_category_preview");
-
-
   let itemsCategory = 1;
-<<<<<<< HEAD
-  const itemsVisibleSlides = 6;
-
-
-  const itemsSlideWidth = document.querySelector(".items_category_product").offsetWidth + 10;
-=======
   const itemsVisibleSlides = 7;
 
 
   const itemsSlideWidth = document.querySelector(".items_category_product").offsetWidth + 34;
->>>>>>> a74a0ca (Initial commit)
+
 
 
   const itemstotalSlides = itemsCategoryContainer.querySelectorAll(".items_category_product").length;
@@ -312,32 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-<<<<<<< HEAD
-  const commentsContainer = document.querySelector(".comments_flex");
 
-  const commentsNextButton = document.querySelector(".comments_next_button");
-  const commentsPreviewButton = document.querySelector(".comments_preview_button");
-
-
-  let comments = 0;
-  const commentsVisibleSlides = 4;
-
-
-  const commentsSlideWidth = document.querySelector(".comment").offsetWidth + 10;
-
-
-  const commentstotalSlides = commentsContainer.querySelectorAll(".comment").length;
-
-  function updateCommentsCarousel() {
-    commentsContainer.style.transform = `translateX(-${comments * commentsSlideWidth}px)`;
-  }
-
-  commentsNextButton.addEventListener("click", () => {
-    if (comments < commentstotalSlides - commentsVisibleSlides) {
-      comments++;
-    } else {
-      comments = 0;
-=======
   const commentsContainer = document.querySelector(".comments_container");
   const commentsNextButton = document.querySelector(".comments_next");
   const commentsPreviewButton = document.querySelector(".comments_preview");
@@ -357,27 +295,93 @@ document.addEventListener("DOMContentLoaded", () => {
       commentsIndex++;
     } else {
       commentsIndex = 0;
->>>>>>> a74a0ca (Initial commit)
+
     }
     updateCommentsCarousel();
   });
+ 
 
   commentsPreviewButton.addEventListener("click", () => {
-<<<<<<< HEAD
+
     if (comments > 0) {
       comments--;
-=======
+
     if (commentsIndex > 0) {
       commentsIndex--;
-    } else{
+    } else{ 
       commentsIndex = commentstotalSlides - commentsVisibleSlides
->>>>>>> a74a0ca (Initial commit)
     }
     updateCommentsCarousel();
+    }
+
   });
 
-
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const newArrivalsContainer = document.querySelector(".new_arrivals_container");
+  const topSellersContainer = document.querySelector(".top_sellers_container");
+  const newArrivalsNextButton = document.querySelector(".new_arrivals_next");
+  const newArrivalsPreviewButton = document.querySelector(".new_arrivals_preview");
+  const topSellersNextButton = document.querySelector(".top_sellers_next");
+  const topSellersPreviewButton = document.querySelector(".top_sellers_preview");
+
+  let newArrivalsIndex = 0;
+  let topSellersIndex = 0;
+  const newArrivalsVisibleSlides = 5;
+  const topSellersVisibleSlides = 5;
+
+  const newArrivalsSlideWidth = newArrivalsContainer.querySelector(".product").offsetWidth + 10;
+  const newArrivalsTotalSlides = newArrivalsContainer.querySelectorAll(".product").length;
+
+  const topSellersSlideWidth = topSellersContainer.querySelector(".product").offsetWidth + 10;
+  const topSellersTotalSlides = topSellersContainer.querySelectorAll(".product").length;
+
+  function updateNewArrivalsCarousel() {
+    newArrivalsContainer.style.transform = `translateX(-${newArrivalsIndex * newArrivalsSlideWidth}px)`;
+  }
+
+  function updateTopSellersCarousel() {
+    topSellersContainer.style.transform = `translateX(-${topSellersIndex * topSellersSlideWidth}px)`;
+  }
+
+  newArrivalsNextButton.addEventListener("click", () => {
+    if (newArrivalsIndex < newArrivalsTotalSlides - newArrivalsVisibleSlides) {
+      newArrivalsIndex++;
+    } else {
+      newArrivalsIndex = 0;
+    }
+    updateNewArrivalsCarousel();
+  });
+
+  newArrivalsPreviewButton.addEventListener("click", () => {
+    if (newArrivalsIndex > 0) {
+      newArrivalsIndex--;
+    } else {
+      newArrivalsIndex = newArrivalsTotalSlides - newArrivalsVisibleSlides;
+    }
+    updateNewArrivalsCarousel();
+  });
+
+  topSellersNextButton.addEventListener("click", () => {
+    if (topSellersIndex < topSellersTotalSlides - topSellersVisibleSlides) {
+      topSellersIndex++;
+    } else {
+      topSellersIndex = 0;
+    }
+    updateTopSellersCarousel();
+  });
+
+  topSellersPreviewButton.addEventListener("click", () => {
+    if (topSellersIndex > 0) {
+      topSellersIndex--;
+    } else {
+      topSellersIndex = topSellersTotalSlides - topSellersVisibleSlides;
+    }
+    updateTopSellersCarousel();
+  });
+});
+
 
 
   
