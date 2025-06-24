@@ -1,0 +1,438 @@
+body {  
+    margin: 0;
+    padding: 0;
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+    padding-top: 160px; 
+   
+}
+
+
+a {
+    text-decoration: none !important;
+    color: #333 !important ;
+    
+}
+
+ul , li {
+    text-decoration: none !important;
+    display: block;
+}
+
+button, p, h5, h6 {
+  line-height: 1;
+  margin: 0;
+}
+
+
+/* -------------------- Navbar Section -------------------- */
+#navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(194, 194, 194);
+    border: 1px solid #b9b9b9;
+    padding: 5px 20px;
+    justify-content: space-around;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo img{
+  height: 55px;
+}
+
+.logo h2{
+    color: white;
+    font-size: larger;
+}
+
+.nav-links {
+    padding-top: 15px;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    gap: 30px;
+    
+}
+
+
+.nav-links a:hover {
+    color: #3c9052;
+}
+
+
+/* -------------------- Dropdown Menu -------------------- */
+.dropdown {
+    position: relative;
+    
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgb(194, 194, 194);
+    color: #333(255, 255, 255, 0.747);
+    list-style: none;
+    text-align: center;
+    padding: 15px 0;
+    top: 100%;
+    z-index: 999;
+    border-radius: 10px;
+}
+
+.dropdown-menu li {
+    padding: 5px 15px;
+    white-space: nowrap;
+    font-size: large;
+   
+}
+
+.dropdown-menu a {
+    color: rgb(49, 49, 49);
+    text-decoration: none;
+    text-align: center;
+    padding: 20px  20px  0 ;
+    font-size: medium;
+    
+}
+
+.dropdown-menu a:hover {
+   
+    border-radius: 10px;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+ /* -------------------- Nav-bar Search -------------------- */
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+    height: 57px;
+    background-color: white;
+    padding: 0 5px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    border: 1px solid #aaaaaa;
+    margin-right: 20px;
+    
+    
+}
+
+#search {
+    width: 85%;   
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    border-radius: 20px;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+#search-button {
+    padding: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    
+}
+
+#search-button:hover {
+    background-color: #45a049;
+}
+
+.navbar_icon{
+    height: 30px;
+    width: 30px;
+    
+}
+
+
+  /* -------------------- Nav-bar 2 Section -------------------- */
+  
+  #nav-bar2{
+    top: 13.5%;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background-color: rgb(255, 255, 255); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    height: 50px;
+
+  }
+
+  .nav-link2{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    gap: 25px;
+    cursor: pointer;
+    
+  }
+
+  .dropdown2 .dropdown3 .dropdown4 .dropdown5 .dropdown6 .dropdown7 .dropdown8 {
+   position: relative;
+  }
+
+   .dropdown-menu2 {
+    display: none;
+    position: absolute;
+    background-color: white;
+    background-color: rgb(255, 254, 254); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    list-style: none;
+    text-align: left;
+    padding: 10px 20px;
+    top: 65%;
+    z-index: 1000;
+    border-radius: 10px;
+    width: 750px;
+    
+   
+ 
+  }
+
+  .dropdown2 li{
+    font-size: medium;
+    padding: 10px 0;
+    
+    
+    
+  }
+
+  .dropdown2:hover  .dropdown-menu2 , .dropdown3:hover .dropdown-menu3 ,  .dropdown4:hover .dropdown-menu4 ,.dropdown5:hover .dropdown-menu5 ,.dropdown6:hover .dropdown-menu6 ,
+  .dropdown7:hover .dropdown-menu7 , .dropdown8:hover .dropdown-menu8{
+    display: block;
+    color: #00ad2e;
+  }
+
+
+   .dropdown-menu3 , .dropdown-menu4 , .dropdown-menu5 , .dropdown-menu6 , .dropdown-menu7 , .dropdown-menu8{
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    list-style: none;
+    text-align: left;
+    padding: 10px 15px;
+    top: 3%;   
+    z-index: 10;
+    border-radius: 10px;
+ 
+  }
+
+  .dropdown-menu3:hover{
+    color: #00ad2e;
+  }
+
+    .dropdown3 li{
+    font-size: medium;
+    padding: 10px 0;
+  
+  }
+
+  .dropdown3-flex , .dropdown4-flex , .dropdown5-flex , .dropdown6-flex , .dropdown7-flex , .dropdown8-flex{
+    display: flex;
+    float: left;
+    gap: 25px; 
+  }
+
+  .dropdown-menu3{
+    top: 0;
+    right: 17%;
+  }
+
+  .dropdown-menu4{
+    top: 0;
+    right: 10%;
+  }
+
+  .dropdown-menu5{
+    top: 0;
+    right: 53%;
+  }
+
+  .dropdown-menu6{
+    top: 0;
+    right: 54%;
+  }
+
+  .dropdown-menu7{
+    right: 50%;
+  }
+
+  .dropdown-menu8{
+    top: 0;
+    right: 43%;
+  }
+
+  .nav-bar2_green{
+    color: #3c9052;
+  }
+
+  .nav-bar_hover_green:hover{
+    color: #3c9052;
+  }
+
+  .nav-link2 li a:hover{
+    color: #3c9052 !important;
+  }
+
+/* -------------------- Scrolling Text Section -------------------- */
+
+.scrolling-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #222;
+    color: white;
+    font-size: small;
+    padding: 5px 0;
+    position: fixed;
+    top: 10%;
+    left: 0%;
+    right: 0%;
+    z-index: 0;
+    
+  }
+
+  .scrolling-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 90s linear infinite;
+   
+   
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+/* -------------------- Track Your Order -------------------- */
+
+#track_your_order_fill_section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+     
+    
+}
+
+#track_your_order_fill_section h5{
+    padding-right: 80%;
+    font-weight: normal;
+    font-size: medium;
+    
+}
+
+form{
+    border: 1px solid black;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 20px;
+    background-color: white;
+    
+}
+
+label{
+    padding: 20px;
+    font-weight: bolder;
+}
+input{
+    border-radius: 20px;
+    padding: 10px;
+    width: 400px;
+}
+
+.track_button{
+    background-color: yellow;
+    width: 150px;
+    margin-left: 30%;
+    margin-top: 5%;
+    font-size: larger;
+    border: 1px solid black;
+
+}
+
+
+
+
+
+/* -------------------- Footer Section -------------------- */
+
+footer {
+    display: flex;
+    justify-content: center;
+    background: #333;
+    color: white;
+    padding: 50px 0;
+    margin-top: 20px;
+    gap: 200px;
+}
+
+.footer-links li a{
+    color: white !important;
+
+}
+
+.footer-links li a:hover{
+    color: #00ad2e !important;
+}
+
+.footer_logo{
+    margin-left: 25px;
+    height: 70px;
+}
+
+.footer-container h4{
+    color: #00ad2e;
+}
+
+
+.b_w_logo{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.b_w_logo img{
+border: none;
+width: 30px;
+height: 30px;
+}
+
+.footer_link:hover{
+    color: #3c9052;
+    transition: color 0.3s ease-in-out;
+  
+}
+
+.footer-container h4{
+    padding-left: 30px;
+}
+
+
+
