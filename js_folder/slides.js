@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let index = 0;
     const visibleSlides = 3; 
     const totalSlides = slides.length;
+    if (!slides.length) return;
     const slideWidth = slides[0].offsetWidth + 10; 
 
     function updateCarousel() {
@@ -245,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const itemsVisibleSlides = 7;
 
 
-  const itemsSlideWidth = document.querySelector(".items_category_product").offsetWidth + 34;
+  const itemsSlideWidth = document.querySelector(".items_category_product").offsetWidth + 37;
 
 
 
@@ -381,6 +382,12 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTopSellersCarousel();
   });
 });
+
+
+  
+
+
+
 
 
 

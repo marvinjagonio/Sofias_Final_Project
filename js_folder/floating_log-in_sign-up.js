@@ -50,12 +50,6 @@ startPopupCloseBtn.addEventListener("click", () => {
 });
 
 
-// Sign-up pop-up
-
-signUpCloseBtn.addEventListener("click", () => {
-   signUpPopup.style.display = "none";
-});
-
 //log-in pop-up
 
 loginBtn.addEventListener("click", () => {
@@ -73,9 +67,9 @@ signUpBtn.addEventListener("click", () => {
     signUpPopup.style.display = "block";
 });
 
-
-signUpCloseBtn
-
+signUpCloseBtn.addEventListener("click", () => {
+   signUpPopup.style.display = "none";
+});
 
 
 
@@ -106,7 +100,7 @@ function showPopup() {
       setTimeout(() => {
         showPopup();
         localStorage.setItem("popupShown", "true");
-      }, 1500); // Popup appears 1.5 seconds after load
+      }, 1500);
     }
   };
 

@@ -104,3 +104,9 @@ document.getElementById("search-button").addEventListener("click", function() {
         const searchText = document.getElementById("search").value;
         alert("You searched for: " + searchText);
         });
+
+  function closeDropdown() {
+    const toggle = document.querySelector('[data-bs-toggle="dropdown"]');
+    const dropdown = bootstrap.Dropdown.getInstance(toggle) || new bootstrap.Dropdown(toggle);
+    dropdown.hide();
+  }
