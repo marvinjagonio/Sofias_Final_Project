@@ -164,7 +164,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let indexLoptop = 0;
   let indexDesktop = 0;
-
   const loptopsVisibleSlides = 2;
   const desktopVisibleSlides = 2;
 
@@ -221,16 +220,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateDesktopCarousel();
   });
 
-  // Hide buttons if not needed
-  if (loptoptotalSlides <= loptopsVisibleSlides) {
-    loptopNextButton.style.display = "none";
-    loptopPrevButton.style.display = "none";
-  }
-
-  if (desktoptotalSlides <= desktopVisibleSlides) {
-    desktopNextButton.style.display = "none";
-    desktopPrevButton.style.display = "none";
-  }
 
 });
 
@@ -242,17 +231,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const itemsCategoryContainer = document.querySelector(".items_category");
   const itemsCategoryNext = document.querySelector(".items_category_next");
   const itemsCategoryPreview = document.querySelector(".items_category_preview");
+
   let itemsCategory = 1;
   const itemsVisibleSlides = 7;
 
-
-  const itemsSlideWidth = document.querySelector(".items_category_product").offsetWidth + 37;
-
-
-
+  const itemsSlideWidth = document.querySelector(".items_category_product").offsetWidth + 20;
   const itemstotalSlides = itemsCategoryContainer.querySelectorAll(".items_category_product").length;
 
-  function updateItemsCarousel() {
+    function updatesItemCategoryCarousel() {
     itemsCategoryContainer.style.transform = `translateX(-${itemsCategory * itemsSlideWidth}px)`;
   }
 
@@ -262,16 +248,20 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       itemsCategory = 0;
     }
-    updateItemsCarousel();
+    updatesItemCategoryCarousel();
+   
   });
 
   itemsCategoryPreview.addEventListener("click", () => {
     if (itemsCategory > 0) {
       itemsCategory--;
+    }else{
+       itemsCategory = 0;
     }
-    updateItemsCarousel();
+    updatesItemCategoryCarousel();
   });
 
+   
 
 });
 
@@ -284,7 +274,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let commentsIndex = 0;
   const commentsVisibleSlides = 3;
 
-  const commentsSlideWidth = commentsContainer.querySelector(".comment").offsetWidth + 5;
+  const commentsSlideWidth = commentsContainer.querySelector(".comment").offsetWidth + 10;
   const commentstotalSlides = commentsContainer.querySelectorAll(".comment").length;
 
   function updateCommentsCarousel() {
@@ -303,17 +293,13 @@ document.addEventListener("DOMContentLoaded", () => {
  
 
   commentsPreviewButton.addEventListener("click", () => {
-
-    if (comments > 0) {
-      comments--;
-
     if (commentsIndex > 0) {
       commentsIndex--;
     } else{ 
-      commentsIndex = commentstotalSlides - commentsVisibleSlides
+      commentsIndex = 0;
     }
     updateCommentsCarousel();
-    }
+   
 
   });
 
