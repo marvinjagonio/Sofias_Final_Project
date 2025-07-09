@@ -313,6 +313,10 @@ button, p, h5, h6 {
   
 }
 
+@media  (max-width: 991.98px){
+
+}
+
    /* -------------------- Product Card Section -------------------- */
 
   .product {
@@ -535,7 +539,9 @@ button, p, h5, h6 {
   }
 }
 
+@media  (max-width: 991.98px){
 
+}
 
 /* -------------------- Navigation Buttons -------------------- */
 
@@ -670,11 +676,6 @@ button, p, h5, h6 {
     z-index: 1;
 }
 
-/* .loptop_preview:hover , .loptop_next:hover , .desktop_preview:hover , .desktop_next:hover {
-    transform: scale(0.95);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2) inset;
-} */
-
 
 
 @media (max-width: 575.98px){
@@ -723,6 +724,9 @@ button, p, h5, h6 {
  }
 }
 
+@media  (max-width: 991.98px){
+
+}
 
   /* -------------------- Checkout Vouchers and Daily Free Shipping Section -------------------- */
 
@@ -828,6 +832,9 @@ button, p, h5, h6 {
     }
   }
 
+  @media  (max-width: 991.98px){
+
+  }
 
   /* -------------------- Customers Comments Section -------------------- */
   
@@ -923,20 +930,39 @@ button, p, h5, h6 {
    @media (max-width: 575.98px){
 
        .comments_slider{
-          width: 100px;
-          max-width: 100px;
+          width: 80px;
+          max-width: 80px;
+          margin: auto;
+       }
+
+       .comment{
+        width: 300px;
+        max-width: 300px;
+        padding: 0;
+       }
+
+       #customers_comment h3{
+        margin: auto;
+        text-align: center;
        }
   }
 
   @media (max-width: 768px) {
-
     .comments_slider {
-        width: 430px;
-        max-width: 430px;
+        width: 330px;
+        max-width: 330px;
+        margin: auto;
     }
+
+     #customers_comment h3{
+        margin: auto;
+        text-align: center;
+       }
 }
 
- 
+ @media  (max-width: 991.98px){
+
+ }
 
   /* -------------------- Payment Option Section -------------------- */
 
@@ -958,13 +984,10 @@ button, p, h5, h6 {
 /* -------------------- Footer Section -------------------- */
 
 footer {
-    display: flex;
-    justify-content: center;
     background: #333;
     color: white;
     padding: 50px 0;
-    margin-top: 20px;
-    gap: 200px;
+  
 }
 
 .footer-links li a{
@@ -974,39 +997,36 @@ footer {
 
 .footer-links li a:hover{
     color: #00ad2e !important;
+    transition: color 0.3s ease-in-out;
 }
 
-.footer_logo{
-    margin-left: 25px;
-    height: 70px;
-}
 
 .footer-container h4{
     color: #00ad2e;
 }
 
 
-.b_w_logo{
+.footer_end{
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    gap: 20px;
     cursor: pointer;
-    margin-left: 5px;
+    
 }
 
-.b_w_logo img{
-border: none;
-width: 30px;
-height: 30px;
+.footer_bw_logo{
+ border: none;
+ width: 30px;
+ height: 30px;
 }
 
-.footer_link:hover{
-    color: #3c9052;
-    transition: color 0.3s ease-in-out;
-  
+.footer_logo{
+  width: 100px;
+  height: 50px;
 }
 
-.footer-container h4{
-    padding-left: 30px;
+@media  (max-width: 991.98px){
+
 }
 
 /* -------------------- Start Pop-up Section -------------------- */
@@ -1299,9 +1319,7 @@ height: 30px;
     max-width: 60%;
     position: relative;
     padding: 20px 30px;
-    margin: 7% auto;
-    
-    
+    margin: 7% auto;   
 }
 
 

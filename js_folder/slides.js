@@ -289,7 +289,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
     updateCommentsCarousel();
+
+      window.addEventListener("resize", () => {
+    commentsVisibleSlides = window.innerWidth <= 575.98 ? 1 : 3;
+    updateCommentsCarousel();
   });
+  });
+
+
  
 
   commentsPreviewButton.addEventListener("click", () => {
