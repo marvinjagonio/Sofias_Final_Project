@@ -405,13 +405,13 @@ button, p, h5, h6 {
   padding: 2%;
   }
 
- #left_side_section {
+ .left_side_section {
   padding-top: 150px;
   width: 35%;
   padding-left: 13%;
  }
 
- #right_side_section {
+ .right_side_section {
   padding-top: 150px;
   width: 63%;
   padding-right: 1%;
@@ -496,6 +496,26 @@ button, p, h5, h6 {
   display: block;
 }
 
+@media (max-width: 575.98px){
+    .right_side_section{
+      margin: auto;
+      padding-top: 200px;
+     
+    }
+
+    .left_side_section{
+      display: none;
+    }
+
+    .product{
+      width: 230px;
+      height: 400px;
+    }
+  
+}
+
+
+
 
    /* Product Card */
 
@@ -572,9 +592,8 @@ button, p, h5, h6 {
 }
 
 .product_image {
-  max-width: fit-content;
-  max-height: fit-content;
-  max-height: 150px; 
+  max-height: 150px;
+  max-width: 150px; 
   object-fit: cover;
   margin-bottom: 8px;
 }
@@ -680,26 +699,6 @@ button, p, h5, h6 {
     margin-top: 30px;
 }
 
-@media (max-width: 500px) {
-    #left_side_section, #right_side_section {
-        position: relative;
-        top: 30%;
-        width: 50%;
-        padding: 50px 30px 10px 30px; /* top, right, bottom, left */
-    }
-
-      .products_flex {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .product {
-        width: 23%; /* Close to 25% but leaves room for gap/margin */
-        margin-bottom: 20px;
-    }
-
-}
 
 .pagination {
   bottom: 10px;
