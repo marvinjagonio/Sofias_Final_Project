@@ -1104,8 +1104,10 @@ footer {
 }
 
 .left_p_2{
+
     float: left;
     font-size: 17px;
+    font-weight: bold;
 }
 
 .pop-up_right h3{
@@ -1167,7 +1169,7 @@ footer {
 
 .popup-content{
   padding: 0;
-  margin: 10px;
+  margin: auto !important;
    width: fit-content;
    height: fit-content;
    font-size: smaller;
@@ -1186,6 +1188,10 @@ footer {
 
     .left_p_2{
       font-size: small;
+       white-space: normal;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      padding: 0 20px;
     }
 
     .left_p_1{

@@ -13,12 +13,12 @@
 </head>
 <body>
 
-  <!-- Navigation Bar Section -->
+ <!-- Navigation Bar Section -->
 
 <header>
-   <div class="bg-warning py-2 fixed-top" style="z-index: 1040;">
+   <div class="bg-warning py-2 fixed-top">
     <marquee behavior="scroll" direction="left" scrollamount="5" class="px-3">
-      ShopMate now offers easy 2 Get Delivery... (your text here)
+      SPC now offers easy 2 Get Delivery... (your text here)
     </marquee>
   </div>
  
@@ -26,12 +26,12 @@
     <div class="container-fluid">
     
       <a class="navbar-brand" href="../../index.html">
-        <img src="../../image/SPC-Logo.png" alt="Logo" class="img-fluid ps-3" style="height: 40px;" />
+        <img src="../../image/SPC-Logo.png" alt="Logo" class="img-fluid ps-3" style="height: 40px; border: none;" />
       </a>
   
    
       <button class="navbar-toggler me-3 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent1">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" id="navbar1_toggler"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarContent1">
@@ -41,14 +41,13 @@
     </form>
     <ul class="navbar-nav d-flex flex-row flex-md-row flex-wrap justify-content-around">
       <li class="nav-item mx-1"><a href="#"><img src="../../icons/about.png" class="img-fluid " style="height: 35px;" alt=""></a></li>
-      <li class="nav-item mx-1"><a href="items_page_folder/track_your_order.html"><img class="img-fluid px-2" style="height: 30px;" title="Track your order" src="../../icons/track_your_order.png"  alt=""></a></li>
+      <li class="nav-item mx-1"><a href="../../items_page_folder/track_your_order.html"><img class="img-fluid px-2" style="height: 30px;" title="Track your order" src="icons/track_your_order.png"  alt=""></a></li>
       <li class="nav-item mx-1"><a href="#"><img class="img-fluid px-2" style="height: 30px;" title="Comment Page" src="../../icons/comment_icon.png" alt=""></a></li>
       <li class="nav-item mx-1"><a href="#"><img class="img-fluid px-2" style="height: 30px;" title="Cart Page" src="../../icons/cart.png" alt=""></a></li>
       <li class="nav-item mx-1" id="loginBtn"> <a href="#"><img class="img-fluid px-2" style="height: 30px;" title="Log-in" src="../../icons/log-in.png" alt=""></a></li>
       <li class="nav-item mx-1" id="signUpBtn"><a href="#"><img class="img-fluid px-2" style="height: 30px;" title="Sign-up" src="../../icons/nav_icon_2.png" alt=""></a></li>
     </ul> 
-    </div>
-    
+    </div> 
     </div>
   </nav>
   
@@ -65,16 +64,16 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarContent2">
+      <div class="collapse navbar-collapse position-relative " id="navbarContent2">
         <ul class="navbar-nav nav-link2 w-100 flex-md-row flex-column justify-content-center gap-5">
         <li class=""><a class="nav-link" href="#">Home</a></li>
         
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Products</a>
-          <ul class="dropdown-menu p-3 mt-1" style="width: 400px;">
+          <ul class="dropdown-menu p-3 mt-1" style="width: 400px; ">
             <li>
-              <div class="row gap-4">
-                <div class="col-12 col-md-4 mb-2" >
+              <div class="row gap-1">
+                <div class="col-auto col-md-4 col-sm-3 mb-2 " >
             <ul class="list-unstyled">
             <li><a class="dropdown-item" href="#" onclick="closeDropdown()"><b  class="text-success">Components</b></a></li>
             <li><a class="dropdown-item" href="items_page_folder/component_page/cpu_cooling_fan_page.html">CPU Cooling</a></li>
@@ -119,7 +118,7 @@
       <!-- LEFT SIDE SECTION -->
       <div class="page_wrapper">
       <section class="left_side_section">
-        <div><h5><a href="../index.html">Home</a> &nbsp > &nbsp CPU Cooling Fan</h5></div>
+        <div><h5><a href="../../index.html">Home</a> &nbsp > &nbsp CPU Cooling Fan</h5></div>
         
         <h2>CPU Cooling Fan</h2>
         <!-- Max - Min Price -->
@@ -431,12 +430,14 @@
   <a href="#" class="page-link">Next »</a>
 </div>
 
-       <!-- Footer -->
+      <!-- Footer -->
 
     <footer>
-      <div class="footer-container">
-        <h4>CUSTOMER SERVICE</h4>
+      <div class="footer-container container">
+        <div class="row">
+        <div class=" col-md-3 col-sm-3 mb-2">
         <ul class="footer-links">
+          <li><a class="footer_link" href="#"><h4>CUSTOMER SERVICE</h4></a></li>
           <li><a class="footer_link" href="#">Cancellation Policy</a></li>
           <li><a class="footer_link" href="#">Delivery</a></li>
           <li><a class="footer_link" href="#">Order And Payments</a></li>
@@ -448,10 +449,10 @@
           <li><a class="footer_link" href="#">Warranty Information</a></li>
           <li><a class="footer_link" href="#">Warranty Policy</a></li>
         </ul>
-      </div>
-      <div class="footer-container">
-        <h4>COMPANY</h4>
+        </div>
+    <div class=" col-md-3 col-sm-3 mb-2">
         <ul class="footer-links">
+          <li><a class="footer_link" href="#"><h4>COMPANY</h4></a></li>
           <li><a class="footer_link" href="#">Careers</a></li>
           <li><a class="footer_link" href="#">Contact Us</a></li>
           <li><a class="footer_link" href="#">FAQs</a></li>
@@ -460,32 +461,36 @@
           <li><a class="footer_link" href="#">Reviews</a></li>
           <li><a class="footer_link" href="#">Store Locations</a></li>
         </ul>
-      </div>
-
-      <div class="footer-container">
-        <h4>LINKS</h4>
+        </div>
+        <div class=" col-md-3 col-sm-3 mb-2">
         <ul class="footer-links">
+          <li><a class="footer_link" href="#"><h4>LINKS</h4></a></li>
           <li><a class="footer_link" href="#">EasyPC Corporate</a></li>
           <li><a class="footer_link" href="#">EasyPC Community</a></li>
           <li><a class="footer_link" href="#">Lazada Official Store</a></li>
           <li><a class="footer_link" href="#">Shopee Official Store</a></li>
         </ul>
-      </div>
-      <div class="footer-container">
-        <img class="footer_logo" src="../../image/SPC-Logo.png" alt="" />
-        
+     </div>
+     <div class="col-md-3 col-sm-3 mb-2">
         <ul class="footer-links">
-          <br>
-          <h3>FOLLOW US</h3>
-            
-          <div class="b_w_logo">
-            <img src="../../black_white_logo/facebook_logo_b_w.png" alt="" />
-            <img src="../../black_white_logo/instagram_logo_b_w.png" alt="" />
-            <img src="../../black_white_logo/viber_icon_b_w.png" alt="" />
+          <div class="footer_end">
+            <img class="footer_logo" src="../../image/SPC-Logo.png" alt=""/>
+          <h4>FOLLOW US</h4>
+          <div>
+            <img class="footer_bw_logo" src="../../black_white_logo/facebook_logo_b_w.png" alt="" />
+            <img class="footer_bw_logo" src="../../black_white_logo/instagram_logo_b_w.png" alt="" />
+            <img class="footer_bw_logo" src="../../black_white_logo/viber_icon_b_w.png" alt="" />
+            </div>
           </div>
         </ul>
-      </div>
+        </div>
+        </div>
+     </div>
     </footer>
+     
+    <script src="js_folder/floating_log-in_sign-up.js"></script>
+    <script src="js_folder/script.js"></script>
+    <script src="js_folder/slides.js"></script>
        <script src="../../js_folder/page.js"></script>
 
        <!-- Bootstrap -->
