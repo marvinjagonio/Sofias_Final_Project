@@ -95,8 +95,7 @@ button, p, h5, h6 {
     border-radius: 20px;
     border: 1px solid #aaaaaa;
     margin: 0 auto 10px auto;
-    align-items: stretch;
-   
+    align-items: stretch;  
 }
 
 
@@ -200,19 +199,12 @@ button, p, h5, h6 {
   bottom: 10px;
 }
 
-
-  
-
-
-
  /* -------------------- Items Cathegory Section -------------------- */
 
 #items_category_section{
     margin:40px 0;
     width: 100%;
-    height: 200px;
-   
-    
+    height: 200px;  
 }
 
 .items_category_slider{
@@ -228,7 +220,7 @@ button, p, h5, h6 {
     display: flex;
     justify-content: left; 
     width: 100%;             
-    transition: transform 1.20s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     padding: 15px 0;    
 }
 
@@ -239,7 +231,7 @@ button, p, h5, h6 {
     text-align: center;
     box-shadow: 0 4px 8px rgba(104, 104, 104, 0.5);
     margin: 0 7px;
-    transition: transform 0.3s ease;
+    
 }
 
 .items_category_product h4{
@@ -296,7 +288,7 @@ button, p, h5, h6 {
 
   .items_category_slider{
     width: 355px;
-    margin: auto;
+    margin: auto !important;
    
   }
 
@@ -313,8 +305,29 @@ button, p, h5, h6 {
   
 }
 
-@media  (max-width: 991.98px){
+@media (min-width: 576px) and (max-width: 990px){
+   #items_category_section{
+    margin: 0;
+    padding-top: 30px;
+  }
 
+  .items_category_slider{
+    width: 473px;
+    margin: auto !important;
+   
+  }
+
+  .items_cathegory_image{
+    padding-top: 10px;
+    width: 60px;
+    height: 60px;
+    
+  }
+
+  .items_category_product{
+    padding: auto;
+  }
+     
 }
 
    /* -------------------- Product Card Section -------------------- */
@@ -537,9 +550,21 @@ button, p, h5, h6 {
     width: 280px;
     max-width: 280px;
   }
+
+   .featured_products_container{
+    margin: auto !important;
+  }
 }
 
-@media  (max-width: 991.98px){
+@media (min-width: 576px) and (max-width: 990px){
+  .featured_products_container{
+    margin: auto !important;
+  }
+
+  .featured_products_slides{
+    width: 525px;
+    max-width: 525px;
+  }
 
 }
 
@@ -712,19 +737,17 @@ button, p, h5, h6 {
   left: 80%;
   z-index: 1;
 }
+
 }
 
-@media  (max-width: 991.98px) {
+@media (max-width: 990px) {
  .loptop_desktop_flex{
   display: flex;
   flex-direction: column;
-  gap:10px;
+  gap:20px;
   margin: auto;
   
  }
-}
-
-@media  (max-width: 991.98px){
 
 }
 
@@ -832,8 +855,17 @@ button, p, h5, h6 {
     }
   }
 
-  @media  (max-width: 991.98px){
+  @media (min-width: 576px) and (max-width: 990px) {
+     #new_arrivals_top_sellers_section h2{
+      text-align: center;
+      padding: 0;
+    }
 
+    .new_arrivals_slider, .top_sellers_slider{
+      width: 500px;
+      max-width: 500px;
+      margin: auto;
+    }
   }
 
   /* -------------------- Customers Comments Section -------------------- */
@@ -930,14 +962,14 @@ button, p, h5, h6 {
    @media (max-width: 575.98px){
 
        .comments_slider{
-          width: 80px;
-          max-width: 80px;
+          width: 300px;
+          max-width: 300px;
           margin: auto;
        }
 
        .comment{
-        width: 300px;
-        max-width: 300px;
+        width: 255px;
+        max-width: 255px;
         padding: 0;
        }
 
@@ -947,10 +979,11 @@ button, p, h5, h6 {
        }
   }
 
-  @media (max-width: 768px) {
+
+  @media (min-width: 576px) and (max-width: 990px) {
     .comments_slider {
-        width: 330px;
-        max-width: 330px;
+        width: 430px;
+        max-width: 430px;
         margin: auto;
     }
 
@@ -960,9 +993,6 @@ button, p, h5, h6 {
        }
 }
 
- @media  (max-width: 991.98px){
-
- }
 
   /* -------------------- Payment Option Section -------------------- */
 
@@ -979,6 +1009,27 @@ button, p, h5, h6 {
     height: 80px;
     width: 80px;
     border-radius: 20px;
+ }
+
+   @media (max-width: 575.98px){
+    .payment_option_flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0 !important;
+    gap: 30px;
+  }
+  }
+
+
+ @media (min-width: 576px) and (max-width: 990px){
+    .payment_option_flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 150px;
+    gap: 30px;
+  }
  }
 
 /* -------------------- Footer Section -------------------- */

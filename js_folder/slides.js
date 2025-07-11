@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const itemsCategoryPreview = document.querySelector(".items_category_preview");
 
   let itemsCategory = 1;
-  const itemsVisibleSlides = 7;
+  const itemsVisibleSlides = window.innerWidth <= 575.98 ? 1 : 7;
 
   const itemsSlideWidth = document.querySelector(".items_category_product").offsetWidth + 20;
   const itemstotalSlides = itemsCategoryContainer.querySelectorAll(".items_category_product").length;
@@ -261,7 +261,10 @@ document.addEventListener("DOMContentLoaded", () => {
     updatesItemCategoryCarousel();
   });
 
-   
+      window.addEventListener("resize", () => {
+    commentsVisibleSlides = window.innerWidth <= 575.98 ? 1 : 3;
+    updateCommentsCarousel();
+  });
 
 });
 
@@ -272,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const commentsPreviewButton = document.querySelector(".comments_preview");
 
   let commentsIndex = 0;
-  const commentsVisibleSlides = 3;
+  const commentsVisibleSlides = window.innerWidth <= 575.98 ? 1 : 13;
 
   const commentsSlideWidth = commentsContainer.querySelector(".comment").offsetWidth + 10;
   const commentstotalSlides = commentsContainer.querySelectorAll(".comment").length;
@@ -291,7 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCommentsCarousel();
 
       window.addEventListener("resize", () => {
-    commentsVisibleSlides = window.innerWidth <= 575.98 ? 1 : 3;
+    commentsVisibleSlides = window.innerWidth <= 575.98 ? 1 : 1;
     updateCommentsCarousel();
   });
   });
