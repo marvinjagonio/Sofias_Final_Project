@@ -11,9 +11,8 @@ a {
     
 }
 
-ul , li {
-    text-decoration: none !important;
-    display: block;
+ ul  li {
+    list-style: none !important;
 }
 
 button, p, h5, h6 {
@@ -23,7 +22,6 @@ button, p, h5, h6 {
 
 /* -------------------- Navbar Section -------------------- */
 .navbar {
-    position: fixed;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -36,6 +34,7 @@ button, p, h5, h6 {
     right: 0;
     left: 0;
     width: 100%;
+    z-index: 10;
 }
 
 .logo img{
@@ -49,20 +48,18 @@ button, p, h5, h6 {
 
 
 .fixed-below-marquee {
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 20;
+  z-index: 1000;
   width: 100% ;
 }
 
 .fixed-below-navbar {
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 20;
+  z-index: 10;
   background-color: white;
   width: 100% ;
   border-bottom: 1px solid #ccc;
@@ -81,6 +78,7 @@ button, p, h5, h6 {
 
 
 .search-container {
+  position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -95,7 +93,8 @@ button, p, h5, h6 {
     border-radius: 20px;
     border: 1px solid #aaaaaa;
     margin: 0 auto 10px auto;
-    align-items: stretch;  
+    align-items: stretch; 
+    z-index: 10; 
 }
 
 
@@ -105,6 +104,7 @@ button, p, h5, h6 {
   border: 1px solid #cacaca;
   border-radius: 20px;
   padding: 5px;
+  z-index: 10;
 
 }
 
@@ -139,6 +139,32 @@ button, p, h5, h6 {
   filter: invert(1); 
 }
 
+#itemList{
+  position: absolute;
+  top: 90%;
+  background-color: white;
+  width: 610px;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 10;
+  border: 1px solid rgb(163, 163, 163);
+  display: none;
+  list-style: none; 
+  max-height: 200px; 
+  overflow-y: auto; 
+}
+
+#itemList li{
+  text-decoration: none !important;
+}
+
+#itemList li:hover{
+  background-color: rgb(187, 255, 212) ;
+  cursor: pointer;
+  border: 20px;
+
+}
+
 @media (max-width: 575.98px) {
 
   .navbar{
@@ -148,8 +174,10 @@ button, p, h5, h6 {
 
 
   .search-container {
-    flex-direction: column;
-    align-items: stretch;
+    display: flex;
+    width: 350px;
+    gap: 10px;
+    margin: auto !important;
   }
 
   .navbar-nav {
@@ -159,6 +187,20 @@ button, p, h5, h6 {
         width: 100%;
         gap: 5px;
     }
+
+    #search-button{
+      padding: 0 5px;
+      font-size: small;
+    }
+
+    #search{
+      margin: auto !important;
+    }
+
+    #itemList{
+      width: 345px;
+    }
+
 }
 
 
