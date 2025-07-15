@@ -233,14 +233,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const itemsCategoryPreview = document.querySelector(".items_category_preview");
 
   let itemsCategory = 1;
-  const itemsVisibleSlides = window.innerWidth <= 575.98 ? 1 : 7;
+  const itemsVisibleSlides = window.innerWidth <= 575.98 ? 1 : 8;
 
-  const itemsSlideWidth = document.querySelector(".items_category_product").offsetWidth + 20;
+  const itemsSlideWidth = document.querySelector(".items_category_product").offsetWidth + 28;
   const itemstotalSlides = itemsCategoryContainer.querySelectorAll(".items_category_product").length;
 
     function updatesItemCategoryCarousel() {
     itemsCategoryContainer.style.transform = `translateX(-${itemsCategory * itemsSlideWidth}px)`;
   }
+  
 
   itemsCategoryNext.addEventListener("click", () => {
     if (itemsCategory < itemstotalSlides - itemsVisibleSlides) {

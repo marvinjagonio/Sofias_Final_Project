@@ -250,8 +250,8 @@ button, p, h5, h6 {
 }
 
 .items_category_slider{
-    width: 1322px;
-    max-width: 1322px;
+    width: 1350px;
+    max-width: 1350px;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -268,7 +268,7 @@ button, p, h5, h6 {
 
 .items_category_product{
     background-color: white;
-    padding: 0 20px;
+    padding: 0 10px;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(104, 104, 104, 0.5);
@@ -289,7 +289,7 @@ button, p, h5, h6 {
     display: flex;
     width: max-content;       
     transition: transform 0.6s ease-in-out;
-    gap: 5px;
+    gap: 10px;
 }
 
 .items_cathegory_image{
@@ -521,13 +521,13 @@ button, p, h5, h6 {
     transition: transform 0.3s ease;
     font-weight: bold;
     position: absolute;
-    margin-left: 3px;
+    margin-right: 15px;
     
 
 }
 
 .cart img{
-    width: 15px;
+    width: 30px;
     padding: 5px;
     color: #333;
 }
@@ -546,7 +546,7 @@ button, p, h5, h6 {
     font-weight: bold;
     width: 150px;
     height: 35px;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .buy_now:hover{
@@ -648,8 +648,6 @@ button, p, h5, h6 {
     transition: background 0.3s ease;
 }
 
-
-
 .prev {
     left: 10px;
 }
@@ -677,8 +675,8 @@ button, p, h5, h6 {
 }
 
 .loptop_slider , .desktop_slider{
-    width: 565px;
-    max-width: 565px;
+    width: 555px;
+    max-width: 555px;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -765,9 +763,7 @@ button, p, h5, h6 {
   display: flex;
   flex-direction: column;
   width: 100%; 
-  margin: auto;
-  
-  
+  margin: auto;  
 }
 
 .loptop_preview , .desktop_preview{
@@ -802,24 +798,10 @@ button, p, h5, h6 {
     gap: 20px;
   }
 
-  .best_coupons_flex h3{
-    background-color: rgb(0, 167, 0) ;
-    font-size: x-large;
-    color: white;
-    text-align: center;
-    width: 400px;
-    border-radius: 10px;
-    padding: 20px 0;
-  }
-
-  .best_coupons_flex h2{
-    background-color: rgb(142, 0, 170) ;
-    font-size: x-large;
-    color: white;
-    text-align: center;
-    width: 400px;
-    border-radius: 10px;
-    padding: 20px 0;
+  .best_coupons_flex img{
+    width: 450px;
+    height: 150px;
+    border-radius: 20px;
   }
 
   @media (max-width: 575.98px){
@@ -829,10 +811,12 @@ button, p, h5, h6 {
       margin: 20px;
     }
 
-    .best_coupons_flex h2, .best_coupons_flex h3{
-      width: 250px;
-      margin: auto;
-    }
+    .best_coupons_flex img{
+    width: 350px;
+    height: 100px;
+    border-radius: 20px;
+    margin: auto;
+  }
   }
 
   /* -------------------- New Arrivals Section and Top Sellers Section -------------------- */
@@ -1051,7 +1035,13 @@ button, p, h5, h6 {
     height: 80px;
     width: 80px;
     border-radius: 20px;
+    transition: filter 0.3s ease;
  }
+
+ .payment_option_flex img:hover{
+  filter: brightness(2) !important;
+  
+}
 
    @media (max-width: 575.98px){
     .payment_option_flex{
@@ -1469,7 +1459,7 @@ footer {
  }
 
 .checkout_btn{
-  background-color: yellow;
+  background-color: rgb(220, 220, 0) !important;
   color: #222;
 }
 
