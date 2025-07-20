@@ -1342,20 +1342,22 @@
               spam ever above
             </p>
             <div class="pop-up_form">
-              <form action="">
+              <form id="popupForm" action="/popup_submit" method="POST">
                 <div>
                   <input
                     type="text"
-                    placeholder="First Name (Optional)"
+                    name="name"
+                    placeholder="Name"
                     id=""
                   />
                 </div>
                 <br>
                 <div>
-                  <input type="text" placeholder="Enter Your Email Address" />
+                  <input name="email" type="text" placeholder="Enter Your Email Address" required />
                 </div>
                 <br>
-                <button class="continue_button">Continue</button>
+                <button type="submit" class="continue_button">Continue</button>
+                <p id="popup_message"></p>
               </form>
             </div>
           </div>
@@ -1414,7 +1416,7 @@
          <input id="signup_password" type="password" name="password" placeholder="******" maxlength="6" minlength="1" required /><br>
 
          <input id="signup_submit" type="submit" value="Sign-Up"/><br>
-          <p id="message"></p>
+          <p id="message_signup"></p>
            </form>
       </div>
     </section>
@@ -1510,6 +1512,8 @@
     <script src="js_folder/slides.js"></script>
     <script src="js_folder/search.js"></script>
     <script src="js_folder/popup.js"></script>
+    <script src="js_folder/floatingLogin.js"></script>
+    <script src="js_folder/floatingSignup.js"></script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   </body>

@@ -3,3 +3,13 @@ username: pia
 email: tempsofimae@gmail.com
 password: sofia
 
+name: undefined
+username: undefined
+email: undefined
+password: undefined
+
+name: Arielle
+username: yiel
+email: arielle@gmail.com
+password: yiel
+
