@@ -38,6 +38,7 @@ app.post('/sign-up_submit', (req, res) => {
   });
 });
  
+// Log-in
 app.post('/login_submit', (req, res) => {
   const { email, password } = req.body;
 
@@ -75,46 +76,45 @@ app.post('/login_submit', (req, res) => {
     }
   });
 });
-// Popup
-// app.post('/popup_submit', (req, res) => {
-//   const { name, password } = req.body;
-//   const filePath = path.join(__dirname, 'submissions.txt');
 
-//   fs.readFile(filePath, 'utf8', (err, data) => {
-//     if (err) return res.status(500).send('❌ Error reading file.');
+// Popup Form
+app.post('/popup_submit', (req, res) => {
+  const { email } = req.body;
 
-//     const blocks = data.split('\n\n');
+  const filePath = path.join(__dirname, 'submissions.txt');
 
-//     let found = false;
+   fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) return res.send('❌ Error reading file.');
 
-//     for (const block of blocks) {
-//       const user = {};
-//       const lines = block.split('\n');
+    const lines = data.split('\n').filter(line => line.trim() !== '');
 
-//       lines.forEach(line => {
-//         const [key, value] = line.split(':');
-//         if (key && value) {
-//           user[key.trim().toLowerCase()] = value.trim();
-//         }
-//       });
+    let found = false;
 
-//       // Match by name and password
-//       if (
-//         user.name?.toLowerCase() === name.toLowerCase() &&
-//         user.password === password
-//       ) {
-//         found = true;
-//         break;
-//       }
-//     }
+    for (let i = 0; i < lines.length; i += 4) {
+      const emailLine = lines[i + 2];
+    
 
-//     if (found) {
-//       res.status(200).send('✅ Log-in Successfully!');
-//     } else {
-//       res.status(401).send('❌ Invalid name or password.');
-//     }
-//   });
-// });
+      if (emailLine) {
+        const storedEmail = emailLine.replace('email:', '').trim().toLowerCase();
+      
+
+        if (
+          storedEmail === email.toLowerCase() 
+        
+        ) {
+          found = true;
+          break;
+        }
+      }
+    }
+
+    if (found) {
+      res.send('✅ Subscribe Successfully.');
+    } else {
+      res.send('❌ Not yet registered.');
+    }
+  });
+   });
 
 // ✅ Start server OUTSIDE the route
 app.listen(port, () => {

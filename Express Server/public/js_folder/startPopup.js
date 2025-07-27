@@ -5,29 +5,21 @@ const popupForm = document.getElementById("popupForm");
 const popupMessage = document.getElementById("popup_message");
 const popupCloseBtn = document.querySelector(".start_popup_close-btn");
 
-popupForm.addEventListener("submit", function (e) {
+popupForm.addEventListener("submit", async function (e) {
   e.preventDefault();
 
-  const formData = new FormData(this);
+  const formData = new FormData(popupForm);
 
-  fetch("/popup_submit", {
+  const response = await fetch("/popup_submit", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded"
-    },
     body: new URLSearchParams(formData),
-  })
-    .then((response) => response.text())
-    .then((text) => {
-      popupMessage.textContent = text;
-      popupMessage.style.fontSize = "small";
-      popupMessage.style.color = text.toLowerCase().includes("success") ? "green" : "red";
-    })
-    .catch(() => {
-      popupMessage.textContent = "❌ Server error.";
-      popupMessage.style.fontSize = "small";
-      popupMessage.style.color = "red";
-    });
+  });
+
+  const resultText = await response.text(); 
+  popupMessage.textContent = resultText;    
+
+  popupMessage.style.fontSize = "small";
+  popupMessage.style.color = resultText.includes("✅") ? "green" : "red";
 });
 
 popupCloseBtn.addEventListener("click", () => {
@@ -35,4 +27,3 @@ popupCloseBtn.addEventListener("click", () => {
   popupMessage.textContent = "";
   popupMessage.removeAttribute("style");
 });
-
