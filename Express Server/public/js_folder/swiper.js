@@ -3,15 +3,15 @@
     const comments_swiper = new Swiper('.comments_swiper', {
       loop: false,
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 10,
       navigation: {
         nextEl: '.comments_next',
         prevEl: '.comments_prev',
       },
       breakpoints: {
         0:{
-          slidesPerView: 1,
-          spaceBetween: 5,
+          slidesPerView: 2,
+          
         },
          576: {
          slidesPerView: 2,
@@ -21,7 +21,7 @@
           slidesPerView: 2,
         },
         1024: {
-          slidesPerView: 5,
+          slidesPerView: 3,
         }
       },
       on:{
@@ -220,7 +220,7 @@ const top_sellers_swiper = new Swiper('.top_sellers_swiper', {
     },
     768: {
       slidesPerView: 3,
-      spaceBetween: 20, 
+      
       
     },
     1024: {
