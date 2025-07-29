@@ -62,6 +62,7 @@ button, p, h5, h6 {
   z-index: 10;
   width: 100% ;
   border-bottom: 1px solid #ccc;
+  flex-wrap: nowrap;
   padding: 0;
 }
 
@@ -247,12 +248,13 @@ button, p, h5, h6 {
 }
 
 .items_cathegory_swiper{
-      width: 90%;
-      max-width: 1250px;
+      width: 100%;
+      max-width: 1195px;
       overflow: hidden;
-      margin: 50px auto;
+      margin: 50px;
       padding: 20px !important;      
       border-radius: 20px;
+   
       
 }
 
@@ -263,6 +265,8 @@ button, p, h5, h6 {
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
     width: fit-content;
     height: fit-content;
+    position: relative;
+    cursor: pointer;
 }
 
 .items_category_product:hover{
@@ -277,9 +281,41 @@ button, p, h5, h6 {
 
 
 .items_cathegory_image{
-    width: 130px;
-    height: 130px;
+    width: 110px;
+    height: 110px;
 }
+
+@media (min-width: 576px) {
+ .items_category_product{
+  width: 50%;
+ }
+
+ .items_cathegory_swiper{
+ 
+ }
+}
+
+@media (min-width: 768px){
+ .items_category_product{
+  width: 100%;
+ }
+
+ 
+}
+
+@media (min-width: 992px){
+ .items_category_product{
+  width: 100%;
+ }
+
+}
+
+@media (min-width: 1200px) {
+ .items_category_product{
+  width: 100%;
+ }
+}
+
 
 
 
@@ -295,10 +331,10 @@ button, p, h5, h6 {
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
     flex-wrap: nowrap;
-    flex: 1 1 240px;
+    width: 250px;
     min-width: 150px;
-    max-width: 100%;
     box-sizing: border-box;
+    position: relative;
    
 }
 
@@ -483,19 +519,17 @@ button, p, h5, h6 {
     transform: scale(1.05);
 }
 
-/* Product Media */
-
-@media (max-width: 991.98px) {
-  .product {
-    flex: 1 1 calc(20% - 20px);
-    max-width: calc(20% - 20px);
-  }
+.swiper-slide {
+  width: auto; 
 }
 
-@media (max-width: 575.98px) {
+/* Product @Media */
+
+@media (min-width: 576px) {
+
   .product {
-    flex: 1 1 50%; 
-    max-width: 50%;
+     width: 100%;
+   
   }
 
   .product_name{
@@ -519,13 +553,66 @@ button, p, h5, h6 {
  font-size: small;
 
 }
+
+.product_save{
+  font-size: x-small;
 }
 
-@media (max-width: 575.98px) {
-  .products_hover {
+.products_hover {
     display: none !important;
   }
 }
+
+@media (min-width: 768px){
+
+
+  .product {
+    max-width: 100%;
+  }
+
+  .buy_now,
+  .spcfix_btn {
+    font-size: small;
+  }
+
+  .product_save {
+    font-size: small;
+  }
+
+  .products_hover {
+    display: block;
+  }
+}
+
+@media (min-width: 992px){
+
+
+  .product {
+    max-width: 100%;
+  }
+
+  .product_name {
+    font-size: medium;
+  }
+
+  .products_hover {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+
+
+  .product {
+    max-width: 100%;
+  }
+
+  .product_name {
+    font-size: medium;
+  }
+}
+
+
 /* -------------------- Featured Products Section -------------------- */
 
 .featured_products h2 {
@@ -653,7 +740,6 @@ button, p, h5, h6 {
 .desktop_background{
   background-color: rgba(135, 135, 135, 0.693);
   padding: 0 40px !important;
-
   border-radius: 10px;
   width: 100%;
   max-width: 600px;
@@ -680,8 +766,9 @@ button, p, h5, h6 {
 
   .loptop_background,
   .desktop_background {
-    padding: 10px;
-    margin-bottom: 20px;
+    width: 100%;
+    max-width: 450px;
+    margin: 50px;
   }
 
   .loptop_font, .desktop_font {
@@ -691,11 +778,15 @@ button, p, h5, h6 {
   }
 }
 
-@media (max-width: 576px) {
+/* Loptop and Desktop @media */
+
+@media (min-width: 576px) {
   .loptop_swiper,
   .desktop_swiper {
-    max-width:100%;
+    width: 100%;
+    max-width: 1000px;
     padding: 5px;
+    
 
   }
 
@@ -706,14 +797,37 @@ button, p, h5, h6 {
   }
 }
 
-@media (min-width: 577px) and (max-width: 991px) {
-  .loptop_swiper,
+@media (min-width: 768px){
+.loptop_swiper,
   .desktop_swiper {
     max-width: 100%;
   }
+
+  
 }
 
+.loptop_desktop_flex{
+  display: flex ;
+  flex-direction: column;
+}
 
+@media (min-width: 992px){
+.loptop_desktop_flex{
+  display: flex ;
+  flex-direction: column;
+}
+
+  
+}
+
+@media (min-width: 1200px) {
+.loptop_desktop_flex{
+  display: flex ;
+  flex-direction: row;
+}
+
+ 
+}
   /* -------------------- Checkout Vouchers and Daily Free Shipping Section -------------------- */
 
 
@@ -790,20 +904,26 @@ button, p, h5, h6 {
   }
 
    .comments_swiper {
-     width: 90%;
+     width: 100%;
       max-width: 1000px;
-      margin: 50px auto;
+      margin:  50px 5px !important;
       
      
     }
 
     .comments {
      background: #eee;
-      width: 330px !important;
+     flex-wrap: nowrap;
+      width: 100%;
+      max-width: auto;
       padding: 20px;
       text-align: center;
       font-size: 20px;
       border-radius: 10px;
+      position: relative;
+
+      
+     
     }
 
     .comments_next,

@@ -2,23 +2,26 @@
   window.addEventListener('load', function () {
     const comments_swiper = new Swiper('.comments_swiper', {
       loop: false,
-     
       slidesPerView: 1,
-      spaceBetween: 5,
+      spaceBetween: 20,
       navigation: {
         nextEl: '.comments_next',
         prevEl: '.comments_prev',
       },
       breakpoints: {
+        0:{
+          slidesPerView: 1,
+          spaceBetween: 5,
+        },
          576: {
-      slidesPerView: 2,
-      spaceBetween: 24,
+         slidesPerView: 2,
+    
         },
         768: {
           slidesPerView: 2,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 5,
         }
       },
       on:{
@@ -35,16 +38,19 @@
 const new_arrivals_swiper = new Swiper('.new_arrivals_swiper', {
   loop: false,
   slidesPerView: 1,
-  spaceBetween: 5,
+  spaceBetween: 10,
   
   navigation: {
     nextEl: '.new-arrivals-next',
     prevEl: '.new-arrivals-prev',
   },
   breakpoints: {
-     576: {
+        0:{
+          slidesPerView: 1,
+        },
+         576: {
       slidesPerView: 2,
-      spaceBetween: 24,
+     
     },
     768: {
       slidesPerView: 2,
@@ -70,20 +76,19 @@ const new_arrivals_swiper = new Swiper('.new_arrivals_swiper', {
 const top_sellers_swiper = new Swiper('.top_sellers_swiper', {
   loop: false,
   slidesPerView: 1,
-  spaceBetween: 5,
+  spaceBetween: 10,
   
   navigation: {
     nextEl: '.top-sellers-next',
     prevEl: '.top-sellers-prev',
   },
   breakpoints: {
-    0:{
-      slidesPerView: 1,
-      spaceBetween: 5,
-    },
-     576: {
-      slidesPerView: 1,
-      spaceBetween: 24,
+        0:{
+          slidesPerView: 1,
+        },
+         576: {
+      slidesPerView: 2,
+     
     },
     768: {
       slidesPerView: 2,
@@ -110,18 +115,21 @@ const top_sellers_swiper = new Swiper('.top_sellers_swiper', {
       loop: false,
      
       slidesPerView: 1,
-      spaceBetween: 5,
+      spaceBetween: 10,
       navigation: {
         nextEl: '.featured_products_next',
         prevEl: '.featured_products_prev',
       },
       breakpoints: {
+        0:{
+          slidesPerView: 1,
+        },
          576: {
       slidesPerView: 2,
-      spaceBetween: 24,
+     
     },
     768: {
-      slidesPerView: 1,
+      slidesPerView: 2,
     },
     1024: {
       slidesPerView: 4,
@@ -142,16 +150,16 @@ const top_sellers_swiper = new Swiper('.top_sellers_swiper', {
  window.addEventListener('load', function () {
   // Loptop Swiper
   const loptopSwiper = new Swiper('.loptop_swiper', {
-    slidesPerView: 2,
-    spaceBetween: 24,
+    slidesPerView: 1,
+    spaceBetween: 30,
     navigation: {
       nextEl: '.loptop_next',
       prevEl: '.loptop_prev',
     },
     breakpoints: {
       0: {
-        slidesPerView: 2,
-        spaceBetween: 16,
+        slidesPerView: 1,
+        spaceBetween: 30,
       },
       768: {
         slidesPerView: 2,
@@ -166,23 +174,23 @@ const top_sellers_swiper = new Swiper('.top_sellers_swiper', {
 
   // Desktop Swiper
   const desktopSwiper = new Swiper('.desktop_swiper', {
-    slidesPerView: 2,
-    spaceBetween: 24,
+    slidesPerView: 1,
+    spaceBetween: 30,
     navigation: {
       nextEl: '.desktop_next',
       prevEl: '.desktop_prev',
     },
     breakpoints: {
       0: {
-        slidesPerView: 2,
-        spaceBetween: 16,
+        slidesPerView: 1,
+        spaceBetween: 30,
       },
       768: {
-        slidesPerView: 3,
-        spaceBetween: 21,
+        slidesPerView: 2,
+        spaceBetween: 24,
       },
       1024: {
-        slidesPerView: 2,
+        slidesPerView:2,
         spaceBetween: 24,
       },
     },
@@ -192,22 +200,32 @@ const top_sellers_swiper = new Swiper('.top_sellers_swiper', {
   window.addEventListener('load', function () {
    const itemsCathegorySwiper = new Swiper('.items_cathegory_swiper', {
   slidesPerView: 6,
-  spaceBetween: 24, // space between slides
+  spaceBetween: 30, 
   navigation: {
     nextEl: '.items_cathegory_next',
     prevEl: '.items_cathegory_prev',
   },
-  // Optional: responsive behavior
+ 
   breakpoints: {
+    0:{
+       slidesPerView: 2,
+       
+     
+    },
     576: {
       slidesPerView: 2,
-      spaceBetween: 24,
+    
+        
+      
     },
     768: {
-      slidesPerView: 6,
+      slidesPerView: 3,
+      spaceBetween: 20, 
+      
     },
     1024: {
-      slidesPerView: 6,
+      slidesPerView: 7,
+
     }
   }
 });
