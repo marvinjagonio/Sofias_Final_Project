@@ -6,6 +6,7 @@
     <title>E-Commerce Landing Page</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css_folder/styles.css" />
+    <link rel="stylesheet" href="css_folder/add_to_cart.css" />
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
@@ -123,16 +124,7 @@
                     alt=""
                 /></a>
               </li>
-              <li class="nav-item mx-1">
-                <a href="#"
-                  ><img
-                    class="img-fluid px-2"
-                    style="height: 30px"
-                    title="Cart Page"
-                    src="icons/cart.png"
-                    alt=""
-                /></a>
-              </li>
+
               <li class="nav-item mx-1" id="loginBtn">
                 <a href="#"
                   ><img
@@ -150,6 +142,16 @@
                     style="height: 30px"
                     title="Sign-up"
                     src="icons/nav_icon_2.png"
+                    alt=""
+                /></a>
+              </li>
+              <li class="nav-item mx-1">
+                <a href="#"
+                  ><img
+                    class="cart_button img-fluid px-2"
+                    style="height: 30px"
+                    title="Cart Page"
+                    src="icons/cart.png"
                     alt=""
                 /></a>
               </li>
@@ -606,49 +608,43 @@
               <h2>LOPTOP</h2>
               <h3>see more</h3>
             </article>
+
             <div class="swiper-wrapper loptop_swiper-wrapper">
               <div class="swiper-slide product">
                 <p class="product_save"><b>Save ₱700.00</b></p>
                 <a href="items_page_folder/webcam_page.html">
                   <img
-                    class="product_image"
                     src="page_item_images/loptops_images/Lenovo V15 G4 ABP FHD Business Laptop AMD Ryzen 5-7530U Hexa-Core.png"
                     alt="Product 1"
                   />
-                  <div class="product_column">
-                    <p class="product_name">
-                      <b
-                        >Lenovo V15 G4 ABP FHD Business Laptop AMD Ryzen 5-7530U
-                        Hexa-Core</b
-                      >
-                    </p>
-                    <div class="btn_star_flex">
-                      <button class="spcfix_btn"><b>SPCfix</b></button>
-                      <div class="star_flex">
-                        <span class="star"
-                          >⭐ <span class="star_count">4.5</span>
-                        </span>
-                      </div>
-                    </div>
-                    <h5>₱25,295.00</h5>
-                    <h6>₱25,995.00</h6>
-                  </div>
                 </a>
+                <div class="product_column">
+                  <p>
+                    <small>
+                      Lenovo V15 G4 ABP FHD Business Laptop AMD Ryzen 5-7530U
+                    </small>
+                    Hexa-Core
+                  </p>
+                  <div class="btn_star_flex">
+                    <button class="spcfix_btn"><b>SPCfix</b></button>
+                    <div class="star_flex">
+                      <span class="star"
+                        >⭐ <span class="star_count">4.5</span>
+                      </span>
+                    </div>
+                  </div>
+                  <h5 class="price">₱25,295.00</h5>
+                  <h6>₱25,995.00</h6>
+                </div>
+
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Lenovo V15 G4 ABP FHD Business Laptop AMD Ryzen 5-7530U Hexa-Core"
-                    data-image="page_item_images/loptops_images/Lenovo V15 G4 ABP FHD Business Laptop AMD Ryzen 5-7530U Hexa-Core.png"
-                    data-quantity="1"
-                    data-total="₱25,295.00"
-                    data-less="₱25,995.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
               </div>
-              <div class="swiper-slide product">
+              <!-- <div class="swiper-slide product">
                 <p class="product_save"><b>Save ₱2,095.00</b></p>
                 <a href="items_page_folder/webcam_page.html">
                   <img
@@ -676,14 +672,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Lenovo V15 G4 IRU  FHD Business Laptop Intel Core i5-1335U"
-                    data-image="page_item_images/loptops_images/Lenovo V15 G4 IRU  FHD Business Laptop Intel Core i5-1335U.png"
-                    data-quantity="1"
-                    data-total="₱28,500.00"
-                    data-less="₱30,595.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -713,14 +702,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="MSI Thin A15 B7UCX-084PH FHD 144Hz AMD RYZEN"
-                    data-image="page_item_images/loptops_images/MSI Thin A15 B7UCX-084PH FHD 144Hz AMD RYZEN.png"
-                    data-quantity="1"
-                    data-total="₱36,500.00"
-                    data-less="₱38,995.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -750,14 +732,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Gigabyte G5 KF5-H3PH393KH 144Hz i7-13620H"
-                    data-image="page_item_images/loptops_images/Gigabyte G5 KF5-H3PH393KH 144Hz i7-13620H.png"
-                    data-quantity="1"
-                    data-total="₱65,995.00"
-                    data-less="₱0.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -787,14 +762,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name=">Asus Vivbobook 15 X1605ZA-MB819WSM I5-1235U"
-                    data-image="page_item_images/loptops_images/Asus Vivbobook 15 X1605ZA-MB819WSM I5-1235U.png"
-                    data-quantity="1"
-                    data-total="₱34,995.00"
-                    data-less="₱39,295.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -827,14 +795,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Lenovo V14 G4 ABP FHD Compact Business Laptop AMD Ryzen 5-5500U Hexa-Core"
-                    data-image="page_item_images/loptops_images/Lenovo V14 G4 ABP FHD Compact Business Laptop AMD Ryzen 5-5500U Hexa-Core.png"
-                    data-quantity="1"
-                    data-total="₱21,765.00"
-                    data-less="₱29,995.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -867,14 +828,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Lenovo V15 G4 IRU  FHD Business Laptop Intel Core i5-1335U"
-                    data-image="page_item_images/loptops_images/Lenovo V15 G4 IRU  FHD Business Laptop Intel Core i5-1335U.png"
-                    data-quantity="1"
-                    data-total="₱30,595.00"
-                    data-less="₱0.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -904,14 +858,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Lenovo V15 G4  FHD Ryzen 5-7530U"
-                    data-image="page_item_images/loptops_images/Lenovo V15 G4  FHD Ryzen 5-7530U.png"
-                    data-quantity="1"
-                    data-total="₱24,995.00"
-                    data-less="₱0.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -941,14 +888,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Acer Aspire 3 A325-42 FHD IPS Laptop"
-                    data-image="page_item_images/loptops_images/Acer Aspire 3 A325-42 FHD IPS Laptop .png"
-                    data-quantity="1"
-                    data-total="₱29,995.00"
-                    data-less="₱34,995.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -978,18 +918,11 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Asus Vivbobook 15 X1605ZA-MB819WSM I5-1235U"
-                    data-image="page_item_images/loptops_images/Asus Vivobook 16 X1605ZA-MB695WSM Intel Core i7-12700H.png"
-                    data-quantity="1"
-                    data-total="₱41,372.00"
-                    data-less="₱0.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="swiper-button-prev loptop_prev"></div>
             <div class="swiper-button-next loptop_next"></div>
@@ -1030,14 +963,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Lenovo V15 G4 ABP FHD Business Laptop AMD Ryzen 5-7530U Hexa-Core"
-                    data-image="page_item_images/loptops_images/Lenovo V15 G4 ABP FHD Business Laptop AMD Ryzen 5-7530U Hexa-Core.png"
-                    data-quantity="1"
-                    data-total="₱25,295.00"
-                    data-less="₱25,995.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -1070,14 +996,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Lenovo V15 G4 IRU  FHD Business Laptop Intel Core i5-1335U"
-                    data-image="page_item_images/loptops_images/Lenovo V15 G4 IRU  FHD Business Laptop Intel Core i5-1335U.png"
-                    data-quantity="1"
-                    data-total="₱28,500.00"
-                    data-less="₱30,595.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -1107,14 +1026,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="MSI Thin A15 B7UCX-084PH FHD 144Hz AMD RYZEN"
-                    data-image="page_item_images/loptops_images/MSI Thin A15 B7UCX-084PH FHD 144Hz AMD RYZEN.png"
-                    data-quantity="1"
-                    data-total="₱36,500.00"
-                    data-less="₱38,995.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -1144,14 +1056,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Gigabyte G5 KF5-H3PH393KH 144Hz i7-13620H"
-                    data-image="page_item_images/loptops_images/Gigabyte G5 KF5-H3PH393KH 144Hz i7-13620H.png"
-                    data-quantity="1"
-                    data-total="₱65,995.00"
-                    data-less="₱0.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -1181,14 +1086,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name=">Asus Vivbobook 15 X1605ZA-MB819WSM I5-1235U"
-                    data-image="page_item_images/loptops_images/Asus Vivbobook 15 X1605ZA-MB819WSM I5-1235U.png"
-                    data-quantity="1"
-                    data-total="₱34,995.00"
-                    data-less="₱39,295.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -1221,14 +1119,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Lenovo V14 G4 ABP FHD Compact Business Laptop AMD Ryzen 5-5500U Hexa-Core"
-                    data-image="page_item_images/loptops_images/Lenovo V14 G4 ABP FHD Compact Business Laptop AMD Ryzen 5-5500U Hexa-Core.png"
-                    data-quantity="1"
-                    data-total="₱21,765.00"
-                    data-less="₱29,995.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -1261,14 +1152,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Lenovo V15 G4 IRU  FHD Business Laptop Intel Core i5-1335U"
-                    data-image="page_item_images/loptops_images/Lenovo V15 G4 IRU  FHD Business Laptop Intel Core i5-1335U.png"
-                    data-quantity="1"
-                    data-total="₱30,595.00"
-                    data-less="₱0.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -1298,14 +1182,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Lenovo V15 G4  FHD Ryzen 5-7530U"
-                    data-image="page_item_images/loptops_images/Lenovo V15 G4  FHD Ryzen 5-7530U.png"
-                    data-quantity="1"
-                    data-total="₱24,995.00"
-                    data-less="₱0.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -1335,14 +1212,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Acer Aspire 3 A325-42 FHD IPS Laptop"
-                    data-image="page_item_images/loptops_images/Acer Aspire 3 A325-42 FHD IPS Laptop .png"
-                    data-quantity="1"
-                    data-total="₱29,995.00"
-                    data-less="₱34,995.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -1372,14 +1242,7 @@
                 </a>
                 <div class="product_buttons">
                   <button class="buy_now">Buy Now</button>
-                  <button
-                    class="cart"
-                    data-name="Asus Vivbobook 15 X1605ZA-MB819WSM I5-1235U"
-                    data-image="page_item_images/loptops_images/Asus Vivobook 16 X1605ZA-MB695WSM Intel Core i7-12700H.png"
-                    data-quantity="1"
-                    data-total="₱41,372.00"
-                    data-less="₱0.00"
-                  >
+                  <button class="cart">
                     <img src="image/cart.png" alt="" />
                   </button>
                 </div>
@@ -1705,10 +1568,12 @@
     <section id="best_coupons">
       <div class="best_coupons_flex">
         <img
+          class="container-fluid px-0 mb-0 pb-0"
           src="image/White And Black Gradient Coming Soon Email Header (2).jpg"
           alt=""
         />
         <img
+          class="container-fluid px-0 mb-0 pb-0"
           src="image/White And Black Gradient Coming Soon Email Header (3).jpg"
           alt=""
         />
@@ -2293,19 +2158,20 @@
                 src="page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
                 alt="Product 1"
               />
-              <div class="product_column">
-                <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                <div class="btn_star_flex">
-                  <button class="spcfix_btn"><b>SPCfix</b></button>
-
-                  <p class="star_count"><span class="star">★</span> 4.5</p>
-                </div>
-                <div class="prices">
-                  <p class="price">₱187.00</p>
-                  <p class="percent_off"><s>₱190.00</s></p>
-                </div>
-              </div>
             </a>
+            <div class="product_column">
+              <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
+              <div class="btn_star_flex">
+                <button class="spcfix_btn"><b>SPCfix</b></button>
+
+                <p class="star_count"><span class="star">★</span> 4.5</p>
+              </div>
+              <div class="prices">
+                <p class="price">₱187.00</p>
+                <p class="percent_off"><s>₱190.00</s></p>
+              </div>
+            </div>
+
             <div class="product_buttons">
               <button class="buy_now">Buy Now</button>
               <button class="cart"><img src="image/cart.png" alt="" /></button>
@@ -2670,6 +2536,56 @@
       </div>
     </footer>
 
+    <!-- Shopping Cart Floating  -->
+    <div id="main_body">
+      <div id="cart_window">
+        <div class="overlay"></div>
+        <div id="cart_box">
+          <div class="heading">
+            <div class="title_circle_container">
+              <div class="purple_pink_circle">
+                <div>
+                  <h1>Shopping Cart</h1>
+                  <p>Quick Delivery</p>
+                </div>
+              </div>
+              <button class="close_button">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.6492 11.2501L12.7904 6.53852L13.8346 5.46167L20.5774 12.0001L13.8346 18.5385L12.7904 17.4617L17.6492 12.7501H3V11.2501H17.6492Z"
+                    fill="#080341"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div id="cart_items_container">
+              <span class="empty_cart_message"
+                >Your cart is empty.order an item.</span
+              >
+              <div class="white_fade_overflow top"></div>
+              <ul></ul>
+              <div class="white_fade_overflow bottom"></div>
+            </div>
+            <div id="cart_checkout">
+              <div id="total_checkout">
+                <p>total:</p>
+                <span class="price">0.00</span>
+              </div>
+              <button id="checkout_button">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Javascript -->
     <script src="js_folder/floating_log-in_sign-up.js"></script>
     <script src="js_folder/script.js"></script>
@@ -2678,6 +2594,8 @@
     <script src="js_folder/floatingLogin.js"></script>
     <script src="js_folder/floatingSignup.js"></script>
     <script src="js_folder/swiper.js"></script>
+    <script src="js_folder/shopping_cart.js"></script>
+
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper JS -->
