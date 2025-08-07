@@ -16,14 +16,6 @@ li {
   display: block;
 }
 
-button,
-p,
-h5,
-h6 {
-  line-height: 1;
-  margin: 0;
-}
-
 /* -------------------- Navbar Section -------------------- */
 .navbar {
   position: fixed;
