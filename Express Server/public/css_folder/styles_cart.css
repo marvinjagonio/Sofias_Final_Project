@@ -1,0 +1,254 @@
+/* CART */
+
+#cart_window {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 14%;
+  left: 0;
+  z-index: 9999;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: background-color 0.5s ease-in-out;
+  transform: translateX(100%);
+}
+
+#cart_window.active {
+  animation: slideRight 0.5s ease forwards;
+  visibility: visible;
+}
+
+#cart_window.hide {
+  animation: slideOut 0.5s ease forwards;
+}
+
+#cart_window .title_circle_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#cart_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  right: 0;
+  width: calc(35% - 60px);
+  height: calc(100% - 100px);
+  background: white;
+  border: 1px solid black;
+  padding: 40px 20px;
+  color: rgb(50, 50, 50);
+  box-shadow: -5px 0 80px rgba(255, 255, 255, 0.65);
+  overflow: hidden;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  transition: 0.5s ease-in-out;
+}
+
+#cart_window.active #cart-box {
+  width: calc(35% - 80px);
+  padding: 40px;
+}
+
+#cart_box .heading h1 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #00ad2e;
+}
+
+#cart_box .heading p {
+  color: rgb(186, 186, 186);
+  font-size: 15px;
+  font-weight: 400;
+  text-align: left;
+}
+
+#cart_box .close_button svg {
+  width: 25px;
+  height: 25px;
+  fill: black;
+  stroke: black;
+}
+
+#cart_box .close_button {
+  background: transparent;
+  border: 0;
+}
+
+#cart_items_container {
+  position: relative;
+}
+
+.empty_cart_message {
+  font-size: 15px;
+  font-weight: 500;
+  display: none;
+}
+
+#cart_items_container ul {
+  height: 50vh;
+  text-wrap: wrap;
+  overflow-y: scroll !important;
+}
+
+#cart_items_container ul::-webkit-scrollbar {
+  display: none;
+}
+
+#cart_items_container .cart_item {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+#cart_items_container .cart_item .item_1 {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+}
+
+#cart_items_container .cart_item .cart_item_image {
+  width: 30%;
+  height: 80%;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+  z-index: 5;
+}
+
+#cart_items_container .cart_item .cart_item_image button.remove_button {
+  width: 100%;
+  height: 100%;
+  max-width: fit-content;
+  max-height: fit-content;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  position: absolute;
+  left: 7%;
+  bottom: 0;
+  top: 10%;
+  right: 0;
+  z-index: 10;
+  transition: background-color 0.4s ease-in-out;
+}
+
+#cart_items_container .cart_item .cart_item_image button.remove_button svg {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+#cart_items_container
+  .cart_item
+  .cart_item_image:hover
+  button.remove_button
+  svg {
+  opacity: 1;
+}
+
+#cart_items_container .cart_item .cart_item_image img {
+  width: 70px;
+  height: 70px;
+  max-width: fit-content;
+  max-height: fit-content;
+  object-fit: contain;
+  position: relative;
+  border: 1px solid rgb(113, 113, 113);
+  border-radius: 10px;
+}
+
+#cart_items_container .cart_item .cart_item_desc {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+#cart_items_container .cart_item .cart_item_desc span:nth-child(2) {
+  color: rgb(170, 170, 170);
+}
+
+#cart_box .cart_item .cart_item_price {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.white_fade_overflow {
+  position: absolute;
+  height: 15vh;
+  left: 0;
+  z-index: 101;
+}
+
+.white_fade_overflow .top {
+  opacity: 0;
+  top: 0;
+}
+
+.white_fade_overflow .bottom {
+  opacity: 1;
+  bottom: 0;
+}
+
+#cart_box #cart_checkout {
+  position: absolute;
+  bottom: 1%;
+  font-weight: 600;
+  font-size: 17px;
+  display: flex;
+  gap: 100%;
+  text-align: right;
+}
+
+#cart_box #total_checkout {
+  margin-bottom: 27px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+#cart_box #total_checkout p {
+  margin-right: 20px;
+}
+
+#cart_box #total_checkout span {
+  color: green;
+}
+
+#cart_box #checkout_button {
+  border: 0;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* End of CART */

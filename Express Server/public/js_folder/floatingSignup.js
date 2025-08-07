@@ -1,5 +1,24 @@
 const signupForm = document.getElementById("signupForm");
 const messageSignUp = document.getElementById("message_signup");
+const signUpBtn = document.getElementById("signUpBtn");
+const signUpPopup = document.getElementById("signUpPopup");
+const signUpCloseBtn = document.querySelector(".sign-up_close-btn");
+
+//sign-up pop-up
+
+signUpBtn.addEventListener("click", () => {
+  signUpPopup.style.display = "block";
+});
+
+signUpCloseBtn.addEventListener("click", () => {
+  signUpPopup.style.display = "none";
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target === signUpPopup) {
+    signUpPopup.style.display = "none";
+  }
+});
 
 signupForm.addEventListener("submit", async function (e) {
   e.preventDefault(); // Prevent normal form submit
