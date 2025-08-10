@@ -36,14 +36,9 @@ function closePopup() {
   document.getElementById("start_popup").style.display = "none";
 }
 
-function handleFirstClick() {
-  if (!localStorage.getItem("popupShown")) {
-    localStorage.setItem("popupShown", "true");
-  }
-
-  window.removeEventListener("click", handleFirstClick);
-}
-
 if (!localStorage.getItem("popupShown")) {
-  window.addEventListener("click", handleFirstClick);
+  setTimeout(() => {
+    showPopup();
+    localStorage.setItem("popupShown", "true");
+  }, 3000);
 }
