@@ -42,9 +42,6 @@
   .items_category_product {
     width: 50%;
   }
-
-  /* .items_cathegory_swiper {
-  } */
 }
 
 @media (min-width: 768px) {
@@ -243,34 +240,6 @@
   .loptop_desktop_flex {
     display: flex;
     flex-direction: row;
-  }
-}
-/* -------------------- Checkout Vouchers and Daily Free Shipping Section -------------------- */
-
-.best_coupons_flex {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.best_coupons_flex img {
-  width: 450px;
-  height: 150px;
-  border-radius: 20px;
-}
-
-@media (max-width: 575.98px) {
-  .best_coupons_flex {
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-  }
-
-  .best_coupons_flex img {
-    width: 350px;
-    height: 100px;
-    border-radius: 20px;
-    margin: auto;
   }
 }
 

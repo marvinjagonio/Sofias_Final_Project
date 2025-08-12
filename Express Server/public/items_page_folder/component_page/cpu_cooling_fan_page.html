@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="../../css_folder/style_electronics.css" />
+    <link rel="stylesheet" href="../../css_folder/style_items_page.css" />
     <link rel="stylesheet" href="../../css_folder/styles_cart.css" />
     <link rel="stylesheet" href="../../css_folder/styles_floating_popup.css" />
     <link rel="stylesheet" href="../../css_folder/styles_navbar_footer.css" />
@@ -31,7 +31,7 @@
         </marquee>
       </div>
 
-      <nav id="navbar1" class="navbar navbar-expand-md bg-light">
+      <nav id="navbar1" class="navbar navbar-expand-md bg-light no-wrap">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
             <img
@@ -53,7 +53,7 @@
 
           <div class="collapse navbar-collapse" id="navbarContent1">
             <form
-              class="search-container d-flex justify-content-center mt-0 mb-0 mx-auto flex-wrap"
+              class="search-container d-flex justify-content-center mx-auto mt-0 mb-0"
               role="search"
             >
               <input
@@ -63,46 +63,75 @@
                 placeholder="Search..."
               />
               <ul id="itemList">
-                <li><a href="">Components</a></li>
-                <li><a href="">CPU Cooling</a></li>
-                <li><a href="">Graphics Card</a></li>
-                <li><a href="">Hard Disk</a></li>
-                <li><a href="">Memory</a></li>
-                <li><a href="">Motherboard</a></li>
-                <li><a href="">PC Case</a></li>
-                <li><a href="">Power Supply</a></li>
-                <li><a href="">Processor AMD</a></li>
-                <li><a href="">Processor INTEL</a></li>
-                <li><a href="">Processor Tray</a></li>
-                <li><a href="">Chromebook</a></li>
-                <li><a href="">Loptops</a></li>
-                <li><a href="">Mobile Phone</a></li>
-                <li><a href="">Tablet</a></li>
-                <li><a href="">Desktop</a></li>
-                <li><a href="">Powered by MSI</a></li>
-                <li><a href="">Build a PC</a></li>
-                <li><a href="">RAKK</a></li>
+                <li>
+                  <a href="../component_page/cpu_cooling_fan_page.html"
+                    >CPU Cooling</a
+                  >
+                </li>
+                <li>
+                  <a href="../component_page/graphics_card.html"
+                    >Graphics Card</a
+                  >
+                </li>
+                <li>
+                  <a href="../component_page/hard_disk.html">Hard Disk</a>
+                </li>
+                <li><a href="../component_page/memory.html">Memory</a></li>
+                <li>
+                  <a href="../component_page/motherboard.html">Motherboard</a>
+                </li>
+                <li><a href="../component_page/pc_case.html">PC Case</a></li>
+                <li>
+                  <a href="../component_page/power_supply.html">Power Supply</a>
+                </li>
+                <li>
+                  <a href="../component_page/processor_AMD.html"
+                    >Processor AMD</a
+                  >
+                </li>
+                <li>
+                  <a href="../component_page/processor_intel.html"
+                    >Processor INTEL</a
+                  >
+                </li>
+                <li>
+                  <a href="../loptop_mobile_page/chrombook_page.html"
+                    >Chromebook</a
+                  >
+                </li>
+                <li>
+                  <a href="../loptop_mobile_page/laptops_page.html">Loptops</a>
+                </li>
+                <li>
+                  <a href="../loptop_mobile_page/mobile_page.html"
+                    >Mobile Phone</a
+                  >
+                </li>
+                <li>
+                  <a href="../loptop_mobile_page/tablet_page.html">Tablet</a>
+                </li>
+                <li><a href="../desktop_page.html">Desktop</a></li>
+
+                <li><a href="../rakk_page.html">RAKK</a></li>
                 <li id="noResults" style="display: none; color: gray">
                   No results found
                 </li>
               </ul>
               <button type="submit" id="search-button">Search</button>
             </form>
-            <ul
-              class="navbar d-flex flex-row flex-md-row mt-0 mb-0 justify-content-around"
-            >
-              <li class="nav-item mx-1">
+            <ul class="navbar d-flex no-wrap mt-0 mb-0 justify-content-around">
+              <li class="nav-item mx-1 img-fluid">
                 <a href="#"
                   ><img
                     src="../../icons/about.png"
-                    class="img-fluid nav-icon px-2"
+                    class="nav-icon px-2 img-fluid"
                     alt=""
                 /></a>
               </li>
               <li class="nav-item mx-1">
                 <a href="items_page_folder/track_your_order.html"
                   ><img
-                    class="img-fluid nav-icon px-2"
+                    class="nav-icon px-2 img-fluid"
                     title="Track your order"
                     src="../../icons/track_your_order.png"
                     alt=""
@@ -111,7 +140,7 @@
               <li class="nav-item mx-1">
                 <a href="#"
                   ><img
-                    class="img-fluid nav-icon px-2"
+                    class="nav-icon px-2 img-fluid"
                     title="Comment Page"
                     src="../../icons/comment_icon.png"
                     alt=""
@@ -121,7 +150,7 @@
               <li class="nav-item mx-1" id="loginBtn">
                 <a href="#"
                   ><img
-                    class="img-fluid nav-icon px-2"
+                    class="nav-icon px-2 img-fluid"
                     title="Log-in"
                     src="../../icons/log-in.png"
                     alt=""
@@ -130,7 +159,7 @@
               <li class="nav-item mx-1" id="signUpBtn">
                 <a href="#"
                   ><img
-                    class="img-fluid nav-icon px-2"
+                    class="nav-icon px-2 img-fluid"
                     title="Sign-up"
                     src="../../icons/nav_icon_2.png"
                     alt=""
@@ -139,7 +168,7 @@
               <li class="nav-item mx-1">
                 <a href="#"
                   ><img
-                    class="cart_button img-fluid nav-icon"
+                    class="cart_button nav-icon px-2 img-fluid"
                     title="Cart Page"
                     src="../../icons/cart.png"
                     alt=""
@@ -164,11 +193,11 @@
           </button>
 
           <div
-            class="collapse navbar-collapse position-relative"
+            class="collapse navbar-collapse position-relative overflow-auto"
             id="navbarContent2"
           >
             <ul
-              class="navbar-nav nav-link2 w-100 flex-md-row flex-column justify-content-center gap-5"
+              class="navbar-nav nav-link2 w-100 flex-md-row flex-column justify-content-center gap-5 gap-md-3 gap-lg-5"
             >
               <li class=""><a class="nav-link" href="#">Home</a></li>
 
@@ -180,7 +209,7 @@
                   data-bs-toggle="dropdown"
                   >Products</a
                 >
-                <ul class="dropdown-menu p-3 mt-1" style="width: 400px">
+                <ul class="dropdown-menu" style="width: 400px">
                   <li>
                     <div class="row gap-1">
                       <div class="col-auto col-md-4 col-sm-3 mb-2">
@@ -366,37 +395,34 @@
     <div class="page_wrapper">
       <section class="left_side_section">
         <div>
-          <h5>
+          <h5 class="top_product_name">
             <a href="../../index.html">Home</a> &nbsp > &nbsp CPU Cooling Fan
           </h5>
         </div>
 
         <h2>CPU Cooling Fan</h2>
         <!-- Max - Min Price -->
-        <ul>
-          <li class="price_dropdown">
-            Price
-            <ul class="price_dropdown_hover">
-              <li class="price_inputs">
-                <input
-                  type="number"
-                  id="min-price"
-                  name="min-price"
-                  placeholder="min"
-                />
-                <label for=""> - </label>
-                <input
-                  type="number"
-                  id="max-price"
-                  name="max-price"
-                  placeholder="max"
-                />
+        <div class="price_dropdown img-fluid w-auto">
+          Price
 
-                <button onclick="filterPrices()">Filter</button>
-              </li>
-            </ul>
-          </li>
-        </ul>
+          <div class="price_inputs">
+            <input
+              type="number"
+              id="min-price"
+              name="min-price"
+              placeholder="min"
+            />
+            <label for=""> - </label>
+            <input
+              type="number"
+              id="max-price"
+              name="max-price"
+              placeholder="max"
+            />
+
+            <button onclick="filterPrices()">Filter</button>
+          </div>
+        </div>
         <hr />
 
         <!-- Availability -->

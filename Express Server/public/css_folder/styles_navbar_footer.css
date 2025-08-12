@@ -118,8 +118,8 @@ h6 {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 700px;
+  width: 40vw;
+  max-width: auto;
   height: auto;
   background-color: white;
   background-size: cover;
@@ -127,7 +127,7 @@ h6 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   border: 1px solid #aaaaaa;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 10px auto !important;
   align-items: stretch;
   z-index: 10;
 }
