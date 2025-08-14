@@ -9,10 +9,10 @@ window.addEventListener("load", function () {
     },
     breakpoints: {
       0: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       576: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       768: {
         slidesPerView: 2,
@@ -49,7 +49,7 @@ window.addEventListener("load", function () {
         slidesPerView: 1,
       },
       576: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       768: {
         slidesPerView: 2,
@@ -89,7 +89,7 @@ window.addEventListener("load", function () {
         slidesPerView: 1,
       },
       576: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       768: {
         slidesPerView: 2,
@@ -129,7 +129,7 @@ window.addEventListener("load", function () {
         slidesPerView: 1,
       },
       576: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       768: {
         slidesPerView: 2,
@@ -168,6 +168,10 @@ window.addEventListener("load", function () {
         slidesPerView: 1,
         spaceBetween: 30,
       },
+      576: {
+        slidesPerView: 1,
+        spaceBetween: 24,
+      },
       768: {
         slidesPerView: 2,
         spaceBetween: 24,
@@ -192,6 +196,10 @@ window.addEventListener("load", function () {
         slidesPerView: 1,
         spaceBetween: 30,
       },
+      576: {
+        slidesPerView: 1,
+        spaceBetween: 24,
+      },
       768: {
         slidesPerView: 2,
         spaceBetween: 24,
@@ -215,10 +223,10 @@ window.addEventListener("load", function () {
 
     breakpoints: {
       0: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       576: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       768: {
         slidesPerView: 3,
