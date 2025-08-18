@@ -6,21 +6,20 @@ document.getElementById("search").addEventListener("input", function () {
 
   let matchCount = 0;
 
-  items.forEach(item => {
-    const match = item.textContent.toLowerCase().startsWith(query); 
-    
+  items.forEach((item) => {
+    if (item.id === "noResults") return; // skip the "no results" item
+
+    const match = item.textContent.toLowerCase().includes(query);
+
     item.style.display = match ? "list-item" : "none";
     if (match) matchCount++;
   });
 
-  // Show/hide the "No results found" item
-  noResults.style.display = (query.length > 0 && matchCount === 0) ? "list-item" : "none";
+  // Show "No results" only when nothing matches
+  noResults.style.display = query && matchCount === 0 ? "list-item" : "none";
 
-  if (query.length == 0){
-    list.style.display = "none";
-  }
-  // ✅ Show list on first letter
-  list.style.display = query.length > 0 ? "block" : "no result";
+  // Show/hide the whole list
+  list.style.display = query ? "block" : "none";
 });
 
 document.addEventListener("click", function (e) {

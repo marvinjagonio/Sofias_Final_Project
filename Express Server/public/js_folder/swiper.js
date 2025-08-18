@@ -135,7 +135,7 @@ window.addEventListener("load", function () {
         slidesPerView: 2,
       },
       1024: {
-        slidesPerView: 4,
+        slidesPerView: 5,
       },
       1400: {
         slidesPerView: 5,

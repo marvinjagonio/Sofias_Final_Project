@@ -83,7 +83,6 @@
 .empty_cart_message {
   font-size: 15px;
   font-weight: 500;
-  display: none;
 }
 
 #cart_items_container ul {
