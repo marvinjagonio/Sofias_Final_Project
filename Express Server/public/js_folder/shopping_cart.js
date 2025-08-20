@@ -5,9 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartCountDisplay = document.querySelector("#cart-count");
   const userCart = document.querySelector("#cart_items_container ul");
   const emptyCartMessage = document.querySelector(".empty_cart_message");
-
-  // Initialize cart count display
-  updateCartCount();
+  const cartBadge = document.getElementById("cartCount");
+  let cartIconChildCount = 0;
 
   // --- EVENT LISTENERS ---
 
@@ -44,6 +43,21 @@ document.addEventListener("DOMContentLoaded", () => {
       updateCartCount();
       alert(`You added ${cartCount} item${cartCount !== 1 ? "s" : ""} in cart`);
     });
+  });
+
+  cartButtons.forEach((bttn) => {
+    bttn.addEventListener("click", (e) => {
+      cartIconChildCount++;
+      cartBadge.textContent = cartIconChildCount;
+    });
+  });
+
+  userCart.addEventListener("click", (e) => {
+    let targetElement = e.target.closest(".remove_button");
+    if (targetElement) {
+      cartIconChildCount--;
+      cartBadge.textContent = cartIconChildCount;
+    }
   });
 
   // Cart scroll effect
@@ -91,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bttn.addEventListener("click", () => {
       addToCart(userCart, bttn);
       cartCount++;
+
       setTimeout(() => {
         alert(`You added ${cartCount} item${cartCount > 1 ? "s" : ""} in cart`);
       }, 500);
@@ -131,6 +146,9 @@ function addToCart(userCart, bttn) {
   const addItemImage = addItem.querySelector(".product a img").src;
   const elementName = addItem.querySelector(".product_name").textContent;
   const addItemPrice = addItem.querySelector(".price").textContent.substring(1);
+  const priceDiscount = addItem
+    .querySelector(".percent_off")
+    .textContent.substring(1);
 
   const newItem = `<li>
       <div class="cart_item">
@@ -147,7 +165,8 @@ function addToCart(userCart, bttn) {
           </div>
         
         <div class="cart_item_price">
-          <span>${addItemPrice}</span>
+          <span> <b>${addItemPrice}</b></span>
+          <span style = " color: red"><small><s>${priceDiscount}</s></small></span>
         </div>
       </div>
     </div>

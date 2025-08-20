@@ -890,6 +890,145 @@
       <a href="#" class="page-link">Next »</a>
     </div>
 
+    <!-- Log-in Popup Section -->
+
+    <section id="loginPopup" class="popup">
+      <div class="login_popup-content">
+        <span class="login_close-btn">&times;</span>
+        <form id="loginForm" action="/login_submit" method="POST">
+          <img class="login_logo" src="../../image/SPC-Logo.png" alt="" />
+          <br />
+          <h5 class="log-in_h1">Welcome Back</h5>
+
+          <div class="email_password">
+            <div class="login_email">
+              <label class="email_label">Email:</label><br />
+              <input type="text" name="email" placeholder="email" required />
+            </div>
+            <div class="login_password">
+              <label class="password_label">Password:</label><br />
+              <input
+                type="password"
+                name="password"
+                placeholder="******"
+                required
+              />
+            </div>
+            <input class="login_submit" type="submit" value="Login" />
+            <img
+              class="sign-up_w_google"
+              src="../../image/sign-up_w_google.png"
+            />
+          </div>
+          <br />
+          <p id="message_login"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Sign-up Popup -->
+    <section class="sign-up_overlay">
+      <div id="signUpPopup" class="sign-up_popup">
+        <div class="sign-up_popup-content">
+          <span class="sign-up_close-btn">&times;</span>
+
+          <form id="signupForm" action="/sign-up_submit" method="POST">
+            <img class="sign-up_logo" src="../../image/SPC-Logo.png" alt="" />
+            <h2 class="sign-up_h1">Sign-Up</h2>
+            <label>Name:</label><br />
+            <input
+              id="signup_name"
+              name="name"
+              placeholder="name"
+              required
+            /><br />
+
+            <label>Username:</label><br />
+            <input
+              id="signup_username"
+              name="username"
+              placeholder="username"
+              required
+            /><br />
+
+            <label>Email:</label><br />
+            <input
+              id="signup_email"
+              type="text"
+              name="email"
+              placeholder="email"
+              required
+            /><br />
+
+            <label>Password:</label><br />
+            <input
+              id="signup_password"
+              type="password"
+              name="password"
+              placeholder="******"
+              maxlength="6"
+              minlength="1"
+              required
+            /><br />
+
+            <input id="signup_submit" type="submit" value="Sign-Up" />
+            <br />
+            <p id="message_signup"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!--  Shopping Cart Floating  -->
+    <div id="main_body">
+      <div id="cart_window">
+        <div class="overlay"></div>
+        <div id="cart_box">
+          <div class="heading">
+            <div class="title_circle_container">
+              <div class="purple_pink_circle">
+                <div>
+                  <h1>Shopping Cart</h1>
+                  <p>Quick Delivery</p>
+                </div>
+              </div>
+              <button class="close_button">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.6492 11.2501L12.7904 6.53852L13.8346 5.46167L20.5774 12.0001L13.8346 18.5385L12.7904 17.4617L17.6492 12.7501H3V11.2501H17.6492Z"
+                    fill="#080341"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div id="cart_items_container">
+              <span class="empty_cart_message"
+                >Your cart is empty.order an item.</span
+              >
+              <div class="white_fade_overflow top"></div>
+              <ul></ul>
+              <div class="white_fade_overflow bottom"></div>
+            </div>
+            <div id="cart_checkout">
+              <div id="total_checkout">
+                <p>total:</p>
+                <span class="price">0.00</span>
+              </div>
+              <button id="checkout_button">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
 
     <footer>
