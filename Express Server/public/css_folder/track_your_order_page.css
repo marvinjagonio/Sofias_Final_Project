@@ -39,7 +39,7 @@ h6 {
 .breadcrumb_trail span {
   font-weight: normal;
   font-size: medium;
-  color: white !important;
+  color: black !important;
 }
 
 .breadcrumb_trail a:hover {
@@ -55,7 +55,7 @@ h6 {
 }
 
 .track_your_order_fill_section h2 {
-  color: white;
+  color: black;
 }
 
 form {

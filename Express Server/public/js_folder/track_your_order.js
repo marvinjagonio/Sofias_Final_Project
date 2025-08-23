@@ -6,6 +6,9 @@ document
     const email = document.getElementById("email").value.trim();
     const formMessage = document.getElementById("formMessage");
 
+    const numberInput = document.getElementById("number");
+    const emailInput = document.getElementById("email");
+
     if (!number || !email) {
       formMessage.textContent = "⚠️ Please fill in all fields.";
       formMessage.className = "error showMessage";
@@ -17,5 +20,14 @@ document
     } else {
       formMessage.textContent = "✅ Order tracked successfully!";
       formMessage.className = "success showMessage";
+      numberInput.value = "";
+      numberInput.className = "";
+      emailInput.textContent = "";
+      emailInput.value = "";
+
+      setTimeout(() => {
+        formMessage.textContent = " ";
+        formMessage.className = " ";
+      }, 2000);
     }
   });
