@@ -6,7 +6,7 @@
     <title>E-Commerce Landing Page</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css_folder/styles_home.css" />
-    <link rel="stylesheet" href="css_folder/styles_cart.css" />
+    <link rel="stylesheet" href="css_folder/styles_floating_carts.css" />
     <link rel="stylesheet" href="css_folder/styles_floating_popup.css" />
     <link rel="stylesheet" href="css_folder/styles_navbar_footer.css" />
     <link rel="stylesheet" href="css_folder/styles_product.css" />
@@ -156,6 +156,7 @@
                     alt=""
                 /></a>
               </li>
+
               <li class="nav-item mx-1">
                 <a href="items_page_folder/track_your_order.html"
                   ><img
@@ -192,6 +193,19 @@
                     src="icons/sign_up.png"
                     alt=""
                 /></a>
+              </li>
+              <li class="nav-item mx-1">
+                <a href="#"
+                  ><img
+                    class="wishlist_cart_button img-fluid nav-icon px-2"
+                    title="Wishlist"
+                    src="icons/wishlist.png"
+                    alt=""
+                  />
+                  <span id="wishlistCartCount" class="wishlist-cart-badge"
+                    >0</span
+                  ></a
+                >
               </li>
               <li class="nav-item mx-1">
                 <a href="#"
@@ -1391,7 +1405,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><a class="wishlist" href="">♡ Add To Wishlist</a></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1420,7 +1434,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><a class="wishlist" href="">♡ Add To Wishlist</a></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1451,7 +1465,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><a class="wishlist" href="">♡ Add To Wishlist</a></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1480,7 +1494,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><a class="wishlist" href="">♡ Add To Wishlist</a></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1509,7 +1523,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><a class="wishlist" href="">♡ Add To Wishlist</a></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1538,7 +1552,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><a class="wishlist" href="">♡ Add To Wishlist</a></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1567,7 +1581,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><a class="wishlist" href="">♡ Add To Wishlist</a></li>
             </ul>
           </div>
         </div>
@@ -1634,7 +1648,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><a class="wishlist" href="">♡ Add To Wishlist</a></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1663,7 +1677,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><a class="wishlist" href="">♡ Add To Wishlist</a></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1692,7 +1706,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><a class="wishlist" href="">♡ Add To Wishlist</a></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1752,7 +1766,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><button class="wishlist">♡ Add To Wishlist</button></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1781,7 +1795,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><button class="wishlist">♡ Add To Wishlist</button></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1810,7 +1824,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><button class="wishlist">♡ Add To Wishlist</button></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1839,7 +1853,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><button class="wishlist">♡ Add To Wishlist</button></li>
             </ul>
           </div>
         </div>
@@ -1881,7 +1895,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><button class="wishlist">♡ Add To Wishlist</button></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1910,7 +1924,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><button class="wishlist">♡ Add To Wishlist</button></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1939,7 +1953,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><button class="wishlist">♡ Add To Wishlist</button></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1970,7 +1984,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><button class="wishlist">♡ Add To Wishlist</button></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -1999,7 +2013,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><button class="wishlist">♡ Add To Wishlist</button></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -2028,7 +2042,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><button class="wishlist">♡ Add To Wishlist</button></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -2057,7 +2071,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><button class="wishlist">♡ Add To Wishlist</button></li>
             </ul>
           </div>
           <div class="swiper-slide product">
@@ -2086,7 +2100,7 @@
               <button class="cart"><img src="image/cart.png" alt="" /></button>
             </div>
             <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
+              <li><button class="wishlist">♡ Add To Wishlist</button></li>
             </ul>
           </div>
         </div>
@@ -2350,6 +2364,56 @@
       </div>
     </div>
 
+    <!-- Wishlist Cart Floating  -->
+    <div id="wishlist_cart">
+      <div id="wishlist_cart_window">
+        <div class="overlay"></div>
+        <div id="wishlist_cart_box">
+          <div class="heading">
+            <div class="title_circle_container">
+              <div class="wishlist_cart_circle">
+                <div>
+                  <h1>Wishlist Cart</h1>
+                  <p>Quick Delivery</p>
+                </div>
+              </div>
+              <button class="wishlist_close_button">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.6492 11.2501L12.7904 6.53852L13.8346 5.46167L20.5774 12.0001L13.8346 18.5385L12.7904 17.4617L17.6492 12.7501H3V11.2501H17.6492Z"
+                    fill="#080341"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div id="wishlist_cart_items_container">
+              <span class="wishlist_cart_empty_cart_message"
+                >Your cart is empty.order an item.</span
+              >
+              <div class="white_fade_overflow top"></div>
+              <ul></ul>
+              <div class="white_fade_overflow bottom"></div>
+            </div>
+            <div id="wishlist_cart_checkout">
+              <div id="wishlist_cart_total_checkout">
+                <p>total:</p>
+                <span class="price">0.00</span>
+              </div>
+              <button id="wishlist_cart_checkout_button">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
 
     <footer>
@@ -2436,7 +2500,8 @@
     <script src="js_folder/floatingLogin.js"></script>
     <script src="js_folder/floatingSignup.js"></script>
     <script src="js_folder/swiper.js"></script>
-    <script src="js_folder/shopping_cart.js"></script>
+    <script src="js_folder/wishlist.js"></script>
+    <script src="js_folder/floating_carts.js"></script>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
