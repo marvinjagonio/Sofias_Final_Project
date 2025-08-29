@@ -8,7 +8,66 @@ document.addEventListener("DOMContentLoaded", () => {
   const userCart = document.querySelector("#cart_items_container ul");
   const cartBadge = document.getElementById("cartCount");
   const emptyCartMessage = document.querySelector(".empty_cart_message");
+
+  const cartTotalElement = document.querySelector("#total_checkout .price");
+
+  const cartLessElement = document.querySelector(
+    "#total_checkout .percent_off"
+  );
+  const checkoutButton = document.getElementById("checkout_button");
+
   let cartIconCount = 0;
+
+  // --------- Function to calculate total ---------- //
+  function calculateCartTotal() {
+    let lessTotal = 0;
+    let total = 0;
+
+    const items = document.querySelectorAll(".item_1 .price");
+    const discounts = document.querySelectorAll(".item_1 .percent_off");
+
+    items.forEach((priceElement) => {
+      let price = parseFloat(priceElement.textContent.replace(/[^\d.-]/g, ""));
+      if (!isNaN(price)) {
+        total += price;
+      }
+    });
+
+    discounts.forEach((lessElement) => {
+      let price = parseFloat(lessElement.textContent.replace(/[^\d.-]/g, ""));
+      if (!isNaN(price)) {
+        lessTotal += price;
+      }
+    });
+
+    // Update the total in the checkout area
+    cartTotalElement.textContent = total.toFixed(2); // discounted
+    cartLessElement.textContent = lessTotal.toFixed(2);
+  }
+
+  // Run on load
+  calculateCartTotal();
+
+  document.addEventListener("click", (e) => {
+    const removeBtn = e.target.closest(".remove_button");
+    if (removeBtn) {
+      setTimeout(calculateCartTotal, 100);
+    }
+  });
+
+  // Checkout button click
+  checkoutButton.addEventListener("click", () => {
+    if (cartTotalElement.textContent && cartLessElement.textContent > 0) {
+      alert(
+        "Proceeding to checkout with total: " +
+          cartTotalElement.textContent +
+          "\nDiscount: " +
+          cartLessElement.textContent
+      );
+    } else {
+      alert("No added on the Cart");
+    }
+  });
 
   // Open Cart
   document
@@ -48,6 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       addToCart(userCart, bttn);
       updateCartCount();
+      calculateCartTotal();
     });
   });
 
@@ -112,9 +172,10 @@ document.addEventListener("DOMContentLoaded", () => {
           <span>${elementName}</span>
           <span>Qty. 1</span>
         </div>
+      
         <div class="cart_item_price">
-          <b>${addItemPrice}</b>
-          <span style="color:red"><small><s>${priceDiscount}</s></small></span>
+           <b class="price">${addItemPrice}</b>
+          <span style="color:red" class="percent_off"><small>${priceDiscount}</small></span>
         </div>
       </div>
     </li>`;
@@ -135,8 +196,76 @@ document.addEventListener("DOMContentLoaded", () => {
   const wishlistEmptyCartMessage = document.querySelector(
     ".wishlist_empty_cart_message"
   );
+  const wishlistTotalElement = document.querySelector(
+    "#wishlist_cart_total_checkout .price"
+  );
+  const wishlistLessElement = document.querySelector(
+    "#wishlist_cart_total_checkout .percent_off"
+  );
+  const checkoutButton = document.getElementById(
+    "wishlist_cart_checkout_button"
+  );
 
   let cartIconChildCount = 0;
+
+  // --------- Function to calculate total ---------- //
+  function calculateWishlistTotal() {
+    let lessTotal = 0;
+    let total = 0;
+
+    const items = document.querySelectorAll(".wishlist_item_1 .price");
+    const discounts = document.querySelectorAll(
+      ".wishlist_item_1 .percent_off"
+    );
+
+    items.forEach((priceElement) => {
+      let price = parseFloat(priceElement.textContent.replace(/[^\d.-]/g, ""));
+      if (!isNaN(price)) {
+        total += price;
+      }
+    });
+
+    discounts.forEach((lessElement) => {
+      let price = parseFloat(lessElement.textContent.replace(/[^\d.-]/g, ""));
+      if (!isNaN(price)) {
+        lessTotal += price;
+      }
+    });
+
+    // Update the total in the checkout area
+    wishlistTotalElement.textContent = total.toFixed(2); // discounted
+    wishlistLessElement.textContent = lessTotal.toFixed(2);
+  }
+
+  // Run on load
+  calculateWishlistTotal();
+
+  document.addEventListener("click", (e) => {
+    const removeBtn = e.target.closest(".wishlist_remove_button");
+    if (removeBtn) {
+      setTimeout(calculateWishlistTotal, 100);
+    }
+  });
+
+  // Checkout button click
+  checkoutButton.addEventListener("click", () => {
+    if (
+      wishlistTotalElement.textContent &&
+      wishlistLessElement.textContent > 0
+    ) {
+      alert(
+        "Proceeding to checkout with total: " +
+          wishlistTotalElement.textContent +
+          "\nDiscount: " +
+          wishlistLessElement.textContent
+      );
+    } else {
+      alert("No added on the Wishlist");
+    }
+
+    // Here you could redirect to a checkout page
+    // window.location.href = "/checkout";
+  });
 
   // Open Cart
   document
@@ -204,6 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     wishlistItem.remove();
     updateWishListCount();
+    calculateWishlistTotal();
   }
 
   function wishlistOpenCartView() {
@@ -240,13 +370,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <span>Qty. 1</span>
         </div>
         <div class="wishlist_cart_item_price">
-          <b>${addItemPrice}</b>
-          <span style="color:red"><small><s>${priceDiscount}</s></small></span>
+          <b class="price">${addItemPrice}</b>
+          <span style="color:red" class="percent_off"><small>${priceDiscount}</small></span>
         </div>
         <button class="cart">Add to Cart</button>
       </div>
     </li>`;
     wishlistUserCart.insertAdjacentHTML("beforeend", newItem);
+    calculateWishlistTotal();
   }
 });
 // Cart scroll effect

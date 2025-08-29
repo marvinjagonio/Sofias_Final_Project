@@ -203,7 +203,7 @@
   font-weight: 600;
   font-size: 17px;
   display: flex;
-  gap: 100%;
+  gap: 85%;
   text-align: right;
 }
 
@@ -211,7 +211,7 @@
   margin-bottom: 27px;
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: space-evenly;
 }
 
 #cart_box #total_checkout p {
@@ -223,12 +223,16 @@
 }
 
 #cart_box #checkout_button {
+  position: absolute;
   border: 0;
   font-size: 15px;
   font-weight: 500;
   padding: 10px 20px;
   border-radius: 10px;
-  width: 100%;
+  width: 100px;
+  background-color: lightgreen;
+  color: white;
+  left: 330px;
 }
 
 .cart-badge {
@@ -489,7 +493,7 @@
   font-weight: 600;
   font-size: 17px;
   display: flex;
-  gap: 100%;
+  gap: 85%;
   text-align: right;
 }
 
@@ -497,7 +501,7 @@
   margin-bottom: 27px;
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: space-evenly;
 }
 
 #wishlist_cart_box #wishlist_cart_total_checkout p {
@@ -509,12 +513,16 @@
 }
 
 #wishlist_cart_box #wishlist_cart_checkout_button {
+  position: absolute;
   border: 0;
   font-size: 15px;
   font-weight: 500;
   padding: 10px 20px;
   border-radius: 10px;
-  width: 100%;
+  width: 100px;
+  background-color: lightcoral;
+  color: white;
+  left: 330px;
 }
 
 .wishlist-cart-badge {
