@@ -1,0 +1,30 @@
+.breadcrumb_trail a,
+.breadcrumb_trail span {
+  font-weight: normal;
+  font-size: medium;
+  color: black !important;
+}
+
+.breadcrumb_trail a:hover {
+  text-decoration: underline !important;
+}
+
+.breadcrumb_trail {
+  padding-left: 20px;
+}
+
+.cancellation_policy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 20px;
+}
+
+.cancellation_policy_body {
+  background-color: lightgreen;
+  padding: 20px;
+  width: 1480px;
+  flex-wrap: wrap;
+  font-size: large;
+}
