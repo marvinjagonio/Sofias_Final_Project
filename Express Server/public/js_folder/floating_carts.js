@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartTotalElement = document.querySelector("#total_checkout .price");
 
   const cartLessElement = document.querySelector(
-    "#total_checkout .percent_off"
+    "#total_checkout .product_save"
   );
   const checkoutButton = document.getElementById("checkout_button");
 
@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let total = 0;
 
     const items = document.querySelectorAll(".item_1 .price");
-    const discounts = document.querySelectorAll(".item_1 .percent_off");
+
+    const discounts = document.querySelectorAll(".item_1 .product_save ");
 
     items.forEach((priceElement) => {
       let price = parseFloat(priceElement.textContent.replace(/[^\d.-]/g, ""));
@@ -158,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .querySelector(".price")
       .textContent.substring(1);
     const priceDiscount = addItem
-      .querySelector(".percent_off")
+      .querySelector(".product_save")
       .textContent.substring(1);
 
     const newItem = `
@@ -175,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
         <div class="cart_item_price">
            <b class="price">${addItemPrice}</b>
-          <span style="color:red" class="percent_off"><small>${priceDiscount}</small></span>
+          <span style="color:red" class="product_save"><small>${priceDiscount}</small></span>
         </div>
       </div>
     </li>`;
@@ -200,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "#wishlist_cart_total_checkout .price"
   );
   const wishlistLessElement = document.querySelector(
-    "#wishlist_cart_total_checkout .percent_off"
+    "#wishlist_cart_total_checkout .product_save"
   );
   const checkoutButton = document.getElementById(
     "wishlist_cart_checkout_button"
