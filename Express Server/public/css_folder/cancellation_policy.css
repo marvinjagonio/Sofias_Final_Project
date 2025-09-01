@@ -17,14 +17,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   margin: 20px;
 }
 
 .cancellation_policy_body {
   background-color: lightgreen;
   padding: 20px;
-  width: 1480px;
+  width: 100%;
+  margin: auto;
   flex-wrap: wrap;
   font-size: large;
 }
