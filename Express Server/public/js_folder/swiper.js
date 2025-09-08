@@ -156,12 +156,12 @@ window.addEventListener("load", function () {
 
 window.addEventListener("load", function () {
   // Loptop Swiper
-  const loptopSwiper = new Swiper(".loptop_swiper", {
+  const loptopSwiper = new Swiper(".laptop_swiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     navigation: {
-      nextEl: ".loptop_next",
-      prevEl: ".loptop_prev",
+      nextEl: ".laptop_next",
+      prevEl: ".laptop_prev",
     },
     breakpoints: {
       0: {
@@ -178,7 +178,7 @@ window.addEventListener("load", function () {
       },
       1024: {
         slidesPerView: 2,
-        spaceBetween: 24,
+        spaceBetween: 30,
       },
     },
   });
@@ -206,7 +206,7 @@ window.addEventListener("load", function () {
       },
       1024: {
         slidesPerView: 2,
-        spaceBetween: 24,
+        spaceBetween: 30,
       },
     },
   });

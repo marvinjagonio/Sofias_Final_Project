@@ -125,17 +125,16 @@
 
 /* -------------------- Loptop and Desktop Section --------------------*/
 
-#loptop_desktop_section {
+#laptop_desktop_section {
   background-image: url("../image/index_green_gray_wallpaper1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 80px;
-  padding-bottom: 50px;
-  margin: 40px 0;
+  padding: 20px 0;
+
   width: 100%;
 }
 
-.loptop_swiper,
+.laptop_swiper,
 .desktop_swiper {
   width: 100%;
   max-width: 1000px;
@@ -145,17 +144,17 @@
   box-sizing: border-box;
 }
 
-.loptop_desktop_flex {
-  display: flex !important;
-  justify-content: space-around;
+.laptop_desktop_flex {
+  display: flex;
+  justify-content: space-between;
 }
 
-.loptop_background {
+.laptop_background {
   background-color: rgba(46, 133, 46, 0.5);
-  padding: 0 40px !important;
+
   border-radius: 10px;
   width: 100%;
-  max-width: 600px;
+  max-width: 530px;
   box-sizing: border-box;
   border-radius: 10px;
   margin: auto;
@@ -163,17 +162,17 @@
 
 .desktop_background {
   background-color: rgba(135, 135, 135, 0.693);
-  padding: 0 40px !important;
+
   border-radius: 10px;
   width: 100%;
-  max-width: 600px;
+  max-width: 530px;
   box-sizing: border-box;
   border-radius: 10px;
   margin: auto;
 }
 
-.loptop_font,
-.desktop_font {
+article.laptop_font,
+article.desktop_font {
   margin: 0;
   padding: 0;
   display: flex;
@@ -183,31 +182,21 @@
   font-weight: lighter;
 }
 
-@media (max-width: 768px) {
-  .loptop_desktop_flex {
-    flex-direction: column;
-    align-items: center;
-  }
+article.laptop_font p,
+article.desktop_font p {
+  color: #f5f5f5;
+  text-decoration: underline;
+}
 
-  .loptop_background,
-  .desktop_background {
-    width: 100%;
-    max-width: 450px;
-    margin: 50px;
-  }
-
-  .loptop_font,
-  .desktop_font {
-    flex-direction: column;
-    gap: 5px;
-    text-align: center;
-  }
+article.laptop_font h4,
+article.desktop_font h4 {
+  color: #d3d3d3;
 }
 
 /* Loptop and Desktop @media */
 
 @media (min-width: 576px) {
-  .loptop_swiper,
+  .laptop_swiper,
   .desktop_swiper {
     width: 100%;
     max-width: 1000px;
@@ -215,33 +204,33 @@
   }
 
   .desktop_background,
-  .loptop_background {
+  .laptop_background {
     padding: 0;
     margin: 10px auto;
   }
 }
 
 @media (min-width: 768px) {
-  .loptop_swiper,
+  .laptop_swiper,
   .desktop_swiper {
     max-width: 100%;
   }
 }
 
-.loptop_desktop_flex {
+.laptop_desktop_flex {
   display: flex;
   flex-direction: column;
 }
 
 @media (min-width: 992px) {
-  .loptop_desktop_flex {
+  .laptop_desktop_flex {
     display: flex;
     flex-direction: column;
   }
 }
 
 @media (min-width: 1200px) {
-  .loptop_desktop_flex {
+  .laptop_desktop_flex {
     display: flex;
     flex-direction: row;
   }
