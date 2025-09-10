@@ -177,10 +177,10 @@
 
 /* Product @Media */
 
-/* @media (min-width: 576px) {
+@media (min-width: 576px) {
   .product {
-    width: 1vw;
-    height: 1vh;
+    width: 150px;
+    height: auto;
   }
 
   .product_name {
@@ -191,6 +191,7 @@
   }
   .buy_now {
     font-size: x-small;
+    padding: 0;
   }
 
   .spcfix_btn {
@@ -247,4 +248,4 @@
   .product_name {
     font-size: medium;
   }
-} */
+}

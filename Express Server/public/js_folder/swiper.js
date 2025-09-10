@@ -16,6 +16,7 @@ window.addEventListener("load", function () {
       },
       768: {
         slidesPerView: 2,
+        spaceBetween: 20,
       },
       1024: {
         slidesPerView: 3,
@@ -46,19 +47,20 @@ window.addEventListener("load", function () {
     },
     breakpoints: {
       0: {
-        slidesPerView: 1,
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
       576: {
         slidesPerView: 1,
+        spaceBetween: 24,
       },
       768: {
         slidesPerView: 2,
+        spaceBetween: 24,
       },
       1024: {
-        slidesPerView: 4,
-      },
-      1400: {
-        slidesPerView: 5,
+        slidesPerView: 2,
+        spaceBetween: 30,
       },
     },
     on: {
@@ -86,19 +88,20 @@ window.addEventListener("load", function () {
     },
     breakpoints: {
       0: {
-        slidesPerView: 1,
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
       576: {
         slidesPerView: 1,
+        spaceBetween: 24,
       },
       768: {
         slidesPerView: 2,
+        spaceBetween: 24,
       },
       1024: {
-        slidesPerView: 4,
-      },
-      1400: {
-        slidesPerView: 5,
+        slidesPerView: 2,
+        spaceBetween: 30,
       },
     },
     on: {
@@ -126,19 +129,20 @@ window.addEventListener("load", function () {
     },
     breakpoints: {
       0: {
-        slidesPerView: 1,
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
       576: {
         slidesPerView: 1,
+        spaceBetween: 24,
       },
       768: {
         slidesPerView: 2,
+        spaceBetween: 24,
       },
       1024: {
-        slidesPerView: 5,
-      },
-      1400: {
-        slidesPerView: 5,
+        slidesPerView: 2,
+        spaceBetween: 30,
       },
     },
     on: {
@@ -165,8 +169,8 @@ window.addEventListener("load", function () {
     },
     breakpoints: {
       0: {
-        slidesPerView: 1,
-        spaceBetween: 30,
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
       576: {
         slidesPerView: 1,
@@ -193,8 +197,8 @@ window.addEventListener("load", function () {
     },
     breakpoints: {
       0: {
-        slidesPerView: 1,
-        spaceBetween: 30,
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
       576: {
         slidesPerView: 1,
@@ -223,16 +227,20 @@ window.addEventListener("load", function () {
 
     breakpoints: {
       0: {
-        slidesPerView: 1,
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
       576: {
         slidesPerView: 1,
+        spaceBetween: 24,
       },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 2,
+        spaceBetween: 24,
       },
       1024: {
-        slidesPerView: 7,
+        slidesPerView: 2,
+        spaceBetween: 30,
       },
     },
   });

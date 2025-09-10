@@ -56,9 +56,9 @@
             <span class="navbar-toggler-icon" id="navbar1_toggler"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarContent1">
+          <div class="collapse navbar-collapse pt-2" id="navbarContent1">
             <form
-              class="search-container d-flex justify-content-center mt-0 mb-0 mx-auto flex-wrap"
+              class="search-container d-flex justify-content-center mb-lg-2 mt-0 mb-0 mx-auto flex-wrap"
               role="search"
             >
               <input
@@ -146,21 +146,18 @@
               <button type="submit" id="search-button">Search</button>
             </form>
             <ul
-              class="navbar d-flex flex-row flex-md-row mt-0 mb-0 justify-content-around"
+              class="navbar gap-lg-3 gap-sm-2 pt-3 pb-0 flex-nowrap justify-content-evenly"
             >
-              <li class="nav-item mx-1">
+              <li class="nav-item mx-1 gap-sm-2">
                 <a href="#"
-                  ><img
-                    src="icons/about.png"
-                    class="img-fluid nav-icon px-2"
-                    alt=""
+                  ><img src="icons/about.png" class="img-fluid nav-icon" alt=""
                 /></a>
               </li>
 
               <li class="nav-item mx-1">
                 <a href="items_page_folder/track_your_order.html"
                   ><img
-                    class="img-fluid nav-icon px-2"
+                    class="img-fluid nav-icon"
                     title="Track your order"
                     src="icons/track_your_order.png"
                     alt=""
@@ -169,7 +166,7 @@
               <li class="nav-item mx-1">
                 <a href="#"
                   ><img
-                    class="img-fluid nav-icon px-2"
+                    class="img-fluid nav-icon"
                     title="Comment Page"
                     src="icons/comment_icon.png"
                     alt=""
@@ -179,7 +176,7 @@
               <li class="nav-item mx-1" id="loginBtn">
                 <a href="#"
                   ><img
-                    class="img-fluid nav-icon px-2"
+                    class="img-fluid nav-icon"
                     title="Log-in"
                     src="icons/log_in.png"
                     alt=""
@@ -188,34 +185,40 @@
               <li class="nav-item mx-1" id="signUpBtn">
                 <a href="#"
                   ><img
-                    class="img-fluid nav-icon px-2"
+                    class="img-fluid nav-icon"
                     title="Sign-up"
                     src="icons/sign_up.png"
                     alt=""
                 /></a>
               </li>
               <li class="nav-item mx-1">
-                <a href="#"
+                <a href="#" class="position-relative"
                   ><img
-                    class="wishlist_cart_button img-fluid nav-icon px-2"
+                    class="wishlist_cart_button img-fluid nav-icon"
                     title="Wishlist"
                     src="icons/wishlist.png"
                     alt=""
                   />
-                  <span id="wishlistCartCount" class="wishlist-cart-badge"
+                  <span
+                    id="wishlistCartCount"
+                    class="position-absolute top-1 left-0 start-100 translate-middle badge rounded-pill bg-danger"
                     >0</span
                   ></a
                 >
               </li>
               <li class="nav-item mx-1">
-                <a href="#"
+                <a href="#" class="position-relative"
                   ><img
                     class="cart_button img-fluid nav-icon"
                     title="Cart"
                     src="icons/cart.png"
                     alt=""
                   />
-                  <span id="cartCount" class="cart-badge">0</span></a
+                  <span
+                    id="cartCount"
+                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger"
+                    >0</span
+                  ></a
                 >
               </li>
             </ul>
@@ -241,9 +244,9 @@
             id="navbarContent2"
           >
             <ul
-              class="navbar-nav nav-link2 w-100 flex-md-row flex-column justify-content-center gap-5"
+              class="navbar-nav nav-link2 w-100 gap-lg-5 pt-1 flex-md-row flex-column justify-content-center"
             >
-              <li class=""><a class="nav-link" href="#">Home</a></li>
+              <li class="#"><a class="nav-link" href="#">Home</a></li>
 
               <li class="nav-item dropdown">
                 <a
@@ -253,7 +256,7 @@
                   data-bs-toggle="dropdown"
                   >Products</a
                 >
-                <ul class="dropdown-menu p-3 mt-1" style="width: 400px">
+                <ul class="dropdown-menu mt-1" style="width: 400px">
                   <li>
                     <div class="row gap-1">
                       <div class="col-auto col-md-4 col-sm-3 mb-2">
@@ -346,7 +349,7 @@
                       <div class="col-12 col-md-4 mb-2">
                         <ul class="list-unstyled">
                           <li>
-                            <a class="dropdown-item" href="#"
+                            <a class="nav-link dropdown-item" href="#"
                               ><b class="text-success"
                                 >Laptop & Mobile Devices</b
                               ></a

@@ -235,19 +235,6 @@
   left: 330px;
 }
 
-.cart-badge {
-  position: absolute;
-  top: -8px;
-  right: -10px;
-  background: red;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 50%;
-  padding: 2px 7px;
-  box-shadow: 0 2px 5px inset rgba(0, 0, 0, 0.1);
-}
-
 @keyframes slideRight {
   from {
     transform: translateX(100%);
@@ -523,19 +510,6 @@
   background-color: lightcoral;
   color: white;
   left: 330px;
-}
-
-.wishlist-cart-badge {
-  position: absolute;
-  top: -8px;
-  right: 35px;
-  background: red;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 50%;
-  padding: 2px 7px;
-  box-shadow: 0 2px 5px inset rgba(0, 0, 0, 0.1);
 }
 
 @keyframes slideRight {
