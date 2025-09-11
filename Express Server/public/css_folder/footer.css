@@ -2,7 +2,7 @@
 .breadcrumb_trail span {
   font-weight: normal;
   font-size: medium;
-  color: black !important;
+  color: rgb(77, 76, 76) !important;
 }
 
 .breadcrumb_trail a:hover {
@@ -13,18 +13,33 @@
   padding-left: 20px;
 }
 
-.cancellation_policy {
+.cancellation_policy,
+.delivery {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 20px;
 }
 
-.cancellation_policy_body {
-  background-color: lightgreen;
+.cancellation_policy_body,
+.delivery_body {
   padding: 20px;
   width: 100%;
   margin: auto;
   flex-wrap: wrap;
   font-size: large;
+}
+
+h2 {
+  color: black;
+  font-weight: bolder;
+}
+
+strong {
+  color: #00ad2e;
+}
+
+small {
+  text-decoration: underline;
+  color: blue;
 }

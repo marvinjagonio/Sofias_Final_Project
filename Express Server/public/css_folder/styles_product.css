@@ -205,6 +205,12 @@
   .products_hover {
     display: none !important;
   }
+
+  .percent_off,
+  .price,
+  .spcfix_btn {
+    font-size: x-small;
+  }
 }
 
 @media (min-width: 768px) {
@@ -246,6 +252,12 @@
   }
 
   .product_name {
+    font-size: medium;
+  }
+
+  .percent_off,
+  .price,
+  .spcfix_btn {
     font-size: medium;
   }
 }

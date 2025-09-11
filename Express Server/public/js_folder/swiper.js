@@ -55,7 +55,7 @@ window.addEventListener("load", function () {
         spaceBetween: 24,
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 24,
       },
       1024: {
@@ -96,7 +96,7 @@ window.addEventListener("load", function () {
         spaceBetween: 24,
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 24,
       },
       1024: {
@@ -137,7 +137,7 @@ window.addEventListener("load", function () {
         spaceBetween: 24,
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 24,
       },
       1024: {
@@ -231,15 +231,15 @@ window.addEventListener("load", function () {
         spaceBetween: 20,
       },
       576: {
-        slidesPerView: 1,
-        spaceBetween: 24,
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 4,
         spaceBetween: 24,
       },
       1024: {
-        slidesPerView: 2,
+        slidesPerView: 6,
         spaceBetween: 30,
       },
     },

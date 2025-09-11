@@ -62,39 +62,6 @@
   }
 }
 
-/* -------------------- Featured Products Section -------------------- */
-
-/* .featured_products_container {
-  margin: 40vh auto;
-}
-
-.featured_products_slides {
-  width: 100%;
-  max-width: 500px;
-} */
-
-/* @media (max-width: 575.98px) {
-  .featured_products_slides {
-    width: 280px;
-    max-width: 280px;
-  }
-
-  .featured_products_container {
-    margin: 40vh auto;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 990px) {
-  .featured_products_container {
-    margin: 40vh auto;
-  }
-
-  .featured_products_slides {
-    width: 525px;
-    max-width: 525px;
-  }
-}
-
 /* -------------------- Slider Navigation Buttons -------------------- */
 
 .slider-btn {
