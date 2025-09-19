@@ -2,27 +2,26 @@
 .breadcrumb_trail span {
   font-weight: normal;
   font-size: medium;
-  color: rgb(77, 76, 76) !important;
+  color: rgb(77, 76, 76);
+  text-decoration: none;
 }
 
 .breadcrumb_trail a:hover {
-  text-decoration: underline !important;
+  text-decoration: underline;
 }
 
 .breadcrumb_trail {
   padding-left: 20px;
 }
 
-.cancellation_policy,
-.delivery {
+.footer_layout {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 20px;
 }
 
-.cancellation_policy_body,
-.delivery_body {
+.full_footer_layout {
   padding: 20px;
   width: 100%;
   margin: auto;
@@ -30,8 +29,12 @@
   font-size: large;
 }
 
+.full_footer_layout ul {
+  list-style: none;
+}
+
 h2 {
-  color: black;
+  color: #00ad2e;
   font-weight: bolder;
 }
 
@@ -40,6 +43,20 @@ strong {
 }
 
 small {
-  text-decoration: underline;
-  color: blue;
+  color: rgb(53, 53, 255);
+  font-size: x-small;
+}
+
+b {
+  font-weight: bold;
+}
+
+.locations li {
+  font-size: larger;
+  list-style: circle;
+  font-weight: bolder;
+}
+
+.locations li::marker {
+  color: #00ad2e;
 }
