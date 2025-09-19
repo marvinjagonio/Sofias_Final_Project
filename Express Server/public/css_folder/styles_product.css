@@ -1,5 +1,8 @@
 /* -------------------- Product Card Section -------------------- */
 
+li {
+  list-style: none;
+}
 .product {
   position: relative;
   display: inline-block;
@@ -42,6 +45,15 @@
   animation: fadeIn 0.5s ease-in-out forwards;
 }
 
+.product:hover .products_hover {
+  display: block;
+}
+
+.products_hover li a {
+  text-decoration: none;
+  color: black;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -69,7 +81,6 @@
 }
 .percent_off {
   font-size: 16px;
-
   color: red;
 }
 
@@ -86,7 +97,6 @@
 }
 
 .product_name {
-  font-size: small;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -96,10 +106,6 @@
 
 .products_hover li a:hover {
   color: red !important;
-}
-
-.product:hover .products_hover {
-  display: block;
 }
 
 .product img {
@@ -191,7 +197,6 @@
   }
   .buy_now {
     font-size: x-small;
-    padding: 0;
   }
 
   .spcfix_btn {
@@ -200,10 +205,6 @@
 
   .product_save {
     font-size: x-small;
-  }
-
-  .products_hover {
-    display: none !important;
   }
 
   .percent_off,
@@ -226,10 +227,6 @@
   .product_save {
     font-size: small;
   }
-
-  .products_hover {
-    display: block;
-  }
 }
 
 @media (min-width: 992px) {
@@ -239,10 +236,6 @@
 
   .product_name {
     font-size: medium;
-  }
-
-  .products_hover {
-    display: block;
   }
 }
 
