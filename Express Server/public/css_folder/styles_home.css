@@ -28,6 +28,10 @@
   border: 2px solid rgb(211, 210, 210);
 }
 
+.items_category_product a {
+  text-decoration: none;
+}
+
 .items_category_product h4 {
   font-size: medium;
   color: #222;
