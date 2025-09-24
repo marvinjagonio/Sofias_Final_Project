@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Open Cart
   document
     .querySelector(".cart_button")
-    .addEventListener("click", () => openCartView());
+    .addEventListener("click", () => active_remove());
 
   // Close Cart
   document
@@ -109,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
       addToCart(userCart, bttn);
       updateCartCount();
       calculateCartTotal();
+      cartUpdateMessage();
     });
   });
 
@@ -131,6 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (targetElement) {
       removeCartItem(targetElement);
+      cartUpdateMessage();
     }
   });
 
@@ -142,8 +144,32 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCartCount();
   }
 
+  function active_remove() {
+    if (openCartView()) {
+      wishlistCloseCartView();
+    } else {
+      closeCartView();
+    }
+  }
+
+  function cartUpdateMessage() {
+    const total = parseFloat(cartTotalElement.textContent) || 0;
+    const count = cartIconCount; // you already track this number
+
+    if (count <= 0 || total <= 0) {
+      emptyCartMessage.classList.add("active");
+    } else {
+      emptyCartMessage.classList.remove("active");
+    }
+  }
+
+  function wishlistCloseCartView() {
+    document.querySelector("#wishlist_cart_window").classList.remove("active");
+  }
+
   function openCartView() {
     document.querySelector("#cart_window").classList.add("active");
+    return true;
   }
 
   function closeCartView() {
@@ -194,17 +220,18 @@ document.addEventListener("DOMContentLoaded", () => {
     "#wishlist_cart_items_container ul"
   );
   const wishlistCartBadge = document.getElementById("wishlistCartCount");
-  const wishlistEmptyCartMessage = document.querySelector(
-    ".wishlist_empty_cart_message"
-  );
+
   const wishlistTotalElement = document.querySelector(
-    "#wishlist_cart_total_checkout .price"
+    "#wishlist_total_checkout .price"
   );
   const wishlistLessElement = document.querySelector(
-    "#wishlist_cart_total_checkout .product_save"
+    "#wishlist_total_checkout .product_save"
   );
-  const checkoutButton = document.getElementById(
+  const wishlistCheckoutButton = document.getElementById(
     "wishlist_cart_checkout_button"
+  );
+  const wishlistMessage = document.querySelector(
+    ".wishlist_empty_cart_message"
   );
 
   let cartIconChildCount = 0;
@@ -249,29 +276,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Checkout button click
-  checkoutButton.addEventListener("click", () => {
-    if (
-      wishlistTotalElement.textContent &&
-      wishlistLessElement.textContent > 0
-    ) {
-      alert(
-        "Proceeding to checkout with total: " +
-          wishlistTotalElement.textContent +
-          "\nDiscount: " +
-          wishlistLessElement.textContent
-      );
+
+  function updateWishlistMessage() {
+    const total = parseFloat(wishlistTotalElement.textContent) || 0;
+    const count = cartIconChildCount; // you already track this number
+
+    if (count <= 0 || total <= 0) {
+      wishlistMessage.classList.add("active");
     } else {
-      alert("No added on the Wishlist");
+      wishlistMessage.classList.remove("active");
     }
-
-    // Here you could redirect to a checkout page
-    // window.location.href = "/checkout";
-  });
-
+  }
   // Open Cart
   document
     .querySelector(".wishlist_cart_button")
-    .addEventListener("click", () => wishlistOpenCartView());
+    .addEventListener("click", () => active_remove());
 
   // Close Cart
   document
@@ -286,6 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
   wishlistCartButtons.forEach((bttn) => {
     bttn.addEventListener("click", (e) => {
       cartIconChildCount++;
+
       wishlistCartBadge.textContent = cartIconChildCount;
     });
   });
@@ -304,6 +324,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       addToWishlist(wishlistUserCart, bttn);
       updateWishListCount();
+      updateWishlistMessage();
     });
   });
 
@@ -325,6 +346,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (targetElement) {
       removeWishlistItem(targetElement);
+      updateWishlistMessage();
     }
   });
 
@@ -337,8 +359,21 @@ document.addEventListener("DOMContentLoaded", () => {
     calculateWishlistTotal();
   }
 
+  function active_remove() {
+    if (wishlistOpenCartView()) {
+      closeCartView();
+    } else {
+      wishlistCloseCartView();
+    }
+  }
+
+  function closeCartView() {
+    document.querySelector("#cart_window").classList.remove("active");
+  }
+
   function wishlistOpenCartView() {
     document.querySelector("#wishlist_cart_window").classList.add("active");
+    return true;
   }
 
   function wishlistCloseCartView() {
@@ -363,7 +398,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="wishlist_cart_item_image">
           <img src="${addItemImage}" alt="${elementName}" />
           <button class="wishlist_remove_button">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle opacity="0.5" cx="12" cy="12" r="10" stroke="#ff0000" stroke-width="1.5"></circle> <path d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5" stroke="#ff0000" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+            <svg width="191px" height="191px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ff0000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8.00386 9.41816C7.61333 9.02763 7.61334 8.39447 8.00386 8.00395C8.39438 7.61342 9.02755 7.61342 9.41807 8.00395L12.0057 10.5916L14.5907 8.00657C14.9813 7.61605 15.6144 7.61605 16.0049 8.00657C16.3955 8.3971 16.3955 9.03026 16.0049 9.42079L13.4199 12.0058L16.0039 14.5897C16.3944 14.9803 16.3944 15.6134 16.0039 16.0039C15.6133 16.3945 14.9802 16.3945 14.5896 16.0039L12.0057 13.42L9.42097 16.0048C9.03045 16.3953 8.39728 16.3953 8.00676 16.0048C7.61624 15.6142 7.61624 14.9811 8.00676 14.5905L10.5915 12.0058L8.00386 9.41816Z" fill="#ff0000"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z" fill="#ff0000"></path> </g></svg>
           </button>
         </div>
         <div class="wishlist_cart_item_desc">
@@ -381,27 +416,3 @@ document.addEventListener("DOMContentLoaded", () => {
     calculateWishlistTotal();
   }
 });
-// Cart scroll effect
-// function cartScrollEffect(userCart) {
-//   let topFade = document.querySelector(".white_fade_overflow.top");
-//   let bottomFade = document.querySelector(".white_fade_overflow.bottom");
-
-//   topFade.style.opacity = userCart.scrollTop != 0 ? "1" : "0";
-//   bottomFade.style.opacity =
-//     userCart.offsetHeight + userCart.scrollTop == userCart.scrollHeight
-//       ? "0"
-//       : "1";
-// }
-
-// ---------------- Functions outside ---------------- //
-
-// function cartScrollEffect(userCart) {
-//   let topFade = document.querySelector(".white_fade_overflow.top");
-//   let bottomFade = document.querySelector(".white_fade_overflow.bottom");
-
-//   topFade.style.opacity = userCart.scrollTop !== 0 ? "1" : "0";
-//   bottomFade.style.opacity =
-//     userCart.offsetHeight + userCart.scrollTop >= userCart.scrollHeight
-//       ? "0"
-//       : "1";
-// }

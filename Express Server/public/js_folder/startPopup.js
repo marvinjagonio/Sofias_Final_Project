@@ -1,4 +1,4 @@
-// ===== Pop-up Form =====
+// ===== Pop-up Form ===== //
 const popupForm = document.getElementById("popupForm");
 const popupMessage = document.getElementById("popup_message");
 const popupCloseBtn = document.querySelector(".start_popup_close-btn");
@@ -29,7 +29,7 @@ popupCloseBtn.addEventListener("click", () => {
 });
 
 function showPopup() {
-  document.getElementById("start_popup").style.display = "flex";
+  document.getElementById("start_popup").style.display = "active";
 }
 
 function closePopup() {
