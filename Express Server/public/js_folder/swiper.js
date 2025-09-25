@@ -245,3 +245,19 @@ window.addEventListener("load", function () {
     },
   });
 });
+
+window.addEventListener("load", function () {
+  const itemsCathegorySwiper = new Swiper(".careers_swiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".careers-buttons-next",
+      prevEl: ".careers-buttons-prev",
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      576: { slidesPerView: 2 },
+      992: { slidesPerView: 3 },
+    },
+  });
+});
