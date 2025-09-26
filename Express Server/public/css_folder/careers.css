@@ -5,13 +5,12 @@
   align-items: center;
 }
 
-h1 {
-  color: green !important;
+h6 {
   margin: 20px 0;
 }
 
-h6 {
-  margin: 20px 0;
+h1 {
+  color: #00ad2e !important;
 }
 
 .careers_swiper {
@@ -43,16 +42,12 @@ h6 {
   color: #00ad2e !important;
 }
 
-.spc_contact {
-  background-color: #00ad2e;
-  display: flex;
-  padding: 10px 0;
-  flex-direction: column;
-  color: white;
-  margin: 0%;
+.spc-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
 }
-
-.spc_contact p {
-  padding-left: 30px;
-  font-weight: bold;
+.spc-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }

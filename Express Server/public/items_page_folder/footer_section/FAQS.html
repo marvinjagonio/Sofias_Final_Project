@@ -435,94 +435,136 @@
       </nav>
     </header>
     <div class="breadcrumb_trail">
-      <a href="../../index.html">Home</a><span> > SPC Contact Page</span>
+      <a href="../../index.html">Home</a><span> > FAQS</span>
     </div>
 
-    <section id="contact">
+    <!-- FAQS -->
+
+    <section id="faqs" class="py-5">
       <div class="container">
-        <h1 class="text-center mb-4" style="color: #00ad2e">Contact Us</h1>
+        <h1 class="text-center mb-4">SPC FAQS</h1>
         <p class="text-center mb-5">
-          Have questions or inquiries? We’d love to hear from you. Get in touch
-          with us using the form below or through our contact details.
+          Here are some common questions about SPC. Click to view the answers.
         </p>
-        <div class="d-flex justify-content-center mb-4">
-          <div class="card shadow-sm p-4 h-100">
-            <form>
-              <div class="mb-3">
-                <label for="name" class="form-label"
-                  >Full Name <span style="color: red"> *</span></label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  placeholder="Enter your name"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label"
-                  >Email Address <span style="color: red"> *</span></label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="Enter your email"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label"
-                  >Message <span style="color: red"> *</span></label
-                >
-                <textarea
-                  class="form-control"
-                  id="message"
-                  rows="5"
-                  placeholder="Write your message here..."
-                  required
-                ></textarea>
-              </div>
+
+        <div class="accordion" id="faqAccordion">
+          <!-- FAQ 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeadingOne">
               <button
-                type="submit"
-                style="background-color: #00ad2e; color: white"
-                class="btn w-100"
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqOne"
+                aria-expanded="true"
+                aria-controls="faqOne"
+                style="color: #00ad2e"
               >
-                Send Message
+                What services does SPC offer?
               </button>
-            </form>
+            </h2>
+            <div
+              id="faqOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="faqHeadingOne"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                SPC provides reliable customer support, product services, and
+                technical assistance to ensure your needs are met.
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- SPC Contact -->
-
-    <section id="contact-info">
-      <div class="spc_contact d-flex">
-        <div class="container">
-          <div class="p-4 text-center">
-            <h4 class="mb-4">Get in Touch</h4>
-            <p>
-              <i class="bi bi-telephone-fill me-2"></i>
-              <strong>SPC Service Hotline:</strong> 0967-387-2723
-            </p>
-            <p>
-              <i class="bi bi-envelope-fill me-2"></i>
-              <strong>Email:</strong> tempsofimae@gmail.com
-            </p>
-            <p>
-              <i class="bi bi-facebook me-2"></i>
-              <strong>Facebook Messenger:</strong>
-              <a href="https://www.fb.com/spc.ph" target="_blank"
-                >www.fb.com/spc.ph</a
+          <!-- FAQ 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeadingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqTwo"
+                aria-expanded="false"
+                aria-controls="faqTwo"
+                style="color: #00ad2e"
               >
-            </p>
+                How can I contact SPC?
+              </button>
+            </h2>
+            <div
+              id="faqTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="faqHeadingTwo"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                You can reach us through our service hotline (0967-387-2723),
+                email (tempsofimae@gmail.com), or Facebook Messenger
+                (fb.com/spc.ph).
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeadingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqThree"
+                aria-expanded="false"
+                aria-controls="faqThree"
+                style="color: #00ad2e"
+              >
+                What are your service hours?
+              </button>
+            </h2>
+            <div
+              id="faqThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="faqHeadingThree"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Our service hotline and support channels are open from
+                <strong>Monday to Saturday, 9:00 AM – 6:00 PM</strong>.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeadingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqFour"
+                aria-expanded="false"
+                aria-controls="faqFour"
+                style="color: #00ad2e"
+              >
+                Do you offer refunds or returns?
+              </button>
+            </h2>
+            <div
+              id="faqFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="faqHeadingFour"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Yes, SPC follows a Return and Refund Policy. Please check our
+                <a href="#return-policy">Return & Refunds</a> section for
+                details.
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Footer -->
 
     <footer>
