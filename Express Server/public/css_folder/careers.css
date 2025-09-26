@@ -9,7 +9,9 @@ h6 {
   margin: 20px 0;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   color: #00ad2e !important;
 }
 
@@ -50,4 +52,8 @@ h1 {
 .spc-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#our-company {
+  width: 2200px;
 }
