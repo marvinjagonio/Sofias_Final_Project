@@ -29,10 +29,6 @@
   font-size: large;
 }
 
-.full_footer_layout ul {
-  list-style: none;
-}
-
 h2 {
   color: #00ad2e;
   font-weight: bolder;
@@ -101,12 +97,12 @@ h3 {
 }
 
 .card-title {
-  color: #00ad2e !important;
+  color: #00ad2e;
 }
 
 .careers-buttons-next,
 .careers-buttons-prev {
-  color: #00ad2e !important;
+  color: #00ad2e;
 }
 
 .spc-card {
@@ -121,4 +117,16 @@ h3 {
 
 #our-company {
   width: 2200px;
+}
+
+.payment_ul {
+  list-style: disc;
+}
+
+.payment_ul li::marker {
+  color: #00ad2e;
+}
+
+.footer_ul {
+  list-style: none;
 }
