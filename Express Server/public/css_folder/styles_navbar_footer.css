@@ -66,6 +66,12 @@ body {
   list-style: none;
 }
 
+#itemList li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
 @media (max-width: 576px) {
   #navbar1 {
     width: 100%;

@@ -1,3 +1,5 @@
+//  BESTSELLER
+
 const dropdownLinks = document.querySelectorAll(
   ".bestselling-dropdown-content a"
 );
@@ -47,3 +49,71 @@ dropdownLinks.forEach((link) => {
     products.forEach((p) => productList.appendChild(p));
   });
 });
+
+// MAX PRICE and MIN PRICE
+
+function filterPrices() {
+  const minPrice = document.getElementById("min-price").value;
+  const maxPrice = document.getElementById("max-price").value;
+
+  const products = document.querySelectorAll(".product");
+
+  products.forEach((product) => {
+    const price = parseFloat(product.getAttribute("data-price"));
+
+    // Check conditions
+    if (
+      (minPrice === "" || price >= minPrice) &&
+      (maxPrice === "" || price <= maxPrice)
+    ) {
+      product.style.display = "block"; // Show if within range
+    } else {
+      product.style.display = "none"; // Hide if not
+    }
+  });
+}
+
+// AVAILABILITY // RATINGS // DISCOUNTS
+
+// Add event listener for all checkboxes
+const checkboxes = document.querySelectorAll(".filters input[type=checkbox]");
+checkboxes.forEach((cb) => {
+  cb.addEventListener("change", filterProducts);
+});
+
+function filterProducts() {
+  const selectedBrands = getCheckedValues(".filter-brand");
+  const selectedDiscounts = getCheckedValues(".filter-discount");
+  const selectedRatings = getCheckedValues(".filter-rating");
+  const selectedAvailability = getCheckedValues(".filter-availability");
+
+  const products = document.querySelectorAll(".product");
+
+  products.forEach((product) => {
+    const brand = product.dataset.brand;
+    const discount = product.dataset.discount;
+    const rating = product.dataset.rating;
+    const availability = product.dataset.availability;
+
+    let show = true;
+
+    if (selectedBrands.length && !selectedBrands.includes(brand)) show = false;
+    if (selectedDiscounts.length && !selectedDiscounts.includes(discount))
+      show = false;
+    if (selectedRatings.length && !selectedRatings.includes(rating))
+      show = false;
+    if (
+      selectedAvailability.length &&
+      !selectedAvailability.includes(availability)
+    )
+      show = false;
+
+    product.style.display = show ? "block" : "none";
+  });
+}
+
+function getCheckedValues(selector) {
+  return [...document.querySelectorAll(selector + ":checked")].map(
+    (cb) => cb.value
+  );
+}

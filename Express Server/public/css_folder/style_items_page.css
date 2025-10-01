@@ -67,6 +67,15 @@
   gap: 10px;
 }
 
+.top_product_name a {
+  text-decoration: none !important;
+  color: black;
+}
+
+.top_product_name a:hover {
+  color: blue;
+}
+
 @media (max-width: 576px) {
   .right_side_section {
     padding: auto;
