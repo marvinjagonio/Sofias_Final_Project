@@ -24,7 +24,7 @@
     />
   </head>
   <body>
-    <!-- Navigation Bar Section -->
+    <!-- Navigation Bar -->
 
     <header>
       <div id="scrolling_text" class="bg-warning py-2 fixed-top">
@@ -39,9 +39,9 @@
         </marquee>
       </div>
 
-      <nav id="navbar1" class="navbar navbar-expand-md bg-light no-wrap">
+      <nav id="navbar1" class="navbar navbar-expand-md bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="../../index.html">
             <img
               src="../../image/SPC-Logo.png"
               alt="Logo"
@@ -59,9 +59,9 @@
             <span class="navbar-toggler-icon" id="navbar1_toggler"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarContent1">
+          <div class="collapse navbar-collapse pt-2" id="navbarContent1">
             <form
-              class="search-container d-flex justify-content-center mx-auto mt-0 mb-0"
+              class="search-container d-flex justify-content-center mb-lg-2 mt-0 mb-0 mx-auto flex-wrap"
               role="search"
             >
               <input
@@ -72,53 +72,81 @@
               />
               <ul id="itemList">
                 <li>
-                  <a href="../component_page/cpu_cooling_fan_page.html"
-                    >CPU Cooling</a
+                  <a
+                    href="../../items_page_folder/component_page/cpu_cooling_fan_page.html"
+                    >CPU Cooling Fan</a
                   >
                 </li>
                 <li>
-                  <a href="../component_page/graphics_card.html"
+                  <a
+                    href="../../items_page_folder/component_page/graphics_card.html"
                     >Graphics Card</a
                   >
                 </li>
                 <li>
-                  <a href="../component_page/hard_disk.html">Hard Disk</a>
-                </li>
-                <li><a href="../component_page/memory.html">Memory</a></li>
-                <li>
-                  <a href="../component_page/motherboard.html">Motherboard</a>
-                </li>
-                <li><a href="../component_page/pc_case.html">PC Case</a></li>
-                <li>
-                  <a href="../component_page/power_supply.html">Power Supply</a>
+                  <a
+                    href="../../items_page_folder/component_page/hard_disk.html"
+                    >Hard Disk</a
+                  >
                 </li>
                 <li>
-                  <a href="../component_page/processor_AMD.html"
+                  <a href="../../items_page_folder/component_page/memory.html"
+                    >Memory</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../items_page_folder/component_page/motherboard.html"
+                    >Motherboard</a
+                  >
+                </li>
+                <li>
+                  <a href="../../items_page_folder/component_page/pc_case.html"
+                    >PC Case</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../items_page_folder/component_page/power_supply.html"
+                    >Power Supply</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../items_page_folder/component_page/processor_AMD.html"
                     >Processor AMD</a
                   >
                 </li>
                 <li>
-                  <a href="../component_page/processor_intel.html"
+                  <a
+                    href="../../items_page_folder/component_page/processor_intel.html"
                     >Processor INTEL</a
                   >
                 </li>
+
                 <li>
-                  <a href="../loptop_mobile_page/chrombook_page.html"
-                    >Chromebook</a
+                  <a
+                    href="../../items_page_folder/loptop_mobile_page/loptop_page.html"
+                    >Loptops</a
                   >
                 </li>
                 <li>
-                  <a href="../loptop_mobile_page/laptops_page.html">Loptops</a>
-                </li>
-                <li>
-                  <a href="../loptop_mobile_page/mobile_page.html"
+                  <a
+                    href="../../items_page_folder/loptop_mobile_page/mobile_page.html"
                     >Mobile Phone</a
                   >
                 </li>
                 <li>
-                  <a href="../loptop_mobile_page/tablet_page.html">Tablet</a>
+                  <a
+                    href="../../items_page_folder/loptop_mobile_page/tablet_page.html"
+                    >Tablet</a
+                  >
                 </li>
-                <li><a href="../desktop_page.html">Desktop</a></li>
+                <li>
+                  <a href="../../items_page_folder/desktop_page.html"
+                    >Desktop</a
+                  >
+                </li>
 
                 <li><a href="../rakk_page.html">RAKK</a></li>
                 <li id="noResults" style="display: none; color: gray">
@@ -127,19 +155,19 @@
               </ul>
               <button type="submit" id="search-button">Search</button>
             </form>
-            <ul class="navbar d-flex no-wrap mt-0 mb-0 justify-content-around">
-              <li class="nav-item mx-1 img-fluid">
+            <ul
+              class="navbar gap-lg-3 gap-sm-2 pt-3 pb-0 flex-nowrap justify-content-evenly"
+            >
+              <li class="nav-item mx-1 gap-sm-2">
                 <a href="#"
-                  ><img
-                    src="../../icons/about.png"
-                    class="nav-icon px-2 img-fluid"
-                    alt=""
+                  ><img src="icons/about.png" class="img-fluid nav-icon" alt=""
                 /></a>
               </li>
+
               <li class="nav-item mx-1">
                 <a href="items_page_folder/track_your_order.html"
                   ><img
-                    class="nav-icon px-2 img-fluid"
+                    class="img-fluid nav-icon"
                     title="Track your order"
                     src="../../icons/track_your_order.png"
                     alt=""
@@ -148,7 +176,7 @@
               <li class="nav-item mx-1">
                 <a href="#"
                   ><img
-                    class="nav-icon px-2 img-fluid"
+                    class="img-fluid nav-icon"
                     title="Comment Page"
                     src="../../icons/comment_icon.png"
                     alt=""
@@ -158,30 +186,49 @@
               <li class="nav-item mx-1" id="loginBtn">
                 <a href="#"
                   ><img
-                    class="nav-icon px-2 img-fluid"
+                    class="img-fluid nav-icon"
                     title="Log-in"
-                    src="../../icons/log-in.png"
+                    src="../../icons/log_in.png"
                     alt=""
                 /></a>
               </li>
               <li class="nav-item mx-1" id="signUpBtn">
                 <a href="#"
                   ><img
-                    class="nav-icon px-2 img-fluid"
+                    class="img-fluid nav-icon"
                     title="Sign-up"
-                    src="../../icons/nav_icon_2.png"
+                    src="../../icons/sign_up.png"
                     alt=""
                 /></a>
               </li>
               <li class="nav-item mx-1">
-                <a href="#"
+                <a href="#" class="position-relative"
                   ><img
-                    class="cart_button nav-icon px-2 img-fluid"
-                    title="Cart Page"
+                    class="wishlist_cart_button img-fluid nav-icon"
+                    title="Wishlist"
+                    src="../../icons/wishlist.png"
+                    alt=""
+                  />
+                  <span
+                    id="wishlistCartCount"
+                    class="position-absolute top-1 left-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    >0</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item mx-1">
+                <a href="#" class="position-relative"
+                  ><img
+                    class="cart_button img-fluid nav-icon"
+                    title="Cart"
                     src="../../icons/cart.png"
                     alt=""
                   />
-                  <span id="cartCount" class="cart-badge">0</span></a
+                  <span
+                    id="cartCount"
+                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger"
+                    >0</span
+                  ></a
                 >
               </li>
             </ul>
@@ -189,7 +236,7 @@
         </div>
       </nav>
 
-      <!-- Second Nav-bar Section -->
+      <!-- Second Navigation Bar -->
 
       <nav id="navbar2" class="navbar navbar-expand-md">
         <div class="container-fluid">
@@ -203,13 +250,13 @@
           </button>
 
           <div
-            class="collapse navbar-collapse position-relative overflow-auto"
+            class="collapse navbar-collapse position-relative"
             id="navbarContent2"
           >
             <ul
-              class="navbar-nav nav-link2 w-100 flex-md-row flex-column justify-content-center gap-5 gap-md-3 gap-lg-5"
+              class="navbar-nav nav-link2 w-100 gap-lg-5 gap-md-3 pt-md-3 pt-lg-2 flex-md-row flex-column justify-content-center"
             >
-              <li class=""><a class="nav-link" href="#">Home</a></li>
+              <li class="#"><a class="nav-link" href="#">Home</a></li>
 
               <li class="nav-item dropdown">
                 <a
@@ -219,14 +266,14 @@
                   data-bs-toggle="dropdown"
                   >Products</a
                 >
-                <ul class="dropdown-menu" style="width: 400px">
+                <ul class="dropdown-menu mt-1" style="width: 400px">
                   <li>
                     <div class="row gap-1">
                       <div class="col-auto col-md-4 col-sm-3 mb-2">
                         <ul class="list-unstyled">
                           <li>
                             <a
-                              class="dropdown-item"
+                              class="dropdown-item fs-6"
                               href="#"
                               onclick="closeDropdown()"
                               ><b class="text-success">Components</b></a
@@ -234,76 +281,76 @@
                           </li>
                           <li>
                             <a
-                              class="dropdown-item"
-                              href="items_page_folder/component_page/cpu_cooling_fan_page.html"
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/cpu_cooling_fan_page.html"
                               >CPU Cooling</a
                             >
                           </li>
                           <li>
                             <a
-                              class="dropdown-item"
-                              href="items_page_folder/component_page/graphics_card.html"
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/graphics_card.html"
                               >Graphics Card</a
                             >
                           </li>
                           <li>
                             <a
-                              class="dropdown-item"
-                              href="items_page_folder/component_page/hard_disk.html"
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/hard_disk.html"
                               >Hard Disk</a
                             >
                           </li>
                           <li>
                             <a
-                              class="dropdown-item"
-                              href="items_page_folder/component_page/memory.html"
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/memory.html"
                               >Memory</a
                             >
                           </li>
                           <li>
                             <a
-                              class="dropdown-item"
-                              href="items_page_folder/component_page/motherboard.html"
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/motherboard.html"
                               >Motherboard</a
                             >
                           </li>
                           <li>
                             <a
-                              class="dropdown-item"
-                              href="items_page_folder/component_page/pc_case.html"
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/pc_case.html"
                               >PC Case</a
                             >
                           </li>
                           <li>
                             <a
-                              class="dropdown-item"
-                              href="items_page_folder/component_page/power_supply.html"
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/power_supply.html"
                               >Power Supply</a
                             >
                           </li>
                           <li>
                             <a
-                              class="dropdown-item"
-                              href="items_page_folder/component_page/processor_AMD.html"
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/processor_AMD.html"
                               >Processor AMD</a
                             >
                           </li>
                           <li>
                             <a
-                              class="dropdown-item"
-                              href="items_page_folder/component_page/processor_intel.html"
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/processor_intel.html"
                               >Processor INTEL</a
                             >
                           </li>
                           <li>
                             <a
-                              class="dropdown-item"
-                              href="items_page_folder/component_page/processor_tray.html"
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/processor_tray.html"
                               >Processor Tray</a
                             >
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#"
+                            <a class="dropdown-item fs-6" href="#"
                               >Solid State Drive</a
                             >
                           </li>
@@ -312,7 +359,7 @@
                       <div class="col-12 col-md-4 mb-2">
                         <ul class="list-unstyled">
                           <li>
-                            <a class="dropdown-item" href="#"
+                            <a class="nav-link dropdown-item fs-6" href="#"
                               ><b class="text-success"
                                 >Laptop & Mobile Devices</b
                               ></a
@@ -320,29 +367,29 @@
                           </li>
                           <li>
                             <a
-                              class="dropdown-item"
-                              href="items_page_folder/loptop_mobile_page/chrombook_page.html"
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/loptop_mobile_page/chrombook_page.html"
                               >Chromebook</a
                             >
                           </li>
                           <li>
                             <a
-                              class="dropdown-item"
-                              href="items_page_folder/loptop_mobile_page/laptops_page.html"
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/loptop_mobile_page/laptops_page.html"
                               >Laptops</a
                             >
                           </li>
                           <li>
                             <a
-                              class="dropdown-item"
-                              href="items_page_folder/loptop_mobile_page/mobile_page.html"
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/loptop_mobile_page/mobile_page.html"
                               >Mobile Phone</a
                             >
                           </li>
                           <li>
                             <a
-                              class="dropdown-item"
-                              href="items_page_folder/loptop_mobile_page/tablet_page.html"
+                              class="dropdown-item fs-6 fs-sm-8"
+                              href="../../items_page_folder/loptop_mobile_page/tablet_page.html"
                               >Tablet</a
                             >
                           </li>
@@ -354,44 +401,58 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="items_page_folder/desktop_page.html"
+                <a
+                  class="nav-link"
+                  href="../../items_page_folder/desktop_page.html"
                   >Desktop</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="items_page_folder/laptop_page.html"
+                <a
+                  class="nav-link"
+                  href="../../items_page_folder/laptop_page.html"
                   >Laptop</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="items_page_folder/powerd_by_msi.html"
+                <a
+                  class="nav-link"
+                  href="../../items_page_folder/powerd_by_msi.html"
                   >Powered by MSI</a
                 >
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  href="items_page_folder/build_a_pc_page.html"
+                  href="../../items_page_folder/build_a_pc_page.html"
                   >Build a PC</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="items_page_folder/rakk_page.html"
+                <a
+                  class="nav-link"
+                  href="../../items_page_folder/rakk_page.html"
                   >RAKK</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="items_page_folder/shopmate_page.html"
+                <a
+                  class="nav-link"
+                  href="../../items_page_folder/shopmate_page.html"
                   >SPC</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="items_page_folder/rewards_page.html"
+                <a
+                  class="nav-link"
+                  href="../../items_page_folder/rewards_page.html"
                   >Rewards</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="items_page_folder/brands_page.html"
+                <a
+                  class="nav-link"
+                  href="../../items_page_folder/brands_page.html"
                   >Brands</a
                 >
               </li>
@@ -504,10 +565,10 @@
           <div class="bestselling_dropdown">
             <button class="dropbtn">Bestselling</button>
             <div class="bestselling-dropdown-content">
-              <a href="#">Title: A-Z</a>
-              <a href="#">Title: Z-A</a>
-              <a href="#">Title: High-Low</a>
-              <a href="#">Title: Low-High</a>
+              <a href="#" data-sort="az">Title: A-Z</a>
+              <a href="#" data-sort="za">Title: Z-A</a>
+              <a href="#" data-sort="high-low">Title: High-Low</a>
+              <a href="#" data-sort="low-high">Title: Low-High</a>
             </div>
           </div>
         </div>
@@ -1170,7 +1231,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/cancellation_policy.html"
+                  href="../../items_page_folder/footer_section/cancellation_policy.html"
                   title="Cancellation Policy"
                   >Cancellation Policy</a
                 >
@@ -1178,7 +1239,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/delivery.html"
+                  href="../../items_page_folder/footer_section/delivery.html"
                   title="Deliver"
                   >Delivery</a
                 >
@@ -1186,7 +1247,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/order_payment.html"
+                  href="../../items_page_folder/footer_section/order_payment.html"
                   title="Order Payment"
                   >Order And Payments</a
                 >
@@ -1194,7 +1255,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/payment_faqs.html"
+                  href="../../items_page_folder/footer_section/payment_faqs.html"
                   title="Payment Faqs"
                   >Payment FAQs</a
                 >
@@ -1202,7 +1263,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/privacy_policy.html"
+                  href="../../items_page_folder/footer_section/privacy_policy.html"
                   title="Privacy Policy"
                   >Privacy Policy</a
                 >
@@ -1210,7 +1271,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/return_refunds.html"
+                  href="../../items_page_folder/footer_section/return_refunds.html"
                   title="Return Refunds"
                   >Return And Refunds</a
                 >
@@ -1218,7 +1279,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/service_area_directory.html"
+                  href="../../items_page_folder/footer_section/service_area_directory.html"
                   title="Service Area Directory"
                   >Service Area Directory</a
                 >
@@ -1226,7 +1287,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/terms_conditions.html"
+                  href="../../items_page_folder/footer_section/terms_conditions.html"
                   title="Terms Condition"
                   >Terms And Conditions</a
                 >
@@ -1234,7 +1295,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/warranty_information.html"
+                  href="../../items_page_folder/footer_section/warranty_information.html"
                   title="Warranty Information"
                   >Warranty Information</a
                 >
@@ -1242,7 +1303,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/warranty_policy.html"
+                  href="../../items_page_folder/footer_section/warranty_policy.html"
                   title="Warranty Policy"
                   >Warranty Policy</a
                 >
@@ -1257,7 +1318,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/careers.html"
+                  href="../../items_page_folder/footer_section/careers.html"
                   title="Careers"
                   >Careers</a
                 >
@@ -1265,7 +1326,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/contact_us.html"
+                  href="../../items_page_folder/footer_section/contact_us.html"
                   title="Contact Us"
                   >Contact Us</a
                 >
@@ -1273,7 +1334,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/FAQS.html"
+                  href="../../items_page_folder/footer_section/FAQS.html"
                   title="FAQS"
                   >FAQs</a
                 >
@@ -1281,7 +1342,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/news_articles.html"
+                  href="../../items_page_folder/footer_section/news_articles.html"
                   title="News Articles"
                   >News And Articles</a
                 >
@@ -1289,7 +1350,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/our_company.html"
+                  href="../../items_page_folder/footer_section/our_company.html"
                   title="Our Company"
                   >Our Company</a
                 >
@@ -1297,7 +1358,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/reviews.html"
+                  href="../../items_page_folder/footer_section/reviews.html"
                   title="Reviews"
                   >Reviews</a
                 >
@@ -1305,7 +1366,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/store_location.html"
+                  href="../../items_page_folder/footer_section/store_location.html"
                   title="Store Location"
                   >Store Locations</a
                 >
@@ -1320,7 +1381,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/spc_corporate.html"
+                  href="../../items_page_folder/footer_section/spc_corporate.html"
                   title="SPC Corporate"
                   >SPC Corporate</a
                 >
@@ -1328,7 +1389,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/spc_community.html"
+                  href="../../items_page_folder/footer_section/spc_community.html"
                   title="SPC Community"
                   >SPC Community</a
                 >
@@ -1345,7 +1406,7 @@
                 <div>
                   <img
                     class="footer_bw_logo"
-                    src="../../.black_white_logo/facebook_logo_b_w.png"
+                    src="../../black_white_logo/facebook_logo_b_w.png"
                     alt=""
                   />
                   <img
@@ -1375,6 +1436,8 @@
     <script src="../../js_folder/floatingSignup.js"></script>
     <script src="../../js_folder/swiper.js"></script>
     <script src="../../js_folder/shopping_cart.js"></script>
+    <script src="../../js_folder/bestselling.js"></script>
+    <script src="../../js_folder/floating_carts.js"></script>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
