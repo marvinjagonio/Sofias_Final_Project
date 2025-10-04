@@ -4,42 +4,452 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css_folder/styles_item_page.css" />
+    <link rel="stylesheet" href="../../css_folder/style_items_page.css" />
+    <link rel="stylesheet" href="../../css_folder/styles_cart.css" />
+    <link rel="stylesheet" href="../../css_folder/styles_floating_popup.css" />
+    <link rel="stylesheet" href="../../css_folder/styles_navbar_footer.css" />
+    <link rel="stylesheet" href="../../css_folder/styles_product.css" />
+    <link rel="stylesheet" href="../../css_folder/styles_floating_carts.css" />
+    <link rel="stylesheet" href="../../css_folder/styles_product.css" />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <a href="../index.html">
-            <img src="../image/SPC-Logo.png" alt="" />
-          </a>
-          <h2>ShopMate</h2>
-        </div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li class="dropdown">
-            <a href="#">Products ▼</a>
-            <ul class="dropdown-menu">
-              <li><a href="../items_page_folder/electronic_page.html">Electronics</a></li>
-              <li><a href="../items_page_folder/storage_page.html"> Storage</a></li>
-              <li><a href="../items_page_folder/accessories_page.html">Accessories</a></li>
-              <li><a href="../items_page_folder/memory_page.html">Memory</a></li>
-            </ul>
-          </li>
+    <!-- Navigation Bar -->
 
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <div class="sign_in">
-            <li>
-              <a href="#">Sign in</a>
-            </li>
-            <li>
-              <a href=""
-                ><img class="sign_in_img" src="../image/log_in.jpg" alt=""
-              /></a>
-            </li>
+    <header>
+      <div id="scrolling_text" class="bg-warning py-2 fixed-top">
+        <marquee
+          behavior="scroll"
+          direction="left"
+          scrollamount="5"
+          class="px-3"
+        >
+          SPC Computer Hardware now offers easy 2 Get Delivery... (your text
+          here)
+        </marquee>
+      </div>
+
+      <nav id="navbar1" class="navbar navbar-expand-md bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../../index.html">
+            <img
+              src="../../image/SPC-Logo.png"
+              alt="Logo"
+              class="img-fluid ps-3"
+              style="height: 35px"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler me-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent1"
+          >
+            <span class="navbar-toggler-icon" id="navbar1_toggler"></span>
+          </button>
+
+          <div class="collapse navbar-collapse pt-2" id="navbarContent1">
+            <form
+              class="search-container d-flex justify-content-center mb-lg-2 mt-0 mb-0 mx-auto flex-wrap"
+              role="search"
+            >
+              <input
+                class="form-control w-100 w-md-50"
+                type="text"
+                id="search"
+                placeholder="Search..."
+              />
+              <ul id="itemList">
+                <li>
+                  <a
+                    href="../../items_page_folder/component_page/cpu_cooling_fan_page.html"
+                    >CPU Cooling Fan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../items_page_folder/component_page/graphics_card.html"
+                    >Graphics Card</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../items_page_folder/component_page/hard_disk.html"
+                    >Hard Disk</a
+                  >
+                </li>
+                <li>
+                  <a href="../../items_page_folder/component_page/memory.html"
+                    >Memory</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../items_page_folder/component_page/motherboard.html"
+                    >Motherboard</a
+                  >
+                </li>
+                <li>
+                  <a href="../../items_page_folder/component_page/pc_case.html"
+                    >PC Case</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../items_page_folder/component_page/power_supply.html"
+                    >Power Supply</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../items_page_folder/component_page/processor_AMD.html"
+                    >Processor AMD</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../items_page_folder/component_page/processor_intel.html"
+                    >Processor INTEL</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="../../items_page_folder/loptop_mobile_page/loptop_page.html"
+                    >Loptops</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../items_page_folder/loptop_mobile_page/mobile_page.html"
+                    >Mobile Phone</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../items_page_folder/loptop_mobile_page/tablet_page.html"
+                    >Tablet</a
+                  >
+                </li>
+                <li>
+                  <a href="../../items_page_folder/desktop_page.html"
+                    >Desktop</a
+                  >
+                </li>
+
+                <li><a href="../rakk_page.html">RAKK</a></li>
+                <li id="noResults" style="display: none; color: gray">
+                  No results found
+                </li>
+              </ul>
+              <button type="submit" id="search-button">Search</button>
+            </form>
+            <ul
+              class="navbar gap-lg-3 gap-sm-2 pt-3 pb-0 flex-nowrap justify-content-evenly"
+            >
+              <li class="nav-item mx-1 gap-sm-2">
+                <a href="#"
+                  ><img src="icons/about.png" class="img-fluid nav-icon" alt=""
+                /></a>
+              </li>
+
+              <li class="nav-item mx-1">
+                <a href="items_page_folder/track_your_order.html"
+                  ><img
+                    class="img-fluid nav-icon"
+                    title="Track your order"
+                    src="../../icons/track_your_order.png"
+                    alt=""
+                /></a>
+              </li>
+              <li class="nav-item mx-1">
+                <a href="#"
+                  ><img
+                    class="img-fluid nav-icon"
+                    title="Comment Page"
+                    src="../../icons/comment_icon.png"
+                    alt=""
+                /></a>
+              </li>
+
+              <li class="nav-item mx-1" id="loginBtn">
+                <a href="#"
+                  ><img
+                    class="img-fluid nav-icon"
+                    title="Log-in"
+                    src="../../icons/log_in.png"
+                    alt=""
+                /></a>
+              </li>
+              <li class="nav-item mx-1" id="signUpBtn">
+                <a href="#"
+                  ><img
+                    class="img-fluid nav-icon"
+                    title="Sign-up"
+                    src="../../icons/sign_up.png"
+                    alt=""
+                /></a>
+              </li>
+              <li class="nav-item mx-1">
+                <a href="#" class="position-relative"
+                  ><img
+                    class="wishlist_cart_button img-fluid nav-icon"
+                    title="Wishlist"
+                    src="../../icons/wishlist.png"
+                    alt=""
+                  />
+                  <span
+                    id="wishlistCartCount"
+                    class="position-absolute top-1 left-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    >0</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item mx-1">
+                <a href="#" class="position-relative"
+                  ><img
+                    class="cart_button img-fluid nav-icon"
+                    title="Cart"
+                    src="../../icons/cart.png"
+                    alt=""
+                  />
+                  <span
+                    id="cartCount"
+                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger"
+                    >0</span
+                  ></a
+                >
+              </li>
+            </ul>
           </div>
-        </ul>
+        </div>
+      </nav>
+
+      <!-- Second Navigation Bar -->
+
+      <nav id="navbar2" class="navbar navbar-expand-md">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler me-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent2"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse position-relative"
+            id="navbarContent2"
+          >
+            <ul
+              class="navbar-nav nav-link2 w-100 gap-lg-5 gap-md-3 pt-md-3 pt-lg-2 flex-md-row flex-column justify-content-center"
+            >
+              <li class="#">
+                <a class="nav-link" href="../../index.html">Home</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Products</a
+                >
+                <ul class="dropdown-menu mt-1" style="width: 400px">
+                  <li>
+                    <div class="row gap-1">
+                      <div class="col-auto col-md-4 col-sm-3 mb-2">
+                        <ul class="list-unstyled">
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="#"
+                              onclick="closeDropdown()"
+                              ><b class="text-success">Components</b></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/cpu_cooling_fan_page.html"
+                              >CPU Cooling</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/graphics_card.html"
+                              >Graphics Card</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/hard_disk.html"
+                              >Hard Disk</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/memory.html"
+                              >Memory</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/motherboard.html"
+                              >Motherboard</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/pc_case.html"
+                              >PC Case</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/power_supply.html"
+                              >Power Supply</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/processor_AMD.html"
+                              >Processor AMD</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/processor_intel.html"
+                              >Processor INTEL</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/component_page/processor_tray.html"
+                              >Processor Tray</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item fs-6" href="#"
+                              >Solid State Drive</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-12 col-md-4 mb-2">
+                        <ul class="list-unstyled">
+                          <li>
+                            <a class="nav-link dropdown-item fs-6" href="#"
+                              ><b class="text-success"
+                                >Laptop & Mobile Devices</b
+                              ></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/loptop_mobile_page/chrombook_page.html"
+                              >Chromebook</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/loptop_mobile_page/laptops_page.html"
+                              >Laptops</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="../../items_page_folder/loptop_mobile_page/mobile_page.html"
+                              >Mobile Phone</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6 fs-sm-8"
+                              href="../../items_page_folder/loptop_mobile_page/tablet_page.html"
+                              >Tablet</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../../items_page_folder/desktop_page.html"
+                  >Desktop</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../../items_page_folder/laptop_page.html"
+                  >Laptop</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../../items_page_folder/powerd_by_msi.html"
+                  >Powered by MSI</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../../items_page_folder/build_a_pc_page.html"
+                  >Build a PC</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../../items_page_folder/rakk_page.html"
+                  >RAKK</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../../items_page_folder/shopmate_page.html"
+                  >SPC</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../../items_page_folder/rewards_page.html"
+                  >Rewards</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../../items_page_folder/brands_page.html"
+                  >Brands</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
     <section id="first_section">

@@ -496,52 +496,66 @@
         </div>
         <hr />
 
-        <!-- Availability -->
-        <div><label for="">Availability</label> <input type="checkbox" /></div>
-        <hr />
+        <div class="filters">
+          <!-- Availability -->
+          <div>
+            <label for="">Availability</label> <input type="checkbox" />
+          </div>
+          <hr />
 
-        <!-- Brand -->
-        <div>
-          <label for=""> Brand</label> <br /><br /><input
-            type="checkbox"
-            name=""
-            id=""
-          />
-          <label for="">AMD</label> <br />
-          <input type="checkbox" name="" id="" /><label for="">ShopMate</label>
-          <br />
-          <input type="checkbox" /> <label for="">Intel</label>
-        </div>
-        <hr />
+          <!-- Brand -->
+          <div>
+            <label for=""> Brand</label> <br /><br /><input
+              type="checkbox"
+              class="filter-brand"
+              value="AMD"
+            />
+            <label for="">AMD</label> <br />
+            <input
+              type="checkbox"
+              class="filter-brand"
+              value="SPCComputerHardware"
+            /><label for="">SPC Computer Hardware</label>
+            <br />
+            <input type="checkbox" class="filter-brand" value="Intel" />
+            <label for="">Intel</label>
+          </div>
+          <hr />
 
-        <!-- Discount -->
-        <div>
-          <label for="">Discount</label> <br />
-          <br />
-          <input type="checkbox" name="" id="" /> <label for="">10%</label>
-          <br />
-          <input type="checkbox" /> <label for="">20%</label> <br />
-          <input type="checkbox" /> <label for="">30%</label> <br />
-          <input type="checkbox" /> <label for="">40%</label> <br />
-          <input type="checkbox" /> <label for="">50%</label> <br />
-          <input type="checkbox" /> <label for="">70%</label>
-        </div>
-        <hr />
+          <!-- Discount -->
+          <div>
+            <label for="">Discount</label> <br />
+            <br />
+            <input type="checkbox" name="" id="" /> <label for="">10%</label>
+            <br />
+            <input type="checkbox" class="filter-discount" value="10" />
+            <label for="">20%</label> <br />
+            <input type="checkbox" class="filter-discount" value="20" />
+            <label for="">30%</label> <br />
+            <input type="checkbox" class="filter-discount" value="30" />
+            <label for="">40%</label> <br />
+            <input type="checkbox" class="filter-discount" value="40" />
+            <label for="">50%</label> <br />
+            <input type="checkbox" class="filter-discount" value="50" />
+            <label for="">70%</label>
+          </div>
+          <hr />
 
-        <!-- Ratings -->
-        <div>
-          <label for=""> Ratings</label> <br />
-          <br />
-          <input type="checkbox" />
-          <label class="star_rating" for="">★★★★★</label> <br />
-          <input type="checkbox" />
-          <label class="star_rating" for="">★★★★☆</label> <br />
-          <input type="checkbox" />
-          <label class="star_rating" for="">★★★☆☆</label> <br />
-          <input type="checkbox" />
-          <label class="star_rating" for="">★★☆☆☆</label> <br />
-          <input type="checkbox" />
-          <label class="star_rating" for="">★☆☆☆☆</label>
+          <!-- Ratings -->
+          <div>
+            <label for=""> Ratings</label> <br />
+            <br />
+            <input type="checkbox" class="filter-rating" value="5" />
+            <label class="star_rating" for="">★★★★★</label> <br />
+            <input type="checkbox" class="filter-rating" value="4" />
+            <label class="star_rating" for="">★★★★☆</label> <br />
+            <input type="checkbox" class="filter-rating" value="3" />
+            <label class="star_rating" for="">★★★☆☆</label> <br />
+            <input type="checkbox" class="filter-rating" value="2" />
+            <label class="star_rating" for="">★★☆☆☆</label> <br />
+            <input type="checkbox" class="filter-rating" value="1" />
+            <label class="star_rating" for="">★☆☆☆☆</label>
+          </div>
         </div>
       </section>
 
@@ -1008,7 +1022,7 @@
       <div class="login_popup-content">
         <span class="login_close-btn">&times;</span>
         <form id="loginForm" action="/login_submit" method="POST">
-          <img class="login_logo" src="../../image/SPC-Logo.png" alt="" />
+          <img class="login_logo" src="image/SPC-Logo.png" alt="" />
           <br />
           <h5 class="log-in_h1">Welcome Back</h5>
 
@@ -1027,10 +1041,7 @@
               />
             </div>
             <input class="login_submit" type="submit" value="Login" />
-            <img
-              class="sign-up_w_google"
-              src="../../image/sign-up_w_google.png"
-            />
+            <img class="sign-up_w_google" src="image/sign-up_w_google.png" />
           </div>
           <br />
           <p id="message_login"></p>
@@ -1045,7 +1056,7 @@
           <span class="sign-up_close-btn">&times;</span>
 
           <form id="signupForm" action="/sign-up_submit" method="POST">
-            <img class="sign-up_logo" src="../../image/SPC-Logo.png" alt="" />
+            <img class="sign-up_logo" src="image/SPC-Logo.png" alt="" />
             <h2 class="sign-up_h1">Sign-Up</h2>
             <label>Name:</label><br />
             <input
@@ -1091,14 +1102,14 @@
       </div>
     </section>
 
-    <!--  Shopping Cart Floating  -->
+    <!-- Shopping Cart Floating  -->
     <div id="main_body">
       <div id="cart_window">
         <div class="overlay"></div>
         <div id="cart_box">
           <div class="heading">
             <div class="title_circle_container">
-              <div class="purple_pink_circle">
+              <div class="shopping_cart_circle">
                 <div>
                   <h1>Shopping Cart</h1>
                   <p>Quick Delivery</p>
@@ -1129,12 +1140,76 @@
               <ul></ul>
               <div class="white_fade_overflow bottom"></div>
             </div>
+
             <div id="cart_checkout">
               <div id="total_checkout">
-                <p>total:</p>
-                <span class="price">0.00</span>
+                <p>total: <span class="price">0.00</span></p>
+
+                <p>
+                  Discount: <span style="color: red">-</span>
+                  <span style="color: red" class="product_save"
+                    ><small>0.00</small></span
+                  >
+                </p>
               </div>
               <button id="checkout_button">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wishlist Cart Floating  -->
+    <div id="wishlist_cart">
+      <div id="wishlist_cart_window">
+        <div class="overlay"></div>
+        <div id="wishlist_cart_box">
+          <div class="heading">
+            <div class="title_circle_container">
+              <div class="wishlist_cart_circle">
+                <div>
+                  <h1>Wishlist Cart</h1>
+                  <p>Quick Delivery</p>
+                </div>
+              </div>
+              <button class="wishlist_close_button">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.6492 11.2501L12.7904 6.53852L13.8346 5.46167L20.5774 12.0001L13.8346 18.5385L12.7904 17.4617L17.6492 12.7501H3V11.2501H17.6492Z"
+                    fill="#080341"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div id="wishlist_cart_items_container">
+              <span class="wishlist_empty_cart_message"
+                >Your cart is empty.order an item.</span
+              >
+              <div class="white_fade_overflow top"></div>
+              <ul></ul>
+              <div class="white_fade_overflow bottom"></div>
+            </div>
+
+            <div id="wishlist_cart_checkout">
+              <div id="wishlist_total_checkout">
+                <p>total: <span class="price">0.00</span></p>
+
+                <p>
+                  Discount: <span style="color: red">-</span>
+                  <span style="color: red" class="product_save"
+                    ><small>0.00</small></span
+                  >
+                </p>
+              </div>
+              <button id="wishlist_cart_checkout_button">Checkout</button>
             </div>
           </div>
         </div>
@@ -1324,7 +1399,11 @@
           <div class="col-md-3 col-sm-3 mb-2">
             <ul class="footer-links">
               <div class="footer_end">
-                <img class="footer_logo" src="image/SPC-Logo.png" alt="" />
+                <img
+                  class="footer_logo"
+                  src="../../image/SPC-Logo.png"
+                  alt=""
+                />
                 <h4>FOLLOW US</h4>
                 <div>
                   <img
