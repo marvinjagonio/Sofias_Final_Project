@@ -43,7 +43,7 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.html">
             <img
-              src="../image/SPC-Logo.png"
+              src="../../image/SPC-Logo.png"
               alt="Logo"
               class="img-fluid ps-3"
               style="height: 35px"
@@ -165,7 +165,7 @@
                   ><img
                     class="img-fluid nav-icon"
                     title="Track your order"
-                    src="../icons/track_your_order.png"
+                    src="../../icons/track_your_order.png"
                     alt=""
                 /></a>
               </li>
@@ -174,7 +174,7 @@
                   ><img
                     class="img-fluid nav-icon"
                     title="Comment Page"
-                    src="../icons/comment_icon.png"
+                    src="../../icons/comment_icon.png"
                     alt=""
                 /></a>
               </li>
@@ -184,7 +184,7 @@
                   ><img
                     class="img-fluid nav-icon"
                     title="Log-in"
-                    src="../icons/log_in.png"
+                    src="../../icons/log_in.png"
                     alt=""
                 /></a>
               </li>
@@ -193,7 +193,7 @@
                   ><img
                     class="img-fluid nav-icon"
                     title="Sign-up"
-                    src="../icons/sign_up.png"
+                    src="../../icons/sign_up.png"
                     alt=""
                 /></a>
               </li>
@@ -202,7 +202,7 @@
                   ><img
                     class="wishlist_cart_button img-fluid nav-icon"
                     title="Wishlist"
-                    src="../icons/wishlist.png"
+                    src="../../icons/wishlist.png"
                     alt=""
                   />
                   <span
@@ -217,7 +217,7 @@
                   ><img
                     class="cart_button img-fluid nav-icon"
                     title="Cart"
-                    src="../icons/cart.png"
+                    src="../../icons/cart.png"
                     alt=""
                   />
                   <span
@@ -456,47 +456,66 @@
     <!--Page Section -->
 
     <section>
-      <div class="item_page_full py-3">
-        <div class="item_page_left_side">
-          <div class="breadcrumbs">
-            <a href="../../index.html">Home</a> > <mark>CPU Cooling Fan</mark>
-          </div>
-          <!-- Main Product Image -->
-          <div class="main-image mb-3">
-            <img
-              src="../../sample_img/spc_sample_cpu_cooling_fan.png"
-              alt="CPU Cooling Fan"
-              class="img-fluid rounded shadow-sm"
-              style="max-width: 400px"
-            />
+      <div
+        class="item_page_full d-flex flex-column flex-md-row justify-content-around align-items-start ps-lg-0 ps-md-3 ps-sm-1 mt-3"
+      >
+        <!-- LEFT SIDE -->
+        <div
+          class="item_page_left_side ps-lg-5 ps-md-3 ps-sm-0 text-center text-md-start w-100 mx-sm-5"
+        >
+          <!-- Breadcrumbs -->
+          <div class="breadcrumbs my-3">
+            <a
+              class="text-decoration-none"
+              style="color: black"
+              href="../../index.html"
+              >Home</a
+            >
+            > CPU Cooling Fan
           </div>
 
-          <!-- Thumbnail Images -->
-          <div class="d-flex justify-content-center gap-2 flex-wrap">
-            <img
-              src="../../sample_img/spc_sample_cpu_cooling_fan.png"
-              alt="Thumbnail 1"
-              class="img-thumbnail"
-              width="100"
-              height="100"
-            />
-            <img
-              src="../../sample_img/spc_sample_cpu_cooling_fan.png"
-              alt="Thumbnail 2"
-              class="img-thumbnail"
-              width="100"
-              height="100"
-            />
-            <img
-              src="../../sample_img/spc_sample_cpu_cooling_fan.png"
-              alt="Thumbnail 3"
-              class="img-thumbnail"
-              width="100"
-              height="100"
-            />
+          <!-- Main Product Image -->
+          <div class="d-flex flex-column align-items-center w-100">
+            <div class="main-image mb-3">
+              <img
+                id="main-image"
+                src="../../sample_img/spc_sample_cpu_cooling_fan.png"
+                alt="CPU Cooling Fan"
+                class="img-fluid rounded shadow-sm"
+                style="max-width: 100%; height: auto"
+              />
+            </div>
+
+            <!-- Thumbnail Images -->
+            <div class="d-flex justify-content-center gap-2 flex-wrap">
+              <img
+                src="../../sample_img/spc_sample_monitor.png"
+                alt="Thumbnail 1"
+                class="img-thumbnail thumb"
+                width="90"
+                height="90"
+                title="Click"
+              />
+              <img
+                src="../../sample_img/spc_sample_gaming_chair.png"
+                alt="Thumbnail 2"
+                class="img-thumbnail thumb"
+                width="90"
+                height="90"
+                title="Click"
+              />
+              <img
+                src="../../sample_img/spc_sample_pc_mouse.png"
+                alt="Thumbnail 3"
+                class="img-thumbnail thumb"
+                width="90"
+                height="90"
+                title="Click"
+              />
+            </div>
           </div>
         </div>
-        <div class="item_page_center">
+        <div class="item_page_center text-sm-start mx-4 w-100 pt-3">
           <p>CPU Cooling Fan</p>
           <h2>CPU Cooling Fan</h2>
           <div class="d-flex">
@@ -508,14 +527,13 @@
             <p>Available:</p>
             <p>Instock</p>
           </div>
-          <hr />
+          <hr class="m-0 p-0 w-100 w-sm-100 w-md-auto" />
           <div class="d-flex">
             <h2>₱100.00</h2>
-            <p class="cart mt-1 ms-2">𖹭 Add to Cart</p>
           </div>
-          <h4><s class="fw-light">₱100.00</s></h4>
-          <div class="d-flex gap-3">
-            <div class="input-group quantity-group" style="width: 150px">
+          <h4><s class="fw-light" style="color: red">₱100.00</s></h4>
+          <div class="d-flex flex-column gap-3">
+            <div class="input-group quantity-group w-50 h-50">
               <button class="btn btn-outline-secondary minus-btn" type="button">
                 −
               </button>
@@ -530,14 +548,20 @@
                 +
               </button>
             </div>
-            <button class="cart py-1 px-3 fs-6">
-              <img src="../../image/cart.png" alt="" />Add to Cart
-            </button>
-            <button class="buy_now py-2 px-4 fs-6">Buy Now</button>
+            <div class="d-flex flex-row gap-1 w-50 h-25 no-wrap">
+              <button class="cart">
+                <img src="../../image/cart.png" alt="" />
+              </button>
+
+              <button class="buy_now">Buy Now</button>
+            </div>
           </div>
+
           <p></p>
         </div>
-        <div class="item_page_right_side mt-4 d-flex flex-column">
+        <div
+          class="item_page_right_side ps-lg-5 ps-md-3 ps-sm-0 text-center text-md-start w-100 mx-sm-5 d-none d-sm-block"
+        >
           <table class="table table-bordered text-center align-middle">
             <thead class="table-dark">
               <tr>
@@ -593,8 +617,9 @@
                     width="70"
                     class="m-2"
                   />
+
                   <img
-                    src="../../image/grab_logo.png"
+                    src="../../image/paymaya_icon.png"
                     alt="Grab"
                     width="70"
                     class="m-2"
@@ -990,22 +1015,26 @@
           <div class="col-md-3 col-sm-3 mb-2">
             <ul class="footer-links">
               <div class="footer_end">
-                <img class="footer_logo" src="image/SPC-Logo.png" alt="" />
+                <img
+                  class="footer_logo"
+                  src="../../image/SPC-Logo.png"
+                  alt=""
+                />
                 <h4>FOLLOW US</h4>
                 <div>
                   <img
                     class="footer_bw_logo"
-                    src="../black_white_logo/facebook_logo_b_w.png"
+                    src="../../black_white_logo/facebook_logo_b_w.png"
                     alt=""
                   />
                   <img
                     class="footer_bw_logo"
-                    src="../black_white_logo/instagram_logo_b_w.png"
+                    src="../../black_white_logo/instagram_logo_b_w.png"
                     alt=""
                   />
                   <img
                     class="footer_bw_logo"
-                    src="../black_white_logo/viber_icon_b_w.png"
+                    src="../../black_white_logo/viber_icon_b_w.png"
                     alt=""
                   />
                 </div>

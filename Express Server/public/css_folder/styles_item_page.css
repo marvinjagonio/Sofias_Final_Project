@@ -1,21 +1,5 @@
 /* First_Section */
 
-.item_page_full {
-  display: flex;
-  justify-content: space-around;
-}
-
-.zoom-image {
-  transition: transform 0.4s ease, box-shadow 0.3s ease;
-  cursor: zoom-in;
-}
-
-.zoom-image:hover {
-  transform: scale(1.5);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  z-index: 2;
-}
-
 /* .zoom-container {
   position: relative;
   width: 300px;
