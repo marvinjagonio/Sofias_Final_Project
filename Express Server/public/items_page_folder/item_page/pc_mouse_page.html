@@ -15,8 +15,12 @@
     <link rel="stylesheet" href="../../css_folder/styles_home.css" />
     <!-- Bootstrap -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <!-- Swiper CSS -->
     <link
@@ -517,25 +521,62 @@
           </div>
         </div>
         <div class="item_page_center text-sm-start mx-4 w-100 pt-3">
-          <p>CPU Cooling Fan</p>
-          <h2>CPU Cooling Fan</h2>
           <div class="d-flex">
-            <p class="star_rates">☆☆☆☆☆</p>
-            <p>No Reviews</p>
+            <img
+              class="mt-2 me-2"
+              src="../../image/SPC-Logo.png"
+              height="25px"
+            />
+            <h3 style="color: #222">CPU Cooling Fan</h3>
           </div>
-          <button type="button" class="btn btn-primary">𝚏 share</button>
+
           <div class="d-flex">
-            <p>Available:</p>
+            <div class="text-warning fs-5 me-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+            <p class="mt-1">4.9</p>
+          </div>
+          <div class="d-flex">
+            <p class="fw-bold me-2">Brand:</p>
+            <p>SPC</p>
+          </div>
+          <div class="d-flex">
+            <p class="fw-bold me-2">Available:</p>
             <p>Instock</p>
           </div>
           <hr class="m-0 p-0 w-100 w-sm-100 w-md-auto" />
           <div class="d-flex">
-            <h2>₱100.00</h2>
+            <h2 class="fw-bold" style="color: #222">₱100.00</h2>
+
+            <h5 class="mt-2 mx-2">
+              <s style="color: red">₱50.00</s>
+              <h6 class="mt-2" style="color: red">50%</h6>
+            </h5>
           </div>
-          <h4><s class="fw-light" style="color: red">₱100.00</s></h4>
+          <div class="d-flex w-100">
+            <p class="fw-bold">Delivery Options:</p>
+            <p class="mx-2">
+              <img src="../../icons/location-pin.png" alt="" />Metro
+              Manila~Quezon City
+            </p>
+          </div>
+
           <div class="d-flex flex-column gap-3">
-            <div class="input-group quantity-group w-50 h-50">
-              <button class="btn btn-outline-secondary minus-btn" type="button">
+            <div
+              class="input-group quantity-group input-group-sm"
+              style="width: 200px"
+            >
+              <p class="fw-bold mt-2 me-2" style="font-size: 0.9rem">
+                Quantity:
+              </p>
+              <button
+                class="btn btn-outline-secondary minus-btn py-0 px-2"
+                type="button"
+              >
                 −
               </button>
               <input
@@ -544,17 +585,34 @@
                 id="quantityInput"
                 value="1"
                 min="1"
+                style="max-width: 50px"
               />
-              <button class="btn btn-outline-secondary plus-btn" type="button">
+              <button
+                class="btn btn-outline-secondary plus-btn py-0 px-2"
+                type="button"
+              >
                 +
               </button>
             </div>
-            <div class="d-flex flex-row gap-1 w-50 h-25 no-wrap">
-              <button class="cart">
-                <img src="../../image/cart.png" alt="" />
+            <div class="d-flex flex-row gap-2 flex-wrap w-50 h-25">
+              <button
+                class="btn d-flex align-items-center justify-content-center gap-2 fw-semibold px-3 py-2 rounded-3"
+                style="width: 250px; color: white; background-color: #00ad2e"
+              >
+                <img
+                  src="../../image/cart.png"
+                  alt="Cart"
+                  style="height: 20px"
+                />
+                Add to Cart
               </button>
 
-              <button class="buy_now">Buy Now</button>
+              <button
+                class="fw-semibold px-3 py-2 rounded-3"
+                style="width: 250px; color: white; background-color: #00ad2e"
+              >
+                Buy Now
+              </button>
             </div>
           </div>
 
@@ -1024,6 +1082,198 @@
       </div>
     </section>
 
+    <section
+      class="product-ratings my-5 p-4 bg-light rounded-4 shadow-sm w-75"
+      style="margin-left: 12%"
+    >
+      <h4 class="fw-bold mb-4">Customer Ratings & Reviews</h4>
+
+      <!-- Average Rating Summary -->
+      <div class="d-flex align-items-center mb-4">
+        <h1 class="fw-bold mb-0 me-3">4.6</h1>
+        <div>
+          <div class="text-warning fs-5">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </div>
+          <p class="text-muted mb-0">Based on 124 reviews</p>
+        </div>
+      </div>
+
+      <!-- Rating Bars -->
+      <div class="rating-bars mb-4">
+        <div class="d-flex align-items-center mb-1">
+          <span class="me-2">5 ⭐</span>
+          <div class="progress w-50 me-2" style="height: 8px">
+            <div class="progress-bar bg-warning" style="width: 70%"></div>
+          </div>
+          <small>70%</small>
+        </div>
+        <div class="d-flex align-items-center mb-1">
+          <span class="me-2">4 ⭐</span>
+          <div class="progress w-50 me-2" style="height: 8px">
+            <div class="progress-bar bg-warning" style="width: 20%"></div>
+          </div>
+          <small>20%</small>
+        </div>
+        <div class="d-flex align-items-center mb-1">
+          <span class="me-2">3 ⭐</span>
+          <div class="progress w-50 me-2" style="height: 8px">
+            <div class="progress-bar bg-warning" style="width: 5%"></div>
+          </div>
+          <small>5%</small>
+        </div>
+        <div class="d-flex align-items-center mb-1">
+          <span class="me-2">2 ⭐</span>
+          <div class="progress w-50 me-2" style="height: 8px">
+            <div class="progress-bar bg-warning" style="width: 3%"></div>
+          </div>
+          <small>3%</small>
+        </div>
+        <div class="d-flex align-items-center">
+          <span class="me-2">1 ⭐</span>
+          <div class="progress w-50 me-2" style="height: 8px">
+            <div class="progress-bar bg-warning" style="width: 2%"></div>
+          </div>
+          <small>2%</small>
+        </div>
+      </div>
+
+      <hr />
+      <div class="swiper careers_swiper">
+        <div class="swiper-wrapper careers_swiper_wrapper">
+          <div class="swiper-slide">
+            <!-- Job 1 -->
+
+            <div class="card shadow-sm h-100 p-3">
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="../../random_profile_pics/random_profile_pic1.png"
+                  class="rounded-circle me-3"
+                  alt="Maria Santos"
+                  style="width: 50px"
+                />
+                <div>
+                  <h6 class="mb-0">Maria Santos</h6>
+                  <small class="text-muted">Customer</small>
+                  <p class="star_rates">⭐⭐⭐⭐⭐</p>
+                </div>
+              </div>
+              <p>
+                “Excellent service! SPC’s support team responds very quickly and
+                resolves issues effectively. I’m very satisfied.”
+              </p>
+              <span class="badge bg-success">Positive</span>
+            </div>
+          </div>
+
+          <!-- Job 2 -->
+          <div class="swiper-slide">
+            <div class="card shadow-sm h-100 p-3">
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="../../random_profile_pics/random_profile_pic2.png"
+                  class="rounded-circle me-3"
+                  alt="Juan Dela Cruz"
+                  style="width: 50px"
+                />
+                <div>
+                  <h6 class="mb-0">Juan Dela Cruz</h6>
+                  <small class="text-muted">Business Owner</small>
+                  <p class="star_rates">⭐⭐</p>
+                </div>
+              </div>
+              <p>
+                “Service was good overall, but sometimes the response time was a
+                bit slow during peak hours. Could improve in this area.”
+              </p>
+              <span class="badge bg-danger">Negative</span>
+            </div>
+          </div>
+          <!-- Job 3 -->
+          <div class="swiper-slide">
+            <div class="card shadow-sm h-100 p-3">
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="../../random_profile_pics/random_profile_pic3.png"
+                  class="rounded-circle me-3"
+                  alt="Anna Lopez"
+                  style="width: 50px"
+                />
+                <div>
+                  <h6 class="mb-0">Anna Lopez</h6>
+                  <small class="text-muted">Client</small>
+                  <p class="star_rates">⭐⭐⭐⭐</p>
+                </div>
+              </div>
+              <p>
+                “I love how SPC really listens to customer feedback. They
+                improved their services since my last visit. Highly
+                recommended!”
+              </p>
+              <span class="badge bg-success">Positive</span>
+            </div>
+          </div>
+
+          <!-- Job 4 -->
+          <div class="swiper-slide">
+            <div class="card h-100 shadow-sm">
+              <div class="card shadow-sm h-100 p-3">
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    src="../../random_profile_pics/random_profile_pic4.png"
+                    class="rounded-circle me-3"
+                    alt="Pedro Reyes"
+                    style="width: 50px"
+                  />
+                  <div>
+                    <h6 class="mb-0">Pedro Reyes</h6>
+                    <small class="text-muted">Customer</small>
+                    <p class="star_rates">⭐⭐⭐</p>
+                  </div>
+                </div>
+                <p>
+                  “Pricing was a bit higher compared to competitors. Good
+                  service, but I hope they offer more affordable packages soon.”
+                </p>
+                <span class="badge bg-warning text-dark">Mixed</span>
+              </div>
+            </div>
+          </div>
+          <!-- Job 5 -->
+          <div class="swiper-slide">
+            <div class="card h-100 shadow-sm">
+              <div class="card shadow-sm h-100 p-3">
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    src="../../random_profile_pics/random_profile_pic5.png"
+                    class="rounded-circle me-3"
+                    alt="Carla Mendoza"
+                    style="width: 50px"
+                  />
+                  <div>
+                    <h6 class="mb-0">Carla Mendoza</h6>
+                    <small class="text-muted">Client</small>
+                    <p class="star_rates">⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+                <p>
+                  “The SPC team was very professional, friendly, and
+                  accommodating. Definitely will come back again!”
+                </p>
+                <span class="badge bg-success">Positive</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev careers-buttons-prev"></div>
+        <div class="swiper-button-next careers-buttons-next"></div>
+      </div>
+    </section>
+
     <!-- Log-in Popup Section -->
 
     <section id="loginPopup" class="popup">
@@ -1436,6 +1686,12 @@
         </div>
       </div>
     </footer>
+
+    <section>
+      <p class="mt-2" style="margin-left: 10%">
+        © 2025 SPC Computer Hardware. All Rights Reserved .
+      </p>
+    </section>
     <!-- Javascript -->
 
     <script src="../../js_folder/script.js"></script>
