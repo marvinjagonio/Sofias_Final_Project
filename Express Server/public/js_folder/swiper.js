@@ -261,3 +261,44 @@ window.addEventListener("load", function () {
     },
   });
 });
+
+window.addEventListener("load", function () {
+  const add_on_deals_swiper = new Swiper(".add_on_deals_swiper", {
+    loop: false,
+
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".add_on_deals_next",
+      prevEl: ".add_on_deals_prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      576: {
+        slidesPerView: 1,
+        spaceBetween: 24,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 10,
+      },
+    },
+    on: {
+      fromEdge: function () {
+        document
+          .querySelector(".add_on_deals_prev")
+          .classList.remove("swiper-button-disabled");
+        document
+          .querySelector(".add_on_deals_next")
+          .classList.remove("swiper-button-disabled");
+      },
+    },
+  });
+});

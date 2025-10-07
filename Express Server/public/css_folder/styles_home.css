@@ -221,22 +221,29 @@ article.desktop_font h4 {
 #new_arrivals_top_sellers_section,
 #featured_products_section {
   padding: 50px 0;
+}
+
+#add_on_deals_section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 20px;
 }
 
 #new_arrivals_top_sellers_section h2,
-#featured_products_section h2 {
+#featured_products_section h2,
+#add_on_deals_section h2 {
   font-size: x-large;
   text-decoration: 3px underline rgb(238, 0, 0);
   text-underline-offset: 10px;
   padding-left: 12%;
+  padding-top: 20px;
 }
 
 .new_arrivals_swiper,
 .top_sellers_swiper,
-.featured_products_swiper {
+.featured_products_swiper,
+.add_on_deals_swiper {
   width: 95%;
   max-width: 1200px;
   margin: 50px auto;
@@ -245,7 +252,8 @@ article.desktop_font h4 {
 
 .top_sellers_swiper-wrapper,
 .new_arrivals_swiper-wrapper,
-.featured_products_swiper-wrapper {
+.featured_products_swiper-wrapper,
+.add_on_deals_swiper-wrapper {
   padding-top: 10px;
   padding-bottom: 50px;
 }
