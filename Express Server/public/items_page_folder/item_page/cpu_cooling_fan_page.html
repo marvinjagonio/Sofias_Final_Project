@@ -492,7 +492,7 @@
                 id="main-image"
                 src="../../sample_img/spc_sample_cpu_cooling_fan.png"
                 alt="CPU Cooling Fan"
-                class="img-fluid rounded shadow-sm"
+                class=".product_image img-fluid rounded shadow-sm"
                 style="max-width: 100%; height: auto"
               />
             </div>
@@ -556,10 +556,10 @@
           </div>
           <hr class="m-0 p-0 w-100 w-sm-100 w-md-auto" />
           <div class="d-flex">
-            <h2 class="fw-bold" style="color: #222">₱100.00</h2>
+            <h2 class="price fw-bold mb-0 text-dark">₱100.00</h2>
 
             <h5 class="mt-2 mx-2">
-              <s style="color: red">₱50.00</s>
+              <s class="percent_off" style="color: red">₱50.00</s>
               <h6 class="mt-2" style="color: red">50%</h6>
             </h5>
           </div>
@@ -622,7 +622,8 @@
               >
                 <img
                   src="../../image/cart.png"
-                  alt="Cart"
+                  alt=" Cart"
+                  class="cart"
                   style="height: 30px; width: 30px"
                 />
                 Add to Cart
@@ -1408,9 +1409,8 @@
               <span class="empty_cart_message"
                 >Your cart is empty.order an item.</span
               >
-              <div class="white_fade_overflow top"></div>
-              <ul></ul>
-              <div class="white_fade_overflow bottom"></div>
+
+              <ul id="userCart"></ul>
             </div>
 
             <div id="cart_checkout">
