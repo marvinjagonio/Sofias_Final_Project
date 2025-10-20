@@ -61,10 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const name =
       addItem.querySelector(".product_name")?.textContent || "Unnamed";
     const price = parsePrice(
-      addItem.querySelector(".price")?.textContent || "0"
+      addItem.querySelector(".price, .price2")?.textContent || "0"
     );
     const discount = parsePrice(
-      addItem.querySelector(".product_save")?.textContent || "0"
+      addItem.querySelector(".percent_off, .product_save")?.textContent || "0"
     );
 
     const newItem = `
