@@ -7,18 +7,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const userCart = document.querySelector("#cart_items_container ul");
   const cartBadge = document.getElementById("cartCount");
   const emptyCartMessage = document.querySelector(".empty_cart_message");
-  const cartTotalElement = document.querySelector(".price");
-  const cartLessElement = document.querySelector(".product_save");
+  const cartTotalElement = document.getElementById("cartTotal");
+  const cartLessElement = document.getElementById("cartLess");
   const checkoutButton = document.getElementById("checkout_button");
   const cartOpenBtn = document.querySelector(".cart_button");
   const cartCloseBtn = document.querySelector("#cart_box .close_button");
 
   let cartIconCount = 0;
 
-  // --- Utility: Parse number from string ---
-  const parsePrice = (str) => parseFloat(str.replace(/[^\d.-]/g, "")) || 0;
+  function parsePrice(value) {
+    return Number(value.replace(/[^0-9.-]+/g, ""));
+  }
 
-  // --- Calculate Total ---
   function calculateCartTotal() {
     let total = 0;
     let discountTotal = 0;
@@ -27,13 +27,16 @@ document.addEventListener("DOMContentLoaded", () => {
       total += parsePrice(el.textContent);
     });
 
-    document.querySelectorAll(".item_1 .product_save").forEach((el) => {
+    // if you will use a different class for discount, change this line:
+    document.querySelectorAll(".item_1 .percent_off").forEach((el) => {
       discountTotal += parsePrice(el.textContent);
     });
 
     cartTotalElement.textContent = total.toFixed(2);
     cartLessElement.textContent = discountTotal.toFixed(2);
   }
+
+  calculateCartTotal();
 
   // --- Update Cart Count ---
   function updateCartCount() {
@@ -87,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
           <div class="cart_item_price">
             <b class="price">${price.toFixed(2)}</b>
-            <span class="product_save" style="color:red"><small>${discount.toFixed(
+            <span class="percent_off" style="color:red"><small>${discount.toFixed(
               2
             )}</small></span>
           </div>

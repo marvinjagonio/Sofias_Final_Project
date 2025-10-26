@@ -75,11 +75,11 @@ li {
   color: #1a1a1a;
 }
 
-/* .price {
+.price {
   font-size: 16px;
   color: #1a1a1a;
   flex-wrap: nowrap;
-} */
+}
 
 .percent_off {
   font-size: 16px;
