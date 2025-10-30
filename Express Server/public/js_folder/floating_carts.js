@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let cartIconCount = 0;
 
+  console.log(cartButtons);
+
   function parsePrice(value) {
     return Number(value.replace(/[^0-9.-]+/g, ""));
   }

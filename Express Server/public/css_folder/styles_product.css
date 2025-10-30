@@ -88,8 +88,11 @@ li {
 
 .percent_off,
 .price,
-.spcfix_btn {
-  margin: 3px;
+.spcfix_btn,
+.cart,
+.buy_now,
+.product_column {
+  margin: 0 !important;
 }
 
 .product_list {
@@ -164,10 +167,6 @@ li {
   width: 30px;
   padding: 5px;
   color: #333;
-}
-
-.cart:hover {
-  transform: scale(1.05);
 }
 
 .buy_now {
