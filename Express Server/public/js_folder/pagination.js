@@ -74,17 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
-  const perPage = 12;
-  let currentPage = 1;
-  let currentSort = "bestseller";
-  let filteredItems = [...items];
-  let sortedItems = [...items];
-
   const listContainer = document.getElementById("product-list");
-  const pageLinks = document.querySelectorAll(".page-link");
-  const sortLinks = document.querySelectorAll(
-    ".bestselling-dropdown-content a"
-  );
+  const pageLinks = document.querySelectorAll(".pagination a");
+  const sortLinks = document.querySelectorAll(".sort a");
+  const perPage = 6;
+  let currentPage = 1;
+  let currentSort = "default";
+  let sortedItems = [...items]; // ✅ define this early
 
   // 🔹 SORT LOGIC
   function sortItems(criteria) {
@@ -98,46 +94,40 @@ document.addEventListener("DOMContentLoaded", () => {
       sortedItems.sort((a, b) => a.dataPrice - b.dataPrice);
     } else if (criteria === "bestseller") {
       sortedItems.sort((a, b) => b.bestseller - a.bestseller);
+    } else {
+      sortedItems = [...items]; // ✅ reset to original order
     }
   }
 
-  // 🔹 FILTER LOGIC (fixed)
+  // 🔹 FILTER LOGIC
   function filterItems() {
     const minPrice =
-      parseFloat(document.getElementById("min-price").value) || 0;
+      parseFloat(document.getElementById("min-price")?.value) || 0;
     const maxPrice =
-      parseFloat(document.getElementById("max-price").value) || Infinity;
+      parseFloat(document.getElementById("max-price")?.value) || Infinity;
 
     const selectedBrands = Array.from(
       document.querySelectorAll(".filter-brand:checked")
     ).map((el) => el.value);
-
-    // discount checkboxes hold numeric percent values (e.g. "10", "20")
     const selectedDiscounts = Array.from(
       document.querySelectorAll(".filter-discount:checked")
     ).map((el) => parseInt(el.value));
-
-    // ratings checkboxes hold numeric rating values (e.g. "5","4")
     const selectedRatings = Array.from(
       document.querySelectorAll(".filter-rating:checked")
     ).map((el) => parseInt(el.value));
 
-    filteredItems = items.filter((item) => {
+    const filteredItems = items.filter((item) => {
       const matchPrice =
         item.dataPrice >= minPrice && item.dataPrice <= maxPrice;
-
       const matchBrand = selectedBrands.length
         ? selectedBrands.includes(item.brand)
         : true;
-
       const discountPercent = item.dataPrice
         ? Math.round((item.dataDiscount / item.dataPrice) * 100)
         : 0;
-
       const matchDiscount = selectedDiscounts.length
         ? selectedDiscounts.some((disc) => discountPercent >= disc)
         : true;
-
       const matchRating = selectedRatings.length
         ? selectedRatings.some((r) => item.rating >= r)
         : true;
@@ -164,26 +154,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
       card.innerHTML = `
         <p class="product_save"><b>Save ₱${item.dataDiscount}</b></p>
-        <img src="${item.image}" alt="${item.name}">
-        <p class="product-name">${item.name}</p>
+        <img class="product_image" src="${item.image}" alt="${item.name}">
+        <p class="product_name">${item.name}</p>
         <button class="spcfix_btn"><b>SPCfix</b></button>
         <div class="d-flex justify-content-between">
           <div>
-            <p class="price">${item.price}</p>
-            <p class="discount"><del>${item.discount}</del></p>
+            <p class="price">${item.discount}</p>
+            <p class="discount"><del>${item.price}</del></p>
           </div>
           <div><span class="star">⭐ ${item.rating}</span></div>
         </div>
         <div class="d-flex justify-content-between">
           <button class="buy_now">Buy Now</button>
-          <button class="cart"><img src="../../image/cart.png" alt="cart"></button>
+          <button class="cart"><img src="../../image/cart.png" /></button>
         </div>
       `;
 
       listContainer.appendChild(card);
+
+      // ✅ optional addToCart check
+      const cartButton = card.querySelector(".cart");
+      cartButton.addEventListener("click", () => {
+        if (typeof addToCart === "function") {
+          addToCart(item);
+        } else {
+          console.warn("⚠️ addToCart() not found.");
+        }
+      });
     });
 
-    // ✨ Fade-in animation
+    // ✅ fade-in animation
     listContainer.classList.remove("fade-in");
     void listContainer.offsetWidth;
     listContainer.classList.add("fade-in");
@@ -219,16 +219,6 @@ document.addEventListener("DOMContentLoaded", () => {
       renderPage(currentPage);
       document.querySelector(".dropbtn").textContent = e.target.textContent;
     });
-  });
-
-  // 🔹 FILTER BUTTON (Price range)
-  document
-    .querySelector(".price_dropdown button")
-    .addEventListener("click", filterItems);
-
-  // 🔹 FILTER CHECKBOXES
-  document.querySelectorAll(".filters input").forEach((checkbox) => {
-    checkbox.addEventListener("change", filterItems);
   });
 
   // ✅ INITIAL LOAD

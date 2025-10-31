@@ -57,50 +57,55 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- Add Item to Cart ---
-  function addToCart(bttn) {
+  window.addToCart = function (bttn) {
     const addItem =
-      bttn.closest(".product") || bttn.closest(".item_page_full_top");
-    if (!addItem) return;
+      bttn.closest(".product-card") ||
+      bttn.closest(".product") ||
+      bttn.closest(".item_page_full_top");
+
+    if (!addItem) {
+      console.warn("❌ No product card found for this button.");
+      return;
+    }
 
     const image = addItem.querySelector(".product_image")?.src || "";
     const name =
       addItem.querySelector(".product_name")?.textContent || "Unnamed";
-    const price = parsePrice(
-      addItem.querySelector(".price, .price2")?.textContent || "0"
-    );
-    const discount = parsePrice(
-      addItem.querySelector(".percent_off, .product_save")?.textContent || "0"
-    );
+    const price =
+      parseFloat(
+        addItem.querySelector(".price")?.textContent.replace(/[^0-9.]/g, "")
+      ) || 0;
+    const discount =
+      parseFloat(
+        addItem
+          .querySelector(".product_save")
+          ?.textContent.replace(/[^0-9.]/g, "")
+      ) || 0;
 
+    const userCart = document.querySelector("#cart_items_container ul");
     const newItem = `
-      <li>
-        <div class="cart_item item_1">
-          <div class="cart_item_image">
-            <img src="${image}" alt="${name}" />
-            <button class="remove_button">
-              <svg width="191" height="191" viewBox="0 0 24 24" fill="none" stroke="#ff0000" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.00386 9.41816C7.61333 9.02763 7.61334 8.39447 8.00386 8.00395C8.39438 7.61342 9.02755 7.61342 9.41807 8.00395L12.0057 10.5916L14.5907 8.00657C14.9813 7.61605 15.6144 7.61605 16.0049 8.00657C16.3955 8.3971 16.3955 9.03026 16.0049 9.42079L13.4199 12.0058L16.0039 14.5897C16.3944 14.9803 16.3944 15.6134 16.0039 16.0039C15.6133 16.3945 14.9802 16.3945 14.5896 16.0039L12.0057 13.42L9.42097 16.0048C9.03045 16.3953 8.39728 16.3953 8.00676 16.0048C7.61624 15.6142 7.61624 14.9811 8.00676 14.5905L10.5915 12.0058L8.00386 9.41816Z" fill="#ff0000"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z" fill="#ff0000"/>
-              </svg>
-            </button>
-          </div>
-
-          <div class="cart_item_desc">
-            <span>${name}</span>
-            <span>Qty. 1</span>
-          </div>
-      
-          <div class="cart_item_price">
-            <b class="price">${price.toFixed(2)}</b>
-            <span class="percent_off" style="color:red"><small>${discount.toFixed(
-              2
-            )}</small></span>
-          </div>
+    <li>
+      <div class="cart_item item_1">
+        <div class="cart_item_image">
+          <img src="${image}" alt="${name}" />
         </div>
-      </li>`;
+        <div class="cart_item_desc">
+          <span>${name}</span>
+          <span>Qty. 1</span>
+        </div>
+        <div class="cart_item_price">
+          <b class="price">${price.toFixed(2)}</b>
+          <span class="percent_off" style="color:red"><small>${discount.toFixed(
+            2
+          )}</small></span>
+        </div>
+      </div>
+    </li>
+  `;
 
     userCart.insertAdjacentHTML("beforeend", newItem);
-  }
+    calculateCartTotal?.(); // optional safe call if function exists
+  };
 
   // --- Remove Item from Cart ---
   function removeCartItem(button) {
