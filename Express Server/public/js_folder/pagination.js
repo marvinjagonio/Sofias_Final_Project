@@ -1,227 +1,203 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const items = [
-    {
-      name: "Gaming Mouse Pro",
-      price: "₱1,499.00",
-      discount: "₱1,299.00",
-      image: "../../sample_img/spc_sample_network_device.png",
-      brand: "AMD",
-      availability: "in-stock",
-      rating: 4,
-      dataPrice: 1499,
-      dataDiscount: 200,
-      bestseller: 10,
-    },
-    {
-      name: "Wireless Mouse X",
-      price: "₱1,299.00",
-      discount: "₱999.00",
-      image: "../../sample_img/spc_sample_desktop.png",
-      brand: "Intel",
-      availability: "in-stock",
-      rating: 4,
-      dataPrice: 1299,
-      dataDiscount: 300,
-      bestseller: 8,
-    },
-    {
-      name: "RGB Gamer Mouse",
-      price: "₱1,899.00",
-      discount: "₱1,499.00",
-      image: "../../sample_img/spc_sample_network_device.png",
-      brand: "AMD",
-      availability: "in-stock",
-      rating: 5,
-      dataPrice: 1899,
-      dataDiscount: 400,
-      bestseller: 9,
-    },
-    {
-      name: "Ergonomic Mouse",
-      price: "₱999.00",
-      discount: "₱799.00",
-      image: "../../sample_img/spc_sample_network_device.png",
-      brand: "AMD",
-      availability: "in-stock",
-      rating: 3,
-      dataPrice: 999,
-      dataDiscount: 200,
-      bestseller: 6,
-    },
-    {
-      name: "Office Silent Mouse",
-      price: "₱799.00",
-      discount: "₱649.00",
-      image: "../../sample_img/spc_sample_network_device.png",
-      brand: "AMD",
-      availability: "in-stock",
-      rating: 4,
-      dataPrice: 799,
-      dataDiscount: 150,
-      bestseller: 4,
-    },
-    {
-      name: "Bluetooth Mouse",
-      price: "₱1,099.00",
-      discount: "₱899.00",
-      image: "../../sample_img/spc_sample_network_device.png",
-      brand: "AMD",
-      availability: "in-stock",
-      rating: 4,
-      dataPrice: 1099,
-      dataDiscount: 200,
-      bestseller: 7,
-    },
-  ];
+  const container = document.getElementById("productContainer");
+  const pagination = document.getElementById("pagination");
+  const sortLinks = document.querySelectorAll(
+    ".bestselling-dropdown-content a"
+  );
+  const minPriceInput = document.getElementById("min-price");
+  const maxPriceInput = document.getElementById("max-price");
+  const brandCheckboxes = document.querySelectorAll(".filter-brand");
+  const discountCheckboxes = document.querySelectorAll(".filter-discount");
+  const ratingCheckboxes = document.querySelectorAll(".filter-rating");
+  const availabilityCheckbox = document.querySelector(
+    'input[type="checkbox"]:not(.filter-brand):not(.filter-discount):not(.filter-rating)'
+  );
 
-  const listContainer = document.getElementById("product-list");
-  const pageLinks = document.querySelectorAll(".pagination a");
-  const sortLinks = document.querySelectorAll(".sort a");
-  const perPage = 6;
+  const allProducts = Array.from(document.querySelectorAll(".product"));
+  const itemsPerPage = 6;
   let currentPage = 1;
-  let currentSort = "default";
-  let sortedItems = [...items]; // ✅ define this early
+  let currentSort = null;
+  let filteredProducts = [...allProducts];
 
-  // 🔹 SORT LOGIC
-  function sortItems(criteria) {
-    if (criteria === "az") {
-      sortedItems.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (criteria === "za") {
-      sortedItems.sort((a, b) => b.name.localeCompare(a.name));
-    } else if (criteria === "high-low") {
-      sortedItems.sort((a, b) => b.dataPrice - a.dataPrice);
-    } else if (criteria === "low-high") {
-      sortedItems.sort((a, b) => a.dataPrice - b.dataPrice);
-    } else if (criteria === "bestseller") {
-      sortedItems.sort((a, b) => b.bestseller - a.bestseller);
-    } else {
-      sortedItems = [...items]; // ✅ reset to original order
-    }
-  }
+  // ✅ Apply Filters
+  function applyFilters() {
+    const min = Number(minPriceInput.value) || 0;
+    const max = Number(maxPriceInput.value) || Infinity;
+    const selectedBrands = Array.from(brandCheckboxes)
+      .filter((cb) => cb.checked)
+      .map((cb) => cb.value);
+    const selectedDiscounts = Array.from(discountCheckboxes)
+      .filter((cb) => cb.checked)
+      .map((cb) => Number(cb.value));
+    const selectedRatings = Array.from(ratingCheckboxes)
+      .filter((cb) => cb.checked)
+      .map((cb) => Number(cb.value));
+    const availabilityChecked =
+      availabilityCheckbox && availabilityCheckbox.checked;
 
-  // 🔹 FILTER LOGIC
-  function filterItems() {
-    const minPrice =
-      parseFloat(document.getElementById("min-price")?.value) || 0;
-    const maxPrice =
-      parseFloat(document.getElementById("max-price")?.value) || Infinity;
+    filteredProducts = allProducts.filter((p) => {
+      const price = Number(p.dataset.price);
+      const brand = p.dataset.brand;
+      const discount = Number(p.dataset.discount);
+      const rating = Number(p.dataset.rating);
+      const availability = p.dataset.availability;
 
-    const selectedBrands = Array.from(
-      document.querySelectorAll(".filter-brand:checked")
-    ).map((el) => el.value);
-    const selectedDiscounts = Array.from(
-      document.querySelectorAll(".filter-discount:checked")
-    ).map((el) => parseInt(el.value));
-    const selectedRatings = Array.from(
-      document.querySelectorAll(".filter-rating:checked")
-    ).map((el) => parseInt(el.value));
-
-    const filteredItems = items.filter((item) => {
-      const matchPrice =
-        item.dataPrice >= minPrice && item.dataPrice <= maxPrice;
-      const matchBrand = selectedBrands.length
-        ? selectedBrands.includes(item.brand)
+      const priceMatch = price >= min && price <= max;
+      const brandMatch = selectedBrands.length
+        ? selectedBrands.includes(brand)
         : true;
-      const discountPercent = item.dataPrice
-        ? Math.round((item.dataDiscount / item.dataPrice) * 100)
-        : 0;
-      const matchDiscount = selectedDiscounts.length
-        ? selectedDiscounts.some((disc) => discountPercent >= disc)
+      const discountMatch = selectedDiscounts.length
+        ? selectedDiscounts.includes(discount)
         : true;
-      const matchRating = selectedRatings.length
-        ? selectedRatings.some((r) => item.rating >= r)
+      const ratingMatch = selectedRatings.length
+        ? selectedRatings.includes(rating)
+        : true;
+      const availabilityMatch = availabilityChecked
+        ? availability === "in-stock"
         : true;
 
-      return matchPrice && matchBrand && matchDiscount && matchRating;
+      return (
+        priceMatch &&
+        brandMatch &&
+        discountMatch &&
+        ratingMatch &&
+        availabilityMatch
+      );
     });
 
-    sortedItems = [...filteredItems];
-    sortItems(currentSort);
+    applySort();
+  }
+
+  // ✅ Apply Sorting
+  function applySort() {
+    switch (currentSort) {
+      case "az":
+        filteredProducts.sort((a, b) =>
+          a
+            .querySelector(".product_name b")
+            .textContent.localeCompare(
+              b.querySelector(".product_name b").textContent
+            )
+        );
+        break;
+      case "za":
+        filteredProducts.sort((a, b) =>
+          b
+            .querySelector(".product_name b")
+            .textContent.localeCompare(
+              a.querySelector(".product_name b").textContent
+            )
+        );
+        break;
+      case "high-low":
+        filteredProducts.sort(
+          (a, b) => Number(b.dataset.price) - Number(a.dataset.price)
+        );
+        break;
+      case "low-high":
+        filteredProducts.sort(
+          (a, b) => Number(a.dataset.price) - Number(b.dataset.price)
+        );
+        break;
+    }
+
     currentPage = 1;
     renderPage(currentPage);
   }
 
-  // 🔹 RENDER PAGE
+  // ✅ Render Page
   function renderPage(page) {
-    listContainer.innerHTML = "";
-    const start = (page - 1) * perPage;
-    const end = start + perPage;
-    const pageItems = sortedItems.slice(start, end);
+    container.innerHTML = "";
+    const start = (page - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
 
-    pageItems.forEach((item) => {
-      const card = document.createElement("div");
-      card.classList.add("product-card");
+    filteredProducts.slice(start, end).forEach((p) => container.appendChild(p));
 
-      card.innerHTML = `
-        <p class="product_save"><b>Save ₱${item.dataDiscount}</b></p>
-        <img class="product_image" src="${item.image}" alt="${item.name}">
-        <p class="product_name">${item.name}</p>
-        <button class="spcfix_btn"><b>SPCfix</b></button>
-        <div class="d-flex justify-content-between">
-          <div>
-            <p class="price">${item.discount}</p>
-            <p class="discount"><del>${item.price}</del></p>
-          </div>
-          <div><span class="star">⭐ ${item.rating}</span></div>
-        </div>
-        <div class="d-flex justify-content-between">
-          <button class="buy_now">Buy Now</button>
-          <button class="cart"><img src="../../image/cart.png" /></button>
-        </div>
-      `;
+    // Empty message
+    if (filteredProducts.length === 0) {
+      container.innerHTML = `<p style="text-align:center; color:gray;">No products found.</p>`;
+    }
 
-      listContainer.appendChild(card);
-
-      // ✅ optional addToCart check
-      const cartButton = card.querySelector(".cart");
-      cartButton.addEventListener("click", () => {
-        if (typeof addToCart === "function") {
-          addToCart(item);
-        } else {
-          console.warn("⚠️ addToCart() not found.");
-        }
-      });
-    });
-
-    // ✅ fade-in animation
-    listContainer.classList.remove("fade-in");
-    void listContainer.offsetWidth;
-    listContainer.classList.add("fade-in");
+    renderPagination(totalPages);
   }
 
-  // 🔹 PAGINATION
-  pageLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
+  // ✅ Render Pagination Buttons
+  function renderPagination(totalPages) {
+    pagination.innerHTML = "";
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement("button");
+      btn.textContent = i;
+      btn.classList.toggle("active", i === currentPage);
+      btn.addEventListener("click", () => {
+        currentPage = i;
+        renderPage(currentPage);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+      pagination.appendChild(btn);
+    }
+  }
 
-      if (link.classList.contains("prev") && currentPage > 1) {
-        currentPage--;
-      } else if (
-        link.classList.contains("next") &&
-        currentPage < Math.ceil(sortedItems.length / perPage)
-      ) {
-        currentPage++;
-      } else if (link.dataset.page) {
-        currentPage = parseInt(link.dataset.page);
-      }
-
-      renderPage(currentPage);
-    });
-  });
-
-  // 🔹 SORT DROPDOWN
+  // ✅ Event Listeners
   sortLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
-      currentSort = e.target.dataset.sort;
-      sortItems(currentSort);
-      currentPage = 1;
-      renderPage(currentPage);
-      document.querySelector(".dropbtn").textContent = e.target.textContent;
+      currentSort = link.dataset.sort;
+      applySort();
     });
   });
 
-  // ✅ INITIAL LOAD
-  sortItems(currentSort);
-  renderPage(currentPage);
+  [minPriceInput, maxPriceInput].forEach((input) =>
+    input.addEventListener("input", applyFilters)
+  );
+
+  [...brandCheckboxes, ...discountCheckboxes, ...ratingCheckboxes].forEach(
+    (cb) => cb.addEventListener("change", applyFilters)
+  );
+
+  if (availabilityCheckbox)
+    availabilityCheckbox.addEventListener("change", applyFilters);
+
+  // ✅ Initial Render
+  applyFilters();
 });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const products = document.querySelectorAll(".product");
+//   const container = document.getElementById("productContainer");
+//   const pagination = document.getElementById("pagination");
+//   const itemsPerPage = 6; // you can change to 4 or 8
+//   let currentPage = 1;
+//   const totalPages = Math.ceil(products.length / itemsPerPage);
+
+//   function renderPage(page) {
+//     container.innerHTML = "";
+//     const start = (page - 1) * itemsPerPage;
+//     const end = start + itemsPerPage;
+
+//     products.forEach((product, index) => {
+//       if (index >= start && index < end) {
+//         container.appendChild(product);
+//       }
+//     });
+
+//     renderPagination();
+//   }
+
+//   function renderPagination() {
+//     pagination.innerHTML = "";
+//     for (let i = 1; i <= totalPages; i++) {
+//       const btn = document.createElement("button");
+//       btn.textContent = i;
+//       btn.classList.toggle("active", i === currentPage);
+//       btn.addEventListener("click", () => {
+//         currentPage = i;
+//         renderPage(currentPage);
+//         window.scrollTo({ top: 0, behavior: "smooth" });
+//       });
+//       pagination.appendChild(btn);
+//     }
+//   }
+
+//   renderPage(currentPage);
+// });
