@@ -2,7 +2,7 @@
   font-size: 15px;
   color: #333;
   font-weight: 500;
-  padding-left: 20px !important;
+  margin-left: 20px;
 }
 
 .breadcrumb_trail a {
@@ -27,6 +27,17 @@
 .breadcrumb_trail .separator {
   margin: 0 6px;
   color: #aaa;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .bestselling-dropdown-content {
@@ -163,16 +174,6 @@
 .fade-in {
   animation: fadeIn 0.4s ease forwards;
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 .product-list {
   display: flex;
@@ -216,7 +217,15 @@
   font-weight: bold;
 }
 
-.price {
+.careers_header_img {
+  width: 100%;
+}
+
+.card-title {
+  color: #007f22 !important;
+}
+
+/* .price {
   font-size: 16px;
   color: #1a1a1a;
   flex-wrap: nowrap;
@@ -256,7 +265,7 @@
 
 .cart:hover {
   background-color: #007f22;
-}
+} */
 
 @media (max-width: 576px) {
   .right_side_section {
@@ -360,7 +369,7 @@
     padding: 8px 14px;
     border: none;
     border-radius: 6px;
-    background: #28a745; /* main green */
+    background: #28a745;
     color: #fff;
     cursor: pointer;
     font-weight: 500;
@@ -369,13 +378,13 @@
   }
 
   .pagination-container button.active {
-    background: #1e7e34; /* darker green for active */
+    background: #1e7e34;
     box-shadow: 0 3px 6px rgba(0, 128, 0, 0.3);
     transform: scale(1.05);
   }
 
   .pagination-container button:hover {
-    background: #218838; /* hover green */
+    background: #218838;
     box-shadow: 0 4px 8px rgba(0, 128, 0, 0.3);
   }
 
