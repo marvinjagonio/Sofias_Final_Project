@@ -1,24 +1,12 @@
-.breadcrumb_trail a,
-.breadcrumb_trail span {
-  font-weight: normal;
-  font-size: medium;
-  color: rgb(77, 76, 76);
-  text-decoration: none;
-}
-
-.breadcrumb_trail a:hover {
-  text-decoration: underline;
-}
-
-.breadcrumb_trail {
-  padding-left: 20px;
-}
-
 .footer_layout {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 20px;
+}
+
+.footer_layout p b {
+  color: #2b2b2b;
 }
 
 .full_footer_layout {
