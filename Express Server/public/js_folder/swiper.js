@@ -3,6 +3,8 @@ window.addEventListener("load", function () {
     loop: false,
     slidesPerView: 1,
     spaceBetween: 10,
+    loop: true,
+    autoplay: true,
     navigation: {
       nextEl: ".comments_next",
       prevEl: ".comments_prev",
@@ -163,6 +165,7 @@ window.addEventListener("load", function () {
   const loptopSwiper = new Swiper(".laptop_swiper", {
     slidesPerView: 1,
     spaceBetween: 30,
+
     navigation: {
       nextEl: ".laptop_next",
       prevEl: ".laptop_prev",
@@ -191,6 +194,7 @@ window.addEventListener("load", function () {
   const desktopSwiper = new Swiper(".desktop_swiper", {
     slidesPerView: 1,
     spaceBetween: 30,
+
     navigation: {
       nextEl: ".desktop_next",
       prevEl: ".desktop_prev",
@@ -220,6 +224,7 @@ window.addEventListener("load", function () {
   const itemsCathegorySwiper = new Swiper(".items_cathegory_swiper", {
     slidesPerView: 6,
     spaceBetween: 30,
+
     navigation: {
       nextEl: ".items_cathegory_next",
       prevEl: ".items_cathegory_prev",
