@@ -1,7 +1,7 @@
 /* -------------------- Start Pop-up Section -------------------- */
 
 #start_popup {
-  display: none;
+  display: none !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -34,8 +34,6 @@
   top: 4%;
   font-size: larger;
 }
-
-
 
 .pop-up_left_image {
   float: left;

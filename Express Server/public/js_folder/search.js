@@ -1,32 +1,40 @@
-document.getElementById("search").addEventListener("input", function () {
-  const query = this.value.toLowerCase();
-  const list = document.getElementById("itemList");
-  const items = list.querySelector(" li");
-  const noResults = document.getElementById("noResults");
+const searchInput = document.getElementById("search");
+const itemList = document.getElementById("itemList");
+const items = itemList.querySelectorAll("li");
+const noResults = document.getElementById("noResults");
 
-  let matchCount = 0;
+itemList.style.display = "none";
+
+searchInput.addEventListener("input", function () {
+  const query = searchInput.value.toLowerCase().trim();
+  let matchFound = false;
+
+  if (query === "") {
+    itemList.style.display = "none";
+    noResults.style.display = "none";
+    return;
+  }
+
+  itemList.style.display = "block";
 
   items.forEach((item) => {
-    if (item.id === "noResults") return; // skip the "no results" item
+    const text = item.textContent.toLowerCase();
 
-    const match = item.textContent.toLowerCase().includes(query);
-    item.style.display = match ? "list-item" : "none";
-    if (match) matchCount++;
+    if (text.includes(query) && item.id !== "noResults") {
+      item.style.display = "block";
+      matchFound = true;
+    } else {
+      if (item.id !== "noResults") {
+        item.style.display = "none";
+      }
+    }
   });
 
-  // Show "No results" only when nothing matches
-  noResults.style.display = query && matchCount === 0 ? "list-item" : "none";
-
-  // Show/hide the whole list
-  list.style.display = query ? "block" : "none";
+  noResults.style.display = matchFound ? "none" : "block";
 });
 
-// Hide list when clicking outside
-document.addEventListener("click", function (e) {
-  const search = document.getElementById("search");
-  const list = document.getElementById("itemList");
-
-  if (e.target !== search && !list.contains(e.target)) {
-    list.style.display = "none";
-  }
-});
+document
+  .querySelector(".search-container")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+  });
