@@ -479,38 +479,33 @@
 
     <!-- Track Your Order Fill -->
     <div class="breadcrumb_trail">
-      <a href="../index.html">Home</a> <span class="separator">›</span
-      ><span> Track Your Order</span>
+      <a style="color: black" href="../index.html">Home</a>
+      <span class="separator">›</span><span> Track Your Order</span>
     </div>
     <section>
-      <div class="track_your_order_fill_section">
-        <h2>Track Your Order</h2>
-        <br />
-        <form id="track_your_order_form" action="">
-          <label for="">Order Number</label>
-          <br />
+      <form class="track_your_order" id="track_your_order_form">
+        <h5>Track Your Order</h5>
+
+        <div class="input_group">
           <input
             id="number"
             name="number"
             type="text"
-            placeholder="number"
+            placeholder=" "
             required
           />
-          <br />
+          <label for="number">Order Number</label>
+        </div>
+
+        <div class="input_group">
+          <input id="email" name="email" type="text" placeholder=" " required />
           <label for="email">Email</label>
-          <br />
-          <input
-            id="email"
-            name="email"
-            type="text"
-            placeholder="email"
-            required
-          />
-          <br />
-          <input class="track_button" type="submit" value="Track" />
-        </form>
-        <p id="formMessage"><small></small></p>
-      </div>
+        </div>
+
+        <button type="submit" class="track_your_order_button">Track</button>
+
+        <p id="formMessage"></p>
+      </form>
     </section>
 
     <!-- Log-in Popup Section -->
@@ -942,5 +937,6 @@
     <script src="../js_folder/wishlist.js"></script>
     <script src="../js_folder/floating_carts.js"></script>
     <script src="../js_folder/scroll_animation.js"></script>
+    <script src="../js_folder/track_your_order.js"></script>
   </body>
 </html>

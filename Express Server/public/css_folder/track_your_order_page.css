@@ -1,71 +1,66 @@
 body {
-  background-image: url("../wallpaper/track_your_order_wallpaper.png");
+  background-image: url("../wallpaper/track_your_order_wallpaper.jpg");
 }
 
 /* -------------------- Track Your Order -------------------- */
 
-.track_your_order_fill_section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
-}
-
-.track_your_order_fill_section span {
-  display: flex;
-}
-
-.track_your_order_fill_section h2 {
-  color: black;
-}
-
-form {
-  border: 1px solid black;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+.track_your_order {
+  background-color: white;
+  width: 40%;
+  padding: 20px;
   border-radius: 10px;
-  width: fit-content;
-  padding: 20px;
+  margin: 0 0 30px 30%;
+}
+
+.track_your_order h5 {
+  text-align: center;
+  color: #444;
+  font-weight: bold;
+}
+
+.input_group {
   background-color: white;
+  width: 100%;
+  position: relative;
+  margin-bottom: 25px;
 }
 
-label {
-  padding: 20px;
-  font-weight: bolder;
-}
-input {
-  border-radius: 20px;
-  padding: 10px;
-  width: 400px;
+.input_group input {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  outline: none;
 }
 
-.track_button {
-  background-color: #fdd835;
+.input_group label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background-color: white;
+  padding: 0 5px;
+  color: #777;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+/* ✅ Floating animation */
+.input_group input:focus + label,
+.input_group input:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 12px;
+  color: #00ad2e;
+}
+
+.track_your_order_button {
+  background: #fdd835;
   color: white;
-  width: 150px;
-  margin-left: 30%;
-  margin-top: 5%;
-  font-size: larger;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#formMessage {
-  background-color: white;
-  padding: 20px;
-  transform: translateY(-100px);
-  border-radius: 20px;
-  font-size: smaller;
-  opacity: 0;
-}
-
-.showMessage {
-  animation: slideDown 0.5s forwards;
-}
-
-/* Animation */
-
-@keyframes slideDown {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  padding: 12px 30px;
+  margin: 10px 0;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
