@@ -1,29 +1,5 @@
 body {
-  margin: 0;
-  padding: 0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  padding-top: 160px;
   background-image: url("../wallpaper/track_your_order_wallpaper.png");
-}
-
-a {
-  text-decoration: none !important;
-}
-
-ul,
-li {
-  text-decoration: none !important;
-  display: block;
-}
-
-button,
-p,
-h5,
-h6 {
-  line-height: 1;
-  margin: 0;
 }
 
 /* -------------------- Track Your Order -------------------- */
@@ -33,21 +9,6 @@ h6 {
   flex-direction: column;
   align-items: center;
   padding: 30px;
-}
-
-.breadcrumb_trail a,
-.breadcrumb_trail span {
-  font-weight: normal;
-  font-size: medium;
-  color: black !important;
-}
-
-.breadcrumb_trail a:hover {
-  text-decoration: underline !important;
-}
-
-.breadcrumb_trail {
-  padding-left: 20px;
 }
 
 .track_your_order_fill_section span {
@@ -99,6 +60,8 @@ input {
 .showMessage {
   animation: slideDown 0.5s forwards;
 }
+
+/* Animation */
 
 @keyframes slideDown {
   to {
