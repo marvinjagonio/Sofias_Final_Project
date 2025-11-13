@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css_folder/styles_floating_popup.css" />
     <link rel="stylesheet" href="css_folder/styles_navbar_footer.css" />
     <link rel="stylesheet" href="css_folder/styles_product.css" />
+    <link rel="stylesheet" href="css_folder/chatbox.css" />
 
     <!-- Bootstrap -->
     <link
@@ -2662,6 +2663,25 @@
       </div>
     </div>
 
+    <!-- Chatbox -->
+    <div class="chatbox">
+      <div class="chat-header">Customer Service</div>
+      <div class="chat-body" id="chatBody">
+        <div class="bot-message">
+          <img src="image/SPC-Logo.png" alt="" /> Hi! How can we help you today?
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type your message..." />
+        <button title="send" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+    <!-- Floating chat button -->
+    <div class="chat-toggle" id="chatToggle">
+      <img src="icons/message.png" alt="" />
+    </div>
+
     <!-- Footer -->
 
     <footer>
@@ -2896,6 +2916,7 @@
     <script src="js_folder/wishlist.js"></script>
     <script src="js_folder/floating_carts.js"></script>
     <script src="js_folder/scroll_animation.js"></script>
+    <script src="js_folder/chatbox.js"></script>
 
     <script type="module" src="/src/main.jsx"></script>
   </body>

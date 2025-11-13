@@ -1,7 +1,7 @@
 /* -------------------- Start Pop-up Section -------------------- */
 
 #start_popup {
-  display: none !important;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
