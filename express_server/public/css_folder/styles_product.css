@@ -66,7 +66,7 @@ li {
 
 .products_hover li a {
   text-decoration: none;
-  color: black;
+  color: #333;
 }
 
 @keyframes fadeIn {
@@ -79,19 +79,19 @@ li {
 }
 
 .product_save {
-  background-color: yellow;
+  background: linear-gradient(180deg, #ffeb3b, #fdd835);
   text-align: left;
   width: fit-content;
   padding: 5px;
   border-radius: 10px;
   font-size: 13px;
   flex-wrap: nowrap;
-  color: #1a1a1a;
+  color: #333;
 }
 
 .price {
   font-size: 16px;
-  color: #1a1a1a;
+  color: #333;
   flex-wrap: nowrap;
 }
 
@@ -166,7 +166,7 @@ li {
 }
 
 .spcfix_btn {
-  background-color: rgb(53, 187, 53);
+  background-color: rgb(189, 189, 189);
   height: fit-content;
   color: white;
   border: none;
@@ -199,7 +199,7 @@ li {
 
 .price {
   font-size: 16px;
-  color: #1a1a1a;
+  color: #333;
   flex-wrap: nowrap;
 }
 
@@ -209,10 +209,10 @@ li {
 }
 
 .buy_now {
-  color: white;
   border-radius: 10px;
   border: none;
-  background-color: #00ad2e;
+  background: linear-gradient(180deg, #00c853, #009b3a);
+  color: #fff;
   padding: 3px;
   font-weight: bold;
   font-size: small;
@@ -224,7 +224,7 @@ li {
   color: white;
   border-radius: 10px;
   border: none;
-  background-color: yellow;
+  background: linear-gradient(180deg, #ffdd3c, #ffc300);
   padding: 10px;
   font-weight: bold;
   font-size: small;
