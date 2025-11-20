@@ -501,7 +501,7 @@
   padding: 10px 20px;
   border-radius: 10px;
   width: 100px;
-  background-color: lightcoral;
+  background: linear-gradient(180deg, #ff4d4d, #e60000);
   color: white;
   left: 330px;
 }

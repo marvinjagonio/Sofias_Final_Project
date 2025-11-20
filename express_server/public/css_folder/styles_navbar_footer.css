@@ -85,6 +85,11 @@ body {
   color: black;
 }
 
+#cartCount,
+#wishlistCartCount {
+  background: linear-gradient(180deg, #ff4d4d, #e60000);
+}
+
 @media (max-width: 576px) {
   #navbar1 {
     width: 100%;
