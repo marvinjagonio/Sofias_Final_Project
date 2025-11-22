@@ -5,18 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- CSS -->
+    <link rel="stylesheet" href="../css_folder/styles_home.css" />
+    <link rel="stylesheet" href="../css_folder/styles_floating_carts.css" />
+    <link rel="stylesheet" href="../css_folder/styles_floating_popup.css" />
+    <link rel="stylesheet" href="../css_folder/styles_navbar_footer.css" />
+    <link rel="stylesheet" href="../css_folder/styles_product.css" />
+    <link rel="stylesheet" href="../css_folder/chatbox.css" />
     <link rel="stylesheet" href="../css_folder/shopping_list.css" />
+
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-..."
+      crossorigin="anonymous"
     />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
   <body>
-    <!-- Navigation Bar Section -->
+    <!-- Navigation Bar -->
 
     <header>
-      <div class="bg-warning py-2 fixed-top">
+      <div id="scrolling_text" class="bg-warning py-2 fixed-top">
         <marquee
           behavior="scroll"
           direction="left"
@@ -31,16 +47,14 @@
         </marquee>
       </div>
 
-      <nav
-        class="navbar navbar-expand-md bg-light fixed-below-marquee custom-navbar"
-      >
+      <nav id="navbar1" class="navbar navbar-expand-md bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
             <img
-              src="../image/SPC-Logo.png"
+              src="image/SPC-Logo.png"
               alt="Logo"
               class="img-fluid ps-3"
-              style="height: 40px"
+              style="height: 35px"
             />
           </a>
 
@@ -53,104 +67,384 @@
             <span class="navbar-toggler-icon" id="navbar1_toggler"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarContent1">
+          <div class="collapse navbar-collapse pt-2" id="navbarContent1">
             <form
-              class="search-container d-flex flex-row flex-md-row mb-2 mb-md-0 ms-md-auto me-3"
+              class="search-container d-flex justify-content-center mb-lg-2 mt-0 mb-0 mx-auto flex-wrap"
               role="search"
             >
               <input
-                class="form-control me-md-2 mb-2 mb-md-0"
+                class="form-control w-100 w-md-50"
                 type="text"
                 id="search"
                 placeholder="Search..."
               />
               <ul id="itemList">
-                <li><a href="">Components</a></li>
-                <li><a href="">CPU Cooling</a></li>
-                <li><a href="">Graphics Card</a></li>
-                <li><a href="">Hard Disk</a></li>
-                <li><a href="">Memory</a></li>
-                <li><a href="">Motherboard</a></li>
-                <li><a href="">PC Case</a></li>
-                <li><a href="">Power Supply</a></li>
-                <li><a href="">Processor AMD</a></li>
-                <li><a href="">Processor INTEL</a></li>
-                <li><a href="">Processor Tray</a></li>
-                <li><a href="">Chromebook</a></li>
-                <li><a href="">Laptops</a></li>
-                <li><a href="">Mobile Phone</a></li>
-                <li><a href="">Tablet</a></li>
-                <li><a href="">Desktop</a></li>
-                <li><a href="">Powered by MSI</a></li>
-                <li><a href="">Build a PC</a></li>
-                <li><a href="">RAKK</a></li>
+                <li>
+                  <a href="items_page_folder/items_selection_page_sample.html"
+                    >CPU Cooling Fan</a
+                  >
+                </li>
+                <li>
+                  <a href="items_page_folder/items_selection_page_sample.html"
+                    >Graphics Card</a
+                  >
+                </li>
+                <li>
+                  <a href="items_page_folder/items_selection_page_sample.html"
+                    >Hard Disk</a
+                  >
+                </li>
+                <li>
+                  <a href="items_page_folder/items_selection_page_sample.html"
+                    >Memory</a
+                  >
+                </li>
+                <li>
+                  <a href="items_page_folder/items_selection_page_sample.html"
+                    >Motherboard</a
+                  >
+                </li>
+                <li>
+                  <a href="items_page_folder/items_selection_page_sample.html"
+                    >PC Case</a
+                  >
+                </li>
+                <li>
+                  <a href="items_page_folder/items_selection_page_sample.html"
+                    >Power Supply</a
+                  >
+                </li>
+                <li>
+                  <a href="items_page_folder/items_selection_page_sample.html"
+                    >Processor AMD</a
+                  >
+                </li>
+                <li>
+                  <a href="items_page_folder/items_selection_page_sample.html"
+                    >Processor INTEL</a
+                  >
+                </li>
+
+                <li>
+                  <a href="items_page_folder/items_selection_page_sample.html"
+                    >Loptops</a
+                  >
+                </li>
+                <li>
+                  <a href="items_page_folder/items_selection_page_sample.html"
+                    >Mobile Phone</a
+                  >
+                </li>
+                <li>
+                  <a href="items_page_folder/items_selection_page_sample.html"
+                    >Tablet</a
+                  >
+                </li>
+                <li>
+                  <a href="items_page_folder/items_selection_page_sample.html"
+                    >Desktop</a
+                  >
+                </li>
+
+                <li><a href="../rakk_page.html">RAKK</a></li>
                 <li id="noResults" style="display: none; color: gray">
                   No results found
                 </li>
               </ul>
-              <button type="submit" id="search-button">Search</button>
+              <button class="mx-1" type="submit" id="search-button">
+                Search
+              </button>
             </form>
             <ul
-              class="navbar-nav d-flex flex-row flex-md-row flex-wrap justify-content-around"
+              class="navbar gap-lg-3 gap-sm-2 pt-3 pb-0 flex-nowrap justify-content-evenly"
             >
-              <li class="nav-item mx-1">
+              <li class="nav-item mx-1 gap-sm-2">
                 <a href="#"
-                  ><img
-                    src="../icons/about.png"
-                    class="img-fluid"
-                    style="height: 35px"
-                    alt=""
+                  ><img src="icons/about.png" class="img-fluid nav-icon" alt=""
                 /></a>
               </li>
+
               <li class="nav-item mx-1">
                 <a href="items_page_folder/track_your_order.html"
                   ><img
-                    class="img-fluid px-2"
-                    style="height: 30px"
+                    class="img-fluid nav-icon"
                     title="Track your order"
-                    src="../icons/track_your_order.png"
+                    src="icons/track_your_order.png"
                     alt=""
                 /></a>
               </li>
               <li class="nav-item mx-1">
                 <a href="#"
                   ><img
-                    class="img-fluid px-2"
-                    style="height: 30px"
+                    class="img-fluid nav-icon"
                     title="Comment Page"
-                    src="../icons/comment_icon.png"
+                    src="icons/comment_icon.png"
                     alt=""
                 /></a>
               </li>
-              <li class="nav-item mx-1">
-                <a href="#"
-                  ><img
-                    class="img-fluid px-2"
-                    style="height: 30px"
-                    title="Cart Page"
-                    src="../icons/cart.png"
-                    alt=""
-                /></a>
-              </li>
+
               <li class="nav-item mx-1" id="loginBtn">
                 <a href="#"
                   ><img
-                    class="img-fluid px-2"
-                    style="height: 30px"
+                    class="img-fluid nav-icon"
                     title="Log-in"
-                    src="../icons/log-in.png"
+                    src="icons/log_in.png"
                     alt=""
                 /></a>
               </li>
               <li class="nav-item mx-1" id="signUpBtn">
                 <a href="#"
                   ><img
-                    class="img-fluid px-2"
-                    style="height: 30px"
+                    class="img-fluid nav-icon"
                     title="Sign-up"
-                    src="../icons/nav_icon_2.png"
+                    src="icons/sign_up.png"
                     alt=""
                 /></a>
+              </li>
+              <li class="nav-item mx-1">
+                <a href="#" class="position-relative"
+                  ><img
+                    class="wishlist_cart_button img-fluid nav-icon"
+                    title="Wishlist"
+                    src="icons/wishlist.png"
+                    alt=""
+                  />
+                  <span
+                    id="wishlistCartCount"
+                    class="position-absolute top-1 left-0 start-100 translate-middle badge rounded-pill"
+                    >0</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item mx-1">
+                <a href="#" class="position-relative"
+                  ><img
+                    class="cart_button img-fluid nav-icon"
+                    title="Cart"
+                    src="icons/cart.png"
+                    alt=""
+                  />
+                  <span
+                    id="cartCount"
+                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill"
+                    >0</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Second Nav-bar Section -->
+
+      <nav id="navbar2" class="navbar navbar-expand-md">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler me-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent2"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse position-relative"
+            id="navbarContent2"
+          >
+            <ul
+              class="navbar-nav nav-link2 w-100 gap-lg-5 gap-md-3 pt-md-3 pt-lg-2 flex-md-row flex-column justify-content-center"
+            >
+              <li class="#"><a class="nav-link" href="#">Home</a></li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Products</a
+                >
+                <ul class="dropdown-menu mt-1" style="width: 400px">
+                  <li>
+                    <div class="row gap-1">
+                      <div class="col-auto col-md-4 col-sm-3 mb-2">
+                        <ul class="list-unstyled">
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="#"
+                              onclick="closeDropdown()"
+                              ><b class="text-success">Components</b></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >CPU Cooling</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="iitems_page_folder/items_selection_page_sample.html"
+                              >Graphics Card</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Hard Disk</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Memory</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Motherboard</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >PC Case</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Power Supply</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Processor AMD</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Processor INTEL</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Processor Tray</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Solid State Drive</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-12 col-md-4 mb-2">
+                        <ul class="list-unstyled">
+                          <li>
+                            <a
+                              class="nav-link dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              ><b class="text-success"
+                                >Laptop & Mobile Devices</b
+                              ></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Chromebook</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Laptops</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Mobile Phone</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6 fs-sm-8"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Tablet</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="items_page_folder/desktop_page.html"
+                  >Desktop</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="items_page_folder/laptop_page.html"
+                  >Laptop</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="items_page_folder/powerd_by_msi.html"
+                  >Powered by MSI</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="items_page_folder/build_a_pc_page.html"
+                  >Build a PC</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="items_page_folder/rakk_page.html"
+                  >RAKK</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="items_page_folder/shopmate_page.html"
+                  >SPC</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="items_page_folder/rewards_page.html"
+                  >Rewards</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="items_page_folder/brands_page.html"
+                  >Brands</a
+                >
               </li>
             </ul>
           </div>
@@ -158,248 +452,35 @@
       </nav>
     </header>
 
-    <!-- Second Nav-bar Section -->
-
-    <nav
-      id="nav-bar2"
-      class="navbar navbar-expand-md bg-light fixed-below-navbar"
-    >
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler me-3"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarContent2"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          class="collapse navbar-collapse position-relative"
-          id="navbarContent2"
-        >
-          <ul
-            class="navbar-nav nav-link2 w-100 flex-md-row flex-column justify-content-center gap-5"
-          >
-            <li class=""><a class="nav-link" href="#">Home</a></li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                >Products</a
-              >
-              <ul class="dropdown-menu p-3 mt-1" style="width: 400px">
-                <li>
-                  <div class="row gap-1">
-                    <div class="col-auto col-md-4 col-sm-3 mb-2">
-                      <ul class="list-unstyled">
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="#"
-                            onclick="closeDropdown()"
-                            ><b class="text-success">Components</b></a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="items_page_folder/component_page/cpu_cooling_fan_page.html"
-                            >CPU Cooling</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="items_page_folder/component_page/graphics_card.html"
-                            >Graphics Card</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="items_page_folder/component_page/hard_disk.html"
-                            >Hard Disk</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="items_page_folder/component_page/memory.html"
-                            >Memory</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="items_page_folder/component_page/motherboard.html"
-                            >Motherboard</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="items_page_folder/component_page/pc_case.html"
-                            >PC Case</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="items_page_folder/component_page/power_supply.html"
-                            >Power Supply</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="items_page_folder/component_page/processor_AMD.html"
-                            >Processor AMD</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="items_page_folder/component_page/processor_intel.html"
-                            >Processor INTEL</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="items_page_folder/component_page/processor_tray.html"
-                            >Processor Tray</a
-                          >
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#"
-                            >Solid State Drive</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-12 col-md-4 mb-2">
-                      <ul class="list-unstyled">
-                        <li>
-                          <a class="dropdown-item" href="#"
-                            ><b class="text-success"
-                              >Laptop & Mobile Devices</b
-                            ></a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="items_page_folder/loptop_mobile_page/chrombook_page.html"
-                            >Chromebook</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="items_page_folder/loptop_mobile_page/laptops_page.html"
-                            >Laptops</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="items_page_folder/loptop_mobile_page/mobile_page.html"
-                            >Mobile Phone</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="items_page_folder/loptop_mobile_page/tablet_page.html"
-                            >Tablet</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="items_page_folder/desktop_page.html"
-                >Desktop</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="items_page_folder/laptop_page.html"
-                >Laptop</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="items_page_folder/powerd_by_msi.html"
-                >Powered by MSI</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="items_page_folder/build_a_pc_page.html"
-                >Build a PC</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="items_page_folder/rakk_page.html"
-                >RAKK</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="items_page_folder/shopmate_page.html"
-                >SPC</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="items_page_folder/rewards_page.html"
-                >Rewards</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="items_page_folder/brands_page.html"
-                >Brands</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
     <!-- Shopping List Section -->
 
     <section>
       <div id="shopping_list_full">
         <div class="shopping_list_left_side">
-          <p><a href="">Home</a>> Your Shopping Cart</p>
+          <div class="breadcrumb_trail">
+            <a href="../index.html">Home</a> <span class="separator">›</span
+            ><span> Cancellation Policy</span>
+          </div>
           <h1>Shopping List</h1>
           <div class="shopping_cart_left_side">
             <div class="shopping_cart_flex">
               <p>Product</p>
               <div class="shopping_cart_flex_right">
-                <p>price</p>
-                <p>quantity</p>
-                <p>cart total</p>
+                <p>Price</p>
+                <p>Quantity</p>
+                <p>Cart Total</p>
               </div>
             </div>
             <hr />
             <div class="shopping_cart_middle_left">
-              <button class="small_button_x">x</button
-              ><img
-                src="../page_item_images/cpu_cooling_fan_images/1stplayer CC360 ARGB AIO CPU Liquid Cooler w Temp Display Black.png"
-                alt=""
-              />
+              <button class="small_button_x" id="removeProduct">x</button>
+              <img class="product_image" alt="" />
               <div class="shopping_cart_middle_column">
-                <p class="product_name">
-                  Team Elite Plus 8gb 1x8 3200Mhz Black Gold Ddr4 Memory
-                </p>
+                <p class="product_name"></p>
                 <p>⚲ SPC Available stock: <span class="available">0</span></p>
               </div>
-              <p class="price">₱0.00</p>
+
+              <p class="price"></p>
               <div class="quantity_container">
                 <input
                   type="number"
@@ -409,17 +490,15 @@
                   max="10"
                   step="1"
                 />
-                <button class="small_button" onclick="changeValue(-1)">
-                  -
-                </button>
-                <button class="small_button" onclick="changeValue(1)">+</button>
+                <button class="small_button" id="decreaseQty">-</button>
+                <button class="small_button" id="increaseQty">+</button>
               </div>
-              <p class="cart_total">₱870.00</p>
+              <p class="cart_total"></p>
             </div>
             <hr />
             <div class="shopping_cart_bottom_right">
-              <button class="continue_shopping">Continue Shopping</button
-              ><button class="clear_cart">Clear Cart</button>
+              <button class="continue_shopping">Continue Shopping</button>
+              <button class="clear_cart" id="clearCart">Clear Cart</button>
             </div>
           </div>
         </div>
@@ -429,8 +508,6 @@
             <textarea
               id="message"
               name="message"
-              rows="4"
-              cols="50"
               rows="5"
               minlength="10"
               maxlength="100"
@@ -439,14 +516,15 @@
           </div>
           <div class="cart_total_right_side">
             <p>Cart Total:</p>
-            <p>₱870.00</p>
+            <p class="cartTotal">₱870.00</p>
           </div>
           <hr />
           <div class="button_right_side">
             <button>
               🚚 <br />
-              Local Delivery</button
-            ><button>
+              Local Delivery
+            </button>
+            <button>
               🏪 <br />
               Store Pickup
             </button>
@@ -458,1458 +536,190 @@
       </div>
     </section>
 
-    <section id="shopping_list_middle_slides_section">
-      <h2>Graphics Card</h2>
-      <div class="graphics_card_slider">
-        <button
-          type="button"
-          class="graphics_card_preview position-absolute top-50 start-0 translate-middle-y ms-2"
-        >
-          &#10094;
-        </button>
-        <div class="graphics_card_container">
-          <div class="product">
-            <p class="product_save"><b>Save ₱2.00</b></p>
-            <a href="items_page_folder/webcam_page.html">
-              <img
-                class="product_image"
-                src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                alt="Product 1"
-              />
-              <div class="product_column">
-                <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                <div class="btn_star_flex">
-                  <button class="spcfix_btn"><b>SPCfix</b></button>
-                  <div class="star_flex">
-                    <p class="star">⭐</p>
-                    <p class="star_count">4.5</p>
-                  </div>
-                </div>
-                <h5>₱187.00</h5>
-                <h6>₱190.00</h6>
-              </div>
-            </a>
-            <div class="product_buttons">
-              <button class="buy_now">Buy Now</button>
-              <button class="cart">
-                <img src="../../image/cart.png" alt="" />
-              </button>
-            </div>
-            <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
-            </ul>
-          </div>
+    <!-- Sign-up Popup -->
+    <section class="sign-up_overlay">
+      <div id="signUpPopup" class="sign-up_popup">
+        <div class="sign-up_popup-content">
+          <span class="sign-up_close-btn">&times;</span>
 
-          <div class="product">
-            <p class="product_save"><b>Save ₱2.00</b></p>
-            <a href="items_page_folder/webcam_page.html">
-              <img
-                class="product_image"
-                src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                alt="Product 1"
-              />
-              <div class="product_column">
-                <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                <div class="btn_star_flex">
-                  <button class="spcfix_btn"><b>SPCfix</b></button>
-                  <div class="star_flex">
-                    <p class="star">⭐</p>
-                    <p class="star_count">4.5</p>
-                  </div>
-                </div>
-                <h5>₱187.00</h5>
-                <h6>₱190.00</h6>
-              </div>
-            </a>
-            <div class="product_buttons">
-              <button class="buy_now">Buy Now</button>
-              <button class="cart">
-                <img src="../../image/cart.png" alt="" />
-              </button>
-            </div>
-            <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
-            </ul>
-          </div>
-          <div class="product">
-            <p class="product_save"><b>Save ₱2.00</b></p>
-            <a href="items_page_folder/webcam_page.html">
-              <img
-                class="product_image"
-                src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                alt="Product 1"
-              />
-              <div class="product_column">
-                <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                <div class="btn_star_flex">
-                  <button class="spcfix_btn"><b>SPCfix</b></button>
-                  <div class="star_flex">
-                    <p class="star">⭐</p>
-                    <p class="star_count">4.5</p>
-                  </div>
-                </div>
-                <h5>₱187.00</h5>
-                <h6>₱190.00</h6>
-              </div>
-            </a>
-            <div class="product_buttons">
-              <button class="buy_now">Buy Now</button>
-              <button class="cart">
-                <img src="../../image/cart.png" alt="" />
-              </button>
-            </div>
-            <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
-            </ul>
-          </div>
-          <div class="product">
-            <p class="product_save"><b>Save ₱2.00</b></p>
-            <a href="items_page_folder/webcam_page.html">
-              <img
-                class="product_image"
-                src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                alt="Product 1"
-              />
-              <div class="product_column">
-                <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                <div class="btn_star_flex">
-                  <button class="spcfix_btn"><b>SPCfix</b></button>
-                  <div class="star_flex">
-                    <p class="star">⭐</p>
-                    <p class="star_count">4.5</p>
-                  </div>
-                </div>
-                <h5>₱187.00</h5>
-                <h6>₱190.00</h6>
-              </div>
-            </a>
-            <div class="product_buttons">
-              <button class="buy_now">Buy Now</button>
-              <button class="cart">
-                <img src="../../image/cart.png" alt="" />
-              </button>
-            </div>
-            <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
-            </ul>
-          </div>
-          <div class="product">
-            <p class="product_save"><b>Save ₱2.00</b></p>
-            <a href="items_page_folder/webcam_page.html">
-              <img
-                class="product_image"
-                src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                alt="Product 1"
-              />
-              <div class="product_column">
-                <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                <div class="btn_star_flex">
-                  <button class="spcfix_btn"><b>SPCfix</b></button>
-                  <div class="star_flex">
-                    <p class="star">⭐</p>
-                    <p class="star_count">4.5</p>
-                  </div>
-                </div>
-                <h5>₱187.00</h5>
-                <h6>₱190.00</h6>
-              </div>
-            </a>
-            <div class="product_buttons">
-              <button class="buy_now">Buy Now</button>
-              <button class="cart">
-                <img src="../../image/cart.png" alt="" />
-              </button>
-            </div>
-            <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
-            </ul>
-          </div>
-          <div class="product">
-            <p class="product_save"><b>Save ₱2.00</b></p>
-            <a href="items_page_folder/webcam_page.html">
-              <img
-                class="product_image"
-                src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                alt="Product 1"
-              />
-              <div class="product_column">
-                <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                <div class="btn_star_flex">
-                  <button class="spcfix_btn"><b>SPCfix</b></button>
-                  <div class="star_flex">
-                    <p class="star">⭐</p>
-                    <p class="star_count">4.5</p>
-                  </div>
-                </div>
-                <h5>₱187.00</h5>
-                <h6>₱190.00</h6>
-              </div>
-            </a>
-            <div class="product_buttons">
-              <button class="buy_now">Buy Now</button>
-              <button class="cart">
-                <img src="../../image/cart.png" alt="" />
-              </button>
-            </div>
-            <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
-            </ul>
-          </div>
-          <div class="product">
-            <p class="product_save"><b>Save ₱2.00</b></p>
-            <a href="items_page_folder/webcam_page.html">
-              <img
-                class="product_image"
-                src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                alt="Product 1"
-              />
-              <div class="product_column">
-                <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                <div class="btn_star_flex">
-                  <button class="spcfix_btn"><b>SPCfix</b></button>
-                  <div class="star_flex">
-                    <p class="star">⭐</p>
-                    <p class="star_count">4.5</p>
-                  </div>
-                </div>
-                <h5>₱187.00</h5>
-                <h6>₱190.00</h6>
-              </div>
-            </a>
-            <div class="product_buttons">
-              <button class="buy_now">Buy Now</button>
-              <button class="cart">
-                <img src="../../image/cart.png" alt="" />
-              </button>
-            </div>
-            <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
-            </ul>
-          </div>
-          <div class="product">
-            <p class="product_save"><b>Save ₱2.00</b></p>
-            <a href="items_page_folder/webcam_page.html">
-              <img
-                class="product_image"
-                src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                alt="Product 1"
-              />
-              <div class="product_column">
-                <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                <div class="btn_star_flex">
-                  <button class="spcfix_btn"><b>SPCfix</b></button>
-                  <div class="star_flex">
-                    <p class="star">⭐</p>
-                    <p class="star_count">4.5</p>
-                  </div>
-                </div>
-                <h5>₱187.00</h5>
-                <h6>₱190.00</h6>
-              </div>
-            </a>
-            <div class="product_buttons">
-              <button class="buy_now">Buy Now</button>
-              <button class="cart">
-                <img src="../../image/cart.png" alt="" />
-              </button>
-            </div>
-            <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
-            </ul>
-          </div>
-          <div class="product">
-            <p class="product_save"><b>Save ₱2.00</b></p>
-            <a href="items_page_folder/webcam_page.html">
-              <img
-                class="product_image"
-                src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                alt="Product 1"
-              />
-              <div class="product_column">
-                <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                <div class="btn_star_flex">
-                  <button class="spcfix_btn"><b>SPCfix</b></button>
-                  <div class="star_flex">
-                    <p class="star">⭐</p>
-                    <p class="star_count">4.5</p>
-                  </div>
-                </div>
-                <h5>₱187.00</h5>
-                <h6>₱190.00</h6>
-              </div>
-            </a>
-            <div class="product_buttons">
-              <button class="buy_now">Buy Now</button>
-              <button class="cart">
-                <img src="../../image/cart.png" alt="" />
-              </button>
-            </div>
-            <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
-            </ul>
-          </div>
-          <div class="product">
-            <p class="product_save"><b>Save ₱2.00</b></p>
-            <a href="items_page_folder/webcam_page.html">
-              <img
-                class="product_image"
-                src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                alt="Product 1"
-              />
-              <div class="product_column">
-                <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                <div class="btn_star_flex">
-                  <button class="spcfix_btn"><b>SPCfix</b></button>
-                  <div class="star_flex">
-                    <p class="star">⭐</p>
-                    <p class="star_count">4.5</p>
-                  </div>
-                </div>
-                <h5>₱187.00</h5>
-                <h6>₱190.00</h6>
-              </div>
-            </a>
-            <div class="product_buttons">
-              <button class="buy_now">Buy Now</button>
-              <button class="cart">
-                <img src="../../image/cart.png" alt="" />
-              </button>
-            </div>
-            <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
-            </ul>
-          </div>
-          <div class="product">
-            <p class="product_save"><b>Save ₱2.00</b></p>
-            <a href="items_page_folder/webcam_page.html">
-              <img
-                class="product_image"
-                src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                alt="Product 1"
-              />
-              <div class="product_column">
-                <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                <div class="btn_star_flex">
-                  <button class="spcfix_btn"><b>SPCfix</b></button>
-                  <div class="star_flex">
-                    <p class="star">⭐</p>
-                    <p class="star_count">4.5</p>
-                  </div>
-                </div>
-                <h5>₱187.00</h5>
-                <h6>₱190.00</h6>
-              </div>
-            </a>
-            <div class="product_buttons">
-              <button class="buy_now">Buy Now</button>
-              <button class="cart">
-                <img src="../../image/cart.png" alt="" />
-              </button>
-            </div>
-            <ul class="products_hover">
-              <li><a href="">♡ Add To Wishlist</a></li>
-            </ul>
-          </div>
-        </div>
-        <button
-          type="button"
-          class="graphics_card position-absolute top-50 end-0 translate-middle-y me-2"
-        >
-          &#10095;
-        </button>
-      </div>
+          <form id="signupForm" action="/sign-up_submit" method="POST">
+            <img class="sign-up_logo" src="image/SPC-Logo.png" alt="" />
+            <h2 class="sign-up_h1">Sign-Up</h2>
+            <label>Name:</label><br />
+            <input
+              id="signup_name"
+              name="name"
+              placeholder="name"
+              required
+            /><br />
 
-      <br />
-      <div class="motherboard_products" class="position-relative">
-        <h2>Motherboard</h2>
+            <label>Username:</label><br />
+            <input
+              id="signup_username"
+              name="username"
+              placeholder="username"
+              required
+            /><br />
 
-        <div class="motherboard_slider">
-          <button
-            type="button"
-            class="motherboard_preview position-absolute top-50 start-0 translate-middle-y ms-2"
-          >
-            &#10094;
-          </button>
+            <label>Email:</label><br />
+            <input
+              id="signup_email"
+              type="text"
+              name="email"
+              placeholder="email"
+              required
+            /><br />
 
-          <div class="motherboard_container">
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-          </div>
-          <button
-            type="button"
-            class="motherboard_next position-absolute top-50 end-0 translate-middle-y me-2"
-          >
-            &#10095;
-          </button>
-        </div>
-      </div>
+            <label>Password:</label><br />
+            <input
+              id="signup_password"
+              type="password"
+              name="password"
+              placeholder="******"
+              maxlength="6"
+              minlength="1"
+              required
+            /><br />
 
-      <br />
-      <div class="hard_disk_products" class="position-relative">
-        <h2>Hard Disk</h2>
-
-        <div class="hard_disk_slider">
-          <button
-            type="button"
-            class="hard_disk_preview position-absolute top-50 start-0 translate-middle-y ms-2"
-          >
-            &#10094;
-          </button>
-
-          <div class="hard_disk_container">
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-          </div>
-          <button
-            type="button"
-            class="hard_disk_next position-absolute top-50 end-0 translate-middle-y me-2"
-          >
-            &#10095;
-          </button>
-        </div>
-      </div>
-      <br />
-      <div class="solid_state_drive_products" class="position-relative">
-        <h2>Solid State Drive</h2>
-
-        <div class="solid_state_drive_slider">
-          <button
-            type="button"
-            class="solid_state_drive_preview position-absolute top-50 start-0 translate-middle-y ms-2"
-          >
-            &#10094;
-          </button>
-
-          <div class="solid_state_drive_container">
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-            <div class="product">
-              <p class="product_save"><b>Save ₱2.00</b></p>
-              <a href="items_page_folder/webcam_page.html">
-                <img
-                  class="product_image"
-                  src="../../page_item_images/cpu_cooling_fan_images/AMD Wraith Stealth Cooler.png"
-                  alt="Product 1"
-                />
-                <div class="product_column">
-                  <p class="product_name"><b>AMD Wraith Stealth Cooler</b></p>
-                  <div class="btn_star_flex">
-                    <button class="spcfix_btn"><b>SPCfix</b></button>
-                    <div class="star_flex">
-                      <p class="star">⭐</p>
-                      <p class="star_count">4.5</p>
-                    </div>
-                  </div>
-                  <h5>₱187.00</h5>
-                  <h6>₱190.00</h6>
-                </div>
-              </a>
-              <div class="product_buttons">
-                <button class="buy_now">Buy Now</button>
-                <button class="cart">
-                  <img src="../../image/cart.png" alt="" />
-                </button>
-              </div>
-              <ul class="products_hover">
-                <li><a href="">♡ Add To Wishlist</a></li>
-              </ul>
-            </div>
-          </div>
-          <button
-            type="button"
-            class="solid_state_drive_next position-absolute top-50 end-0 translate-middle-y me-2"
-          >
-            &#10095;
-          </button>
+            <input id="signup_submit" type="submit" value="Sign-Up" />
+            <br />
+            <p id="message_signup"></p>
+          </form>
         </div>
       </div>
     </section>
+
+    <!-- Shopping Cart Floating  -->
+    <div id="main_body">
+      <div id="cart_window">
+        <div class="overlay"></div>
+        <div id="cart_box">
+          <div class="heading">
+            <div class="title_circle_container">
+              <div class="shopping_cart_circle">
+                <div>
+                  <h1>Shopping Cart</h1>
+                  <p>Quick Delivery</p>
+                </div>
+              </div>
+              <button class="close_button">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.6492 11.2501L12.7904 6.53852L13.8346 5.46167L20.5774 12.0001L13.8346 18.5385L12.7904 17.4617L17.6492 12.7501H3V11.2501H17.6492Z"
+                    fill="#080341"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div id="cart_items_container">
+              <span class="empty_cart_message"
+                >Your cart is empty.order an item.</span
+              >
+
+              <ul></ul>
+            </div>
+
+            <div id="cart_checkout">
+              <div id="total_checkout">
+                <p>total: <span id="cartTotal">0.00</span></p>
+
+                <p>
+                  Discount: <span style="color: red">-</span>
+                  <span style="color: red" id="cartLess"
+                    ><small>0.00</small></span
+                  >
+                </p>
+              </div>
+              <button id="checkout_button">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wishlist Cart Floating  -->
+    <div id="wishlist_cart">
+      <div id="wishlist_cart_window">
+        <div class="overlay"></div>
+        <div id="wishlist_cart_box">
+          <div class="heading">
+            <div class="title_circle_container">
+              <div class="wishlist_cart_circle">
+                <div>
+                  <h1>Wishlist Cart</h1>
+                  <p>Quick Delivery</p>
+                </div>
+              </div>
+              <button class="wishlist_close_button">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.6492 11.2501L12.7904 6.53852L13.8346 5.46167L20.5774 12.0001L13.8346 18.5385L12.7904 17.4617L17.6492 12.7501H3V11.2501H17.6492Z"
+                    fill="#080341"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div id="wishlist_cart_items_container">
+              <span class="wishlist_empty_cart_message"
+                >Your cart is empty.order an item.</span
+              >
+              <div class="white_fade_overflow top"></div>
+              <ul></ul>
+              <div class="white_fade_overflow bottom"></div>
+            </div>
+
+            <div id="wishlist_cart_checkout">
+              <div id="wishlist_total_checkout">
+                <p>total: <span class="price">0.00</span></p>
+
+                <p>
+                  Discount: <span style="color: red">-</span>
+                  <span style="color: red" class="product_save"
+                    ><small>0.00</small></span
+                  >
+                </p>
+              </div>
+              <button id="wishlist_cart_checkout_button">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chatbox -->
+    <div class="chatbox">
+      <div class="chat-header">Customer Service</div>
+      <div class="chat-body" id="chatBody">
+        <div class="bot-message">
+          <img src="image/SPC-Logo.png" alt="" /> Hi! How can we help you today?
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type your message..." />
+        <button title="send" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+    <!-- Floating chat button -->
+    <div class="chat-toggle" id="chatToggle">
+      <img src="icons/message.png" alt="" />
+    </div>
 
     <!-- Footer -->
 
@@ -1921,18 +731,86 @@
               <li>
                 <a class="footer_link" href="#"><h4>CUSTOMER SERVICE</h4></a>
               </li>
-              <li><a class="footer_link" href="#">Cancellation Policy</a></li>
-              <li><a class="footer_link" href="#">Delivery</a></li>
-              <li><a class="footer_link" href="#">Order And Payments</a></li>
-              <li><a class="footer_link" href="#">Payment FAQs</a></li>
-              <li><a class="footer_link" href="#">Privacy Policy</a></li>
-              <li><a class="footer_link" href="#">Return And Refunds</a></li>
               <li>
-                <a class="footer_link" href="#">Service Area Directory</a>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/cancellation_policy.html"
+                  title="Cancellation Policy"
+                  >Cancellation Policy</a
+                >
               </li>
-              <li><a class="footer_link" href="#">Terms And Conditions</a></li>
-              <li><a class="footer_link" href="#">Warranty Information</a></li>
-              <li><a class="footer_link" href="#">Warranty Policy</a></li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/delivery.html"
+                  title="Deliver"
+                  >Delivery</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/order_payment.html"
+                  title="Order Payment"
+                  >Order And Payments</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/payment_faqs.html"
+                  title="Payment Faqs"
+                  >Payment FAQs</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/privacy_policy.html"
+                  title="Privacy Policy"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/return_refunds.html"
+                  title="Return Refunds"
+                  >Return And Refunds</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/service_area_directory.html"
+                  title="Service Area Directory"
+                  >Service Area Directory</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/terms_conditions.html"
+                  title="Terms Condition"
+                  >Terms And Conditions</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/warranty_information.html"
+                  title="Warranty Information"
+                  >Warranty Information</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/warranty_policy.html"
+                  title="Warranty Policy"
+                  >Warranty Policy</a
+                >
+              </li>
             </ul>
           </div>
           <div class="col-md-3 col-sm-3 mb-2">
@@ -1940,13 +818,62 @@
               <li>
                 <a class="footer_link" href="#"><h4>COMPANY</h4></a>
               </li>
-              <li><a class="footer_link" href="#">Careers</a></li>
-              <li><a class="footer_link" href="#">Contact Us</a></li>
-              <li><a class="footer_link" href="#">FAQs</a></li>
-              <li><a class="footer_link" href="#">News And Articles</a></li>
-              <li><a class="footer_link" href="#">Our Company</a></li>
-              <li><a class="footer_link" href="#">Reviews</a></li>
-              <li><a class="footer_link" href="#">Store Locations</a></li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/careers.html"
+                  title="Careers"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/contact_us.html"
+                  title="Contact Us"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/FAQS.html"
+                  title="FAQS"
+                  >FAQs</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/news_articles.html"
+                  title="News Articles"
+                  >News And Articles</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/our_company.html"
+                  title="Our Company"
+                  >Our Company</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/reviews.html"
+                  title="Reviews"
+                  >Reviews</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/store_location.html"
+                  title="Store Location"
+                  >Store Locations</a
+                >
+              </li>
             </ul>
           </div>
           <div class="col-md-3 col-sm-3 mb-2">
@@ -1954,8 +881,22 @@
               <li>
                 <a class="footer_link" href="#"><h4>LINKS</h4></a>
               </li>
-              <li><a class="footer_link" href="#">EasyPC Corporate</a></li>
-              <li><a class="footer_link" href="#">EasyPC Community</a></li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/spc_corporate.html"
+                  title="SPC Corporate"
+                  >SPC Corporate</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer_link"
+                  href="items_page_folder/footer_section/spc_community.html"
+                  title="SPC Community"
+                  >SPC Community</a
+                >
+              </li>
               <li><a class="footer_link" href="#">Lazada Official Store</a></li>
               <li><a class="footer_link" href="#">Shopee Official Store</a></li>
             </ul>
@@ -1963,22 +904,22 @@
           <div class="col-md-3 col-sm-3 mb-2">
             <ul class="footer-links">
               <div class="footer_end">
-                <img class="footer_logo" src="../image/SPC-Logo.png" alt="" />
+                <img class="footer_logo" src="image/SPC-Logo.png" alt="" />
                 <h4>FOLLOW US</h4>
                 <div>
                   <img
                     class="footer_bw_logo"
-                    src="../black_white_logo/facebook_logo_b_w.png"
+                    src="black_white_logo/facebook_logo_b_w.png"
                     alt=""
                   />
                   <img
                     class="footer_bw_logo"
-                    src="../black_white_logo/instagram_logo_b_w.png"
+                    src="black_white_logo/instagram_logo_b_w.png"
                     alt=""
                   />
                   <img
                     class="footer_bw_logo"
-                    src="../black_white_logo/viber_icon_b_w.png"
+                    src="black_white_logo/viber_icon_b_w.png"
                     alt=""
                   />
                 </div>
@@ -1989,9 +930,35 @@
       </div>
     </footer>
 
-    <script src="../js_folder/slides.js"></script>
-    <script src="../js_folder/shopping_cart.js"></script>
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-..."
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Swiper JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Scroll Animation Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- JS Files  -->
+    <script src="../js_folder/script.js"></script>
+    <script src="../js_folder/startPopup.js"></script>
+    <script src="../js_folder/search.js"></script>
+    <script src="../js_folder/floatingLogin.js"></script>
+    <script src="../js_folder/floatingSignup.js"></script>
+    <script src="../js_folder/swiper.js"></script>
+    <script src="../js_folder/wishlist.js"></script>
+    <script src="../js_folder/floating_carts.js"></script>
+    <script src="../js_folder/scroll_animation.js"></script>
+    <script src="../js_folder/chatbox.js"></script>
+    <script src="../js_folder/navbar.js"></script>
+    <script src="../js_folder/buy_now.js"></script>
+
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
