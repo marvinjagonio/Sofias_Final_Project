@@ -1,7 +1,9 @@
 body {
-  background: url("../wallpaper/shopping_list_wallpaper.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  background: url("../wallpaper/shopping_list_wallpaper.jpg") no-repeat center
+    center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #000;
 }
 /* Shopping List */
 
@@ -33,8 +35,63 @@ body {
 .shopping_cart_flex {
   display: flex;
   float: left;
-  gap: 100px;
+
   padding-top: 20px;
+}
+
+@media (max-width: 480px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  .shopping_cart_left_side {
+    width: 80vw;
+    margin: 20px 40px;
+  }
+
+  .shopping_cart_middle_left {
+    flex-direction: column;
+    display: flex;
+    gap: 0 !important;
+  }
+
+  .shopping_cart_flex {
+    display: flex;
+    justify-content: space-around;
+    font-size: small;
+  }
+
+  .shopping_cart_flex_right {
+    gap: 0;
+    padding-left: 0 !important;
+    font-size: small;
+  }
+
+  .quantity_container {
+    padding-top: 10px;
+  }
+
+  .shopping_cart_bottom_right {
+    padding: 0 !important;
+    margin: 10px;
+  }
+
+  .cart_total {
+    margin-top: 0 !important;
+  }
+
+  .badge_product_img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .product_image {
+    width: 200px;
+  }
+
+  #shopping_list_full {
+    flex-direction: column;
+  }
 }
 
 .shopping_cart_flex_right {
@@ -49,12 +106,7 @@ body {
   gap: 30px;
 }
 
-.shopping_cart_middle_left img {
-  width: 200px;
-}
-
 .shopping_cart_bottom_right {
-  position: relative;
   padding: 0 0 15px 600px;
   margin: 10px auto;
 }
@@ -70,42 +122,11 @@ body {
   overflow-wrap: break-word;
 }
 
-.shopping_cart_bottom_right button {
-  width: 150px;
-  height: 50px;
-  font-size: small;
-  margin: 0 0 0 10px;
-}
-
 .quantity_container {
   display: flex;
   gap: 3px;
-  width: fit-content;
-  height: fit-content;
-  padding: 0;
-}
-
-#quantity {
-  margin-top: 70px;
-  height: 25px;
-  width: 30px;
-}
-
-.small_button {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 70px;
-  padding: 0 7px;
-  height: fit-content;
-  width: fit-content;
-  border: none;
-  border-radius: 20px !important;
-  background-color: hsl(121, 96%, 44%);
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
+  width: 10px;
+  height: 30px;
 }
 
 .price,
@@ -137,13 +158,6 @@ body {
 }
 
 .button_right_side button {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  height: fit-content;
-  width: fit-content;
   border: none;
   border-radius: 20px !important;
   background-color: hsl(121, 96%, 44%);
@@ -154,10 +168,6 @@ body {
 }
 
 .proceed_to_checkout button {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   padding: 10px;
   height: fit-content;
   width: 280px;
@@ -171,10 +181,6 @@ body {
 }
 
 .continue_shopping {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   padding: 10px;
   height: fit-content;
   width: fit-content;
@@ -188,10 +194,6 @@ body {
 }
 
 .clear_cart {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   padding: 10px;
   height: fit-content;
   width: fit-content;
@@ -202,23 +204,6 @@ body {
   font-size: large;
   cursor: pointer;
   margin: 10px;
-}
-
-.small_button_x {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 70px;
-  padding: 0 7px;
-  height: fit-content;
-  width: fit-content;
-  border: none;
-  border-radius: 20px !important;
-  background-color: hsl(0, 0%, 69%);
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
 }
 
 textarea {

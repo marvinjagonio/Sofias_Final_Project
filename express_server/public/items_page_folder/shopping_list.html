@@ -464,17 +464,24 @@
           <h1>Shopping List</h1>
           <div class="shopping_cart_left_side">
             <div class="shopping_cart_flex">
-              <p>Product</p>
-              <div class="shopping_cart_flex_right">
-                <p>Price</p>
-                <p>Quantity</p>
-                <p>Cart Total</p>
-              </div>
+              <p class="shopping_cart_flex_right">Product</p>
+
+              <p>Price</p>
+              <p>Quantity</p>
+              <p>Cart Total</p>
             </div>
             <hr />
             <div class="shopping_cart_middle_left">
-              <button class="small_button_x" id="removeProduct">x</button>
-              <img class="product_image" alt="" />
+              <div class="badge_product_img">
+                <button
+                  class="badge border-0 bg-danger mt-5 rounded-pill"
+                  style="height: 26px"
+                  id="removeProduct"
+                >
+                  x
+                </button>
+                <img class="product_image" alt="" />
+              </div>
               <div class="shopping_cart_middle_column">
                 <p class="product_name"></p>
                 <p>⚲ SPC Available stock: <span class="available">0</span></p>
@@ -490,8 +497,18 @@
                   max="10"
                   step="1"
                 />
-                <button class="small_button" id="decreaseQty">-</button>
-                <button class="small_button" id="increaseQty">+</button>
+                <button
+                  class="badge border-0 bg-success rounded-pill"
+                  id="decreaseQty"
+                >
+                  -
+                </button>
+                <button
+                  class="badge border-0 bg-success rounded-pill"
+                  id="increaseQty"
+                >
+                  +
+                </button>
               </div>
               <p class="cart_total"></p>
             </div>
