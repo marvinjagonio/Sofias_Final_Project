@@ -409,3 +409,42 @@ body {
     width: 345px;
   }
 }
+
+/* FOOTER */
+
+a {
+  text-decoration: none !important;
+}
+
+footer {
+  background-color: rgb(40, 40, 40);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.footer_link h4 {
+  color: #00ad2e;
+}
+
+.footer_link {
+  color: white;
+  transition: transform 0.5s, color 0.5s;
+}
+
+.footer_link:hover {
+  color: blue;
+  transform: scale(1.1);
+}
+
+.footer_bw_logo {
+  width: 25px;
+}
+
+.footer_logo {
+  width: 100px;
+}
+
+.footer_end h4 {
+  color: white;
+}

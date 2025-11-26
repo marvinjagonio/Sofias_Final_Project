@@ -1,23 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const product = JSON.parse(localStorage.getItem("selectedProduct"));
+
+  // Buy Now buttons (safe on all pages)
   document.querySelectorAll(".buy_now").forEach((btn) => {
     btn.addEventListener("click", function () {
       const productCard = this.closest(".product");
 
-      const product = {
+      const selectedProduct = {
         name: productCard.dataset.name,
         price: productCard.dataset.price,
         image: productCard.dataset.image,
       };
 
-      localStorage.setItem("selectedProduct", JSON.stringify(product));
-      console.log("Saved product:", product);
+      localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct));
 
       window.location.href = "items_page_folder/shopping_list.html";
     });
   });
 
-  const product = JSON.parse(localStorage.getItem("selectedProduct"));
+  // ---- RUN ONLY ON SHOPPING LIST PAGE ----
+  const shoppingPage = document.getElementById("shoppingPage");
+  if (!shoppingPage) return; // STOP if not on shopping page
 
+  // ---- PRODUCT SECTION ----
   if (!product) {
     document.querySelector(".product_name").textContent = "No product found.";
     return;
@@ -26,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".product_image").src = "../" + product.image;
   document.querySelector(".product_name").textContent = product.name;
   document.querySelector(".price").textContent = product.price;
+
+  // ---- CART LOGIC ----
 
   const qtyInput = document.getElementById("quantity");
   const cartTotalEl = document.querySelector(".cart_total");

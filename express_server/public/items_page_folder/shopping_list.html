@@ -455,99 +455,101 @@
     <!-- Shopping List Section -->
 
     <section>
-      <div id="shopping_list_full">
-        <div class="shopping_list_left_side">
-          <div class="breadcrumb_trail">
-            <a href="../index.html">Home</a> <span class="separator">›</span
-            ><span> Cancellation Policy</span>
-          </div>
-          <h1>Shopping List</h1>
-          <div class="shopping_cart_left_side">
-            <div class="shopping_cart_flex">
-              <p class="shopping_cart_flex_right">Product</p>
+      <div id="shoppingPage">
+        <div id="shopping_list_full">
+          <div class="shopping_list_left_side">
+            <div class="breadcrumb_trail">
+              <a href="../index.html">Home</a> <span class="separator">›</span
+              ><span> Cancellation Policy</span>
+            </div>
+            <h1>Shopping List</h1>
+            <div class="shopping_cart_left_side">
+              <div class="shopping_cart_flex">
+                <p class="shopping_cart_flex_right">Product</p>
 
-              <p>Price</p>
-              <p>Quantity</p>
-              <p>Cart Total</p>
+                <p>Price</p>
+                <p>Quantity</p>
+                <p>Cart Total</p>
+              </div>
+              <hr />
+              <div class="shopping_cart_middle_left">
+                <div class="badge_product_img">
+                  <button
+                    class="badge border-0 bg-danger mt-5 rounded-pill"
+                    style="height: 26px"
+                    id="removeProduct"
+                  >
+                    x
+                  </button>
+                  <img class="product_image" alt="" />
+                </div>
+                <div class="shopping_cart_middle_column">
+                  <p class="product_name"></p>
+                  <p>⚲ SPC Available stock: <span class="available">0</span></p>
+                </div>
+
+                <p class="price"></p>
+                <div class="quantity_container">
+                  <input
+                    type="number"
+                    id="quantity"
+                    value="1"
+                    min="1"
+                    max="10"
+                    step="1"
+                  />
+                  <button
+                    class="badge border-0 bg-success rounded-pill"
+                    id="decreaseQty"
+                  >
+                    -
+                  </button>
+                  <button
+                    class="badge border-0 bg-success rounded-pill"
+                    id="increaseQty"
+                  >
+                    +
+                  </button>
+                </div>
+                <p class="cart_total"></p>
+              </div>
+              <hr />
+              <div class="shopping_cart_bottom_right">
+                <button class="continue_shopping">Continue Shopping</button>
+                <button class="clear_cart" id="clearCart">Clear Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="shopping_list_right_side">
+            <div class="shopping_cart_right_side">
+              <p>Add a note to your order</p>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                minlength="10"
+                maxlength="100"
+                placeholder="Type your message here..."
+              ></textarea>
+            </div>
+            <div class="cart_total_right_side">
+              <p>Cart Total:</p>
+              <p class="cartTotal">₱870.00</p>
             </div>
             <hr />
-            <div class="shopping_cart_middle_left">
-              <div class="badge_product_img">
-                <button
-                  class="badge border-0 bg-danger mt-5 rounded-pill"
-                  style="height: 26px"
-                  id="removeProduct"
-                >
-                  x
-                </button>
-                <img class="product_image" alt="" />
-              </div>
-              <div class="shopping_cart_middle_column">
-                <p class="product_name"></p>
-                <p>⚲ SPC Available stock: <span class="available">0</span></p>
-              </div>
-
-              <p class="price"></p>
-              <div class="quantity_container">
-                <input
-                  type="number"
-                  id="quantity"
-                  value="1"
-                  min="1"
-                  max="10"
-                  step="1"
-                />
-                <button
-                  class="badge border-0 bg-success rounded-pill"
-                  id="decreaseQty"
-                >
-                  -
-                </button>
-                <button
-                  class="badge border-0 bg-success rounded-pill"
-                  id="increaseQty"
-                >
-                  +
-                </button>
-              </div>
-              <p class="cart_total"></p>
+            <div class="button_right_side">
+              <button>
+                🚚 <br />
+                Local Delivery
+              </button>
+              <button>
+                🏪 <br />
+                Store Pickup
+              </button>
             </div>
-            <hr />
-            <div class="shopping_cart_bottom_right">
-              <button class="continue_shopping">Continue Shopping</button>
-              <button class="clear_cart" id="clearCart">Clear Cart</button>
+            <div class="proceed_to_checkout">
+              <button>Proceed to Checkout</button>
             </div>
-          </div>
-        </div>
-        <div class="shopping_list_right_side">
-          <div class="shopping_cart_right_side">
-            <p>Add a note to your order</p>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              minlength="10"
-              maxlength="100"
-              placeholder="Type your message here..."
-            ></textarea>
-          </div>
-          <div class="cart_total_right_side">
-            <p>Cart Total:</p>
-            <p class="cartTotal">₱870.00</p>
-          </div>
-          <hr />
-          <div class="button_right_side">
-            <button>
-              🚚 <br />
-              Local Delivery
-            </button>
-            <button>
-              🏪 <br />
-              Store Pickup
-            </button>
-          </div>
-          <div class="proceed_to_checkout">
-            <button>Proceed to Checkout</button>
           </div>
         </div>
       </div>

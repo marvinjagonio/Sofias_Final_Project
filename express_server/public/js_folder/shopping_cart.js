@@ -49,5 +49,5 @@ document.addEventListener("DOMContentLoaded", () => {
     cartTotalRightSide.textContent = "₱0.00";
   });
 
-  updateTotals(); // initial
+  updateTotals();
 });

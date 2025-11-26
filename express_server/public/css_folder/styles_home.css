@@ -101,6 +101,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
+  padding: 50px 0;
+  display: flex !important;
 }
 
 .laptop_swiper,
@@ -276,8 +278,8 @@ article.desktop_font h4 {
   padding: 20px 0;
 }
 
-#comments_section h2 {
-  color: white;
+#comments_section h3 {
+  color: white !important;
   padding-left: 7%;
 }
 
@@ -291,7 +293,7 @@ article.desktop_font h4 {
   background: #eee;
   flex-wrap: nowrap;
   width: 100%;
-  padding: 20px;
+
   text-align: center;
   font-size: 20px;
   border-radius: 10px;

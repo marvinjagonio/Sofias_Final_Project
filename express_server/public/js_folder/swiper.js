@@ -162,7 +162,7 @@ window.addEventListener("load", function () {
 
 window.addEventListener("load", function () {
   // Loptop Swiper
-  const loptopSwiper = new Swiper(".laptop_swiper", {
+  const laptopSwiper = new Swiper(".laptop_swiper", {
     slidesPerView: 1,
     spaceBetween: 30,
 
