@@ -464,12 +464,13 @@
             </div>
             <h1>Shopping List</h1>
             <div class="shopping_cart_left_side">
-              <div class="shopping_cart_flex">
-                <p class="shopping_cart_flex_right">Product</p>
-
-                <p>Price</p>
-                <p>Quantity</p>
-                <p>Cart Total</p>
+              <div class="d-flex">
+                <p class="px-4 pt-2">Product</p>
+                <div class="price_qty_cartTotal d-flex gap-5">
+                  <p class="px-4 pt-2">Price</p>
+                  <p class="px-1 pt-2">Quantity</p>
+                  <p class="px-5 pt-2">Cart Total</p>
+                </div>
               </div>
               <hr />
               <div class="shopping_cart_middle_left">
@@ -483,35 +484,37 @@
                   </button>
                   <img class="product_image" alt="" />
                 </div>
-                <div class="shopping_cart_middle_column">
+                <div class="px-4 pt-4">
                   <p class="product_name"></p>
                   <p>⚲ SPC Available stock: <span class="available">0</span></p>
                 </div>
+                <div class="d-flex gap-5 pt-4">
+                  <p class="price"></p>
 
-                <p class="price"></p>
-                <div class="quantity_container">
-                  <input
-                    type="number"
-                    id="quantity"
-                    value="1"
-                    min="1"
-                    max="10"
-                    step="1"
-                  />
-                  <button
-                    class="badge border-0 bg-success rounded-pill"
-                    id="decreaseQty"
-                  >
-                    -
-                  </button>
-                  <button
-                    class="badge border-0 bg-success rounded-pill"
-                    id="increaseQty"
-                  >
-                    +
-                  </button>
+                  <div class="quantity_container">
+                    <input
+                      type="number"
+                      id="quantity"
+                      value="1"
+                      min="1"
+                      max="10"
+                      step="1"
+                    />
+                    <button
+                      class="badge border-0 bg-success rounded-pill"
+                      id="decreaseQty"
+                    >
+                      -
+                    </button>
+                    <button
+                      class="badge border-0 bg-success rounded-pill"
+                      id="increaseQty"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <p class="cart_total"></p>
                 </div>
-                <p class="cart_total"></p>
               </div>
               <hr />
               <div class="shopping_cart_bottom_right">

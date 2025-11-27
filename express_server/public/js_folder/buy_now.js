@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---- PRODUCT SECTION ----
   if (!product) {
     document.querySelector(".product_name").textContent = "No product found.";
+    document.querySelector(".cart_total").textContent = "₱0.00";
+    document.querySelector(".price").textContent = "₱0.00";
+    document.querySelector(".product_image").src = "../image/no_image.jpg";
     return;
   }
 
