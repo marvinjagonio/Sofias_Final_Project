@@ -1,4 +1,5 @@
 /* -------------------- Items Cathegory Section -------------------- */
+@import "tailwindcss";
 
 #items_category_section {
   height: 200px;

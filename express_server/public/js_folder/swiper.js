@@ -33,6 +33,11 @@ window.addEventListener("load", function () {
           .querySelector(".comments_next")
           .classList.remove("swiper-button-disabled");
       },
+      reachEnd: function () {
+        this.slideTo(0, 600);
+        swiper.allowSlideNext = true;
+        swiper.allowSlidePrev = true;
+      },
     },
   });
 });
@@ -73,6 +78,11 @@ window.addEventListener("load", function () {
         document
           .querySelector(".new-arrivals-next")
           .classList.remove("swiper-button-disabled");
+      },
+      reachEnd: function () {
+        this.slideTo(0, 600);
+        swiper.allowSlideNext = true;
+        swiper.allowSlidePrev = true;
       },
     },
   });
@@ -115,14 +125,17 @@ window.addEventListener("load", function () {
           .querySelector(".top-sellers-next")
           .classList.remove("swiper-button-disabled");
       },
+      reachEnd: function () {
+        this.slideTo(0, 600);
+        swiper.allowSlideNext = true;
+        swiper.allowSlidePrev = true;
+      },
     },
   });
 });
 
 window.addEventListener("load", function () {
   const featured_products_swiper = new Swiper(".featured_products_swiper", {
-    loop: false,
-
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
@@ -147,6 +160,7 @@ window.addEventListener("load", function () {
         spaceBetween: 10,
       },
     },
+
     on: {
       fromEdge: function () {
         document
@@ -155,6 +169,11 @@ window.addEventListener("load", function () {
         document
           .querySelector(".featured_products_next")
           .classList.remove("swiper-button-disabled");
+      },
+      reachEnd: function () {
+        this.slideTo(0, 600);
+        swiper.allowSlideNext = true;
+        swiper.allowSlidePrev = true;
       },
     },
   });
@@ -188,6 +207,21 @@ window.addEventListener("load", function () {
         spaceBetween: 30,
       },
     },
+    on: {
+      fromEdge: function () {
+        document
+          .querySelector(".laptop_prev")
+          .classList.remove("swiper-button-disabled");
+        document
+          .querySelector(".laptop_next")
+          .classList.remove("swiper-button-disabled");
+      },
+      reachEnd: function () {
+        this.slideTo(0, 600);
+        swiper.allowSlideNext = true;
+        swiper.allowSlidePrev = true;
+      },
+    },
   });
 
   // Desktop Swiper
@@ -215,6 +249,21 @@ window.addEventListener("load", function () {
       1024: {
         slidesPerView: 2,
         spaceBetween: 30,
+      },
+    },
+    on: {
+      fromEdge: function () {
+        document
+          .querySelector(".desktop_prev")
+          .classList.remove("swiper-button-disabled");
+        document
+          .querySelector(".desktop_next")
+          .classList.remove("swiper-button-disabled");
+      },
+      reachEnd: function () {
+        this.slideTo(0, 600);
+        swiper.allowSlideNext = true;
+        swiper.allowSlidePrev = true;
       },
     },
   });
@@ -248,6 +297,21 @@ window.addEventListener("load", function () {
         spaceBetween: 30,
       },
     },
+    on: {
+      fromEdge: function () {
+        document
+          .querySelector(".items_cathegory_prev")
+          .classList.remove("swiper-button-disabled");
+        document
+          .querySelector(".items_cathegory_next")
+          .classList.remove("swiper-button-disabled");
+      },
+      reachEnd: function () {
+        this.slideTo(0, 600);
+        swiper.allowSlideNext = true;
+        swiper.allowSlidePrev = true;
+      },
+    },
   });
 });
 
@@ -263,6 +327,21 @@ window.addEventListener("load", function () {
       0: { slidesPerView: 1 },
       576: { slidesPerView: 2 },
       992: { slidesPerView: 3 },
+    },
+    on: {
+      fromEdge: function () {
+        document
+          .querySelector(".careers-buttons-prev")
+          .classList.remove("swiper-button-disabled");
+        document
+          .querySelector(".careers-buttons-next")
+          .classList.remove("swiper-button-disabled");
+      },
+      reachEnd: function () {
+        this.slideTo(0, 600);
+        swiper.allowSlideNext = true;
+        swiper.allowSlidePrev = true;
+      },
     },
   });
 });
@@ -303,6 +382,11 @@ window.addEventListener("load", function () {
         document
           .querySelector(".add_on_deals_next")
           .classList.remove("swiper-button-disabled");
+      },
+      reachEnd: function () {
+        this.slideTo(0, 600);
+        swiper.allowSlideNext = true;
+        swiper.allowSlidePrev = true;
       },
     },
   });

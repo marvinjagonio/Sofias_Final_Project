@@ -1,30 +1,27 @@
-let lastScroll = 0;
-const navbar1 = document.getElementById("navbar1");
-const navbar2 = document.getElementById("navbar2");
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".navbar");
+  if (!navbar) return;
 
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
+  const threshold = 400;
+  let isVisible = true;
+  let timeout;
 
-  if (currentScroll === 0) {
-    navbar1.classList.remove("scroll", "y");
-    navbar2.classList.remove("scroll", "y");
-    return;
-  }
+  window.addEventListener("scroll", () => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      const scrollPos = window.scrollY || window.pageYOffset;
 
-  if (currentScroll > lastScroll) {
-    navbar1.classList.remove("scroll", "y");
-    navbar2.classList.remove("scroll", "y");
-  } else {
-    navbar1.classList.add("scroll");
+      if (scrollPos < threshold && isVisible) {
+        navbar.classList.add("hidden");
+        isVisible = false;
+      }
 
-    if (currentScroll > 10) {
-      navbar1.classList.add("y");
-      navbar2.classList.add("y");
-    } else {
-      navbar1.classList.remove("y");
-      navbar2.classList.remove("y");
-    }
-  }
-
-  lastScroll = currentScroll;
+      if (scrollPos >= threshold && !isVisible) {
+        setTimeout(function () {
+          navbar.classList.remove("hidden");
+          isVisible = true;
+        }, 50);
+      }
+    }, 50);
+  });
 });
