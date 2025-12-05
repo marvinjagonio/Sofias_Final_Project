@@ -27,11 +27,9 @@ html {
   box-shadow: 0 2px 5px inset rgba(0, 0, 0, 0.1);
   opacity: 1;
   transition: opacity 0.4s ease;
-
-  pointer-events: auto;
 }
 
-#navbar1.hidden {
+#navbar1.fade-out {
   opacity: 0;
   transition: opacity 2s ease;
 }
@@ -59,11 +57,13 @@ html {
   height: fit-content;
   padding: 0 0 10px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 0.4s ease;
 }
 
-#navbar2.scroll-down {
-  box-shadow: 0 2px 50px rgba(0, 0, 0, 0.2);
-  animation: fadeInNav 0.3s ease-in forwards !important;
+#navbar2.fade-out {
+  opacity: 0;
+  transition: opacity 2s ease;
 }
 
 #scrolling_text {

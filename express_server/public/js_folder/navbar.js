@@ -4,8 +4,10 @@ window.onload = function () {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  const navbar = document.querySelector(".navbar");
-  if (!navbar) return;
+  const navbar1 = document.getElementById("navbar1");
+  const navbar2 = document.getElementById("navbar2");
+  const scrollingText = document.getElementById("scrolling_text");
+  if (!navbar1 || !navbar2) return;
 
   const threshold = 10;
   let isVisible = true;
@@ -15,11 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if ((scrollPos) => threshold) {
       let timer = setTimeout(() => {
-        navbar.classList.add("fade-in");
+        navbar1.classList.add("fade-in");
+        navbar2.classList.add("fade-in");
+        scrollingText.classList.add("fade-in");
         setTimeout(() => {
-          navbar.classList.add("fade-out");
+          navbar1.classList.add("fade-out");
+          navbar2.classList.add("fade-out");
+          scrollingText.classList.add("fade-out");
           isVisible = true;
-        }, 4000);
+        }, 5000);
       }, 100);
     } else if (scrollPos != threshold) {
       clearTimeout(timer);
