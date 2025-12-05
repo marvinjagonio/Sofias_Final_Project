@@ -6,6 +6,10 @@ body {
   padding-top: 170px;
 }
 
+html {
+  scroll-behavior: auto !important;
+}
+
 /* -------------------- Navbar Section -------------------- */
 #navbar1 {
   display: flex;
@@ -29,7 +33,7 @@ body {
 
 #navbar1.hidden {
   opacity: 0;
-  pointer-events: none;
+  transition: opacity 2s ease;
 }
 
 @keyframes fadeInNav {
