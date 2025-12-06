@@ -88,6 +88,10 @@ li {
   color: #333;
 }
 
+.product .product_save b {
+  background: linear-gradient(180deg, #ffeb3b, #fdd835);
+}
+
 .price {
   font-size: 16px;
   color: #333;

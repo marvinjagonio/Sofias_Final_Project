@@ -307,7 +307,7 @@
 #wishlist_cart_box .heading h1 {
   font-size: 25px;
   font-weight: 600;
-  color: red;
+  color: red !important;
 }
 
 #wishlist_cart_box .heading p {
@@ -511,26 +511,4 @@
   background: linear-gradient(180deg, #ff4d4d, #e60000);
   color: white;
   left: 330px;
-}
-
-@keyframes slideRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideOut {
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100%);
-    opacity: 0;
-  }
 }

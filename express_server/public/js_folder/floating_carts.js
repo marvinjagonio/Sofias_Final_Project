@@ -49,8 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Show/Hide Empty Cart Message ---
   function cartUpdateMessage() {
     const total = parsePrice(cartTotalElement.textContent);
+
     if (cartIconCount <= 0 || total <= 0) {
-      emptyCartMessage.classList.add("active");
+      setTimeout(() => {
+        emptyCartMessage.classList.add("active");
+        closeCartView();
+      }, 1500);
     } else {
       emptyCartMessage.classList.remove("active");
     }
@@ -125,12 +129,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- Cart View Controls ---
   function openCartView() {
+    document.querySelector("#cart_window").classList.remove("hide");
     document.querySelector("#cart_window").classList.add("active");
     document.querySelector("#wishlist_cart_window")?.classList.remove("active");
   }
 
   function closeCartView() {
-    document.querySelector("#cart_window").classList.remove("active");
+    document.querySelector("#cart_window").classList.add("hide");
   }
 
   // --- Checkout ---
@@ -138,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const total = parsePrice(cartTotalElement.textContent);
     const discount = parsePrice(cartLessElement.textContent);
 
-    if (total > 0) {
+    if (total >= 1) {
       alert(
         `Proceeding to checkout with total: ₱${total}\nDiscount: ₱${discount}`
       );
@@ -150,13 +155,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Button Listeners ---
   cartButtons.forEach((bttn) => {
     bttn.addEventListener("click", (e) => {
-      e.preventDefault();
-      addToCart(bttn);
-      cartIconCount++;
-      cartBadge.textContent = cartIconCount;
-      updateCartCount();
-      calculateCartTotal();
-      cartUpdateMessage();
+      {
+        e.preventDefault();
+        addToCart(bttn);
+        cartIconCount++;
+        cartBadge.textContent = cartIconCount;
+        updateCartCount();
+        calculateCartTotal();
+        cartUpdateMessage();
+      }
     });
   });
 
@@ -199,7 +206,12 @@ document.addEventListener("DOMContentLoaded", () => {
     ".wishlist_empty_cart_message"
   );
 
-  let cartIconChildCount = 0;
+  let wishlistCartIconChildCount = 0;
+
+  // --- Initialize ---
+  calculateWishlistTotal();
+  updateWishlistMessage();
+  updateWishListCount();
 
   // --------- Function to calculate total ---------- //
   function calculateWishlistTotal() {
@@ -230,9 +242,6 @@ document.addEventListener("DOMContentLoaded", () => {
     wishlistLessElement.textContent = lessTotal.toFixed(2);
   }
 
-  // Run on load
-  calculateWishlistTotal();
-
   document.addEventListener("click", (e) => {
     const removeBtn = e.target.closest(".wishlist_remove_button");
     if (removeBtn) {
@@ -243,11 +252,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Checkout button click
 
   function updateWishlistMessage() {
-    const total = parseFloat(wishlistTotalElement.textContent) || 0;
-    const count = cartIconChildCount; // you already track this number
+    const total = parseFloat(wishlistTotalElement.textContent);
 
-    if (count <= 0 || total <= 0) {
-      wishlistMessage.classList.add("active");
+    if (wishlistCartIconChildCount <= 0 || total <= 0) {
+      setTimeout(() => {
+        wishlistMessage.classList.add("active");
+        wishlistCloseCartView();
+      }, 1500);
     } else {
       wishlistMessage.classList.remove("active");
     }
@@ -264,14 +275,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize display if exists
   if (wishlistCartCountDisplay) {
-    wishlistCartCountDisplay.textContent = cartIconChildCount;
+    wishlistCartCountDisplay.textContent = wishlistCartIconChildCount;
   }
 
   wishlistCartButtons.forEach((bttn) => {
     bttn.addEventListener("click", (e) => {
-      cartIconChildCount++;
+      wishlistCartIconChildCount++;
 
-      wishlistCartBadge.textContent = cartIconChildCount;
+      wishlistCartBadge.textContent = wishlistCartIconChildCount;
     });
   });
 
@@ -301,8 +312,8 @@ document.addEventListener("DOMContentLoaded", () => {
   wishlistUserCart.addEventListener("click", (e) => {
     let wishlistTargetElement = e.target.closest(".wishlist_remove_button");
     if (wishlistTargetElement) {
-      cartIconChildCount--;
-      wishlistCartBadge.textContent = cartIconChildCount;
+      wishlistCartIconChildCount--;
+      wishlistCartBadge.textContent = wishlistCartIconChildCount;
     }
   });
 
@@ -337,12 +348,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function wishlistOpenCartView() {
+    document.querySelector("#wishlist_cart_window").classList.remove("hide");
     document.querySelector("#wishlist_cart_window").classList.add("active");
     return true;
   }
 
   function wishlistCloseCartView() {
-    document.querySelector("#wishlist_cart_window").classList.remove("active");
+    document.querySelector("#wishlist_cart_window").classList.add("hide");
   }
 
   //--------- Add to Wishlist function ----------//
