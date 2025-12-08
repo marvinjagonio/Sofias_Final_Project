@@ -11,10 +11,23 @@ document.addEventListener("DOMContentLoaded", () => {
     ".cart_total_right_side p:last-child"
   );
 
-  // Extract price as a number
   const price = parseFloat(priceElement.textContent.replace(/[₱,]/g, ""));
 
-  // Update item total and cart total
+  const continueBtn = document.querySelector(".continue_shopping");
+
+  if (continueBtn) {
+    continueBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("Continue Shopping clicked");
+
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = "items_page_folder/index.html";
+      }
+    });
+  }
+
   function updateTotals() {
     const qty = parseInt(quantityInput.value, 10);
     const subtotal = price * qty;
@@ -22,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     cartTotalRightSide.textContent = `₱${subtotal.toLocaleString()}`;
   }
 
-  // Change quantity via + / -
   window.changeValue = (change) => {
     let qty = parseInt(quantityInput.value, 10);
     qty += change;
@@ -32,20 +44,17 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTotals();
   };
 
-  // Also update totals if user types directly
   quantityInput.addEventListener("input", updateTotals);
 
-  // Clear cart button
   clearCartBtn.addEventListener("click", () => {
-    cartItem.remove(); // Remove the product
+    cartItem.remove();
     cartTotalRightSide.textContent = "₱0.00";
   });
 
-  // Proceed to checkout
   proceedToCheckoutBtn.addEventListener("click", () => {
     const totalPrice = cartTotalRightSide.textContent;
     alert(`Checkout Order\nTotal: ${totalPrice}`);
-    cartItem.remove(); // Remove the product
+    cartItem.remove();
     cartTotalRightSide.textContent = "₱0.00";
   });
 
