@@ -53,8 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (cartIconCount <= 0 || total <= 0) {
       setTimeout(() => {
         emptyCartMessage.classList.add("active");
-        closeCartView();
-      }, 1500);
+        setTimeout(() => {
+          closeCartView();
+        }, 1500);
+      }, 50);
     } else {
       emptyCartMessage.classList.remove("active");
     }
@@ -257,8 +259,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (wishlistCartIconChildCount <= 0 || total <= 0) {
       setTimeout(() => {
         wishlistMessage.classList.add("active");
-        wishlistCloseCartView();
-      }, 1500);
+        setTimeout(() => {
+          wishlistCloseCartView();
+        }, 1500);
+      }, 50);
     } else {
       wishlistMessage.classList.remove("active");
     }
