@@ -1,28 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const product = JSON.parse(localStorage.getItem("selectedProduct"));
+  // Event delegation for buy_now buttons on product listing pages
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".buy_now");
+    if (!btn) return;
 
-  // Buy Now buttons (safe on all pages)
-  document.querySelectorAll(".buy_now").forEach((btn) => {
-    btn.addEventListener("click", function () {
-      const productCard = this.closest(".product");
+    e.preventDefault();
 
-      const selectedProduct = {
-        name: productCard.dataset.name,
-        price: productCard.dataset.price,
-        image: productCard.dataset.image,
-      };
+    const productCard = btn.closest(".product");
+    if (!productCard) {
+      console.error("No .product parent found");
+      return;
+    }
 
-      localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct));
+    const selectedProduct = {
+      name: productCard.dataset.name,
+      price: Number(productCard.dataset.price),
+      image: productCard.dataset.image,
+    };
 
-      window.location.href = "items_page_folder/shopping_list.html";
-    });
+    localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct));
+    window.location.href = "items_page_folder/shopping_list.html";
   });
 
-  // ---- RUN ONLY ON SHOPPING LIST PAGE ----
+  // Shopping list page logic
   const shoppingPage = document.getElementById("shoppingPage");
   if (!shoppingPage) return; // STOP if not on shopping page
 
-  // ---- PRODUCT SECTION ----
+  // Get the saved product from localStorage
+  const product = JSON.parse(localStorage.getItem("selectedProduct"));
+
+  // If no product found, show defaults
   if (!product) {
     document.querySelector(".product_name").textContent = "No product found.";
     document.querySelector(".cart_total").textContent = "₱0.00";
@@ -31,21 +38,21 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  // Update product details
   document.querySelector(".product_image").src = "../" + product.image;
   document.querySelector(".product_name").textContent = product.name;
-  document.querySelector(".price").textContent = product.price;
+  document.querySelector(".price").textContent = `₱${product.price}`;
 
-  // ---- CART LOGIC ----
-
+  // Cart quantity and totals
   const qtyInput = document.getElementById("quantity");
   const cartTotalEl = document.querySelector(".cart_total");
   const rightTotal = document.querySelector(".cartTotal");
 
-  function toNumber(price) {
-    return Number(price.replace(/[₱,]/g, ""));
+  function toNumber(priceStr) {
+    return Number(priceStr.replace(/[₱,]/g, ""));
   }
 
-  const priceValue = toNumber(product.price);
+  const priceValue = toNumber(product.price.toString());
 
   function updateTotal() {
     const qty = parseInt(qtyInput.value) || 1;
@@ -58,12 +65,12 @@ document.addEventListener("DOMContentLoaded", () => {
   updateTotal();
 
   document.getElementById("increaseQty").onclick = () => {
-    qtyInput.value++;
+    qtyInput.value = Math.min(parseInt(qtyInput.value) + 1, 10); // Max 10?
     updateTotal();
   };
 
   document.getElementById("decreaseQty").onclick = () => {
-    if (qtyInput.value > 1) qtyInput.value--;
+    qtyInput.value = Math.max(parseInt(qtyInput.value) - 1, 1); // Min 1
     updateTotal();
   };
 
