@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const checkoutButton = document.getElementById("checkout_button");
   const cartOpenBtn = document.querySelector(".cart_button");
   const cartCloseBtn = document.querySelector("#cart_box .close_button");
+  const price = document.querySelector(".price");
+  const discount = document.querySelector(".product_save");
 
   let cartIconCount = 0;
 
@@ -144,14 +146,24 @@ document.addEventListener("DOMContentLoaded", () => {
   checkoutButton?.addEventListener("click", () => {
     const total = parsePrice(cartTotalElement.textContent);
     const discount = parsePrice(cartLessElement.textContent);
-
-    if (total >= 1) {
+    if (total < 1) {
+      alert("No items in the cart.");
+    }
+    setTimeout(() => {
       alert(
         `Proceeding to checkout with total: ₱${total}\nDiscount: ₱${discount}`
       );
-    } else {
-      alert("No items in the cart.");
-    }
+      userCart.remove();
+      emptyCartMessage.classList.add("active");
+      closeCartView();
+
+      setTimeout(() => {
+        cartItemsContainer.innerHTML = "";
+        price.textContent = "";
+        discount.textContent = "";
+        emptyCartMessage.classList.remove("active");
+      }, 1500);
+    }, 50);
   });
 
   // --- Button Listeners ---
