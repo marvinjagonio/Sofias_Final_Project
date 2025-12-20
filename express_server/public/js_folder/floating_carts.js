@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // --- DOM Elements ---
   const cartButtons = document.querySelectorAll(".cart");
-  const cartCountDisplay = document.querySelector("#cart-count");
+  const cartCountDisplay = document.querySelector("#cartCount");
   const userCart = document.querySelector("#cart_items_container ul");
   const cartBadge = document.getElementById("cartCount");
   const emptyCartMessage = document.querySelector(".empty_cart_message");
@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const checkoutButton = document.getElementById("checkout_button");
   const cartOpenBtn = document.querySelector(".cart_button");
   const cartCloseBtn = document.querySelector("#cart_box .close_button");
-  const price = document.querySelector(".price");
-  const discount = document.querySelector(".product_save");
 
   let cartIconCount = 0;
 
@@ -153,15 +151,13 @@ document.addEventListener("DOMContentLoaded", () => {
       alert(
         `Proceeding to checkout with total: ₱${total}\nDiscount: ₱${discount}`
       );
-      userCart.remove();
       emptyCartMessage.classList.add("active");
-      closeCartView();
-
+      userCart.innerHTML = "";
+      cartTotalElement.textContent = "₱0.00";
+      cartLessElement.textContent = "₱0.00";
+      cartCountDisplay.textContent = "0";
       setTimeout(() => {
-        cartItemsContainer.innerHTML = "";
-        price.textContent = "";
-        discount.textContent = "";
-        emptyCartMessage.classList.remove("active");
+        closeCartView();
       }, 1500);
     }, 50);
   });
