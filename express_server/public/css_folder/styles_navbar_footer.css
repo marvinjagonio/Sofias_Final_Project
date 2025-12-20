@@ -21,8 +21,9 @@ html {
   left: 0;
   top: 40px;
   width: 100%;
+  max-width: 100%;
   height: fit-content;
-  z-index: 999;
+  z-index: 9999;
   padding: 0;
   box-shadow: 0 2px 5px inset rgba(0, 0, 0, 0.1);
   opacity: 1;
@@ -65,6 +66,16 @@ html {
 #navbar2.fade-out {
   opacity: 0;
   transition: opacity 2s ease;
+}
+
+.navbar_icons {
+  display: flex;
+
+  flex-direction: row;
+}
+
+.search-container {
+  margin: 0 20px;
 }
 
 #scrolling_text {
@@ -114,15 +125,26 @@ html {
 
 @media (max-width: 576px) {
   #navbar1 {
-    width: 100%;
+    width: 50% !important;
+    padding: 10px;
   }
 
   #navbar2 {
-    top: 82px;
+    top: 105px;
+    padding: 10px;
   }
 
   .nav-link {
     text-wrap: nowrap;
+  }
+
+  .navbar_icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-item img {
+    width: 30px;
   }
 
   .search-container {
@@ -154,10 +176,12 @@ html {
 @media (min-width: 577px) and (max-width: 991px) {
   #navbar1 {
     width: 100%;
+    z-index: 9999;
   }
 
   #navbar2 {
     top: 82px;
+    z-index: 10;
   }
 
   .nav-link {
@@ -178,12 +202,6 @@ html {
   .nav-item {
     flex-wrap: nowrap;
     height: 20px;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1024px) {
-  #navbar1 {
-    width: 100%;
   }
 }
 
@@ -242,28 +260,6 @@ html {
 
   .left_side_section h5 {
     font-size: medium;
-  }
-
-  .buy_now {
-    font-size: small;
-    text-wrap: nowrap;
-  }
-
-  .spcfix_btn {
-    font-size: small;
-  }
-
-  .price,
-  .percent_off {
-    font-size: 10px;
-  }
-
-  .product_name {
-    font-size: 10px;
-  }
-
-  .product_save {
-    font-size: 10px;
   }
 
   .nav-link {

@@ -284,15 +284,12 @@
   width: 20px;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 576px) {
   .btn-cart,
   .btn-buy {
     width: 100%;
   }
-}
 
-@media (max-width: 576px) {
   .right_side_section {
     padding: auto;
     width: 100%;
@@ -319,25 +316,25 @@
     margin: 5px;
   }
 
-  .buy_now {
+  .item_page_center .buy_now {
     font-size: small;
     text-wrap: nowrap;
   }
 
-  .spcfix_btn {
+  .item_page_center .spcfix_btn {
     font-size: small;
   }
 
-  .price,
-  .percent_off {
-    font-size: 10px !important;
+  .item_page_center .price,
+  .item_page_center .percent_off {
+    font-size: 10px;
   }
 
   .product_name {
     font-size: 10px;
   }
 
-  .product_save {
+  .item_page_center .product_save {
     font-size: 10px;
   }
 
@@ -425,25 +422,7 @@
     font-size: medium;
   }
 
-  .buy_now {
-    font-size: small;
-    text-wrap: nowrap;
-  }
-
-  .spcfix_btn {
-    font-size: small;
-  }
-
-  .price,
-  .percent_off {
-    font-size: 10px;
-  }
-
-  .product_name {
-    font-size: 10px;
-  }
-
-  .product_save {
+  .item_page_center .product_name {
     font-size: 10px;
   }
 
@@ -518,25 +497,11 @@
     gap: 10px;
   }
 
-  .buy_now {
-    font-size: 16px;
-    text-wrap: nowrap;
-  }
-
-  .spcfix_btn {
-    font-size: 16px;
-  }
-
-  .price,
-  .percent_off {
+  .item_page_center .spcfix_btn {
     font-size: 16px;
   }
 
   .product_name {
-    font-size: 16px;
-  }
-
-  .product_save {
     font-size: 16px;
   }
 
@@ -611,25 +576,7 @@
     font-size: medium;
   }
 
-  .buy_now {
-    font-size: small;
-    text-wrap: nowrap;
-  }
-
-  .spcfix_btn {
-    font-size: small;
-  }
-
-  .price,
-  .percent_off {
-    font-size: 10px;
-  }
-
   .product_name {
-    font-size: 10px;
-  }
-
-  .product_save {
     font-size: 10px;
   }
 
@@ -699,25 +646,16 @@
     font-size: medium;
   }
 
-  .buy_now {
+  .item_page_center .buy_now {
     font-size: small;
     text-wrap: nowrap;
   }
 
-  .spcfix_btn {
+  .item_page_center .spcfix_btn {
     font-size: small;
   }
 
-  .price,
-  .percent_off {
-    font-size: 10px;
-  }
-
   .product_name {
-    font-size: 10px;
-  }
-
-  .product_save {
     font-size: 10px;
   }
 
