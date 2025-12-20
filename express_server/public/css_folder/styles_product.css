@@ -206,7 +206,8 @@ li {
   flex-wrap: nowrap;
 }
 
-.product .discount {
+.product .discount,
+.wishlist_cart_item .percent_off small {
   font-size: 16px;
   color: red;
 }
@@ -224,7 +225,8 @@ li {
   margin: 10px;
 }
 
-.product .cart {
+.product .cart,
+.wishlist_cart_item .cart {
   color: white;
   border-radius: 10px;
   border: none;
