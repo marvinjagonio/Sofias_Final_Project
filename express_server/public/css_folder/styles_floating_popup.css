@@ -17,7 +17,9 @@
 }
 
 .start_up_popup-content {
-  background: white;
+  background-image: url("../wallpaper/floating_pop_up_wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   width: fit-content;
   height: fit-content;
   padding: 30px;
@@ -52,6 +54,8 @@
 
 .pop-up_right h3 {
   text-align: center;
+  color: #333 !important;
+  font-weight: bold;
 }
 
 .subscribe_button {
@@ -145,13 +149,17 @@
 }
 
 .sign-up_popup-content {
-  background: white;
+  top: 0;
+  background-image: url("../wallpaper/log_in_sign_up_wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  height: fit-content;
   width: fit-content;
+  margin: 100px auto;
   position: relative;
-  padding: 20px 30px;
-  margin: 7% auto;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   transform: translateY(-100px);
   opacity: 0;
   animation: slideDown 0.5s forwards;
@@ -176,15 +184,31 @@
 
 .sign-up_logo,
 .login_logo {
-  height: 35px;
+  height: 30px;
 }
 
-.sign-up_submit {
-  padding: 0;
-  color: white;
-  background-color: #3c9052;
+#signupForm {
+  margin-left: 40px;
+}
+
+#signup_submit {
+  width: 90%;
+  padding: 12px 0;
   margin: 10px 0;
-  width: 100%;
+
+  background-color: #3c9052;
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.15s ease,
+    box-shadow 0.3s ease;
 }
 
 @keyframes slideDown {
@@ -239,7 +263,9 @@
 
 .login_popup-content {
   top: 0;
-  background: white;
+  background-image: url("../wallpaper/log_in_sign_up_wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: black;
   border-radius: 10px;
   padding: 20px;
@@ -253,11 +279,28 @@
 }
 
 .login_submit {
-  padding: 0;
-  color: white;
-  background-color: #3c9052;
+  width: 90%;
+  padding: 12px 0;
   margin: 10px 0;
-  width: 85%;
+
+  background-color: #3c9052;
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.15s ease,
+    box-shadow 0.3s ease;
+}
+
+.login_submit:hover {
+  background-color: #2f7342;
+  box-shadow: 0 6px 15px rgba(60, 144, 82, 0.35);
 }
 
 .login_close-btn {
@@ -271,23 +314,58 @@
   cursor: pointer;
 }
 
-input,
-label {
-  font-size: large;
-  flex-direction: row;
-  font-weight: bold;
-  color: rgb(68, 68, 68);
+.sign-up_w_google {
+  background-color: white;
+  width: 90%;
+  padding: 12px 0;
+  margin: 10px 0;
   border-radius: 10px;
-  z-index: 10;
+}
+
+.sign-up_w_google:hover {
+  background-color: #d9d9d9;
+  box-shadow: 0 6px 15px rgba(60, 144, 82, 0.35);
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2f7342;
+  text-align: left !important;
+}
+
+input {
+  width: 90%;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
 }
 
 .email_password {
   padding-left: 55px;
 }
 
-.sign-up_w_google {
-  background-color: white;
-  width: 85%;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 10px;
+#loginForm h3 {
+  color: #008223 !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+.log-in_h1 {
+  color: #333 !important;
+  text-align: center;
 }
