@@ -167,7 +167,7 @@
 
 .sign-up_h1,
 .log-in_h1 {
-  color: black;
+  color: #333 !important;
   font-size: x-large;
   font-weight: bold;
   text-align: center;
@@ -179,7 +179,7 @@
   right: 10px;
   font-size: 20px;
   cursor: pointer;
-  color: black;
+  color: white;
 }
 
 .sign-up_logo,
@@ -307,7 +307,7 @@
   position: absolute;
   top: 1%;
   right: 4%;
-  color: black;
+  color: white;
   border-radius: 50%;
   font-size: 30px;
   z-index: 10;
@@ -360,7 +360,7 @@ input:focus {
 }
 
 #loginForm h3 {
-  color: #008223 !important;
+  color: #333 !important;
   font-weight: bold;
   text-align: center;
 }
