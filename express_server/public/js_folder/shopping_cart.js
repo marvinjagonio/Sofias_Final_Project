@@ -10,8 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartTotalRightSide = document.querySelector(
     ".cart_total_right_side p:last-child"
   );
+  const rawPrice = Number(priceElement.textContent.replace(/[^\d.]/g, ""));
 
-  const price = parseFloat(priceElement.textContent.replace(/[₱,]/g, ""));
+  priceElement.textContent = rawPrice.toLocaleString("en-PH", {
+    style: "currency",
+    currency: "PHP",
+    minimumFractionDigits: 0,
+  });
 
   const continueBtn = document.querySelector(".continue_shopping");
 
@@ -59,84 +64,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   updateTotals();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  function renderCart() {
-    const container = document.getElementById("cartItemsContainer");
-    container.innerHTML = ""; // clear first
-
-    cart.forEach((product) => {
-      container.innerHTML += createCartItemHTML(product);
-    });
-  }
-
-  renderCart();
-
-  function createCartItemHTML(product) {
-    return `
-    <div class="cart_item">
-      <div class="badge_product_img">
-        <button class="badge border-0 bg-danger mt-5 rounded-pill removeProduct" style="height: 26px">x</button>
-        <img class="product_image" src="${product.image}" alt="">
-      </div>
-
-      <div class="px-4 pt-4">
-        <p class="product_name">${product.name}</p>
-        <p>⚲ SPC Available stock: <span class="available">${
-          product.stock
-        }</span></p>
-      </div>
-
-      <div class="d-flex gap-5 pt-4">
-        <p class="price">₱${product.price}</p>
-
-        <div class="quantity_container">
-          <input type="number" class="quantity" value="${
-            product.quantity
-          }" min="1" max="10" step="1">
-          <button class="badge border-0 bg-success rounded-pill decreaseQty">-</button>
-          <button class="badge border-0 bg-success rounded-pill increaseQty">+</button>
-        </div>
-
-        <p class="cart_total">₱${(product.price * product.quantity).toFixed(
-          2
-        )}</p>
-      </div>
-
-      <hr>
-    </div>
-  `;
-  }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const container = document.getElementById("cartItemsContainer");
-  const cartTotalRightSide = document.querySelector(
-    ".cart_total_right_side p:last-child"
-  );
 
   function renderCart() {
     container.innerHTML = "";
 
     cart.forEach((product, index) => {
+      const price = Number(product.price);
+      const total = price * product.quantity;
+
       container.innerHTML += `
-        <div class="cart_item" data-index="${index}">
-          <p>${product.name}</p>
-          <p class="price">₱${product.price}</p>
+      <div class="cart_item" data-index="${index}">
+        <p>${product.name}</p>
 
-          <button class="decrease">-</button>
-          <span class="qty">${product.quantity}</span>
-          <button class="increase">+</button>
+        <p class="price">${product.price}</p>
 
-          <p class="item_total">₱${product.price * product.quantity}</p>
-          <button class="remove">Remove</button>
-          <hr>
-        </div>
-      `;
+        <button class="decrease">-</button>
+        <span class="qty">${product.quantity}</span>
+        <button class="increase">+</button>
+
+        <p class="item_total">${peso(total)}</p>
+        <button class="remove">Remove</button>
+        <hr>
+      </div>
+    `;
     });
 
     updateGrandTotal();

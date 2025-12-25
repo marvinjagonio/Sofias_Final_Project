@@ -225,6 +225,10 @@ li {
   margin: 10px;
 }
 
+.product .buy_now:hover {
+  background: linear-gradient(180deg, #00c853, #006e28);
+}
+
 .product .cart,
 .wishlist_cart_item .cart {
   color: white;
@@ -235,6 +239,11 @@ li {
   font-weight: bold;
   font-size: small;
   margin: 10px;
+}
+
+.wishlist_cart_item .cart:hover,
+.product .cart:hover {
+  background: linear-gradient(180deg, #ffdd3c, #d0a108);
 }
 
 .cart img {
