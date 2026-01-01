@@ -90,6 +90,24 @@ html {
   color: #464646;
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 150px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .logo img {
   height: 55px;
 }
@@ -121,6 +139,20 @@ html {
 #cartCount,
 #wishlistCartCount {
   background: linear-gradient(180deg, #ff4d4d, #e60000);
+  transition: transform 0.1s ease;
+  position: absolute;
+  top: -7px;
+  left: 20px;
+}
+
+.nav-item:hover #cartCount,
+.nav-item:hover #wishlistCartCount {
+  transform: scale(1.2);
+}
+
+#cartCount:active,
+#wishlistCartCount:active {
+  transform: scale(1.1);
 }
 
 @media (max-width: 576px) {

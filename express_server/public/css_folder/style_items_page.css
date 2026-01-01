@@ -614,8 +614,19 @@
 
 @media (min-width: 1400px) {
   .left_side_section {
-    width: 30%;
-    margin: 0 auto;
+    width: 20% !important;
+  }
+
+  .filters hr,
+  .left_side_section hr {
+    width: 120% !important;
+  }
+
+  .checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #0d6efd;
+    cursor: pointer;
   }
 
   .right_side_section {

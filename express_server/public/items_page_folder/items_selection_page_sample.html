@@ -460,15 +460,15 @@
     <!-- LEFT SIDE SECTION -->
     <div class="page_wrapper">
       <section class="left_side_section">
-        <div>
-          <span class="top_product_name">
-            <a href="../index.html">Home</a> &nbsp > &nbsp ITEM SELECTION PAGE
-          </span>
+        <div class="breadcrumb_trail">
+          <a href="../index.html">Home</a> <span class="separator">›</span
+          ><span> Item Selection Page</span>
         </div>
+        <br />
+        <h2>Item Selection Page</h2>
 
-        <h2>ITEM SELECTION PAGE</h2>
         <!-- Max - Min Price -->
-        <div class="price_dropdown img-fluid w-auto">
+        <div class="price_dropdown img-fluid">
           Price
 
           <div class="price_inputs">
@@ -493,36 +493,61 @@
 
         <div class="filters">
           <!-- Availability -->
-          <div>
-            <label for="">Availability</label> <input type="checkbox" />
+          <div class="d-flex">
+            <label class="me-3">Availability</label>
+            <input class="checkbox" type="checkbox" />
           </div>
           <hr />
 
           <!-- Brand -->
           <div>
-            <label for=""> Brand</label> <br /><br /><input
-              type="checkbox"
-              class="filter-brand"
-              value="AMD"
-            />
-            <label for="">AMD</label> <br />
-            <input
-              type="checkbox"
-              class="filter-brand"
-              value="SPCComputerHardware"
-            /><label for="">SPC Computer Hardware</label>
-            <br />
-            <input type="checkbox" class="filter-brand" value="Intel" />
-            <label for="">Intel</label>
+            <div class="d-flex">
+              <label class="me-3"> Brand</label>
+              <input
+                class="checkbox"
+                type="checkbox"
+                class="filter-brand"
+                value="AMD"
+              />
+            </div>
+            <div class="d-flex">
+              <label class="me-3">AMD</label>
+              <input
+                class="checkbox"
+                type="checkbox"
+                class="filter-brand"
+                value="SPCComputerHardware"
+              />
+            </div>
+            <div class="d-flex">
+              <label class="me-3">SPC Computer Hardware</label>
+
+              <input
+                class="checkbox"
+                type="checkbox"
+                class="filter-brand"
+                value="Intel"
+              />
+            </div>
+            <div class="d-flex">
+              <label class="me-3">Intel</label>
+              <input
+                class="checkbox"
+                type="checkbox"
+                class="filter-brand"
+                value="Intel"
+              />
+            </div>
           </div>
           <hr />
 
           <!-- Discount -->
           <div>
             <label for="">Discount</label> <br />
-            <br />
-            <input type="checkbox" name="" id="" /> <label for="">10%</label>
-            <br />
+            <div class="d-flex">
+              <input type="checkbox" name="" id="" /> <label for="">10%</label>
+            </div>
+
             <input type="checkbox" class="filter-discount" value="10" />
             <label for="">20%</label> <br />
             <input type="checkbox" class="filter-discount" value="20" />
@@ -869,7 +894,7 @@
               <a href="../items_page_folder/item_page/item_page_sample.html">
                 <img
                   class="product_image"
-                  src="../sample_img/spc_sample_loptop.png"
+                  src="../sample_img/spc_sample_laptop.png"
                   alt="Product 1"
                 />
 
@@ -1036,95 +1061,9 @@
       <div class="login_popup-content">
         <span class="login_close-btn">&times;</span>
         <form id="loginForm" action="/login_submit" method="POST">
-          <img class="login_logo" src="../image/SPC-Logo.png" alt="" />
           <br />
-          <h5 class="log-in_h1">Welcome Back</h5>
-
-          <div class="email_password">
-            <div class="login_email">
-              <label class="email_label">Email:</label><br />
-              <input type="text" name="email" placeholder="email" required />
-            </div>
-            <div class="login_password">
-              <label class="password_label">Password:</label><br />
-              <input
-                type="password"
-                name="password"
-                placeholder="******"
-                required
-              />
-            </div>
-            <input class="login_submit" type="submit" value="Login" />
-            <img class="sign-up_w_google" src="../image/sign-up_w_google.png" />
-          </div>
-          <br />
-          <p id="message_login"></p>
-        </form>
-      </div>
-    </section>
-
-    <!-- Sign-up Popup -->
-    <section class="sign-up_overlay">
-      <div id="signUpPopup" class="sign-up_popup">
-        <div class="sign-up_popup-content">
-          <span class="sign-up_close-btn">&times;</span>
-
-          <form id="signupForm" action="/sign-up_submit" method="POST">
-            <img class="sign-up_logo" src="../image/SPC-Logo.png" alt="" />
-            <h2 class="sign-up_h1">Sign-Up</h2>
-            <label>Name:</label><br />
-            <input
-              id="signup_name"
-              name="name"
-              placeholder="name"
-              required
-            /><br />
-
-            <label>Username:</label><br />
-            <input
-              id="signup_username"
-              name="username"
-              placeholder="username"
-              required
-            /><br />
-
-            <label>Email:</label><br />
-            <input
-              id="signup_email"
-              type="text"
-              name="email"
-              placeholder="email"
-              required
-            /><br />
-
-            <label>Password:</label><br />
-            <input
-              id="signup_password"
-              type="password"
-              name="password"
-              placeholder="******"
-              maxlength="6"
-              minlength="1"
-              required
-            /><br />
-
-            <input id="signup_submit" type="submit" value="Sign-Up" />
-            <br />
-            <p id="message_signup"></p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- Log-in Popup Section -->
-
-    <section id="loginPopup" class="popup">
-      <div class="login_popup-content">
-        <span class="login_close-btn">&times;</span>
-        <form id="loginForm" action="/login_submit" method="POST">
-          <img class="login_logo" src="../image/SPC-Logo.png" alt="" />
-          <br />
-          <h5 class="log-in_h1">Welcome Back</h5>
+          <h6 class="log-in_h1">Welcome Back!</h6>
+          <h3>Log-in</h3>
 
           <div class="email_password">
             <div class="login_email">
@@ -1155,8 +1094,8 @@
         <div class="sign-up_popup-content">
           <span class="sign-up_close-btn">&times;</span>
 
+          <img class="sign-up_logo" src="image/SPC-Logo.png" alt="" />
           <form id="signupForm" action="/sign-up_submit" method="POST">
-            <img class="sign-up_logo" src="../image/SPC-Logo.png" alt="" />
             <h2 class="sign-up_h1">Sign-Up</h2>
             <label>Name:</label><br />
             <input
@@ -1524,22 +1463,33 @@
       </div>
     </footer>
 
-    <!-- Javascript -->
+    <!-- Swiper JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- Scroll Animation Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- JS Files  -->
     <script src="../js_folder/script.js"></script>
     <script src="../js_folder/startPopup.js"></script>
     <script src="../js_folder/search.js"></script>
     <script src="../js_folder/floatingLogin.js"></script>
     <script src="../js_folder/floatingSignup.js"></script>
     <script src="../js_folder/swiper.js"></script>
-    <script src="../js_folder/shopping_cart.js"></script>
+    <script src="../js_folder/wishlist.js"></script>
     <script src="../js_folder/floating_carts.js"></script>
-    <script src="../js_folder/pagination.js"></script>
-    <script src="../js_folder/item_page_behavior.js"></script>
+    <script src="../js_folder/scroll_animation.js"></script>
+    <script src="../js_folder/chatbox.js"></script>
+    <script src="../js_folder/navbar.js"></script>
+    <script src="../js_folder/buy_now.js"></script>
+    <script src="../js_folder/shopping_cart.js"></script>
+    <script src="../js_folder/carts_container.js"></script>
 
-    <!-- Bootstrap Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Swiper JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>
