@@ -104,10 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
           <span>Qty. 1</span>
         </div>
         <div class="cart_item_price">
-          <b class="price">${price.toFixed(2)}</b>
-          <span class="percent_off" style="color:red"><small>${discount.toFixed(
-            2
-          )}</small></span>
+          <b class="price">₱${price.toFixed(2)}</b>
+<span class="percent_off" style="color:red">
+  <small>-₱${discount.toFixed(2)}</small>
+</span>
         </div>
       </div>
     </li>
@@ -369,17 +369,26 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#wishlist_cart_window").classList.add("hide");
   }
 
+  const pesoFormatter = new Intl.NumberFormat("en-PH", {
+    style: "currency",
+    currency: "PHP",
+  });
+
   //--------- Add to Wishlist function ----------//
   function addToWishlist(wishlistUserCart, bttn) {
     const addItem = bttn.closest(".product");
     const addItemImage = addItem.querySelector("a img").src;
     const elementName = addItem.querySelector(".product_name").textContent;
-    const addItemPrice = addItem
-      .querySelector(".price")
-      .textContent.substring(1);
-    const priceDiscount = addItem
-      .querySelector(".percent_off")
-      .textContent.substring(1);
+    const price =
+      parseFloat(
+        addItem.querySelector(".price")?.textContent.replace(/[^0-9.]/g, "")
+      ) || 0;
+    const discount =
+      parseFloat(
+        addItem
+          .querySelector(".product_save")
+          ?.textContent.replace(/[^0-9.]/g, "")
+      ) || 0;
 
     const newItem = `
     <li>
@@ -395,8 +404,10 @@ document.addEventListener("DOMContentLoaded", () => {
           <span>Qty. 1</span>
         </div>
         <div class="wishlist_cart_item_price">
-          <b class="price">${addItemPrice}</b>
-          <span style="color:red" class="percent_off"><small>${priceDiscount}</small></span>
+          <b class="price">₱${price.toFixed(2)}</b>
+<span class="percent_off" style="color:red">
+  <small>₱${discount.toFixed(2)}</small>
+</span>
         </div>
         <button class="cart">Add to Cart</button>
       </div>
