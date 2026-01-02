@@ -1,172 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css_folder/track_your_order_page.css">
+    <link rel="stylesheet" href="../css_folder/track_your_order_page.css" />
     <!-- Bootstrap -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <!-- Navigation Bar Section -->
 
-<header>
-  <nav id="navbar">
-    <div class="logo">
-      <a href="../index.html">
-        <img src="../image/SPC-Logo.png" alt="" />
-      </a>
-    </div>
-    <div class="search-container">
-      <input type="text" id="search" placeholder="Search...">
-      <button type="button" id="search-button">Search</button>
-   </div>
-    <ul class="nav-links">
-      <li><a href="#"><img class="navbar_icon" src="../icons/about.png" alt=""></a></li>
-      <li><a href="#"><img class="navbar_icon" src="../icons/track_your_order.png" alt=""></a></li>
-      <li><a href="#"><img class="navbar_icon" src="../icons/comment_icon.png" alt=""></a></li>
-      <li ><a href="#"><img class="navbar_icon" src="../icons/cart.png" alt=""></a></li>
-      <li id="loginBtn"><img class="navbar_icon" src="../icons/log-in.png" alt=""></li>
-      <li id="signUpBtn"><a href="#"><img class="navbar_icon" src="../icons/nav_icon_2.png" alt=""></a></li>
-    </ul> 
-    <div class="scrolling-container">
-      <div class="scrolling-text">
-       ShopMate now offers easy 2 Get Delivery, where you can deliver your order as fast as 3 hours for orders between 9:00AM to 12:00PM, available on some areas of Metro Manila. Express Delivery is also available from on some areas of Metro Manila. Express Delivery is also available from 8:00AM to 2:00PM providing prompt delivery within two hours. Same Day Delivery for orders within some areas of Metro Manila, as well as specific areas in Rizal, Cavite, and Bulacan.
-      </div>
-    </div>
-  </nav>
-</header>
-
- <!-- Second Nav-bar Section -->
-
-   <section>
-      <nav id="nav-bar2"><ul class="nav-link2"><li><a class="" href="">Home</a> </li><li class="dropdown2">
-        <a href="#">Products ▼</a>
-        <ul class="dropdown-menu2">
-          <li class="dropdown3">
-          <a href="items_page_folder/electronic_page.html"><b class="nav-bar2_green">Components</b></a> 
-          <ul class="dropdown-menu3">
-            <div class="dropdown3-flex">
-           <div>
-            <li><a href=""><b  class="nav-bar2_green">Components</b></a></li>
-            <li><a href="items_page_folder/component_page/cpu_cooling_fan_page.html">CPU Cooling</a></li>
-           <li><a href="items_page_folder/component_page/items_page_folder/graphics_card.html">Graphics Card</a></li>
-           <li><a href="items_page_folder/component_page/items_page_folder/hard_disk.html">Hard Disk</a></li>
-           <li><a href="items_page_folder/component_page/items_page_folder/memory.html">Memory</a></li>
-          </div>
-          <div>
-            <li><a href="items_page_folder/component_page/items_page_folder/motherboard.html">Motherboard</a></li>
-            <li><a href="items_page_folder/component_page/items_page_folder/pc_case.html">PC Case</a></li>
-            <li><a href="items_page_folder/component_page/items_page_folder/power_supply.html">Power Supply</a></li>
-           <li><a href="items_page_folder/component_page/items_page_folder/processor_AMD.html">Processor AMD</a></li>
-           <li><a href="items_page_folder/component_page/items_page_folder/processor_intel.html">Processor INTEL</a></li>  
-           </div>
-           <div>
-            <li><a href="items_page_folder/component_page/items_page_folder/processor_tray.html">Processor Tray</a></li>
-           <li><a href="">Solid State Drive</a></li>
-          </div>
-           </div>
-           </ul>
-           
-        </li>
-        <li class="dropdown4"><a href="items_page_folder/storage_page.html"> <b class="nav-bar2_green">Peripherals</b> </a>
-        <ul class="dropdown-menu4">
-            <div class="dropdown4-flex">
-              <div>
-            <li><a href=""><b  class="nav-bar2_green">Peripherals</b></a></li>
-            <li><a href="items_page_folder/peripherals_page/cctv_page.html">CCTV</a></li>
-           <li><a href="items_page_folder/peripherals_page/headset_page.html">Headset</a></li>
-           <li><a href="items_page_folder/peripherals_page/keyboard_page.html">Keyboard</a></li> 
-           <li><a href="items_page_folder/peripherals_page/display_page.html">Display</a></li>         
-          </div>
-          <div>           
-           <li><a href="items_page_folder/peripherals_page/mouse_page.html">Mouse</a></li>
-           <li><a href="items_page_folder/peripherals_page/network_page.html">Network Device</a></li>
-           <li><a href="items_page_folder/peripherals_page/printer_scanner.html">Printer & Scanner</a></li>
-           <li><a href="items_page_folder/peripherals_page/projector_page.html">Projector</a></li>
-           <li><a href="items_page_folder/peripherals_page/recorder_page.html">Recorder</a></li>
-           </div>
-           <div>
-            
-            <li><a href="items_page_folder/peripherals_page/speaker_page.html">Speaker</a></li>
-            <li><a href="items_page_folder/peripherals_page/UPS_AVR.html">UPS & AVR</a></li>
-            <li><a href="items_page_folder/peripherals_page/web_digital_camera.html">Web & Digital Camera</a></li>
-           </div>
-           </div>
-           </ul></li>
-        <li class="dropdown5"><a href="items_page_folder/accessories_page.html"><b class="nav-bar2_green">Accessories</b> </a>
-        <ul class="dropdown-menu5">
-            <div class="dropdown5-flex">
-              <div>
-            <li><a href=""><b  class="nav-bar2_green">Acessories</b></a></li>
-            <li><a href="items_page_folder/accessories_page/cables_page.html">Cables</a></li>
-           <li><a href="items_page_folder/accessories_page/earphones_page.html">Earphones</a></li>
-           <li><a href="items_page_folder/accessories_page/gaming_surface.html">Gaming Surface</a></li>
-           <li><a href="items_page_folder/accessories_page/powerbank_page.html">Powerbank</a></li>
-           <li><a></a></li>    
-          </div>
-           </div>
-           </ul></li>
-        <li class="dropdown6"><a  href="items_page_folder/memory_page.html"><b class="nav-bar2_green">PC Furnitures</b> </a>
-         <ul class="dropdown-menu6">
-            <div class="dropdown6-flex">
-              <div>
-            <li><a  href=""><b class="nav-bar2_green" >PC Furnitures</b></a></li>
-           <li><a href="items_page_folder/pc_furnitures/tables_page.html">Tables</a></li> 
-           <li><a></a></li>  
-           <li><a></a></li> 
-           <li><a></a></li> 
-           <li><a></a></li>    
-           <li><a></a></li> 
-           <li><a></a></li>
-          </div>
-           </div>
-           </ul></li>
-           <li class="dropdown7"><a  href="items_page_folder/memory_page.html"><b class="nav-bar2_green">OS & Softwares</b> </a>
-           <ul class="dropdown-menu7">
-            <div class="dropdown7-flex">
-              <div>
-            <li><a  href=""><b class="nav-bar2_green">OS & Softwares</b></a></li>
-            <li><a href="items_page_folder/os_softwares_page/antivirus_page.html">Antivirus</a></li>
-           <li><a href="items_page_folder/os_softwares_page/office_applications_page.html">Office Applications</a></li>
-           <li><a href="items_page_folder/os_softwares_page/operating_system.html">Operating System</a></li>
-          </div>
-           </div>
-           </ul></li>
-           <li class="dropdown8"><a  href="items_page_folder/memory_page.html"><b class="nav-bar2_green">Laptop & Mobile Devices</b> </a>
-           <ul class="dropdown-menu8">
-            <div class="dropdown8-flex">
-              <div>
-            <li><a  href=""><b class="nav-bar2_green">Laptop & Mobile Devices</b></a></li>
-            <li><a href="items_page_folder/loptop_mobile_page/chrombook_page.html">Chromebook</a></li>
-           <li><a href="items_page_folder/loptop_mobile_page/laptops_page.html">Laptops</a></li>
-           <li><a href="items_page_folder/loptop_mobile_page/mobile_page.html">Mobile Phone</a></li>
-           <li><a href="items_page_folder/loptop_mobile_page/tablet_page.html">Tablet</a></li>
-           <li><a></a></li> 
-          </div>
-           </div>
-           </ul></li>
+    <header>
+      <nav id="navbar">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../image/SPC-Logo.png" alt="" />
+          </a>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search" placeholder="Search..." />
+          <button type="button" id="search-button">Search</button>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#"
+              ><img class="navbar_icon" src="../icons/about.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                class="navbar_icon"
+                src="../icons/track_your_order.png"
+                alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img class="navbar_icon" src="../icons/comment_icon.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img class="navbar_icon" src="../icons/cart.png" alt=""
+            /></a>
+          </li>
+          <li id="loginBtn">
+            <img class="navbar_icon" src="../icons/log-in.png" alt="" />
+          </li>
+          <li id="signUpBtn">
+            <a href="#"
+              ><img class="navbar_icon" src="../icons/nav_icon_2.png" alt=""
+            /></a>
+          </li>
         </ul>
-      </li>
-    <li><a href="items_page_folder/desktop_page.html">Desktop</a></li>
-    <li><a href="items_page_folder/laptop_page.html">Laptop</a></li>
-    <li><a href="items_page_folder/powerd_by_msi.html">Powerd by MSI</a></li>
-    <li><a href="items_page_folder/build_a_pc_page.html">Build a PC</a></li>
-    <li><a href="items_page_folder/rakk_page.html">RAKK</a></li>
-    <li><a href="items_page_folder/shopmate_page.html">ShopMate</a></li>
-    <li><a href="items_page_folder/rewards_page.html">Rewards</a></li>
-    <li><a href="items_page_folder/brands_page.html">Brands</a></li>
-    </ul>
-    
-  </nav>
-  </section>
+        <div class="scrolling-container">
+          <marquee
+            behavior="scroll"
+            direction="left"
+            scrollamount="5"
+            class="px-3"
+          >
+            Welcome to SPC Computer Hardware Website — My First Website! ^^ This
+            project highlights some of my growing skills in
+            <span style="color: red"
+              >HTML, CSS, JavaScript, Bootstrap, Tailwind, MySQL
+            </span>
+            and <span style="color: red"> React </span> . . Dive into a clean,
+            interactive and responsive website where you can explore PC parts,
+            add to cart products, and enjoy smooth transition and animations.
+            Many More Improvement features coming soon!
+          </marquee>
+        </div>
+      </nav>
+    </header>
 
-  <!-- Feedback Form -->
+    <!-- Second Nav-bar Section -->
 
-  
+    <section>
+      <nav id="nav-bar2">
+        <ul class="nav-link2">
+          <li><a class="" href="">Home</a></li>
+          <li class="dropdown2">
+            <a href="#">Products ▼</a>
+            <ul class="dropdown-menu2">
+              <li class="dropdown3">
+                <a href="items_page_folder/electronic_page.html"
+                  ><b class="nav-bar2_green">Components</b></a
+                >
+                <ul class="dropdown-menu3">
+                  <div class="dropdown3-flex">
+                    <div>
+                      <li>
+                        <a href=""><b class="nav-bar2_green">Components</b></a>
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/component_page/cpu_cooling_fan_page.html"
+                          >CPU Cooling</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/component_page/items_page_folder/graphics_card.html"
+                          >Graphics Card</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/component_page/items_page_folder/hard_disk.html"
+                          >Hard Disk</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/component_page/items_page_folder/memory.html"
+                          >Memory</a
+                        >
+                      </li>
+                    </div>
+                    <div>
+                      <li>
+                        <a
+                          href="items_page_folder/component_page/items_page_folder/motherboard.html"
+                          >Motherboard</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/component_page/items_page_folder/pc_case.html"
+                          >PC Case</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/component_page/items_page_folder/power_supply.html"
+                          >Power Supply</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/component_page/items_page_folder/processor_AMD.html"
+                          >Processor AMD</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/component_page/items_page_folder/processor_intel.html"
+                          >Processor INTEL</a
+                        >
+                      </li>
+                    </div>
+                    <div>
+                      <li>
+                        <a
+                          href="items_page_folder/component_page/items_page_folder/processor_tray.html"
+                          >Processor Tray</a
+                        >
+                      </li>
+                      <li><a href="">Solid State Drive</a></li>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+              <li class="dropdown4">
+                <a href="items_page_folder/storage_page.html">
+                  <b class="nav-bar2_green">Peripherals</b>
+                </a>
+                <ul class="dropdown-menu4">
+                  <div class="dropdown4-flex">
+                    <div>
+                      <li>
+                        <a href=""><b class="nav-bar2_green">Peripherals</b></a>
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/peripherals_page/cctv_page.html"
+                          >CCTV</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/peripherals_page/headset_page.html"
+                          >Headset</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/peripherals_page/keyboard_page.html"
+                          >Keyboard</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/peripherals_page/display_page.html"
+                          >Display</a
+                        >
+                      </li>
+                    </div>
+                    <div>
+                      <li>
+                        <a
+                          href="items_page_folder/peripherals_page/mouse_page.html"
+                          >Mouse</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/peripherals_page/network_page.html"
+                          >Network Device</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/peripherals_page/printer_scanner.html"
+                          >Printer & Scanner</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/peripherals_page/projector_page.html"
+                          >Projector</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/peripherals_page/recorder_page.html"
+                          >Recorder</a
+                        >
+                      </li>
+                    </div>
+                    <div>
+                      <li>
+                        <a
+                          href="items_page_folder/peripherals_page/speaker_page.html"
+                          >Speaker</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/peripherals_page/UPS_AVR.html"
+                          >UPS & AVR</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/peripherals_page/web_digital_camera.html"
+                          >Web & Digital Camera</a
+                        >
+                      </li>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+              <li class="dropdown5">
+                <a href="items_page_folder/accessories_page.html"
+                  ><b class="nav-bar2_green">Accessories</b>
+                </a>
+                <ul class="dropdown-menu5">
+                  <div class="dropdown5-flex">
+                    <div>
+                      <li>
+                        <a href=""><b class="nav-bar2_green">Acessories</b></a>
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/accessories_page/cables_page.html"
+                          >Cables</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/accessories_page/earphones_page.html"
+                          >Earphones</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/accessories_page/gaming_surface.html"
+                          >Gaming Surface</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/accessories_page/powerbank_page.html"
+                          >Powerbank</a
+                        >
+                      </li>
+                      <li><a></a></li>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+              <li class="dropdown6">
+                <a href="items_page_folder/memory_page.html"
+                  ><b class="nav-bar2_green">PC Furnitures</b>
+                </a>
+                <ul class="dropdown-menu6">
+                  <div class="dropdown6-flex">
+                    <div>
+                      <li>
+                        <a href=""
+                          ><b class="nav-bar2_green">PC Furnitures</b></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/pc_furnitures/tables_page.html"
+                          >Tables</a
+                        >
+                      </li>
+                      <li><a></a></li>
+                      <li><a></a></li>
+                      <li><a></a></li>
+                      <li><a></a></li>
+                      <li><a></a></li>
+                      <li><a></a></li>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+              <li class="dropdown7">
+                <a href="items_page_folder/memory_page.html"
+                  ><b class="nav-bar2_green">OS & Softwares</b>
+                </a>
+                <ul class="dropdown-menu7">
+                  <div class="dropdown7-flex">
+                    <div>
+                      <li>
+                        <a href=""
+                          ><b class="nav-bar2_green">OS & Softwares</b></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/os_softwares_page/antivirus_page.html"
+                          >Antivirus</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/os_softwares_page/office_applications_page.html"
+                          >Office Applications</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/os_softwares_page/operating_system.html"
+                          >Operating System</a
+                        >
+                      </li>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+              <li class="dropdown8">
+                <a href="items_page_folder/memory_page.html"
+                  ><b class="nav-bar2_green">Laptop & Mobile Devices</b>
+                </a>
+                <ul class="dropdown-menu8">
+                  <div class="dropdown8-flex">
+                    <div>
+                      <li>
+                        <a href=""
+                          ><b class="nav-bar2_green"
+                            >Laptop & Mobile Devices</b
+                          ></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/loptop_mobile_page/chrombook_page.html"
+                          >Chromebook</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/loptop_mobile_page/laptops_page.html"
+                          >Laptops</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/loptop_mobile_page/mobile_page.html"
+                          >Mobile Phone</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="items_page_folder/loptop_mobile_page/tablet_page.html"
+                          >Tablet</a
+                        >
+                      </li>
+                      <li><a></a></li>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="items_page_folder/desktop_page.html">Desktop</a></li>
+          <li><a href="items_page_folder/laptop_page.html">Laptop</a></li>
+          <li>
+            <a href="items_page_folder/powerd_by_msi.html">Powerd by MSI</a>
+          </li>
+          <li>
+            <a href="items_page_folder/build_a_pc_page.html">Build a PC</a>
+          </li>
+          <li><a href="items_page_folder/rakk_page.html">RAKK</a></li>
+          <li><a href="items_page_folder/shopmate_page.html">ShopMate</a></li>
+          <li><a href="items_page_folder/rewards_page.html">Rewards</a></li>
+          <li><a href="items_page_folder/brands_page.html">Brands</a></li>
+        </ul>
+      </nav>
+    </section>
 
-   <!-- Footer -->
+    <!-- Feedback Form -->
+
+    <!-- Footer -->
 
     <footer>
       <div class="footer-container">
@@ -208,11 +465,11 @@
       </div>
       <div class="footer-container">
         <img class="footer_logo" src="image/SPC-Logo.png" alt="" />
-        
+
         <ul class="footer-links">
-          <br>
+          <br />
           <h3>FOLLOW US</h3>
-            
+
           <div class="b_w_logo">
             <img src="../black_white_logo/facebook_logo_b_w.png" alt="" />
             <img src="../black_white_logo/instagram_logo_b_w.png" alt="" />
@@ -222,7 +479,11 @@
       </div>
     </footer>
 
-   <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-</body>
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

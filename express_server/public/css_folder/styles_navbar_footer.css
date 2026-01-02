@@ -28,7 +28,7 @@ html {
   box-shadow: 0 2px 5px inset rgba(0, 0, 0, 0.1);
   opacity: 1;
   transition: opacity 0.4s ease;
-  border: 2px solid #bababa;
+  border: 2px solid #27c300;
 }
 
 #navbar1.fade-out {
@@ -141,7 +141,7 @@ html {
   background: linear-gradient(180deg, #ff4d4d, #e60000);
   transition: transform 0.1s ease;
   position: absolute;
-  top: -7px;
+  top: -8px;
   left: 20px;
 }
 
@@ -152,7 +152,7 @@ html {
 
 #cartCount:active,
 #wishlistCartCount:active {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 @media (max-width: 576px) {
