@@ -538,3 +538,128 @@
   color: white;
   left: 330px;
 }
+
+@media (max-width: 576px) {
+  /* CART (max-width: 576px) */
+  #cart_window {
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    top: 16%;
+    left: 0;
+    z-index: 9999;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    transform: translateX(100%);
+  }
+
+  #cart_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 1px;
+    right: 0;
+    width: calc(100% - 1px);
+    height: calc(93% - 1px);
+    background: white;
+
+    border: 2px solid #5e5e5e;
+    border-radius: 20px;
+    padding: 30px 20px;
+    color: rgb(50, 50, 50);
+    box-shadow: -5px 0 80px rgba(255, 255, 255, 0.65);
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    transition: 0.5s ease-in-out;
+  }
+
+  #cart_box #checkout_button {
+    position: absolute;
+    border: 0;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 100px;
+    background-color: rgb(0, 200, 0);
+    color: white;
+    left: 200%;
+    bottom: 25%;
+  }
+
+  #total_checkout {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cart_item_image .remove_button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    position: absolute;
+    left: 1% !important;
+    top: 1% !important;
+    z-index: 10;
+    transition: background-color 0.4s ease-in-out;
+  }
+
+  /* Wishlist (max-width: 576px) */
+
+  #wishlist_cart_window {
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    top: 16%;
+    left: 0;
+    z-index: 9999;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    transform: translateX(100%);
+  }
+
+  #wishlist_cart_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 1px;
+    right: 0;
+    width: calc(100% - 1px);
+    height: calc(93% - 1px);
+    background: white;
+
+    border: 2px solid #5e5e5e;
+    border-radius: 20px;
+    padding: 30px 20px;
+    color: rgb(50, 50, 50);
+    box-shadow: -5px 0 80px rgba(255, 255, 255, 0.65);
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    transition: 0.5s ease-in-out;
+  }
+
+  #wishlist_cart_box #checkout_button {
+    position: absolute;
+    border: 0;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 100px;
+    background-color: rgb(0, 200, 0);
+    color: white;
+    left: 200%;
+    bottom: 25%;
+  }
+
+  #wishlist_total_checkout {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
