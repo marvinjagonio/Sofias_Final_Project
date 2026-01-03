@@ -222,8 +222,11 @@ article.desktop_font h4 {
 /* -------------------- New Arrivals Section and Top Sellers Section -------------------- */
 
 #new_arrivals_top_sellers_section,
-#featured_products_section {
-  padding: 50px 0;
+#featured_products_section,
+#top_sellers_section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
 }
 
 #add_on_deals_section {
@@ -249,7 +252,7 @@ article.desktop_font h4 {
 .add_on_deals_swiper {
   width: 95%;
   max-width: 1200px;
-  margin: 50px auto;
+  margin: 20px auto;
   padding: 0 5px !important;
 }
 
@@ -257,8 +260,13 @@ article.desktop_font h4 {
 .new_arrivals_swiper-wrapper,
 .featured_products_swiper-wrapper,
 .add_on_deals_swiper-wrapper {
-  padding-top: 10px;
-  padding-bottom: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* -------------------- Best Coupons Section -------------------- */
+
+#best_coupons {
 }
 
 /* -------------------- Customers Comments Section -------------------- */
