@@ -33,6 +33,20 @@ searchInput.addEventListener("input", function () {
   noResults.style.display = matchFound ? "none" : "block";
 });
 
+window.addEventListener("load", () => {
+  searchInput.value = "";
+});
+
+document.addEventListener("click", (event) => {
+  const searchContainer = document.querySelector(".search-container");
+
+  if (!searchContainer.contains(event.target)) {
+    searchInput.value = "";
+    itemList.style.display = "none";
+    noResults.style.display = "none";
+  }
+});
+
 document
   .querySelector(".search-container")
   .addEventListener("submit", function (e) {

@@ -36,7 +36,9 @@ html {
   transition: opacity 0.4s ease;
   border: 2px solid #27c300;
 }
-
+#navbarContent1 {
+  margin-left: 150px;
+}
 #navbar1.fade-out {
   opacity: 0;
   transition: opacity 2s ease;
@@ -81,7 +83,7 @@ html {
 }
 
 .search-container {
-  margin: 0 20px;
+  width: 800px !important;
 }
 
 #scrolling_text {
