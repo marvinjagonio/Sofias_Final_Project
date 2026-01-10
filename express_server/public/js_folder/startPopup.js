@@ -4,15 +4,23 @@ const popupForm = document.getElementById("popupForm");
 const popupMessage = document.getElementById("popup_message");
 
 window.addEventListener("load", () => {
-  if (popup) {
-    document.body.classList.add("no-scroll");
+  const shown = localStorage.getItem("popupShown");
+
+  if (shown) {
+    openPopup();
+  } else {
+    closePopup();
   }
 });
+
+function openPopup() {
+  popup.style.display = "flex";
+  document.body.classList.add("no-scroll");
+}
 
 function closePopup() {
   popup.style.display = "none";
   document.body.classList.remove("no-scroll");
-  localStorage.setItem("popupShown", "true");
 }
 
 closeBtn.addEventListener("click", closePopup);

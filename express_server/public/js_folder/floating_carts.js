@@ -375,23 +375,12 @@ document.addEventListener("DOMContentLoaded", () => {
     calculateWishlistTotal();
   }
 
-  function active_remove() {
-    if (wishlistOpenCartView()) {
-      closeCartView();
-    } else {
-      wishlistCloseCartView();
-    }
-  }
-
   function wishlistOpenCartView() {
     document.querySelector("#wishlist_cart_window").classList.remove("hide");
     document.querySelector("#wishlist_cart_window").classList.add("active");
-    document.body.classList.add("no-scroll");
-    return true;
   }
 
   function wishlistCloseCartView() {
-    document.body.classList.remove("no-scroll");
     document.querySelector("#wishlist_cart_window").classList.add("hide");
   }
 
