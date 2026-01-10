@@ -4,17 +4,14 @@ const popupForm = document.getElementById("popupForm");
 const popupMessage = document.getElementById("popup_message");
 
 window.addEventListener("load", () => {
-  const shown = localStorage.getItem("popupShown");
-
-  if (!shown) {
-    setTimeout(() => {
-      popup.style.display = "block";
-    }, 1500);
+  if (popup) {
+    document.body.classList.add("no-scroll");
   }
 });
 
 function closePopup() {
   popup.style.display = "none";
+  document.body.classList.remove("no-scroll");
   localStorage.setItem("popupShown", "true");
 }
 

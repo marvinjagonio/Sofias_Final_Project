@@ -1,3 +1,9 @@
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  touch-action: none;
+}
+
 /* -------------------- Items Cathegory Section -------------------- */
 @import "tailwindcss";
 
@@ -266,9 +272,11 @@ article.desktop_font h4 {
 
 /* -------------------- Best Coupons Section -------------------- */
 
-#best_coupons {
+.best_coupons_flex {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
-
 /* -------------------- Customers Comments Section -------------------- */
 
 #comments_section {

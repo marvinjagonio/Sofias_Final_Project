@@ -26,6 +26,7 @@
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   transform: translateY(-100px);
+
   opacity: 0;
   animation: slideDown 0.5s forwards;
 }

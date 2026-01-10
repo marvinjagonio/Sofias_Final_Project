@@ -182,8 +182,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (removeBtn) removeCartItem(removeBtn);
   });
 
-  cartOpenBtn?.addEventListener("click", openCartView);
-  cartCloseBtn?.addEventListener("click", closeCartView);
+  cartOpenBtn?.addEventListener("click", () => {
+    document.body.classList.add("no-scroll");
+    openCartView();
+  });
+
+  cartCloseBtn?.addEventListener("click", () => {
+    document.body.classList.remove("no-scroll");
+    closeCartView();
+  });
 
   // --- Initialize ---
   calculateCartTotal();
@@ -212,6 +219,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const wishlistMessage = document.querySelector(
     ".wishlist_empty_cart_message"
   );
+
+  const wishlistOpenBtn = document.querySelector(".wishlist_cart_button");
+
+  const wishlistCloseBtn = document.querySelector(".wishlist_close_button");
 
   let wishlistCartIconChildCount = 0;
 
@@ -291,15 +302,16 @@ document.addEventListener("DOMContentLoaded", () => {
       wishlistMessage.classList.remove("active");
     }
   }
-  // Open Cart
-  document
-    .querySelector(".wishlist_cart_button")
-    .addEventListener("click", () => active_remove());
 
-  // Close Cart
-  document
-    .querySelector("#wishlist_cart_box .wishlist_close_button")
-    .addEventListener("click", wishlistCloseCartView);
+  wishlistOpenBtn?.addEventListener("click", () => {
+    document.body.classList.add("no-scroll");
+    wishlistOpenCartView();
+  });
+
+  wishlistCloseBtn?.addEventListener("click", () => {
+    document.body.classList.remove("no-scroll");
+    wishlistCloseCartView();
+  });
 
   // Initialize display if exists
   if (wishlistCartCountDisplay) {
@@ -371,17 +383,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function closeCartView() {
-    document.querySelector("#cart_window").classList.remove("active");
-  }
-
   function wishlistOpenCartView() {
     document.querySelector("#wishlist_cart_window").classList.remove("hide");
     document.querySelector("#wishlist_cart_window").classList.add("active");
+    document.body.classList.add("no-scroll");
     return true;
   }
 
   function wishlistCloseCartView() {
+    document.body.classList.remove("no-scroll");
     document.querySelector("#wishlist_cart_window").classList.add("hide");
   }
 
