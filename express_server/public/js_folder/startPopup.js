@@ -6,7 +6,7 @@ const popupMessage = document.getElementById("popup_message");
 window.addEventListener("load", () => {
   const shown = localStorage.getItem("popupShown");
 
-  if (shown) {
+  if (!shown) {
     openPopup();
   } else {
     closePopup();

@@ -246,10 +246,19 @@ article.desktop_font h4 {
 #featured_products_section h2,
 #add_on_deals_section h2 {
   font-size: x-large;
-  text-decoration: 3px underline rgb(238, 0, 0);
+
   text-underline-offset: 10px;
   padding-left: 12%;
   padding-top: 20px;
+}
+
+#new_arrivals_top_sellers_section hr,
+#featured_products_section hr,
+#add_on_deals_section hr {
+  border: none;
+  height: 4px;
+  background: linear-gradient(to left, red 20%, gray 80%);
+  margin: 0 10%;
 }
 
 .new_arrivals_swiper,
@@ -282,6 +291,7 @@ article.desktop_font h4 {
 #comments_section {
   background: rgb(56, 56, 56) !important;
   padding: 20px 0;
+  margin: 20px 0;
 }
 
 #comments_section h3 {
@@ -321,16 +331,15 @@ article.desktop_font h4 {
 
 .payment_option_flex {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  padding: 20px 0;
-  gap: 30px;
+  gap: 10px;
 }
 
 .payment_option_flex img {
-  height: 80px;
-  width: 80px;
-  border-radius: 20px;
+  height: 50px;
+  width: 50px;
+
+  border-radius: 10px;
   transition: filter 0.3s ease;
 }
 

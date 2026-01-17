@@ -500,14 +500,38 @@ footer {
   transform: scale(1.1);
 }
 
+.footer-links_end {
+  gap: 30px !important;
+}
+
 .footer_bw_logo {
-  width: 25px;
+  width: 35px;
 }
 
 .footer_logo {
-  width: 100px;
+  width: 130px;
 }
 
 .footer_end h4 {
   color: white;
+}
+
+.footer-links_end h5 {
+  color: white;
+}
+
+.footer_below {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_below_hr {
+  left: 0;
+  right: 0;
+  border: 2px solid #ff4d4d;
+}
+
+.all_right_reserved {
+  color: white;
+  float: right;
 }
