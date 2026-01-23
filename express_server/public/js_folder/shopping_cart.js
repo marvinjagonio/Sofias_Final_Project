@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartTotalElement = cartItem.querySelector(".cart_total");
   const clearCartBtn = document.querySelector(".clear_cart");
   const proceedToCheckoutBtn = document.querySelector(
-    ".proceed_to_checkout button"
+    ".proceed_to_checkout button",
   );
   const cartTotalRightSide = document.querySelector(
-    ".cart_total_right_side p:last-child"
+    ".cart_total_right_side p:last-child",
   );
   const rawPrice = Number(priceElement.textContent.replace(/[^\d.]/g, ""));
 
@@ -57,10 +57,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   proceedToCheckoutBtn.addEventListener("click", () => {
-    const totalPrice = cartTotalRightSide.textContent;
-    alert(`Checkout Order\nTotal: ${totalPrice}`);
-    cartItem.remove();
-    cartTotalRightSide.textContent = "₱0.00";
+    const product = {
+      name: document.querySelector(".product_name").textContent,
+      price: document.querySelector(".price").textContent,
+      quantity: document.getElementById("quantity").value,
+      total: document.querySelector(".cart_total").textContent,
+      image: document.querySelector(".product_image").src,
+      note: document.getElementById("message").value,
+      status: "To Ship",
+    };
+
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    orders.push(product);
+
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+    window.location.href = "to_ship.html";
+    // const totalPrice = cartTotalRightSide.textContent;
+    // alert(`Checkout Order\nTotal: ${totalPrice}`);
+    // cartItem.remove();
+    // cartTotalRightSide.textContent = "₱0.00";
+    // window.location.href = "../index.html";
   });
 
   updateTotals();
@@ -126,3 +144,58 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderCart();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderOrders();
+});
+
+function renderOrders() {
+  const container = document.getElementById("toShipOrders");
+  let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+  container.innerHTML = "";
+
+  if (orders.length === 0) {
+    container.innerHTML = "<p>No orders to ship 📦</p>";
+    return;
+  }
+
+  orders.forEach((order, index) => {
+    if (order.status !== "To Ship") return;
+
+    container.innerHTML += `
+      <div class="card mb-3 p-3">
+        <div class="d-flex justify-content-between">
+          <strong>Order #${index + 1}</strong>
+          <span class="badge bg-warning">${order.status}</span>
+        </div>
+
+        <div class="d-flex mt-3">
+          <img src="${order.image}" width="70" class="me-3 rounded">
+          <div>
+            <p class="mb-1">${order.name}</p>
+            <p class="mb-1">Qty: ${order.quantity}</p>
+            <p class="mb-1">${order.total}</p>
+          </div>
+        </div>
+
+        <small class="text-muted">Note: ${order.note || "None"}</small>
+
+        <div class="mt-3 text-end">
+          <button class="btn btn-danger btn-sm" onclick="cancelOrder(${index})">
+            Cancel Order
+          </button>
+        </div>
+      </div>
+    `;
+  });
+}
+
+function cancelOrder(index) {
+  let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+  orders[index].status = "Cancelled";
+
+  localStorage.setItem("orders", JSON.stringify(orders));
+  renderOrders();
+}

@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Event delegation for buy_now buttons on product listing pages
   document.addEventListener("click", (e) => {
     const btn = e.target.closest(".buy_now");
     if (!btn) return;
@@ -8,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const productCard = btn.closest(".product");
     if (!productCard) {
-      console.error("No .product parent found");
+      alert("No .product parent found");
       return;
     }
 
@@ -22,28 +21,26 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "items_page_folder/shopping_list.html";
   });
 
-  // Shopping list page logic
   const shoppingPage = document.getElementById("shoppingPage");
-  if (!shoppingPage) return; // STOP if not on shopping page
+  if (!shoppingPage) return;
 
-  // Get the saved product from localStorage
   const product = JSON.parse(localStorage.getItem("selectedProduct"));
 
-  // If no product found, show defaults
   if (!product) {
     document.querySelector(".product_name").textContent = "No product found.";
     document.querySelector(".cart_total").textContent = "₱0.00";
     document.querySelector(".price").textContent = "₱0.00";
     document.querySelector(".product_image").src = "../image/no_image.jpg";
+    document.querySelector("#quantity").value = "0";
+    alert("No Product Selected");
+    window.location.href = "../index.html";
     return;
   }
 
-  // Update product details
   document.querySelector(".product_image").src = "../" + product.image;
   document.querySelector(".product_name").textContent = product.name;
   document.querySelector(".price").textContent = `₱${product.price}`;
 
-  // Cart quantity and totals
   const qtyInput = document.getElementById("quantity");
   const cartTotalEl = document.querySelector(".cart_total");
   const rightTotal = document.querySelector(".cartTotal");
@@ -65,12 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
   updateTotal();
 
   document.getElementById("increaseQty").onclick = () => {
-    qtyInput.value = Math.min(parseInt(qtyInput.value) + 1, 10); // Max 10?
+    qtyInput.value = Math.min(parseInt(qtyInput.value) + 1, 10);
     updateTotal();
   };
 
   document.getElementById("decreaseQty").onclick = () => {
-    qtyInput.value = Math.max(parseInt(qtyInput.value) - 1, 1); // Min 1
+    qtyInput.value = Math.max(parseInt(qtyInput.value) - 1, 1);
     updateTotal();
   };
 

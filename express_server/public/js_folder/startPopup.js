@@ -6,16 +6,13 @@ const popupMessage = document.getElementById("popup_message");
 window.addEventListener("load", () => {
   const shown = localStorage.getItem("popupShown");
 
-  if (!shown) {
-    openPopup();
-  } else {
-    closePopup();
+  if (shown) {
+    document.body.classList.add("no-scroll");
   }
 });
 
 function openPopup() {
   popup.style.display = "flex";
-  document.body.classList.add("no-scroll");
 }
 
 function closePopup() {
@@ -29,7 +26,7 @@ popupForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
   popupMessage.textContent = "✅ You're subscribed!";
-  popupMessage.style.color = "green";
+  popupMessage.style.color = "white";
 
   localStorage.setItem("popupShown", "true");
 

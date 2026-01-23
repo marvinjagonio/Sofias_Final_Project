@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>To Ship | My Store</title>
+
     <!-- CSS -->
     <link rel="stylesheet" href="../css_folder/styles_home.css" />
     <link rel="stylesheet" href="../css_folder/styles_floating_carts.css" />
@@ -11,7 +12,7 @@
     <link rel="stylesheet" href="../css_folder/styles_navbar_footer.css" />
     <link rel="stylesheet" href="../css_folder/styles_product.css" />
     <link rel="stylesheet" href="../css_folder/chatbox.css" />
-    <link rel="stylesheet" href="../css_folder/shopping_list.css" />
+    <link rel="stylesheet" href="../css_folder/footer.css" />
 
     <!-- Bootstrap -->
     <link
@@ -20,6 +21,12 @@
       integrity="sha384-..."
       crossorigin="anonymous"
     />
+
+    <!-- Tailwind -->
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css_folder/tailwind.css" /> -->
+
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
@@ -27,6 +34,37 @@
     />
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <script
+      src="https://cdn.example.com/library.js"
+      integrity="sha384-jK8R6W6n1g8l9P0m3c5x7y2z4aB7D9E0F2G4H6I8J0K2L4M6N8O0P2Q4R6S8T0U2V4W6X8Y0Z2="
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .order-card {
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+      }
+
+      .status-badge {
+        background-color: #ffc107;
+        color: #000;
+        font-weight: 600;
+      }
+
+      .product-img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    </style>
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -51,7 +89,7 @@
         </marquee>
       </div>
 
-      <nav id="navbar1" class="navbar navbar-expand-md bg-light">
+      <nav id="navbar1" class="navbar navbar-expand-md bg-light w-auto">
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.html">
             <img
@@ -71,13 +109,13 @@
             <span class="navbar-toggler-icon" id="navbar1_toggler"></span>
           </button>
 
-          <div class="collapse navbar-collapse pt-2" id="navbarContent1">
+          <div class="collapse navbar-collapse pt-2 px-1" id="navbarContent1">
             <form
-              class="search-container d-flex justify-content-center mb-lg-2 mt-0 mb-0 mx-auto flex-wrap"
+              class="search-container d-flex justify-content-center mb-lg-2 ms-2 flex-wrap"
               role="search"
             >
               <input
-                class="form-control w-100 w-md-50"
+                class="form-control w-100 w-md-50 w-sm-50"
                 type="text"
                 id="search"
                 placeholder="Search..."
@@ -173,7 +211,7 @@
               </button>
             </form>
             <ul
-              class="navbar gap-lg-3 gap-sm-2 pt-3 pb-0 flex-nowrap justify-content-evenly"
+              class="navbar_icons navbar gap-lg-3 gap-sm-4 pt-3 pb-0 flex-nowrap justify-content-center w-auto"
             >
               <li class="nav-item mx-1 gap-sm-2">
                 <a href="#"
@@ -184,7 +222,7 @@
                 /></a>
               </li>
 
-              <li class="nav-item mx-1">
+              <li class="nav-item mx-2">
                 <a href="items_page_folder/track_your_order.html"
                   ><img
                     class="img-fluid nav-icon"
@@ -193,7 +231,7 @@
                     alt=""
                 /></a>
               </li>
-              <li class="nav-item mx-1">
+              <li class="nav-item mx-2">
                 <a href="#"
                   ><img
                     class="img-fluid nav-icon"
@@ -203,7 +241,7 @@
                 /></a>
               </li>
 
-              <li class="nav-item mx-1" id="loginBtn">
+              <li class="nav-item mx-2" id="loginBtn">
                 <a href="#"
                   ><img
                     class="img-fluid nav-icon"
@@ -212,7 +250,7 @@
                     alt=""
                 /></a>
               </li>
-              <li class="nav-item mx-1" id="signUpBtn">
+              <li class="nav-item mx-2" id="signUpBtn">
                 <a href="#"
                   ><img
                     class="img-fluid nav-icon"
@@ -221,7 +259,7 @@
                     alt=""
                 /></a>
               </li>
-              <li class="nav-item mx-1">
+              <li class="nav-item mx-2">
                 <a href="#" class="position-relative"
                   ><img
                     class="wishlist_cart_button img-fluid nav-icon"
@@ -229,9 +267,7 @@
                     src="../icons/wishlist.png"
                     alt=""
                   />
-                  <span
-                    id="wishlistCartCount"
-                    class="position-absolute top-1 left-0 start-100 translate-middle badge rounded-pill"
+                  <span id="wishlistCartCount" class="badge rounded-pill"
                     >0</span
                   ></a
                 >
@@ -244,11 +280,7 @@
                     src="../icons/cart.png"
                     alt=""
                   />
-                  <span
-                    id="cartCount"
-                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill"
-                    >0</span
-                  ></a
+                  <span id="cartCount" class="badge rounded-pill">0</span></a
                 >
               </li>
             </ul>
@@ -256,7 +288,7 @@
         </div>
       </nav>
 
-      <!-- Second Nav-bar Section -->
+      <!-- Second Navigation bar -->
 
       <nav id="navbar2" class="navbar navbar-expand-md">
         <div class="container-fluid">
@@ -274,29 +306,31 @@
             id="navbarContent2"
           >
             <ul
-              class="navbar-nav nav-link2 w-100 gap-lg-5 gap-md-3 pt-md-3 pt-lg-2 flex-md-row flex-column justify-content-center"
+              class="navbar-nav nav-link2 w-100 gap-lg-5 gap-md-3 flex-md-row flex-column justify-content-center"
             >
               <li class="#"><a class="nav-link" href="#">Home</a></li>
 
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link1 nav-link dropdown-toggle"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   >Products</a
                 >
-                <ul class="dropdown-menu mt-1" style="width: 400px">
+                <ul class="dropdown-menu mt-1">
                   <li>
-                    <div class="row gap-1">
-                      <div class="col-auto col-md-4 col-sm-3 mb-2">
+                    <div class="row gap-0 p-0">
+                      <div class="d-flex col-auto col-md-4 col-sm-3 mb-2">
                         <ul class="list-unstyled">
                           <li>
                             <a
-                              class="dropdown-item fs-6"
+                              class="px-3 fs-6"
                               href="#"
                               onclick="closeDropdown()"
-                              ><b class="text-success">Components</b></a
+                              ><b class="text-success"
+                                >Internal Computer Hardware</b
+                              ></a
                             >
                           </li>
                           <li>
@@ -378,14 +412,15 @@
                           </li>
                         </ul>
                       </div>
-                      <div class="col-12 col-md-4 mb-2">
+                      <div class="d-flex col-auto col-md-4 col-sm-3 mb-2">
                         <ul class="list-unstyled">
                           <li>
                             <a
-                              class="nav-link dropdown-item fs-6"
-                              href="items_page_folder/items_selection_page_sample.html"
+                              class="px-3 fs-6"
+                              href="#"
+                              onclick="closeDropdown()"
                               ><b class="text-success"
-                                >Laptop & Mobile Devices</b
+                                >Storage & Accessories</b
                               ></a
                             >
                           </li>
@@ -393,28 +428,96 @@
                             <a
                               class="dropdown-item fs-6"
                               href="items_page_folder/items_selection_page_sample.html"
-                              >Chromebook</a
+                              >USB Flash Drive</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="iitems_page_folder/items_selection_page_sample.html"
+                              >External Hard Drive</a
                             >
                           </li>
                           <li>
                             <a
                               class="dropdown-item fs-6"
                               href="items_page_folder/items_selection_page_sample.html"
-                              >Laptops</a
+                              >Memory Card</a
                             >
                           </li>
                           <li>
                             <a
                               class="dropdown-item fs-6"
                               href="items_page_folder/items_selection_page_sample.html"
-                              >Mobile Phone</a
+                              >Card Reader</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >UPS (Uninterruptible Power Supply)</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="d-flex col-auto col-md-4 col-sm-3 mb-2">
+                        <ul class="list-unstyled">
+                          <li>
+                            <a
+                              class="px-3 fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              ><b class="text-success">External Hardware </b></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Monitor</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Keyboard</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Mouse</a
                             >
                           </li>
                           <li>
                             <a
                               class="dropdown-item fs-6 fs-sm-8"
                               href="items_page_folder/items_selection_page_sample.html"
-                              >Tablet</a
+                              >Printer</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6 fs-sm-8"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Scanner</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6 fs-sm-8"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Webcam</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item fs-6 fs-sm-8"
+                              href="items_page_folder/items_selection_page_sample.html"
+                              >Speakers / Headset</a
                             >
                           </li>
                         </ul>
@@ -471,300 +574,16 @@
         </div>
       </nav>
     </header>
-
-    <!-- Shopping List Section -->
-
-    <section>
-      <div id="shoppingPage">
-        <div id="shopping_list_full">
-          <div class="shopping_list_left_side">
-            <div class="breadcrumb_trail">
-              <a href="../index.html">Home</a> <span class="separator">›</span
-              ><span> Cancellation Policy</span>
-            </div>
-            <h1>Shopping List</h1>
-            <div class="shopping_cart_left_side">
-              <div class="d-flex">
-                <p class="px-4 pt-2">Product</p>
-                <div class="price_qty_cartTotal d-flex gap-5">
-                  <p class="px-4 pt-2">Price</p>
-                  <p class="px-1 pt-2">Quantity</p>
-                  <p class="px-5 pt-2">Cart Total</p>
-                </div>
-              </div>
-              <hr />
-              <div class="shopping_cart_middle_left">
-                <div class="badge_product_img">
-                  <button
-                    class="badge border-0 bg-danger mt-5 rounded-pill"
-                    style="height: 26px"
-                    id="removeProduct"
-                  >
-                    x
-                  </button>
-                  <img class="product_image" alt="" />
-                </div>
-                <div class="px-4 pt-4">
-                  <p class="product_name"></p>
-                  <p>⚲ SPC Available stock: <span class="available">0</span></p>
-                </div>
-                <div class="d-flex gap-5 pt-4">
-                  <p class="price">₱0.00</p>
-
-                  <div class="quantity_container">
-                    <input
-                      type="number"
-                      id="quantity"
-                      value="1"
-                      min="1"
-                      max="10"
-                      step="1"
-                    />
-                    <button
-                      class="badge border-0 bg-success rounded-pill"
-                      id="decreaseQty"
-                    >
-                      -
-                    </button>
-                    <button
-                      class="badge border-0 bg-success rounded-pill"
-                      id="increaseQty"
-                    >
-                      +
-                    </button>
-                  </div>
-                  <p class="cart_total"></p>
-                </div>
-              </div>
-              <hr />
-              <div class="shopping_cart_bottom_right">
-                <button class="continue_shopping">Continue Shopping</button>
-                <button class="clear_cart" id="clearCart">Clear Cart</button>
-              </div>
-            </div>
-          </div>
-          <div class="shopping_list_right_side">
-            <div class="shopping_cart_right_side">
-              <p>Add a note to your order</p>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                minlength="10"
-                maxlength="100"
-                placeholder="Type your message here..."
-              ></textarea>
-            </div>
-            <div class="cart_total_right_side">
-              <p>Cart Total:</p>
-              <p class="cartTotal">₱0.00</p>
-            </div>
-            <hr />
-            <div class="button_right_side">
-              <button>
-                🚚 <br />
-                Local Delivery
-              </button>
-              <button>
-                🏪 <br />
-                Store Pickup
-              </button>
-            </div>
-            <div class="proceed_to_checkout">
-              <button>Proceed to Checkout</button>
-            </div>
-          </div>
-        </div>
+    <!-- Header -->
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <span class="navbar-brand">📦 To Ship Orders</span>
       </div>
-    </section>
+    </nav>
 
-    <!-- <section>
-      <div class="shopping_cart_left_side" id="cartItemsContainer"></div>
-    </section> -->
-
-    <!-- Sign-up Popup -->
-    <section class="sign-up_overlay">
-      <div id="signUpPopup" class="sign-up_popup">
-        <div class="sign-up_popup-content">
-          <span class="sign-up_close-btn">&times;</span>
-
-          <form id="signupForm" action="/sign-up_submit" method="POST">
-            <img class="sign-up_logo" src="image/SPC-Logo.png" alt="" />
-            <h2 class="sign-up_h1">Sign-Up</h2>
-            <label>Name:</label><br />
-            <input
-              id="signup_name"
-              name="name"
-              placeholder="name"
-              required
-            /><br />
-
-            <label>Username:</label><br />
-            <input
-              id="signup_username"
-              name="username"
-              placeholder="username"
-              required
-            /><br />
-
-            <label>Email:</label><br />
-            <input
-              id="signup_email"
-              type="text"
-              name="email"
-              placeholder="email"
-              required
-            /><br />
-
-            <label>Password:</label><br />
-            <input
-              id="signup_password"
-              type="password"
-              name="password"
-              placeholder="******"
-              maxlength="6"
-              minlength="1"
-              required
-            /><br />
-
-            <input id="signup_submit" type="submit" value="Sign-Up" />
-            <br />
-            <p id="message_signup"></p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- Shopping Cart Floating  -->
-    <div id="main_body">
-      <div id="cart_window">
-        <div class="overlay"></div>
-        <div id="cart_box">
-          <div class="heading">
-            <div class="title_circle_container">
-              <div class="shopping_cart_circle">
-                <div>
-                  <h1>Shopping Cart</h1>
-                  <p>Quick Delivery</p>
-                </div>
-              </div>
-              <button class="close_button">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="50"
-                  height="50"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M17.6492 11.2501L12.7904 6.53852L13.8346 5.46167L20.5774 12.0001L13.8346 18.5385L12.7904 17.4617L17.6492 12.7501H3V11.2501H17.6492Z"
-                    fill="#080341"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div id="cart_items_container">
-              <span class="empty_cart_message"
-                >Your cart is empty.order an item.</span
-              >
-
-              <ul></ul>
-            </div>
-
-            <div id="cart_checkout">
-              <div id="total_checkout">
-                <p>total: <span id="cartTotal">0.00</span></p>
-
-                <p>
-                  Discount: <span style="color: red">-</span>
-                  <span style="color: red" id="cartLess"
-                    ><small>0.00</small></span
-                  >
-                </p>
-              </div>
-              <button id="checkout_button">Checkout</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Wishlist Cart Floating  -->
-    <div id="wishlist_cart">
-      <div id="wishlist_cart_window">
-        <div class="overlay"></div>
-        <div id="wishlist_cart_box">
-          <div class="heading">
-            <div class="title_circle_container">
-              <div class="wishlist_cart_circle">
-                <div>
-                  <h1>Wishlist Cart</h1>
-                  <p>Quick Delivery</p>
-                </div>
-              </div>
-              <button class="wishlist_close_button">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="50"
-                  height="50"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M17.6492 11.2501L12.7904 6.53852L13.8346 5.46167L20.5774 12.0001L13.8346 18.5385L12.7904 17.4617L17.6492 12.7501H3V11.2501H17.6492Z"
-                    fill="#080341"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div id="wishlist_cart_items_container">
-              <span class="wishlist_empty_cart_message"
-                >Your cart is empty.order an item.</span
-              >
-              <div class="white_fade_overflow top"></div>
-              <ul></ul>
-              <div class="white_fade_overflow bottom"></div>
-            </div>
-
-            <div id="wishlist_cart_checkout">
-              <div id="wishlist_total_checkout">
-                <p>total: <span class="price">0.00</span></p>
-
-                <p>
-                  Discount: <span style="color: red">-</span>
-                  <span style="color: red" class="product_save"
-                    ><small>0.00</small></span
-                  >
-                </p>
-              </div>
-              <button id="wishlist_cart_checkout_button">Checkout</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Chatbox -->
-    <div class="chatbox">
-      <div class="chat-header">Customer Service</div>
-      <div class="chat-body" id="chatBody">
-        <div class="bot-message">
-          <img src="image/SPC-Logo.png" alt="" /> Hi! How can we help you today?
-        </div>
-      </div>
-      <div class="chat-input">
-        <input type="text" id="userInput" placeholder="Type your message..." />
-        <button title="send" onclick="sendMessage()">Send</button>
-      </div>
-    </div>
-
-    <!-- Floating chat button -->
-    <div class="chat-toggle" id="chatToggle">
-      <img src="icons/message.png" alt="" />
+    <!-- Main Content -->
+    <div class="container my-4" id="toShipOrders">
+      <p class="no_to_ship">No to ship order</p>
     </div>
 
     <!-- Footer -->
@@ -780,7 +599,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/cancellation_policy.html"
+                  href="../items_page_folder/footer_section/cancellation_policy.html"
                   title="Cancellation Policy"
                   >Cancellation Policy</a
                 >
@@ -788,7 +607,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/delivery.html"
+                  href="../items_page_folder/footer_section/delivery.html"
                   title="Deliver"
                   >Delivery</a
                 >
@@ -796,7 +615,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/order_payment.html"
+                  href="../items_page_folder/footer_section/order_payment.html"
                   title="Order Payment"
                   >Order And Payments</a
                 >
@@ -804,7 +623,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/payment_faqs.html"
+                  href="../items_page_folder/footer_section/payment_faqs.html"
                   title="Payment Faqs"
                   >Payment FAQs</a
                 >
@@ -812,7 +631,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/privacy_policy.html"
+                  href="../items_page_folder/footer_section/privacy_policy.html"
                   title="Privacy Policy"
                   >Privacy Policy</a
                 >
@@ -820,7 +639,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/return_refunds.html"
+                  href="../items_page_folder/footer_section/return_refunds.html"
                   title="Return Refunds"
                   >Return And Refunds</a
                 >
@@ -828,7 +647,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/service_area_directory.html"
+                  href="../items_page_folder/footer_section/service_area_directory.html"
                   title="Service Area Directory"
                   >Service Area Directory</a
                 >
@@ -836,7 +655,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/terms_conditions.html"
+                  href="../items_page_folder/footer_section/terms_conditions.html"
                   title="Terms Condition"
                   >Terms And Conditions</a
                 >
@@ -844,7 +663,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/warranty_information.html"
+                  href="../items_page_folder/footer_section/warranty_information.html"
                   title="Warranty Information"
                   >Warranty Information</a
                 >
@@ -852,7 +671,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/warranty_policy.html"
+                  href="../items_page_folder/footer_section/warranty_policy.html"
                   title="Warranty Policy"
                   >Warranty Policy</a
                 >
@@ -867,7 +686,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/careers.html"
+                  href="../items_page_folder/footer_section/careers.html"
                   title="Careers"
                   >Careers</a
                 >
@@ -875,7 +694,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/contact_us.html"
+                  href="../items_page_folder/footer_section/contact_us.html"
                   title="Contact Us"
                   >Contact Us</a
                 >
@@ -883,7 +702,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/FAQS.html"
+                  href="../items_page_folder/footer_section/FAQS.html"
                   title="FAQS"
                   >FAQs</a
                 >
@@ -891,7 +710,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/news_articles.html"
+                  href="../items_page_folder/footer_section/news_articles.html"
                   title="News Articles"
                   >News And Articles</a
                 >
@@ -899,7 +718,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/our_company.html"
+                  href="../items_page_folder/footer_section/our_company.html"
                   title="Our Company"
                   >Our Company</a
                 >
@@ -907,7 +726,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/reviews.html"
+                  href="../items_page_folder/footer_section/reviews.html"
                   title="Reviews"
                   >Reviews</a
                 >
@@ -915,7 +734,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/store_location.html"
+                  href="../items_page_folder/footer_section/store_location.html"
                   title="Store Location"
                   >Store Locations</a
                 >
@@ -930,7 +749,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/spc_corporate.html"
+                  href="../items_page_folder/footer_section/spc_corporate.html"
                   title="SPC Corporate"
                   >SPC Corporate</a
                 >
@@ -938,7 +757,7 @@
               <li>
                 <a
                   class="footer_link"
-                  href="items_page_folder/footer_section/spc_community.html"
+                  href="../items_page_folder/footer_section/spc_community.html"
                   title="SPC Community"
                   >SPC Community</a
                 >
@@ -949,28 +768,44 @@
           </div>
           <div class="col-md-3 col-sm-3 mb-2">
             <ul class="footer-links">
-              <div class="footer_end">
-                <img class="footer_logo" src="image/SPC-Logo.png" alt="" />
-                <h4>FOLLOW US</h4>
-                <div>
-                  <img
-                    class="footer_bw_logo"
-                    src="black_white_logo/facebook_logo_b_w.png"
-                    alt=""
-                  />
-                  <img
-                    class="footer_bw_logo"
-                    src="black_white_logo/instagram_logo_b_w.png"
-                    alt=""
-                  />
-                  <img
-                    class="footer_bw_logo"
-                    src="black_white_logo/viber_icon_b_w.png"
-                    alt=""
-                  />
-                </div>
+              <div class="footer-links_end">
+                <img class="footer_logo" src="../image/SPC-Logo.png" alt="" />
               </div>
             </ul>
+          </div>
+          <hr class="footer_below_hr" />
+          <div>
+            <div class="footer_below">
+              <div class="payment_option_flex">
+                <img src="../image/cash-on-delivery.jpg" alt="" />
+                <img src="../image/mastercard_logo.png" alt="" />
+                <img src="../image/visa_logo.jpg" alt="" />
+                <img src="../image/711_logo.png" alt="" />
+                <img src="../image/billease.png" alt="" />
+                <img src="../image/gcash_logo.jpeg" alt="" />
+                <img src="../image/grab_logo.png" alt="" />
+              </div>
+              <div>
+                <img
+                  class="footer_bw_logo"
+                  src="../black_white_logo/facebook_logo_b_w.png"
+                  alt=""
+                />
+                <img
+                  class="footer_bw_logo"
+                  src="../black_white_logo/instagram_logo_b_w.png"
+                  alt=""
+                />
+                <img
+                  class="footer_bw_logo"
+                  src="../black_white_logo/viber_icon_b_w.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <p class="all_right_reserved">
+              © 2025-2026 SPC Computer Hardware. All Rights Reserved.
+            </p>
           </div>
         </div>
       </div>
@@ -1004,7 +839,34 @@
     <script src="../js_folder/navbar.js"></script>
     <script src="../js_folder/buy_now.js"></script>
     <script src="../js_folder/shopping_cart.js"></script>
-
+    <script src="../js_folder/carts_container.js"></script>
     <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("toShipOrders");
+
+        console.log(container);
+
+        const orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+        localStorage.setItem("orders", JSON.stringify([order]));
+
+        no_shipping.innerHTML = "";
+
+        orders.forEach((order, index) => {
+          container.innerHTML += `
+      <div class="card p-3 mb-3">
+        <h6>Order #${index + 1}</h6>
+        <p>${order.name}</p>
+        <p>${order.total}</p>
+      </div>
+    `;
+        });
+      });
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>
