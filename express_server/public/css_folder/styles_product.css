@@ -318,3 +318,30 @@ li {
     font-size: medium;
   }
 }
+
+/* To Ship CSS */
+
+.no_to_ship {
+  color: red;
+  margin-left: 50%;
+  font-weight: bold;
+}
+
+.order-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.status-badge {
+  background-color: #ffc107;
+  color: #000;
+  font-weight: 600;
+}
+
+.product-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}

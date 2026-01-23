@@ -151,13 +151,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function renderOrders() {
   const container = document.getElementById("toShipOrders");
+  const noOrdersMessage = container.querySelector(".no_to_ship");
   let orders = JSON.parse(localStorage.getItem("orders")) || [];
 
   container.innerHTML = "";
 
   if (orders.length === 0) {
-    container.innerHTML = "<p>No orders to ship 📦</p>";
-    return;
+    noOrdersMessage.style.display = "block";
+  } else {
+    noOrdersMessage.style.display = "none";
   }
 
   orders.forEach((order, index) => {
