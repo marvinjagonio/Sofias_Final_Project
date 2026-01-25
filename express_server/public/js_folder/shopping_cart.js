@@ -58,12 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   proceedToCheckoutBtn.addEventListener("click", () => {
     const product = {
-      name: document.querySelector(".product_name").textContent,
-      price: document.querySelector(".price").textContent,
-      quantity: document.getElementById("quantity").value,
-      total: document.querySelector(".cart_total").textContent,
-      image: document.querySelector(".product_image").src,
-      note: document.getElementById("message").value,
+      name: productCard.dataset.name,
+      price: Number(productCard.dataset.price),
+      image: productCard.dataset.image, // ✅ FIX
+      quantity: 1,
+      total: `₱${Number(productCard.dataset.price).toLocaleString()}`,
       status: "To Ship",
     };
 
@@ -82,10 +81,10 @@ document.addEventListener("DOMContentLoaded", () => {
 //  To Ship Item
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderOrders();
+  toShipRenderOrders();
 });
 
-function renderOrders() {
+function toShipRenderOrders() {
   const container = document.getElementById("toShipOrders");
   const noOrdersMessage = document.querySelector(".no_to_ship");
   const orders = JSON.parse(localStorage.getItem("orders")) || [];
@@ -141,5 +140,5 @@ function cancelOrder(realIndex) {
   orders[realIndex].status = "Cancelled";
 
   localStorage.setItem("orders", JSON.stringify(orders));
-  renderOrders();
+  toShipRenderOrders();
 }

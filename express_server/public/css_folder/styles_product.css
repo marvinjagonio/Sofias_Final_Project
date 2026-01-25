@@ -350,3 +350,16 @@ li {
   object-fit: cover;
   border-radius: 8px;
 }
+
+/* Shopping List CSS */
+
+.empty_cart {
+  color: red;
+  margin-left: 50%;
+  font-weight: bold;
+  display: none;
+}
+
+.empty_cart.active {
+  display: block;
+}

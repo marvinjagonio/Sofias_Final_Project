@@ -484,62 +484,26 @@
             </div>
             <h1>Shopping List</h1>
             <div class="shopping_cart_left_side">
-              <div class="d-flex">
-                <p class="px-4 pt-2">Product</p>
-                <div class="price_qty_cartTotal d-flex gap-5">
-                  <p class="px-4 pt-2">Price</p>
-                  <p class="px-1 pt-2">Quantity</p>
-                  <p class="px-5 pt-2">Cart Total</p>
-                </div>
-              </div>
-              <hr />
-              <div class="shopping_cart_middle_left">
-                <div class="badge_product_img">
-                  <button
-                    class="badge border-0 bg-danger mt-5 rounded-pill"
-                    style="height: 26px"
-                    id="removeProduct"
-                  >
-                    x
-                  </button>
-                  <img class="product_image" alt="" />
-                </div>
-                <div class="px-4 pt-4">
-                  <p class="product_name"></p>
-                  <p>⚲ SPC Available stock: <span class="available">0</span></p>
-                </div>
-                <div class="d-flex gap-5 pt-4">
-                  <p class="price">₱0.00</p>
-
-                  <div class="quantity_container">
-                    <input
-                      type="number"
-                      id="quantity"
-                      value="1"
-                      min="1"
-                      max="10"
-                      step="1"
-                    />
-                    <button
-                      class="badge border-0 bg-success rounded-pill"
-                      id="decreaseQty"
-                    >
-                      -
-                    </button>
-                    <button
-                      class="badge border-0 bg-success rounded-pill"
-                      id="increaseQty"
-                    >
-                      +
-                    </button>
+              <div class="cart_item">
+                <div class="cart_header">
+                  <div class="d-flex">
+                    <p class="px-4 pt-2">Product</p>
+                    <div class="price_qty_cartTotal d-flex gap-5">
+                      <p class="px-4 pt-2">Price</p>
+                      <p class="px-1 pt-2">Quantity</p>
+                      <p class="px-5 pt-2">Cart Total</p>
+                    </div>
                   </div>
-                  <p class="cart_total"></p>
+                  <hr />
                 </div>
-              </div>
-              <hr />
-              <div class="shopping_cart_bottom_right">
-                <button class="continue_shopping">Continue Shopping</button>
-                <button class="clear_cart" id="clearCart">Clear Cart</button>
+                <div class="container my-4" id="cartItems"></div>
+                <div><p class="empty_cart">Empty Cart</p></div>
+
+                <hr />
+                <div class="shopping_cart_bottom_right">
+                  <button class="continue_shopping">Continue Shopping</button>
+                  <button class="clear_cart" id="clearCart">Clear Cart</button>
+                </div>
               </div>
             </div>
           </div>
@@ -758,7 +722,7 @@
       </div>
     </div>
 
-    <!-- Floating chat button -->
+    <!-- Floating chat button
     <div class="chat-toggle" id="chatToggle">
       <img src="icons/message.png" alt="" />
     </div>
@@ -1000,6 +964,54 @@
     <script src="../js_folder/navbar.js"></script>
     <script src="../js_folder/buy_now.js"></script>
     <script src="../js_folder/shopping_cart.js"></script>
+    <script>
+      addProduct({
+        name: "Gaming Mouse",
+        price: 1500,
+        stock: 12,
+        image: "../image/mouse.jpg",
+      });
+
+      addProduct({
+        name: "Mechanical Keyboard",
+        price: 3500,
+        stock: 8,
+        image: "../image/keyboard.jpg",
+      });
+      const cartItems = document.getElementById("cartItems");
+
+      function addProduct(product) {
+        const item = document.createElement("div");
+        item.classList.add("cart_item");
+
+        item.innerHTML = `
+    <div class="badge_product_img">
+      <button class="badge border-0 bg-danger mt-5 rounded-pill removeProduct">x</button>
+      <img class="product_image" src="${product.image}" alt="">
+    </div>
+
+    <div class="px-4 pt-4">
+      <p class="product_name">${product.name}</p>
+      <p>⚲ SPC Available stock: <span class="available">${product.stock}</span></p>
+    </div>
+
+    <div class="d-flex gap-5 pt-4">
+      <p class="price">₱${product.price}</p>
+
+      <div class="quantity_container">
+        <input type="number" class="quantity" value="1" min="1" max="10">
+        <button class="badge border-0 bg-success rounded-pill decreaseQty">-</button>
+        <button class="badge border-0 bg-success rounded-pill increaseQty">+</button>
+      </div>
+
+      <p class="cart_total">₱${product.price}</p>
+    </div>
+    <hr>
+  `;
+
+        cartItems.appendChild(item);
+      }
+    </script>
 
     <script type="module" src="/src/main.jsx"></script>
   </body>
