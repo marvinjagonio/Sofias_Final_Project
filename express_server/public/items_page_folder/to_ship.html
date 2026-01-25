@@ -285,7 +285,9 @@
             <ul
               class="navbar-nav nav-link2 w-100 gap-lg-5 gap-md-3 flex-md-row flex-column justify-content-center"
             >
-              <li class="#"><a class="nav-link" href="#">Home</a></li>
+              <li class="#">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
 
               <li class="nav-item dropdown">
                 <a
@@ -561,7 +563,7 @@
     <!-- Main Content -->
     <div class="container my-4" id="toShipOrders"></div>
 
-    <div><p class="no_to_ship">No to ship order</p></div>
+    <div><p class="no_to_ship">No orders to ship 📦</p></div>
 
     <!-- Footer -->
 
@@ -818,30 +820,6 @@
     <script src="../js_folder/shopping_cart.js"></script>
     <script src="../js_folder/carts_container.js"></script>
     <script type="module" src="/src/main.jsx"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const container = document.getElementById("toShipOrders");
-
-        console.log(container);
-
-        const orders = JSON.parse(localStorage.getItem("orders")) || [];
-
-        localStorage.setItem("orders", JSON.stringify([order]));
-
-        no_shipping.innerHTML = "";
-
-        orders.forEach((order, index) => {
-          container.innerHTML += `
-      <div class="card p-3 mb-3">
-        <h6>Order #${index + 1}</h6>
-        <p>${order.name}</p>
-        <p>${order.total}</p>
-      </div>
-    `;
-        });
-      });
-    </script>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

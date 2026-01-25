@@ -325,6 +325,11 @@ li {
   color: red;
   margin-left: 50%;
   font-weight: bold;
+  display: none;
+}
+
+.no_to_ship.active {
+  display: block;
 }
 
 .order-card {

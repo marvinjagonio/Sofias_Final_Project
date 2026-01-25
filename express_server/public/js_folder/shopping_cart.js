@@ -74,76 +74,12 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("orders", JSON.stringify(orders));
 
     window.location.href = "to_ship.html";
-    // const totalPrice = cartTotalRightSide.textContent;
-    // alert(`Checkout Order\nTotal: ${totalPrice}`);
-    // cartItem.remove();
-    // cartTotalRightSide.textContent = "₱0.00";
-    // window.location.href = "../index.html";
   });
 
   updateTotals();
-
-  function renderCart() {
-    container.innerHTML = "";
-
-    cart.forEach((product, index) => {
-      const price = Number(product.price);
-      const total = price * product.quantity;
-
-      container.innerHTML += `
-      <div class="cart_item" data-index="${index}">
-        <p>${product.name}</p>
-
-        <p class="price">${product.price}</p>
-
-        <button class="decrease">-</button>
-        <span class="qty">${product.quantity}</span>
-        <button class="increase">+</button>
-
-        <p class="item_total">${peso(total)}</p>
-        <button class="remove">Remove</button>
-        <hr>
-      </div>
-    `;
-    });
-
-    updateGrandTotal();
-  }
-
-  function updateGrandTotal() {
-    let grandTotal = 0;
-
-    document.querySelectorAll(".cart_total").forEach((el) => {
-      grandTotal += parseFloat(el.textContent.replace(/[₱,]/g, ""));
-    });
-
-    cartTotalRightSide.textContent = `₱${grandTotal.toFixed(2)}`;
-  }
-
-  container.addEventListener("click", (e) => {
-    const item = e.target.closest(".cart_item");
-    if (!item) return;
-
-    const index = item.dataset.index;
-
-    if (e.target.classList.contains("increase")) {
-      cart[index].quantity++;
-    }
-
-    if (e.target.classList.contains("decrease")) {
-      if (cart[index].quantity > 1) cart[index].quantity--;
-    }
-
-    if (e.target.classList.contains("remove")) {
-      cart.splice(index, 1);
-    }
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-    renderCart();
-  });
-
-  renderCart();
 });
+
+//  To Ship Item
 
 document.addEventListener("DOMContentLoaded", () => {
   renderOrders();
@@ -151,24 +87,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function renderOrders() {
   const container = document.getElementById("toShipOrders");
-  const noOrdersMessage = container.querySelector(".no_to_ship");
-  let orders = JSON.parse(localStorage.getItem("orders")) || [];
+  const noOrdersMessage = document.querySelector(".no_to_ship");
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+  if (!container || !noOrdersMessage) return;
 
   container.innerHTML = "";
 
-  if (orders.length === 0) {
-    noOrdersMessage.style.display = "block";
+  const toShipOrders = orders
+    .map((order, index) => ({ ...order, index }))
+    .filter((order) => order.status === "To Ship");
+
+  if (toShipOrders.length === 0) {
+    noOrdersMessage.classList.add("active");
+    return;
   } else {
-    noOrdersMessage.style.display = "none";
+    noOrdersMessage.classList.remove("active");
   }
 
-  orders.forEach((order, index) => {
-    if (order.status !== "To Ship") return;
-
+  toShipOrders.forEach((order, displayIndex) => {
     container.innerHTML += `
       <div class="card mb-3 p-3">
         <div class="d-flex justify-content-between">
-          <strong>Order #${index + 1}</strong>
+          <strong>Order #${displayIndex + 1}</strong>
           <span class="badge bg-warning">${order.status}</span>
         </div>
 
@@ -184,7 +125,8 @@ function renderOrders() {
         <small class="text-muted">Note: ${order.note || "None"}</small>
 
         <div class="mt-3 text-end">
-          <button class="btn btn-danger btn-sm" onclick="cancelOrder(${index})">
+          <button class="btn btn-danger btn-sm"
+            onclick="cancelOrder(${order.index})">
             Cancel Order
           </button>
         </div>
@@ -193,10 +135,10 @@ function renderOrders() {
   });
 }
 
-function cancelOrder(index) {
-  let orders = JSON.parse(localStorage.getItem("orders")) || [];
+function cancelOrder(realIndex) {
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
 
-  orders[index].status = "Cancelled";
+  orders[realIndex].status = "Cancelled";
 
   localStorage.setItem("orders", JSON.stringify(orders));
   renderOrders();
