@@ -67,7 +67,7 @@ window.addEventListener("load", function () {
       },
       1024: {
         slidesPerView: 5,
-        spaceBetween: 10,
+        spaceBetween: 11.5,
       },
     },
     on: {
@@ -113,7 +113,7 @@ window.addEventListener("load", function () {
       },
       1024: {
         slidesPerView: 5,
-        spaceBetween: 10,
+        spaceBetween: 11.5,
       },
     },
     on: {
@@ -137,7 +137,7 @@ window.addEventListener("load", function () {
 window.addEventListener("load", function () {
   const featured_products_swiper = new Swiper(".featured_products_swiper", {
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 12,
     navigation: {
       nextEl: ".featured_products_next",
       prevEl: ".featured_products_prev",
@@ -157,7 +157,7 @@ window.addEventListener("load", function () {
       },
       1024: {
         slidesPerView: 5,
-        spaceBetween: 10,
+        spaceBetween: 11.5,
       },
     },
 
@@ -371,7 +371,7 @@ window.addEventListener("load", function () {
       },
       1024: {
         slidesPerView: 5,
-        spaceBetween: 10,
+        spaceBetween: 11.5,
       },
     },
     on: {
