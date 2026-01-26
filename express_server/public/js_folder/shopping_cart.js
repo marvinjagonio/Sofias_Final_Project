@@ -1,83 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const cartItem = document.querySelector(".shopping_cart_middle_left");
-  const quantityInput = cartItem.querySelector("input[type='number']");
-  const priceElement = cartItem.querySelector(".price");
-  const cartTotalElement = cartItem.querySelector(".cart_total");
-  const clearCartBtn = document.querySelector(".clear_cart");
-  const proceedToCheckoutBtn = document.querySelector(
-    ".proceed_to_checkout button",
-  );
-  const cartTotalRightSide = document.querySelector(
-    ".cart_total_right_side p:last-child",
-  );
-  const rawPrice = Number(priceElement.textContent.replace(/[^\d.]/g, ""));
-
-  priceElement.textContent = rawPrice.toLocaleString("en-PH", {
-    style: "currency",
-    currency: "PHP",
-    minimumFractionDigits: 0,
-  });
-
-  const continueBtn = document.querySelector(".continue_shopping");
-
-  if (continueBtn) {
-    continueBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      console.log("Continue Shopping clicked");
-
-      if (window.history.length > 1) {
-        window.history.back();
-      } else {
-        window.location.href = "../index.html";
-      }
-    });
-  }
-
-  function updateTotals() {
-    const qty = parseInt(quantityInput.value, 10);
-    const subtotal = price * qty;
-    cartTotalElement.textContent = `₱${subtotal.toLocaleString()}`;
-    cartTotalRightSide.textContent = `₱${subtotal.toLocaleString()}`;
-  }
-
-  window.changeValue = (change) => {
-    let qty = parseInt(quantityInput.value, 10);
-    qty += change;
-    if (qty < parseInt(quantityInput.min)) qty = parseInt(quantityInput.min);
-    if (qty > parseInt(quantityInput.max)) qty = parseInt(quantityInput.max);
-    quantityInput.value = qty;
-    updateTotals();
-  };
-
-  quantityInput.addEventListener("input", updateTotals);
-
-  clearCartBtn.addEventListener("click", () => {
-    cartItem.remove();
-    cartTotalRightSide.textContent = "₱0.00";
-  });
-
-  proceedToCheckoutBtn.addEventListener("click", () => {
-    const product = {
-      name: productCard.dataset.name,
-      price: Number(productCard.dataset.price),
-      image: productCard.dataset.image,
-      quantity: 1,
-      total: `₱${Number(productCard.dataset.price).toLocaleString()}`,
-      status: "To Ship",
-    };
-
-    let orders = JSON.parse(localStorage.getItem("orders")) || [];
-
-    orders.push(product);
-
-    localStorage.setItem("orders", JSON.stringify(orders));
-
-    window.location.href = "to_ship.html";
-  });
-
-  updateTotals();
-});
-
 //  To Ship Item
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -124,18 +44,27 @@ function toShipRenderOrders() {
         <small class="text-muted">Note: ${order.note || "None"}</small>
 
         <div class="mt-3 text-end">
-          <button class="btn btn-danger btn-sm"
-            onclick="cancelOrder(${order.index})">
-            Cancel Order
-          </button>
+          <button class="btn btn-danger btn-sm" data-index="${order.index}">
+  Cancel Order
+</button>
         </div>
       </div>
     `;
   });
 }
 
+document.getElementById("toShipOrders").addEventListener("click", (e) => {
+  const btn = e.target.closest(".btn-danger");
+  if (!btn) return;
+
+  const index = Number(btn.dataset.index);
+  cancelOrder(index);
+});
+
 function cancelOrder(realIndex) {
   const orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+  if (!orders[realIndex]) return;
 
   orders[realIndex].status = "Cancelled";
 
