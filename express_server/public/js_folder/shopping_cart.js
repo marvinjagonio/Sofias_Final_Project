@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const product = {
       name: productCard.dataset.name,
       price: Number(productCard.dataset.price),
-      image: productCard.dataset.image, // ✅ FIX
+      image: productCard.dataset.image,
       quantity: 1,
       total: `₱${Number(productCard.dataset.price).toLocaleString()}`,
       status: "To Ship",
