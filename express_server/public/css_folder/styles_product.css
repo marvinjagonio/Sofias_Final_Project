@@ -4,6 +4,10 @@ li {
   list-style: none;
 }
 
+.product a {
+  color: #333 !important;
+}
+
 .fade-in {
   animation: fadeIn 0.4s ease forwards;
 }
@@ -102,7 +106,8 @@ li {
 
 .percent_off {
   font-size: 16px;
-  color: red;
+  color: rgb(255, 90, 90);
+  text-decoration: line-through;
 }
 
 .percent_off,
