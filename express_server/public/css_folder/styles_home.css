@@ -75,7 +75,7 @@ body.no-scroll {
 
 /* -------------------- Slider Navigation Buttons -------------------- */
 
-.slider-btn {
+/* .slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -98,8 +98,8 @@ body.no-scroll {
 }
 
 .slider-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
+  background: rgba(0, 0, 0, 0.567);
+} */
 
 /* -------------------- Loptop and Desktop Section --------------------*/
 
@@ -269,6 +269,7 @@ article.desktop_font h4 {
   max-width: 1200px;
   margin: 20px auto;
   padding: 0 5px !important;
+  padding-bottom: 40px !important;
 }
 
 .top_sellers_swiper-wrapper,
