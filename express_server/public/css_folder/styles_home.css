@@ -73,34 +73,6 @@ body.no-scroll {
   }
 }
 
-/* -------------------- Slider Navigation Buttons -------------------- */
-
-/* .slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 1;
-  border-radius: 50%;
-  transition: background 0.3s ease;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-.slider-btn:hover {
-  background: rgba(0, 0, 0, 0.567);
-} */
-
 /* -------------------- Loptop and Desktop Section --------------------*/
 
 #laptop_desktop_section {

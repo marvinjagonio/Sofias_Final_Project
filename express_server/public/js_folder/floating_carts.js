@@ -79,13 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
       addItem.querySelector(".product_name")?.textContent || "Unnamed";
     const price =
       parseFloat(
-        addItem.querySelector(".price")?.textContent.replace(/[^0-9.]/g, "")
+        addItem.querySelector(".price")?.textContent.replace(/[^0-9.]/g, ""),
       ) || 0;
     const discount =
       parseFloat(
         addItem
           .querySelector(".product_save")
-          ?.textContent.replace(/[^0-9.]/g, "")
+          ?.textContent.replace(/[^0-9.]/g, ""),
       ) || 0;
 
     const userCart = document.querySelector("#cart_items_container ul");
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     setTimeout(() => {
       alert(
-        `Proceeding to checkout with total: ₱${total}\nDiscount: ₱${discount}`
+        `Proceeding to checkout with total: ₱${total}\nDiscount: ₱${discount}`,
       );
       emptyCartMessage.classList.add("active");
       userCart.innerHTML = "";
@@ -202,22 +202,22 @@ document.addEventListener("DOMContentLoaded", () => {
   let wishlistCartCount = document.querySelectorAll(".wishlist_item_1").length;
   const wishlistCartButtons = document.querySelectorAll(".wishlist");
   const wishlistCartCountDisplay = document.querySelector(
-    "#wishlist-cart-count"
+    "#wishlist-cart-count",
   );
   const wishlistUserCart = document.querySelector(
-    "#wishlist_cart_items_container ul"
+    "#wishlist_cart_items_container ul",
   );
   const wishlistCartBadge = document.getElementById("wishlistCartCount");
 
   const wishlistTotalElement = document.querySelector(
-    "#wishlist_total_checkout .price"
+    "#wishlist_total_checkout .price",
   );
   const wishlistLessElement = document.querySelector(
-    "#wishlist_total_checkout .product_save"
+    "#wishlist_total_checkout .product_save",
   );
 
   const wishlistMessage = document.querySelector(
-    ".wishlist_empty_cart_message"
+    ".wishlist_empty_cart_message",
   );
 
   const wishlistOpenBtn = document.querySelector(".wishlist_cart_button");
@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const items = document.querySelectorAll(".wishlist_item_1 .price");
     const discounts = document.querySelectorAll(
-      ".wishlist_item_1 .percent_off"
+      ".wishlist_item_1 .percent_off",
     );
 
     items.forEach((priceElement) => {
@@ -261,7 +261,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.addEventListener("click", (e) => {
-    const removeBtn = e.target.closest(".wishlist_remove_button");
+    const removeBtn = e.target.closest(
+      " .wishlist_cart_item_image .wishlist_remove_button",
+    );
     if (removeBtn) {
       setTimeout(calculateWishlistTotal, 100);
     }
@@ -350,7 +352,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   wishlistUserCart.addEventListener("click", (e) => {
-    let wishlistTargetElement = e.target.closest(".wishlist_remove_button");
+    let wishlistTargetElement = e.target.closest(
+      ".wishlist_cart_item_image .wishlist_remove_button",
+    );
     if (wishlistTargetElement) {
       wishlistCartIconChildCount--;
       wishlistCartBadge.textContent = wishlistCartIconChildCount;
@@ -358,7 +362,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   wishlistUserCart.addEventListener("click", (e) => {
-    const targetElement = e.target.closest(".wishlist_remove_button");
+    const targetElement = e.target.closest(
+      ".wishlist_cart_item_image .wishlist_remove_button",
+    );
 
     if (targetElement) {
       removeWishlistItem(targetElement);
@@ -397,14 +403,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const price =
       parseFloat(
-        addItem.querySelector(".price")?.textContent.replace(/[^0-9.]/g, "")
+        addItem.querySelector(".price")?.textContent.replace(/[^0-9.]/g, ""),
       ) || 0;
 
     const discount =
       parseFloat(
         addItem
           .querySelector(".product_save")
-          ?.textContent.replace(/[^0-9.]/g, "")
+          ?.textContent.replace(/[^0-9.]/g, ""),
       ) || 0;
 
     const newItem = `
@@ -412,7 +418,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="wishlist_cart_item">
         <div class="wishlist_cart_item_image">
           <img src="${addItemImage}" alt="${elementName}" />
-          <button class="wishlist_remove_button">✖</button>
+          <button class="wishlist_cart_item_image wishlist_remove_button"> <svg width="191px" height="191px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ff0000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8.00386 9.41816C7.61333 9.02763 7.61334 8.39447 8.00386 8.00395C8.39438 7.61342 9.02755 7.61342 9.41807 8.00395L12.0057 10.5916L14.5907 8.00657C14.9813 7.61605 15.6144 7.61605 16.0049 8.00657C16.3955 8.3971 16.3955 9.03026 16.0049 9.42079L13.4199 12.0058L16.0039 14.5897C16.3944 14.9803 16.3944 15.6134 16.0039 16.0039C15.6133 16.3945 14.9802 16.3945 14.5896 16.0039L12.0057 13.42L9.42097 16.0048C9.03045 16.3953 8.39728 16.3953 8.00676 16.0048C7.61624 15.6142 7.61624 14.9811 8.00676 14.5905L10.5915 12.0058L8.00386 9.41816Z" fill="#ff0000"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z" fill="#ff0000"></path> </g></svg></button>
         </div>
 
         <div class="wishlist_cart_item_desc">
