@@ -1,3 +1,5 @@
+/* Breadcrumbs Section */
+
 .breadcrumb_trail {
   font-size: 15px;
   color: #333;
@@ -40,6 +42,8 @@
   }
 }
 
+/* Bestselling Drop-down Section */
+
 .bestselling-dropdown-content {
   display: none;
   position: absolute;
@@ -64,6 +68,108 @@
 
 .bestselling_dropdown:hover .bestselling-dropdown-content {
   display: block;
+}
+
+/* Left Side Section */
+
+/* Container for left section */
+.left_side_section {
+  width: fit-content;
+  padding: 20px;
+  margin-bottom: 30px !important;
+  background-color: #f8f9fa;
+  font-family: "Arial", sans-serif;
+  position: sticky;
+  top: 20px;
+}
+
+/* Breadcrumb trail */
+.breadcrumb_trail {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+.breadcrumb_trail a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+.breadcrumb_trail a:hover {
+  text-decoration: underline;
+}
+
+/* Headings */
+.left_side_section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+/* Price filter */
+.price_dropdown {
+  margin-bottom: 20px;
+}
+.price_dropdown label {
+  margin: 0 5px;
+}
+.price_inputs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+.price_inputs input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+.price_inputs button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.price_inputs button:hover {
+  background-color: #0b5ed7;
+}
+
+.filters {
+  margin-top: 20px;
+}
+
+.filters label {
+  font-weight: 500;
+  margin-right: 10px;
+}
+.filters div {
+  margin-bottom: 10px;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #0d6efd;
+  cursor: pointer;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.star_rating {
+  color: #ffc107;
+  font-size: 1rem;
+}
+
+.left_side_section hr {
+  border: 0;
+  border-top: 1px solid #000000;
+
+  width: 100%;
 }
 
 .price_inputs input {
@@ -615,11 +721,6 @@
 @media (min-width: 1400px) {
   .left_side_section {
     width: 20% !important;
-  }
-
-  .filters hr,
-  .left_side_section hr {
-    width: 120% !important;
   }
 
   .checkbox {

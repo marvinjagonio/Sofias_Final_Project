@@ -84,16 +84,34 @@ html {
   width: 500px;
 }
 
-#scrolling_text {
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  position: fixed;
+/* Scrolling Text Section */
+
+/* Container */
+.scrolling-container {
   width: 100%;
-  font-weight: bold;
-  font-size: small;
-  color: #464646;
+  overflow: hidden;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  background-color: #ffc107;
+  padding: 10px 0;
+  z-index: 9999;
+}
+
+/* Text */
+.scrolling-text {
+  display: inline-block;
+  animation: scroll-text 20s linear infinite;
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .dropdown {
