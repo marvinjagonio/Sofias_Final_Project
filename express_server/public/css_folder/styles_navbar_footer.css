@@ -176,7 +176,7 @@ html {
 
 @media (max-width: 576px) {
   #navbar1 {
-    width: 50% !important;
+    width: 100%;
 
     padding: 10px;
   }
