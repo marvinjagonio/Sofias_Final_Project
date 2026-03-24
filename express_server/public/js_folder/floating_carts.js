@@ -50,11 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function cartUpdateMessage() {
     const total = parsePrice(cartTotalElement.textContent);
 
-    if (cartIconCount <= 0 || total <= 0) {
+    if (cartIconCount <= 0 && total <= 0) {
       setTimeout(() => {
         emptyCartMessage.classList.add("active");
         setTimeout(() => {
           closeCartView();
+          document.body.classList.remove("no-scroll");
         }, 1500);
       }, 50);
     } else {
@@ -138,6 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function closeCartView() {
     document.querySelector("#cart_window").classList.add("hide");
+    document.querySelector("#cart_window").classList.remove("active");
   }
 
   // --- Checkout ---
@@ -293,11 +295,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateWishlistMessage() {
     const wishlistTotal = parseFloat(wishlistTotalElement.textContent);
 
-    if (wishlistCartIconChildCount <= 0 || wishlistTotal <= 0) {
+    if (wishlistCartIconChildCount <= 0 && wishlistTotal <= 0) {
       setTimeout(() => {
         wishlistMessage.classList.add("active");
         setTimeout(() => {
           wishlistCloseCartView();
+          document.body.classList.remove("no-scroll");
         }, 1500);
       }, 50);
     } else {
@@ -388,6 +391,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function wishlistCloseCartView() {
     document.querySelector("#wishlist_cart_window").classList.add("hide");
+    document.querySelector("#wishlist_cart_window").classList.remove("active");
   }
 
   const pesoFormatter = new Intl.NumberFormat("en-PH", {
