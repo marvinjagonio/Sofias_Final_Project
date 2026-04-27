@@ -1,3 +1,10 @@
+.chatbox {
+  display: none;
+}
+.chatbox.active {
+  display: flex;
+}
+
 /* Chat button */
 .chat-toggle {
   position: fixed;
@@ -30,12 +37,22 @@
   background: white;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  display: none;
+
+  display: flex;
   flex-direction: column;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+
   z-index: 999;
-  animation: fadeInBox 0.3s forwards;
+}
+
+.chatbox.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /* Fade-in animation for the chatbox */
@@ -122,4 +139,23 @@
 .user-message {
   background: #00ad2e;
   color: white;
+}
+
+.chat-header {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.chat-floating-text {
+  position: fixed;
+  z-index: 9999;
+  background-color: white;
+  bottom: 15%;
+  right: 1%;
+  border-radius: 20px;
+  border: 1px solid gray;
+  padding: 15px;
 }

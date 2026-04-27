@@ -1,3 +1,5 @@
+// ===== BUY NOW SECTION ===== //
+
 document.addEventListener("DOMContentLoaded", () => {
   const cartItem = document.querySelector(".shopping_cart_middle_left");
   const quantityInput = cartItem.querySelector("input[type='number']");
@@ -80,7 +82,8 @@ document.addEventListener("click", (e) => {
   window.location.href = "to_ship.html";
 });
 
-/* BUY NOW BUTTON */
+// ===== BUY NOW BUTTON ===== //
+
 document.addEventListener("click", (e) => {
   const btn = e.target.closest(".buy_now");
   if (!btn) return;

@@ -1,8 +1,10 @@
+// ===== PAGINATION SECTION ===== //
+
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("productContainer");
   const pagination = document.getElementById("pagination");
   const sortLinks = document.querySelectorAll(
-    ".bestselling-dropdown-content a"
+    ".bestselling-dropdown-content a",
   );
   const minPriceInput = document.getElementById("min-price");
   const maxPriceInput = document.getElementById("max-price");
@@ -10,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const discountCheckboxes = document.querySelectorAll(".filter-discount");
   const ratingCheckboxes = document.querySelectorAll(".filter-rating");
   const availabilityCheckbox = document.querySelector(
-    'input[type="checkbox"]:not(.filter-brand):not(.filter-discount):not(.filter-rating)'
+    'input[type="checkbox"]:not(.filter-brand):not(.filter-discount):not(.filter-rating)',
   );
 
   const allProducts = Array.from(document.querySelectorAll(".product"));
@@ -76,8 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
           a
             .querySelector(".product_name b")
             .textContent.localeCompare(
-              b.querySelector(".product_name b").textContent
-            )
+              b.querySelector(".product_name b").textContent,
+            ),
         );
         break;
       case "za":
@@ -85,18 +87,18 @@ document.addEventListener("DOMContentLoaded", () => {
           b
             .querySelector(".product_name b")
             .textContent.localeCompare(
-              a.querySelector(".product_name b").textContent
-            )
+              a.querySelector(".product_name b").textContent,
+            ),
         );
         break;
       case "high-low":
         filteredProducts.sort(
-          (a, b) => Number(b.dataset.price) - Number(a.dataset.price)
+          (a, b) => Number(b.dataset.price) - Number(a.dataset.price),
         );
         break;
       case "low-high":
         filteredProducts.sort(
-          (a, b) => Number(a.dataset.price) - Number(b.dataset.price)
+          (a, b) => Number(a.dataset.price) - Number(b.dataset.price),
         );
         break;
     }
@@ -148,11 +150,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   [minPriceInput, maxPriceInput].forEach((input) =>
-    input.addEventListener("input", applyFilters)
+    input.addEventListener("input", applyFilters),
   );
 
   [...brandCheckboxes, ...discountCheckboxes, ...ratingCheckboxes].forEach(
-    (cb) => cb.addEventListener("change", applyFilters)
+    (cb) => cb.addEventListener("change", applyFilters),
   );
 
   if (availabilityCheckbox)

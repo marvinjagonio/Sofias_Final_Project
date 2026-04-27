@@ -44,25 +44,34 @@
     <!-- Navigation Bar -->
 
     <header>
-      <div class="scrolling-container">
-        <div class="scrolling-text">
-          <marquee
-            behavior="scroll"
-            direction="left"
-            scrollamount="5"
-            class="px-3"
-          >
+      <div class="marquee px-3">
+        <div class="marquee-track">
+          <div class="marquee-content">
             Welcome to SPC Computer Hardware Website — My First Website! ^^ This
             project highlights some of my growing skills in
-            <span style="color: red"
-              >HTML, CSS, JavaScript, Bootstrap, Tailwind, MySQL as well as Git
+            <span class="highlight">
+              HTML, CSS, JavaScript, Bootstrap, Tailwind, MySQL as well as Git
               and Command Line (CMD).
             </span>
-            and <span style="color: red"> React </span> . . Dive into a clean,
+            and <span class="highlight">React</span>. Dive into a clean,
             interactive and responsive website where you can explore PC parts,
             add to cart products, and enjoy smooth transition and animations.
-            Many More Improvement features coming soon!
-          </marquee>
+            Many more improvement features coming soon!
+          </div>
+
+          <!-- duplicate -->
+          <div class="marquee-content">
+            Welcome to SPC Computer Hardware Website — My First Website! ^^ This
+            project highlights some of my growing skills in
+            <span class="highlight">
+              HTML, CSS, JavaScript, Bootstrap, Tailwind, MySQL as well as Git
+              and Command Line (CMD).
+            </span>
+            and <span class="highlight">React</span>. Dive into a clean,
+            interactive and responsive website where you can explore PC parts,
+            add to cart products, and enjoy smooth transition and animations.
+            Many more improvement features coming soon!
+          </div>
         </div>
       </div>
 
@@ -2515,7 +2524,7 @@
                 <p>total: <span id="cartTotal">0.00</span></p>
 
                 <p>
-                  Discount: <span style="color: red">-</span>
+                  Discount: <span style="color: red"></span>
                   <span style="color: red" id="cartLess"
                     ><small>0.00</small></span
                   >
@@ -2584,14 +2593,24 @@
       </div>
     </div>
 
+    <!-- Chatbox Floating Text -->
+    <div class="chat-floating-text">
+      💬 Customer Service — We're online! Ask us anything 😊
+    </div>
     <!-- Chatbox -->
     <div class="chatbox">
-      <div class="chat-header">Customer Service</div>
+      <!-- Header with floating text -->
+      <div class="chat-header">💬 SPC Customer Service</div>
+
+      <!-- Chat body -->
       <div class="chat-body" id="chatBody">
         <div class="bot-message">
-          <img src="image/SPC-Logo.png" alt="" /> Hi! How can we help you today?
+          <img src="image/SPC-Logo.png" alt="" />
+          Hi! How can we help you today?
         </div>
       </div>
+
+      <!-- Input -->
       <div class="chat-input">
         <input type="text" id="userInput" placeholder="Type your message..." />
         <button title="send" onclick="sendMessage()">Send</button>
@@ -2844,11 +2863,8 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <!-- JS Files  -->
-    <script src="js_folder/script.js"></script>
-    <script src="js_folder/startPopup.js"></script>
-    <script src="js_folder/search.js"></script>
-    <script src="js_folder/floatingLogin.js"></script>
-    <script src="js_folder/floatingSignup.js"></script>
+
+    <script src="js_folder/floating_forms.js"></script>
     <script src="js_folder/swiper.js"></script>
     <script src="js_folder/wishlist.js"></script>
     <script src="js_folder/floating_carts.js"></script>

@@ -1,15 +1,41 @@
+// ===== CHATBOX SECTION ===== //
+
 const chatToggle = document.getElementById("chatToggle");
 const chatBox = document.querySelector(".chatbox");
 const chatBody = document.getElementById("chatBody");
 const userInput = document.getElementById("userInput");
 
 chatToggle.addEventListener("click", () => {
-  if (chatBox.classList.toggle("active")) {
-    chatBox.style.display = "none";
-  } else {
+  const isActive = chatBox.classList.toggle("active");
+
+  if (isActive) {
+    // OPEN
     chatBox.style.display = "flex";
+  } else {
+    // CLICK AGAIN → CLOSE + RESET
+    resetChat();
   }
 });
+
+function resetChat() {
+  chatBox.classList.remove("active");
+  chatBox.style.display = "none";
+
+  // reset input
+  userInput.value = "";
+
+  // reset bot message
+  botMsg.innerHTML = defaultBotMessage;
+
+  // (optional) reset chat body
+  // chatBody.innerHTML = `<div class="bot-message">${defaultBotMessage}</div>`;
+}
+
+if (userInput.value.trim() === "") {
+  setTimeout(() => {
+    chatBox.style.display = "none";
+  }, 3000);
+}
 
 function sendMessage() {
   const message = userInput.value.trim();
@@ -22,7 +48,6 @@ function sendMessage() {
 
   userInput.value = "";
 
-  // Optional: Add a simple fixed bot response
   setTimeout(() => {
     const botMsg = document.createElement("div");
     botMsg.className = "bot-message";
