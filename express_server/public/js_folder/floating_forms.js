@@ -132,6 +132,7 @@ function closePopup() {
   document.body.classList.remove("no-scroll");
   setTimeout(() => {
     chatFloatingText.style.display = "flex";
+
     setTimeout(() => {
       chatFloatingText.style.display = "none";
     }, 2000);
