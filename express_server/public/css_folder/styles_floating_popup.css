@@ -189,7 +189,7 @@
   font-size: x-large;
   border-radius: 20px;
   color: white;
-  z-index: 1000000;
+  z-index: 9999;
 }
 
 .sign-up_popup-content {
@@ -304,7 +304,7 @@
   font-size: x-large;
   border-radius: 20px;
   color: white;
-  z-index: 1000000;
+  z-index: 9999;
 }
 
 .login_popup-content {
