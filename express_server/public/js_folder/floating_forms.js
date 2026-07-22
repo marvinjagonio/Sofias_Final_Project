@@ -123,13 +123,19 @@ window.addEventListener("load", () => {
 
 function openPopup() {
   popup.style.display = "flex";
-  document.body.classList.add("no-scroll");
+
+  document.documentElement.classList.add("no-scroll"); // html
+  document.body.classList.add("no-scroll"); // body
+
   chatFloatingText.style.display = "none";
 }
 
 function closePopup() {
   popup.style.display = "none";
+
+  document.documentElement.classList.remove("no-scroll");
   document.body.classList.remove("no-scroll");
+
   setTimeout(() => {
     chatFloatingText.style.display = "flex";
 
@@ -153,5 +159,3 @@ popupForm.addEventListener("submit", function (e) {
     closePopup();
   }, 1500);
 });
-
-// ===== CUSTOMER SERVICE FLOATING TEXT ===== //
