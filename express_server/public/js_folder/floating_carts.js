@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function closeCartView() {
     document.querySelector("#cart_window").classList.add("hide");
     document.querySelector("#cart_window").classList.remove("active");
-    // document.body.classList.remove("no-scroll");
+    document.body.classList.remove("no-scroll");
   }
 
   // --- Checkout ---
