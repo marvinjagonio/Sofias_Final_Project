@@ -470,9 +470,7 @@
 
 .sign-up_popup-content {
   top: 0;
-  background-image: url("../wallpaper/log_in_sign_up_wallpaper.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(to bottom, #a8e6a3 0%, #ffffff 100%);
   color: black;
   border-radius: 10px;
   padding: 20px;
