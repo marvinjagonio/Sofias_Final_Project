@@ -59,7 +59,7 @@ html {
   right: 0;
   top: 113px;
   width: 100%;
-  z-index: 9999;
+  z-index: 10;
   height: fit-content;
   padding: 0 0 0 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -76,10 +76,6 @@ html {
   display: flex;
 
   flex-direction: row;
-}
-
-.search-container {
-  width: 500px;
 }
 
 /* Scrolling Text Marquee Section */
@@ -159,10 +155,6 @@ html {
 
 .nav-link a:hover {
   color: #00ad2e !important;
-}
-
-.search-container {
-  padding: 0;
 }
 
 .nav-item {
@@ -403,7 +395,7 @@ html {
   border: 1px solid #cacaca;
   border-radius: 20px;
   padding: 5px;
-  z-index: 10;
+  z-index: 9999;
 }
 
 #search-button {
