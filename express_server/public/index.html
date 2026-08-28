@@ -2490,52 +2490,54 @@
     <div id="main_body">
       <div id="cart_window">
         <div class="overlay"></div>
-        <div id="cart_box">
-          <div class="heading">
-            <div class="title_circle_container">
-              <div class="shopping_cart_circle">
-                <div>
-                  <h1>Shopping Cart 🛒</h1>
-                  <p>Quick Delivery</p>
+        <div class="cart_background_color">
+          <div id="cart_box">
+            <div class="heading">
+              <div class="title_circle_container">
+                <div class="shopping_cart_circle">
+                  <div>
+                    <h1>Shopping Cart 🛒</h1>
+                    <p>Quick Delivery</p>
+                  </div>
                 </div>
-              </div>
-              <button class="close_button">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="50"
-                  height="50"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M17.6492 11.2501L12.7904 6.53852L13.8346 5.46167L20.5774 12.0001L13.8346 18.5385L12.7904 17.4617L17.6492 12.7501H3V11.2501H17.6492Z"
-                    fill="#080341"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div id="cart_items_container">
-              <span class="empty_cart_message"
-                >Your cart is empty.order an item.</span
-              >
-
-              <ul></ul>
-            </div>
-
-            <div id="cart_checkout">
-              <div id="total_checkout">
-                <p>total: <span id="cartTotal">0.00</span></p>
-
-                <p>
-                  Discount: <span style="color: red"></span>
-                  <span style="color: red" id="cartLess"
-                    ><small>0.00</small></span
+                <button class="close_button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="50"
+                    height="50"
                   >
-                </p>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.6492 11.2501L12.7904 6.53852L13.8346 5.46167L20.5774 12.0001L13.8346 18.5385L12.7904 17.4617L17.6492 12.7501H3V11.2501H17.6492Z"
+                      fill="#080341"
+                    />
+                  </svg>
+                </button>
               </div>
-              <button id="checkout_button">Checkout</button>
+              <div id="cart_items_container">
+                <span class="empty_cart_message"
+                  >Your cart is empty.order an item.</span
+                >
+
+                <ul></ul>
+              </div>
+
+              <div id="cart_checkout">
+                <div id="total_checkout">
+                  <p>total: <span id="cartTotal">0.00</span></p>
+
+                  <p>
+                    Discount: <span style="color: red"></span>
+                    <span style="color: red" id="cartLess"
+                      ><small>0.00</small></span
+                    >
+                  </p>
+                </div>
+                <button id="checkout_button">Checkout</button>
+              </div>
             </div>
           </div>
         </div>
@@ -2570,11 +2572,11 @@
 
             <div id="wishlist_total_checkout">
               <div>
-                <p>total:₱<span class="price py-1">0.00</span></p>
+                <p>total:₱<span class="price ps-1">0.00</span></p>
               </div>
               <div>
                 <p>
-                  Discount:₱<span class="minus py-1">-</span>
+                  Discount:₱<span class="minus ps-1">-</span>
                   <span class="product_save"><span>0.00</span></span>
                 </p>
               </div>

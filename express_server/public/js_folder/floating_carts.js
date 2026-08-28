@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function openCartView() {
     document.querySelector("#cart_window").classList.remove("hide");
     document.querySelector("#cart_window").classList.add("active");
-    document.querySelector("#wishlist_cart_window")?.classList.remove("active");
+    document.querySelector("#wishlist_cart_window")?.classList.add("hide");
   }
 
   function closeCartView() {
@@ -386,6 +386,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function wishlistOpenCartView() {
     document.querySelector("#wishlist_cart_window").classList.remove("hide");
     document.querySelector("#wishlist_cart_window").classList.add("active");
+    document.querySelector("#cart_window")?.classList.add("hide");
   }
 
   function wishlistCloseCartView() {
