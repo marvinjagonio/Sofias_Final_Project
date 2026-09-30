@@ -2,7 +2,9 @@ body {
   background-image: url("../wallpaper/track_your_order_wallpaper.jpg");
 }
 
-/* -------------------- Track Your Order -------------------- */
+/* =========================================================
+   TRACK YOUR ORDER SECTION
+   ========================================================= */
 
 .track_your_order {
   background-color: white;

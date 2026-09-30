@@ -1,10 +1,6 @@
-html.no-scroll,
-body.no-scroll {
-  overflow: hidden !important;
-  height: 100%;
-}
-
-/* -------------------- Items Cathegory Section -------------------- */
+/* =========================================================
+   ITEMS CATHEGORY SECTION
+   ========================================================= */
 @import "tailwindcss";
 
 #items_category_section {
@@ -50,31 +46,9 @@ body.no-scroll {
   height: 110px;
 }
 
-@media (min-width: 576px) {
-  .items_category_product {
-    width: 50%;
-  }
-}
-
-@media (min-width: 768px) {
-  .items_category_product {
-    width: 100%;
-  }
-}
-
-@media (min-width: 992px) {
-  .items_category_product {
-    width: 100%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .items_category_product {
-    width: 100%;
-  }
-}
-
-/* -------------------- Loptop and Desktop Section --------------------*/
+/* =========================================================
+   LAPTOP AND DESKTOP SECTION
+   ========================================================= */
 
 #laptop_desktop_section {
   background-image: url("../image/index_green_gray_wallpaper1.jpg");
@@ -140,66 +114,9 @@ article.desktop_font h4 {
   color: white;
 }
 
-/* Loptop and Desktop @media */
-
-@media (min-width: 576px) {
-  .laptop_swiper,
-  .desktop_swiper {
-    width: 100%;
-    max-width: 1000px;
-    margin: 20px auto;
-  }
-
-  .desktop_background,
-  .laptop_background {
-    margin: 20px auto;
-  }
-
-  .laptop_desktop_flex {
-    justify-content: center;
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 768px) {
-  .laptop_swiper,
-  .desktop_swiper {
-    width: 100%;
-    max-width: 1000px;
-    margin: 20px auto;
-  }
-
-  .desktop_background,
-  .laptop_background {
-    margin: 20px auto;
-  }
-
-  .laptop_desktop_flex {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 992px) {
-  .laptop_desktop_flex {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 1200px) {
-  .laptop_desktop_flex {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .laptop_desktop_flex {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-/* -------------------- New Arrivals Section and Top Sellers Section -------------------- */
+/* =========================================================
+   NEW ARRIVALS AND TOP SELLERS SECTION
+   ========================================================= */
 
 #new_arrivals_top_sellers_section,
 #featured_products_section,
@@ -278,24 +195,18 @@ article.desktop_font h4 {
   transform: scale(1.08);
 }
 
-/* .swiper-button-prev {
-  position: absolute;
-  padding-left: 50px;
-}
-
-.swiper-button-next {
-  position: absolute;
-  padding-left: 50px;
-} */
-
-/* -------------------- Best Coupons Section -------------------- */
+/* =========================================================
+   BEST COUPONS SECTION
+   ========================================================= */
 
 .best_coupons_flex {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-/* -------------------- Customers Comments Section -------------------- */
+/* =========================================================
+   CUSTOMER COMMENTS SECTION
+   ========================================================= */
 
 #comments_section {
   background: rgb(56, 56, 56) !important;

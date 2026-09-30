@@ -1,4 +1,6 @@
-/* Breadcrumbs Section */
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
 
 .breadcrumb_trail {
   font-size: 15px;
@@ -42,7 +44,9 @@
   }
 }
 
-/* Bestselling Drop-down Section */
+/* =========================================================
+   BESTSELLING DROPDOWN
+   ========================================================= */
 
 .bestselling-dropdown-content {
   display: none;
@@ -70,9 +74,10 @@
   display: block;
 }
 
-/* Left Side Section */
+/* =========================================================
+   LEFT SIDE SECTION
+   ========================================================= */
 
-/* Container for left section */
 .left_side_section {
   width: fit-content;
   padding: 20px;
@@ -83,7 +88,6 @@
   top: 20px;
 }
 
-/* Breadcrumb trail */
 .breadcrumb_trail {
   font-size: 0.9rem;
   color: #6c757d;
@@ -361,7 +365,9 @@
   transition: all 0.25s ease;
 }
 
-/* Add to Cart */
+/* =========================================================
+  ADD TO CART
+   ========================================================= */
 .btn-cart {
   background-color: #ffc107;
   color: #212529;
