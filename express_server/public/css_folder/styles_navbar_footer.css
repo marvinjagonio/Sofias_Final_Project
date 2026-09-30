@@ -1,7 +1,4 @@
 body {
-  margin: 0;
-  padding: 0;
-  background-color: rgb(250, 250, 250);
   height: 100%;
   padding-top: 170px;
 }
@@ -93,7 +90,7 @@ html {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: scroll 20s linear infinite;
+  animation: scroll 35s linear infinite;
 }
 
 .marquee-content {
@@ -511,7 +508,7 @@ footer {
 }
 
 .footer_link:hover {
-  color: blue;
+  color: #00ff44;
   transform: scale(1.1);
 }
 
