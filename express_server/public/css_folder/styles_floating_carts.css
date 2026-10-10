@@ -2,7 +2,8 @@
    FLOATING ADD TO CART
    ========================================================= */
 
-#cart_window {
+#cart_window,
+#wishlist_cart_window {
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -71,7 +72,8 @@
   justify-content: space-between;
 }
 
-#cart_box {
+#cart_box,
+#wishlist_cart_box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -91,7 +93,8 @@
   transition: 0.5s ease-in-out;
 }
 
-#cart_window.active #cart-box {
+#cart_window.active #cart-box,
+#wishlist_cart_window.active #wishlist-cart-box {
   width: calc(35% - 80px);
   padding: 40px;
 }
@@ -109,17 +112,25 @@
   text-align: left;
 }
 
-#cart_box .close_button svg {
+#cart_box .close_button svg,
+.wishlist_close_button svg {
   width: 25px;
   height: 25px;
   fill: black;
   stroke: black;
 }
 
-#cart_box .close_button {
-  background: transparent;
-  border: 1px solid #333;
-  height: 40px;
+#cart_box .close_button,
+.wishlist_close_button {
+  font-size: larger;
+  border-radius: 20px;
+  height: 35px;
+  width: 35px;
+  color: #333;
+  padding-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(50px);
+  border: 1px solid #d3d3d3;
 }
 
 #cart_box .close_button:hover {
@@ -316,7 +327,7 @@
    FLOATING WISHLIST CART
    ========================================================= */
 
-#wishlist_cart_window {
+/* #wishlist_cart_window {
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -327,7 +338,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   animation: background-color 0.5s ease-in-out;
   transform: translateX(100%);
-}
+} */
 
 #wishlist_cart_window.active {
   animation: slideRight 0.5s ease forwards;
@@ -343,7 +354,7 @@
   justify-content: space-between;
 }
 
-#wishlist_cart_box {
+/* #wishlist_cart_box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -361,12 +372,12 @@
   text-wrap: nowrap;
   text-overflow: ellipsis;
   transition: 0.5s ease-in-out;
-}
+} */
 
-#wishlist_cart_window.active #wishlist-cart-box {
+/* #wishlist_cart_window.active #wishlist-cart-box {
   width: calc(35% - 80px);
   padding: 40px;
-}
+} */
 
 #wishlist_cart_box .heading h1 {
   font-size: 30px;
@@ -381,7 +392,7 @@
   text-align: left;
 }
 
-.wishlist_close_button {
+/* .wishlist_close_button {
   font-size: larger;
   border-radius: 20px;
   height: 35px;
@@ -391,7 +402,7 @@
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(50px);
   border: 1px solid #d3d3d3;
-}
+} */
 
 .wishlist_close_button:hover {
   background-color: #c5c5c5;

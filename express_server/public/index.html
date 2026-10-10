@@ -652,11 +652,7 @@
      ========================================================= -->
 
     <section id="items_category_section">
-      <div
-        class="swiper items_cathegory_swiper"
-        data-aos="fade-up"
-        data-aos-delay="50"
-      >
+      <div class="swiper items_cathegory_swiper">
         <div class="swiper-wrapper items_cathegory_swiper-wrapper">
           <div class="swiper-slide items_category_product">
             <a href="items_page_folder/items_selection_page_sample.html">
@@ -1314,11 +1310,7 @@
         <h2>FEATURED PRODUCTS</h2>
         <hr />
       </article>
-      <div
-        class="swiper featured_products_swiper"
-        data-aos="fade-up"
-        data-aos-delay="50"
-      >
+      <div class="swiper featured_products_swiper">
         <div class="swiper-wrapper featured_products_swiper-wrapper">
           <div
             class="swiper-slide product"
@@ -1542,7 +1534,7 @@
         <img
           class="img-fluid rounded-2"
           style="width: auto; height: auto"
-          src="wallpaper/White And Black Gradient Coming Soon Email Header (3).jpg"
+          src="gif/free-shipping.gif"
           alt=""
         />
       </div>
@@ -1552,19 +1544,12 @@
      NEW ARRIVALS AND TO TOP SELLERS SECTION
      ========================================================= -->
 
-    <section id="new_arrivals_top_sellers_section">
+    <section id="new_arrivals_section">
       <article>
-        <!-- =========================================================
-     NEW ARRIVALS
-     ========================================================= -->
         <h2>NEW ARRIVALS</h2>
         <hr />
       </article>
-      <div
-        class="swiper new_arrivals_swiper"
-        data-aos="fade-up"
-        data-aos-delay="50"
-      >
+      <div class="swiper new_arrivals_swiper">
         <div class="swiper-wrapper new_arrivals_swiper-wrapper">
           <div
             class="swiper-slide product"
@@ -1856,21 +1841,18 @@
         <div class="swiper-button-prev new-arrivals-prev"></div>
         <div class="swiper-button-next new-arrivals-next"></div>
       </div>
+    </section>
 
-      <!-- =========================================================
+    <!-- =========================================================
      TOP SELLERS
      ========================================================= -->
-
+    <section id="top_sellers_section">
       <article>
         <h2>TOP SELLERS</h2>
         <hr />
       </article>
       <div class="swiper top_sellers_swiper">
-        <div
-          class="swiper-wrapper top_sellers_swiper-wrapper"
-          data-aos="fade-up"
-          data-aos-delay="50"
-        >
+        <div class="swiper-wrapper top_sellers_swiper-wrapper">
           <div
             class="swiper-slide product"
             data-name="Gaming Chair"
@@ -2157,6 +2139,7 @@
             <div class="products_hover">❤︎ Wishlist</div>
           </div>
         </div>
+
         <div class="swiper-button-prev top-sellers-prev"></div>
         <div class="swiper-button-next top-sellers-next"></div>
       </div>
@@ -2307,7 +2290,7 @@
       <div class="start_up_popup-content">
         <div class="d-flex flex-row">
           <div class="pop-up_left_image">
-            <img src="image/SPC-Logo.png" alt="" />
+            <img class="spc-logo" src="image/SPC-Logo.png" alt="" />
           </div>
           <div class="pop-up_right">
             <span class="start_popup_close-btn" onclick="closePopup()">×</span>
@@ -2342,6 +2325,14 @@
         </div>
       </div>
     </section>
+
+    <!-- =========================================================
+     Floating Back to Top Button
+     ========================================================= -->
+
+    <button id="backToTop" title="Back to Top" aria-label="Back to top">
+      ↑
+    </button>
 
     <!-- =========================================================
      LOG-IN POP-UP SECTION
@@ -2513,7 +2504,20 @@
               </div>
 
               <button class="wishlist_close_button">
-                <span>x</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.6492 11.2501L12.7904 6.53852L13.8346 5.46167L20.5774 12.0001L13.8346 18.5385L12.7904 17.4617L17.6492 12.7501H3V11.2501H17.6492Z"
+                    fill="#080341"
+                  />
+                </svg>
               </button>
             </div>
 

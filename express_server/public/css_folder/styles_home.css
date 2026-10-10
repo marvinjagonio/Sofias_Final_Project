@@ -118,7 +118,7 @@ article.desktop_font h4 {
    NEW ARRIVALS AND TOP SELLERS SECTION
    ========================================================= */
 
-#new_arrivals_top_sellers_section,
+#new_arrivals_section,
 #featured_products_section,
 #top_sellers_section {
   display: flex;
@@ -135,7 +135,9 @@ article.desktop_font h4 {
 
 #new_arrivals_top_sellers_section h2,
 #featured_products_section h2,
-#add_on_deals_section h2 {
+#add_on_deals_section h2,
+#top_sellers_section h2,
+#new_arrivals_section h2 {
   font-size: x-large;
   text-underline-offset: 10px;
   padding-left: 12%;
@@ -144,7 +146,9 @@ article.desktop_font h4 {
 
 #new_arrivals_top_sellers_section hr,
 #featured_products_section hr,
-#add_on_deals_section hr {
+#add_on_deals_section hr,
+#top_sellers_section hr,
+#new_arrivals_section hr {
   border: none;
   height: 4px;
   background: linear-gradient(to left, red 20%, gray 80%);
@@ -282,4 +286,38 @@ article.desktop_font h4 {
     padding: 20px 150px;
     gap: 30px;
   }
+}
+
+/* Floating Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: #28a745;
+  color: white;
+
+  border: none;
+  border-radius: 50%;
+
+  font-size: 28px;
+  font-weight: bold;
+
+  cursor: pointer;
+  z-index: 9999;
+
+  display: none;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+}
+
+/* Hover Effect */
+#backToTop:hover {
+  background-color: #218838;
 }

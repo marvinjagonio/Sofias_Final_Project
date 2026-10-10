@@ -77,6 +77,15 @@ html {
   flex-direction: row;
 }
 
+.nav-icon {
+  transition: filter 0.3s ease;
+}
+
+.nav-icon:hover {
+  filter: brightness(0) saturate(100%) invert(43%) sepia(91%) saturate(430%)
+    hue-rotate(85deg) brightness(95%) contrast(95%);
+}
+
 /* =========================================================
    SCROLLING TEXT AND MARQUEE SECTION
    ========================================================= */

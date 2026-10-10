@@ -77,6 +77,20 @@
 
 /* Close Button */
 
+.spc-logo:hover {
+  animation: greenGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes greenGlow {
+  from {
+    filter: drop-shadow(0 0 3px #28a745);
+  }
+
+  to {
+    filter: drop-shadow(0 0 8px #474747) drop-shadow(0 0 18px #91b69a);
+  }
+}
+
 .start_popup_close-btn {
   position: absolute;
   top: 15px;
