@@ -46,7 +46,7 @@ window.addEventListener("load", function () {
   const new_arrivals_swiper = new Swiper(".new_arrivals_swiper", {
     loop: false,
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 11,
 
     navigation: {
       nextEl: ".new-arrivals-next",
@@ -92,7 +92,7 @@ window.addEventListener("load", function () {
   const top_sellers_swiper = new Swiper(".top_sellers_swiper", {
     loop: false,
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 11,
 
     navigation: {
       nextEl: ".top-sellers-next",
@@ -137,7 +137,7 @@ window.addEventListener("load", function () {
 window.addEventListener("load", function () {
   const featured_products_swiper = new Swiper(".featured_products_swiper", {
     slidesPerView: 1,
-    spaceBetween: 12,
+    spaceBetween: 11,
     navigation: {
       nextEl: ".featured_products_next",
       prevEl: ".featured_products_prev",

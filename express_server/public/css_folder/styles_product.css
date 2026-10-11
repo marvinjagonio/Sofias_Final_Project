@@ -34,8 +34,8 @@ li {
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   flex-wrap: nowrap;
-  width: 50vw;
-  max-width: 50vw;
+  width: 16vw !important;
+  max-width: 16vw !important;
   height: fit-content;
   box-sizing: border-box;
   z-index: 1000;
