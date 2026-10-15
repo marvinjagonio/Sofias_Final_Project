@@ -60,11 +60,13 @@
 
 #cart_window.active {
   animation: slideRight 0.5s ease forwards;
+
   visibility: visible;
 }
 
 #cart_window.hide {
   animation: slideOut 0.5s ease forwards;
+
 }
 
 #cart_window .title_circle_container {

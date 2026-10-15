@@ -74,7 +74,7 @@
   background-color: rgba(46, 133, 46, 0.5);
   border-radius: 10px;
   width: 100%;
-  max-width: 530px;
+  max-width: 560px;
   box-sizing: border-box;
   border-radius: 10px;
   padding: 10px;
@@ -85,7 +85,7 @@
   background-color: rgba(135, 135, 135, 0.693);
   border-radius: 10px;
   width: 100%;
-  max-width: 530px;
+  max-width: 560px;
   box-sizing: border-box;
   border-radius: 10px;
   padding: 10px;
@@ -152,7 +152,7 @@ article.desktop_font h4 {
   border: none;
   height: 4px;
   background: linear-gradient(to left, red 20%, gray 80%);
-  margin: 0 10%;
+  margin: 0 8%;
   z-index: 1000;
 }
 

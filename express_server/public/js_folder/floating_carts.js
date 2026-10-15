@@ -308,13 +308,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   wishlistOpenBtn?.addEventListener("click", () => {
-    document.body.classList.add("no-scroll");
     wishlistOpenCartView();
+    document.body.classList.add("no-scroll");
   });
 
   wishlistCloseBtn?.addEventListener("click", () => {
-    document.body.classList.remove("no-scroll");
     wishlistCloseCartView();
+    document.body.classList.remove("no-scroll");
   });
 
   // Initialize display if exists
@@ -392,7 +392,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function wishlistCloseCartView() {
     document.querySelector("#wishlist_cart_window").classList.add("hide");
     document.querySelector("#wishlist_cart_window").classList.remove("active");
-    // document.body.classList.remove("no-scroll");
   }
 
   const pesoFormatter = new Intl.NumberFormat("en-PH", {

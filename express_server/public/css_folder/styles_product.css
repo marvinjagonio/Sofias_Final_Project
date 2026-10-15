@@ -250,3 +250,66 @@ li {
 .cart img {
   width: 20px;
 }
+
+.product_save_new_badge {
+  display: flex;
+  justify-content: space-between;
+}
+.new_badge {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+
+  padding: 0 5px !important;
+  border-radius: 6px;
+  border: none;
+  background: linear-gradient(135deg, #ff3030, #ff4f4f);
+  color: #ffffff;
+  height: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Moving shine */
+.new_badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+
+  width: 50%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.9),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+  animation: newShine 2s infinite;
+}
+
+/* Glowing effect */
+@keyframes newGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.9);
+  }
+}
+
+/* Shine travels across the badge */
+@keyframes newShine {
+  0% {
+    left: -100%;
+  }
+  60%,
+  100% {
+    left: 150%;
+  }
+}
