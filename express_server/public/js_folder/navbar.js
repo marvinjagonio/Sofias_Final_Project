@@ -153,3 +153,51 @@ backToTop.addEventListener("click", function () {
     }, 100);
   }, 1000);
 });
+
+// ===== ON SALE NOW COUNTDOWN ===== //
+
+// Set your sale ending date and time
+const saleEndDate = new Date("2026-12-31T23:59:59+08:00").getTime();
+
+const saleCountdown = setInterval(() => {
+  const now = new Date().getTime();
+  const distance = saleEndDate - now;
+
+  if (distance <= 0) {
+    clearInterval(saleCountdown);
+
+    document.querySelector(".countdown_timer").innerHTML = `
+      <h2>SALE HAS ENDED!</h2>
+    `;
+
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+  );
+
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("sale_days").textContent = String(days).padStart(
+    2,
+    "0",
+  );
+
+  document.getElementById("sale_hours").textContent = String(hours).padStart(
+    2,
+    "0",
+  );
+
+  document.getElementById("sale_minutes").textContent = String(
+    minutes,
+  ).padStart(2, "0");
+
+  document.getElementById("sale_seconds").textContent = String(
+    seconds,
+  ).padStart(2, "0");
+}, 1000);
