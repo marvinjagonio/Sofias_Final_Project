@@ -29,7 +29,7 @@ html {
   box-shadow: 0 2px 5px inset rgba(0, 0, 0, 0.1);
   opacity: 1;
   transition: opacity 0.4s ease;
-  border: 2px solid #27c300;
+  border: 2px solid #087f5b;
 }
 #navbarContent1 {
   margin-left: 150px;
@@ -145,7 +145,7 @@ html {
 
 .dropdown-item:hover {
   background-color: rgb(242, 242, 242) !important;
-  color: #27c300 !important;
+  color: #087f5b !important;
   border-radius: 10px;
 }
 
@@ -164,7 +164,7 @@ html {
 }
 
 .nav-link a:hover {
-  color: #00ad2e !important;
+  color: #087f5b !important;
 }
 
 .nav-item {
@@ -312,7 +312,7 @@ footer {
 }
 
 .footer_link:hover {
-  color: #00ff44;
+  color: #727272;
   transform: scale(1.1);
 }
 

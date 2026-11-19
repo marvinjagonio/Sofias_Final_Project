@@ -6,8 +6,6 @@ const signUpBtn = document.getElementById("signUpBtn");
 const signUpPopup = document.getElementById("signUpPopup");
 const signUpCloseBtn = document.querySelector(".sign-up_close-btn");
 
-//sign-up pop-up
-
 signUpBtn.addEventListener("click", () => {
   signUpPopup.style.display = "block";
 });
@@ -61,12 +59,6 @@ const loginMessage = document.getElementById("message_login");
 const loginPopup = document.getElementById("loginPopup");
 const loginBtn = document.getElementById("loginBtn");
 const loginCloseBtn = document.querySelector(".login_close-btn");
-
-//log-in pop-up
-
-loginBtn.addEventListener("click", () => {
-  loginPopup.style.display = "block";
-});
 
 loginCloseBtn.addEventListener("click", () => {
   loginPopup.style.display = "none";
